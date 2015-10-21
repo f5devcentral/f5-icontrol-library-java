@@ -103,6 +103,30 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:simpleType name="LocalLB.ProfileTCP.TCPMode">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="TCP_MODE_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>TCP_MODE_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_MODE_DISABLED">
+					<xsd:annotation>
+						<xsd:documentation>TCP_MODE_DISABLED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_MODE_ENABLED">
+					<xsd:annotation>
+						<xsd:documentation>TCP_MODE_ENABLED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_MODE_AUTO">
+					<xsd:annotation>
+						<xsd:documentation>TCP_MODE_AUTO</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:complexType name="Common.StatisticSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -7210,8 +7234,165 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_FW_RULE_LAST_HIT_TIME</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ASSOCIATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ASSOCIATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CLOSING">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CLOSING</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_UNCONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_UNCONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_INACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_INACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CLIENTLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CLIENTLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SERVERLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SERVERLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_FTPS_SESSIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_FTPS_SESSIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_READ_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_READ_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_WRITE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_WRITE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_PASSTHRU_TRANSITIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_PASSTHRU_TRANSITIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_DISCARDED_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_DISCARDED_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_INSPECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_INSPECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_MALFORMED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_MALFORMED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_LOOKUPS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_LOOKUPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_RESPONSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_RESPONSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_VCMP_RED_PACKETS_IN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_VCMP_RED_PACKETS_IN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_CIPHER_CAMELLIA_BULK">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_CIPHER_CAMELLIA_BULK</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_NAPTR_REQS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_NAPTR_REQS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
+		<xsd:complexType name="LocalLB.ProfileTCP.ProfileTCPModeSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.ProfileTCP.ProfileTCPMode[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:complexType name="LocalLB.ProfileString">
 			<xsd:sequence>
 				<xsd:element name="value" type="xsd:string"/>
@@ -7310,6 +7491,12 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:complexType name="LocalLB.ProfileTCP.ProfileTCPMode">
+			<xsd:sequence>
+				<xsd:element name="value" type="tns:LocalLB.ProfileTCP.TCPMode"/>
+				<xsd:element name="default_flag" type="xsd:boolean"/>
+			</xsd:sequence>
+		</xsd:complexType>
 		<xsd:complexType name="LocalLB.ProfileTCP.ProfileTCPStatisticEntry">
 			<xsd:sequence>
 				<xsd:element name="profile_name" type="xsd:string"/>
@@ -7393,6 +7580,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
+<message name="LocalLB.ProfileTCP.get_cmetrics_cache_timeoutRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_cmetrics_cache_timeoutResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+
 <message name="LocalLB.ProfileTCP.get_congestion_control_modeRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -7456,11 +7650,39 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
+<message name="LocalLB.ProfileTCP.get_fast_open_cookie_expirationRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_fast_open_cookie_expirationResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+
+<message name="LocalLB.ProfileTCP.get_fast_open_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_fast_open_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.ProfileTCP.get_fin_wait_2_timeoutRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_fin_wait_2_timeoutResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+
 <message name="LocalLB.ProfileTCP.get_fin_wait_timeoutRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
 <message name="LocalLB.ProfileTCP.get_fin_wait_timeoutResponse">
 	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+
+<message name="LocalLB.ProfileTCP.get_hardware_syn_cookie_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_hardware_syn_cookie_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
 <message name="LocalLB.ProfileTCP.get_high_performance_tcp_extension_stateRequest">
@@ -7574,6 +7796,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
+<message name="LocalLB.ProfileTCP.get_nagle_algorithm_modeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_nagle_algorithm_modeResponse">
+	<part name="return" type="tns:LocalLB.ProfileTCP.ProfileTCPModeSequence"/>
+</message>
+
 <message name="LocalLB.ProfileTCP.get_packet_loss_ignore_burstRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -7613,6 +7842,20 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
 <message name="LocalLB.ProfileTCP.get_proxy_option_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.ProfileTCP.get_rate_pace_maximum_rateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_rate_pace_maximum_rateResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+
+<message name="LocalLB.ProfileTCP.get_rate_pace_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_rate_pace_stateResponse">
 	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
@@ -7797,6 +8040,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfileTCP.set_cmetrics_cache_stateResponse">
 </message>
 
+<message name="LocalLB.ProfileTCP.set_cmetrics_cache_timeoutRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="timeouts" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_cmetrics_cache_timeoutResponse">
+</message>
+
 <message name="LocalLB.ProfileTCP.set_congestion_control_modeRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="values" type="tns:LocalLB.ProfileTCPCongestionControlModeSequence"/>
@@ -7860,11 +8110,39 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfileTCP.set_ecn_stateResponse">
 </message>
 
+<message name="LocalLB.ProfileTCP.set_fast_open_cookie_expirationRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="expirations" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_fast_open_cookie_expirationResponse">
+</message>
+
+<message name="LocalLB.ProfileTCP.set_fast_open_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_fast_open_stateResponse">
+</message>
+
+<message name="LocalLB.ProfileTCP.set_fin_wait_2_timeoutRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="timeouts" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_fin_wait_2_timeoutResponse">
+</message>
+
 <message name="LocalLB.ProfileTCP.set_fin_wait_timeoutRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="timeouts" type="tns:LocalLB.ProfileULongSequence"/>
 </message>
 <message name="LocalLB.ProfileTCP.set_fin_wait_timeoutResponse">
+</message>
+
+<message name="LocalLB.ProfileTCP.set_hardware_syn_cookie_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_hardware_syn_cookie_stateResponse">
 </message>
 
 <message name="LocalLB.ProfileTCP.set_high_performance_tcp_extension_stateRequest">
@@ -7972,6 +8250,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfileTCP.set_mptcp_stateResponse">
 </message>
 
+<message name="LocalLB.ProfileTCP.set_nagle_algorithm_modeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="modes" type="tns:LocalLB.ProfileTCP.ProfileTCPModeSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_nagle_algorithm_modeResponse">
+</message>
+
 <message name="LocalLB.ProfileTCP.set_packet_loss_ignore_burstRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
@@ -8012,6 +8297,20 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 <message name="LocalLB.ProfileTCP.set_proxy_option_stateResponse">
+</message>
+
+<message name="LocalLB.ProfileTCP.set_rate_pace_maximum_rateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="rates" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_rate_pace_maximum_rateResponse">
+</message>
+
+<message name="LocalLB.ProfileTCP.set_rate_pace_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_rate_pace_stateResponse">
 </message>
 
 <message name="LocalLB.ProfileTCP.set_receive_window_sizeRequest">
@@ -8204,6 +8503,15 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileTCP.get_cmetrics_cache_stateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.get_cmetrics_cache_stateResponse"/>
 	</operation>
+	<operation name="get_cmetrics_cache_timeout">
+	<documentation>
+ Gets the expiration for route metrics cache entries for the specified TCP
+ profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_cmetrics_cache_timeoutRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_cmetrics_cache_timeoutResponse"/>
+	</operation>
 	<operation name="get_congestion_control_mode">
 	<documentation>
  Gets the TCP congestion control modes for the specified TCP profiles.
@@ -8280,14 +8588,50 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileTCP.get_ecn_stateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.get_ecn_stateResponse"/>
 	</operation>
+	<operation name="get_fast_open_cookie_expiration">
+	<documentation>
+ Gets the fast open cookie expiration for the specified TCP profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_fast_open_cookie_expirationRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_fast_open_cookie_expirationResponse"/>
+	</operation>
+	<operation name="get_fast_open_state">
+	<documentation>
+ Gets the state that, if enabled, activates support for TCP Fast
+ Open.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_fast_open_stateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_fast_open_stateResponse"/>
+	</operation>
+	<operation name="get_fin_wait_2_timeout">
+	<documentation>
+ Gets the time (in seconds) to remain in FIN-WAIT-2 state before
+ giving up.  Zero is forever (or until max retransmission of FIN).
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_fin_wait_2_timeoutRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_fin_wait_2_timeoutResponse"/>
+	</operation>
 	<operation name="get_fin_wait_timeout">
 	<documentation>
- Gets the time (in seconds) to remain in FIN-WAIT or CLOSING state before
+ Gets the time (in seconds) to remain in FIN-WAIT-1 or CLOSING state before
  giving up.  Zero is forever (or until max retransmission of FIN).
  
         	</documentation>
 		<input message="tns:LocalLB.ProfileTCP.get_fin_wait_timeoutRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.get_fin_wait_timeoutResponse"/>
+	</operation>
+	<operation name="get_hardware_syn_cookie_state">
+	<documentation>
+ Gets the state that if true, enables hardware SYN cookie support.
+ This protects against the SYN flood type of Denial Of Service
+ (DoS) attack.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_hardware_syn_cookie_stateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_hardware_syn_cookie_stateResponse"/>
 	</operation>
 	<operation name="get_high_performance_tcp_extension_state">
 	<documentation>
@@ -8430,6 +8774,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileTCP.get_mptcp_stateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.get_mptcp_stateResponse"/>
 	</operation>
+	<operation name="get_nagle_algorithm_mode">
+	<documentation>
+ Gets the mode for the Nagle algorithm.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_nagle_algorithm_modeRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_nagle_algorithm_modeResponse"/>
+	</operation>
 	<operation name="get_packet_loss_ignore_burst">
 	<documentation>
  Gets values indicating the likelihood of performing
@@ -8484,6 +8836,26 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileTCP.get_proxy_option_stateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.get_proxy_option_stateResponse"/>
+	</operation>
+	<operation name="get_rate_pace_maximum_rate">
+	<documentation>
+ Gets the maximum rate, in bytes per second, that a flow that
+ has rate pacing enabled may transmit data. The default value
+ of 0 indicates no maximum.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_rate_pace_maximum_rateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_rate_pace_maximum_rateResponse"/>
+	</operation>
+	<operation name="get_rate_pace_state">
+	<documentation>
+ Gets the states that if true, enables rate pacing. This feature
+ causes the system to pace the egress packets to avoid dropping
+ packets, allowing for optimum goodput.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_rate_pace_stateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_rate_pace_stateResponse"/>
 	</operation>
 	<operation name="get_receive_window_size">
 	<documentation>
@@ -8603,11 +8975,14 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_use_nagle_algorithm_state">
 	<documentation>
- Gets the states that if true, delay sending data that is less than MSS in size unless 
- all prior data has been ACKed. This leads to less in-flight small-data, and less chance 
- for drops, but can have poor effects for interactive protocols such as telnet 
+ This method is deprecated and new applications should use the get_nagle_algorithm_mode
+ mode instead.
+
+ Gets the states that if true, delay sending data that is less than MSS in size unless
+ all prior data has been ACKed. This leads to less in-flight small-data, and less chance
+ for drops, but can have poor effects for interactive protocols such as telnet
  over high latency links.
- 
+
         	</documentation>
 		<input message="tns:LocalLB.ProfileTCP.get_use_nagle_algorithm_stateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.get_use_nagle_algorithm_stateResponse"/>
@@ -8735,6 +9110,17 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileTCP.set_cmetrics_cache_stateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.set_cmetrics_cache_stateResponse"/>
 	</operation>
+	<operation name="set_cmetrics_cache_timeout">
+	<documentation>
+ Sets the timeout for route metrics cache entries for the specified TCP
+ profiles. TCP stores congestion parameters on a per-client basis at the end of
+ connections. These parameters are loaded into new connections to that client
+ for the specified duration.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_cmetrics_cache_timeoutRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_cmetrics_cache_timeoutResponse"/>
+	</operation>
 	<operation name="set_congestion_control_mode">
 	<documentation>
  Sets the TCP congestion control modes for the specified TCP profiles.
@@ -8819,14 +9205,56 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileTCP.set_ecn_stateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.set_ecn_stateResponse"/>
 	</operation>
+	<operation name="set_fast_open_cookie_expiration">
+	<documentation>
+ Sets the fast open cookie expiration for the specified TCP profiles.
+ This timeout specifies the time, in seconds, for which a TCP Fast
+ Open Cookie granted by the BIG-IP remains valid to accept data
+ delivered with the SYN packet. The origination time is encrypted
+ in the cookie and checked during cookie validation.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_fast_open_cookie_expirationRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_fast_open_cookie_expirationResponse"/>
+	</operation>
+	<operation name="set_fast_open_state">
+	<documentation>
+ Sets the state that, if enabled, activates support for TCP Fast Open,
+ which allows validated clients to deliver data with SYN packets.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_fast_open_stateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_fast_open_stateResponse"/>
+	</operation>
+	<operation name="set_fin_wait_2_timeout">
+	<documentation>
+ Sets the time (in seconds) to remain in FIN-WAIT-2 state before
+ giving up.  Zero is forever (or until max retransmission of FIN).
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_fin_wait_2_timeoutRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_fin_wait_2_timeoutResponse"/>
+	</operation>
 	<operation name="set_fin_wait_timeout">
 	<documentation>
- Sets the time (in seconds) to remain in FIN-WAIT or CLOSING state before
+ Sets the time (in seconds) to remain in FIN-WAIT-1 or CLOSING state before
  giving up.  Zero is forever (or until max retransmission of FIN).
  
         	</documentation>
 		<input message="tns:LocalLB.ProfileTCP.set_fin_wait_timeoutRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.set_fin_wait_timeoutResponse"/>
+	</operation>
+	<operation name="set_hardware_syn_cookie_state">
+	<documentation>
+ Sets the state that if true, enables hardware SYN cookie support.
+ This protects against the SYN flood type of Denial Of Service
+ (DoS) attack. This is available on most hardware platforms,
+ specifically, those on which PVA10 is present. By default, this
+ setting is enabled.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_hardware_syn_cookie_stateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_hardware_syn_cookie_stateResponse"/>
 	</operation>
 	<operation name="set_high_performance_tcp_extension_state">
 	<documentation>
@@ -8975,6 +9403,21 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileTCP.set_mptcp_stateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.set_mptcp_stateResponse"/>
 	</operation>
+	<operation name="set_nagle_algorithm_mode">
+	<documentation>
+ Sets the mode for the Nagle algorithm. If the mode is set to TCP_MODE_ENABLED,
+ sending data is delayed if it is less than MSS in size unless all prior data
+ has been ACKed. This leads to fewer small packets sent and a smaller chance
+ of dropped packets. However, this can have poor effects for interactive protocols
+ such as telnet over high latency links. If the mode is set to TCP_MODE_DISABLED,
+ sending data that is less than MSS in size is not delayed. If mode is set to
+ TCP_MODE_AUTO, the use of Nagle's algorithm is decided based on the network
+ characteristics such as the use of delayed ACKs.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_nagle_algorithm_modeRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_nagle_algorithm_modeResponse"/>
+	</operation>
 	<operation name="set_packet_loss_ignore_burst">
 	<documentation>
  Sets values indicating the likelihood of performing
@@ -9029,6 +9472,26 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileTCP.set_proxy_option_stateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.set_proxy_option_stateResponse"/>
+	</operation>
+	<operation name="set_rate_pace_maximum_rate">
+	<documentation>
+ Sets the maximum rate, in bytes per second, that a flow that
+ has rate pacing enabled may transmit data. The default value
+ of 0 indicates no maximum.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_rate_pace_maximum_rateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_rate_pace_maximum_rateResponse"/>
+	</operation>
+	<operation name="set_rate_pace_state">
+	<documentation>
+ Sets the states that if true, enables rate pacing. This feature
+ causes the system to pace the egress packets to avoid dropping
+ packets, allowing for optimum goodput.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_rate_pace_stateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_rate_pace_stateResponse"/>
 	</operation>
 	<operation name="set_receive_window_size">
 	<documentation>
@@ -9141,6 +9604,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="set_use_nagle_algorithm_state">
 	<documentation>
+ This method is deprecated and new applications should use the set_nagle_algorithm_mode
+ method instead.
+
  Sets the states that if true, delay sending data that is less than MSS in size unless 
  all prior data has been ACKed. This leads to less in-flight small-data, and less chance 
  for drops, but can have poor effects for interactive protocols such as telnet 
@@ -9379,6 +9845,27 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_cmetrics_cache_timeout">
+	<documentation>
+ Gets the expiration for route metrics cache entries for the specified TCP
+ profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_congestion_control_mode">
 	<documentation>
  Gets the TCP congestion control modes for the specified TCP profiles.
@@ -9563,11 +10050,95 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_fast_open_cookie_expiration">
+	<documentation>
+ Gets the fast open cookie expiration for the specified TCP profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_fast_open_state">
+	<documentation>
+ Gets the state that, if enabled, activates support for TCP Fast
+ Open.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_fin_wait_2_timeout">
+	<documentation>
+ Gets the time (in seconds) to remain in FIN-WAIT-2 state before
+ giving up.  Zero is forever (or until max retransmission of FIN).
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_fin_wait_timeout">
 	<documentation>
- Gets the time (in seconds) to remain in FIN-WAIT or CLOSING state before
+ Gets the time (in seconds) to remain in FIN-WAIT-1 or CLOSING state before
  giving up.  Zero is forever (or until max retransmission of FIN).
  
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_hardware_syn_cookie_state">
+	<documentation>
+ Gets the state that if true, enables hardware SYN cookie support.
+ This protects against the SYN flood type of Denial Of Service
+ (DoS) attack.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
 		<input>
@@ -9917,6 +10488,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_nagle_algorithm_mode">
+	<documentation>
+ Gets the mode for the Nagle algorithm.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_packet_loss_ignore_burst">
 	<documentation>
  Gets values indicating the likelihood of performing
@@ -10028,6 +10619,50 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the states that if true, enable proxying of an option (e.g. time-stamps)
  to the server only if it was negotiated with the client.
  
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_rate_pace_maximum_rate">
+	<documentation>
+ Gets the maximum rate, in bytes per second, that a flow that
+ has rate pacing enabled may transmit data. The default value
+ of 0 indicates no maximum.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_rate_pace_state">
+	<documentation>
+ Gets the states that if true, enables rate pacing. This feature
+ causes the system to pace the egress packets to avoid dropping
+ packets, allowing for optimum goodput.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
 		<input>
@@ -10318,11 +10953,14 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_use_nagle_algorithm_state">
 	<documentation>
- Gets the states that if true, delay sending data that is less than MSS in size unless 
- all prior data has been ACKed. This leads to less in-flight small-data, and less chance 
- for drops, but can have poor effects for interactive protocols such as telnet 
+ This method is deprecated and new applications should use the get_nagle_algorithm_mode
+ mode instead.
+
+ Gets the states that if true, delay sending data that is less than MSS in size unless
+ all prior data has been ACKed. This leads to less in-flight small-data, and less chance
+ for drops, but can have poor effects for interactive protocols such as telnet
  over high latency links.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
 		<input>
@@ -10606,6 +11244,29 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_cmetrics_cache_timeout">
+	<documentation>
+ Sets the timeout for route metrics cache entries for the specified TCP
+ profiles. TCP stores congestion parameters on a per-client basis at the end of
+ connections. These parameters are loaded into new connections to that client
+ for the specified duration.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_congestion_control_mode">
 	<documentation>
  Sets the TCP congestion control modes for the specified TCP profiles.
@@ -10798,11 +11459,101 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_fast_open_cookie_expiration">
+	<documentation>
+ Sets the fast open cookie expiration for the specified TCP profiles.
+ This timeout specifies the time, in seconds, for which a TCP Fast
+ Open Cookie granted by the BIG-IP remains valid to accept data
+ delivered with the SYN packet. The origination time is encrypted
+ in the cookie and checked during cookie validation.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_fast_open_state">
+	<documentation>
+ Sets the state that, if enabled, activates support for TCP Fast Open,
+ which allows validated clients to deliver data with SYN packets.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_fin_wait_2_timeout">
+	<documentation>
+ Sets the time (in seconds) to remain in FIN-WAIT-2 state before
+ giving up.  Zero is forever (or until max retransmission of FIN).
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_fin_wait_timeout">
 	<documentation>
- Sets the time (in seconds) to remain in FIN-WAIT or CLOSING state before
+ Sets the time (in seconds) to remain in FIN-WAIT-1 or CLOSING state before
  giving up.  Zero is forever (or until max retransmission of FIN).
  
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_hardware_syn_cookie_state">
+	<documentation>
+ Sets the state that if true, enables hardware SYN cookie support.
+ This protects against the SYN flood type of Denial Of Service
+ (DoS) attack. This is available on most hardware platforms,
+ specifically, those on which PVA10 is present. By default, this
+ setting is enabled.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
 		<input>
@@ -11146,6 +11897,33 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_nagle_algorithm_mode">
+	<documentation>
+ Sets the mode for the Nagle algorithm. If the mode is set to TCP_MODE_ENABLED,
+ sending data is delayed if it is less than MSS in size unless all prior data
+ has been ACKed. This leads to fewer small packets sent and a smaller chance
+ of dropped packets. However, this can have poor effects for interactive protocols
+ such as telnet over high latency links. If the mode is set to TCP_MODE_DISABLED,
+ sending data that is less than MSS in size is not delayed. If mode is set to
+ TCP_MODE_AUTO, the use of Nagle's algorithm is decided based on the network
+ characteristics such as the use of delayed ACKs.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_packet_loss_ignore_burst">
 	<documentation>
  Sets values indicating the likelihood of performing
@@ -11257,6 +12035,50 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the states that if true, enable proxying of an option (e.g. time-stamps)
  to the server only if it was negotiated with the client.
  
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_rate_pace_maximum_rate">
+	<documentation>
+ Sets the maximum rate, in bytes per second, that a flow that
+ has rate pacing enabled may transmit data. The default value
+ of 0 indicates no maximum.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_rate_pace_state">
+	<documentation>
+ Sets the states that if true, enables rate pacing. This feature
+ causes the system to pace the egress packets to avoid dropping
+ packets, allowing for optimum goodput.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
 		<input>
@@ -11516,6 +12338,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="set_use_nagle_algorithm_state">
 	<documentation>
+ This method is deprecated and new applications should use the set_nagle_algorithm_mode
+ method instead.
+
  Sets the states that if true, delay sending data that is less than MSS in size unless 
  all prior data has been ACKed. This leads to less in-flight small-data, and less chance 
  for drops, but can have poor effects for interactive protocols such as telnet 

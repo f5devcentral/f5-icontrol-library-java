@@ -7409,6 +7409,156 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_FW_RULE_LAST_HIT_TIME</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ASSOCIATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ASSOCIATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CLOSING">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CLOSING</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_UNCONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_UNCONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_INACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_INACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CLIENTLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CLIENTLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SERVERLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SERVERLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_FTPS_SESSIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_FTPS_SESSIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_READ_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_READ_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_WRITE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_WRITE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_PASSTHRU_TRANSITIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_PASSTHRU_TRANSITIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_DISCARDED_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_DISCARDED_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_INSPECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_INSPECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_MALFORMED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_MALFORMED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_LOOKUPS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_LOOKUPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_RESPONSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_RESPONSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_VCMP_RED_PACKETS_IN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_VCMP_RED_PACKETS_IN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_CIPHER_CAMELLIA_BULK">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_CIPHER_CAMELLIA_BULK</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_NAPTR_REQS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_NAPTR_REQS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:simpleType name="Common.MetadataPersistence">
@@ -8398,6 +8548,13 @@ All other trademarks mentioned in this document are the property of their respec
  order but not the absolute numbers originally specified for
  ordering.
 
+ Deprecated behavior: This method will add the members to the
+ specified pool of the matching type type A or AAAA, depending
+ on if the member is backed by an IPv4 or IPv6 address,
+ respectively. If a member is specified and the specified
+ pool of the corresponding type (A for IPv4 members and AAAA
+ for IPv6 members) does not exist, it is an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.add_memberRequest"/>
 		<output message="tns:GlobalLB.Pool.add_memberResponse"/>
@@ -8406,6 +8563,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Adds virtual servers that the specified members of the specified
  pools depend on.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.add_member_dependencyRequest"/>
@@ -8419,6 +8580,13 @@ All other trademarks mentioned in this document are the property of their respec
  system maintains the relative order but not the absolute numbers
  originally specified for ordering.
 
+ Deprecated behavior: This method will add the members to the
+ specified pool of the matching type type A or AAAA, depending
+ on if the member is backed by an IPv4 or IPv6 address,
+ respectively. If a member is specified and the specified
+ pool of the corresponding type (A for IPv4 members and AAAA
+ for IPv6 members) does not exist, it is an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.add_member_v2Request"/>
 		<output message="tns:GlobalLB.Pool.add_member_v2Response"/>
@@ -8428,6 +8596,9 @@ All other trademarks mentioned in this document are the property of their respec
  Adds the metadata for the specified pools.
  For definition of the metadata, refer to the get_metadata method
  description.
+
+ Deprecated behavior: This method adds the specified metadata
+ on the specified pools matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.add_metadataRequest"/>
@@ -8445,6 +8616,11 @@ All other trademarks mentioned in this document are the property of their respec
  order but not the absolute numbers originally specified for
  ordering.
 
+ Deprecated behavior: This method will create an A and AAAA type pool
+ and add the members to the pool of the matching type type A or AAAA,
+ depending on if the member is backed by an IPv4 or IPv6 address,
+ respectively.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.createRequest"/>
 		<output message="tns:GlobalLB.Pool.createResponse"/>
@@ -8457,6 +8633,11 @@ All other trademarks mentioned in this document are the property of their respec
  system maintains the relative order but not the absolute numbers
  originally specified for ordering.
 
+ Deprecated behavior: This method will create an A and AAAA type pool
+ and add the members to the pool of the matching type type A or AAAA,
+ depending on if the member is backed by an IPv4 or IPv6 address,
+ respectively.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.create_v2Request"/>
 		<output message="tns:GlobalLB.Pool.create_v2Response"/>
@@ -8464,6 +8645,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="delete_all_pools">
 	<documentation>
  Deletes all pools.
+
+ Deprecated behavior: This method will delete all pools matching types A,
+ AAAA, or CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.delete_all_poolsRequest"/>
@@ -8473,6 +8657,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Deletes the specified pools.
 
+ Deprecated behavior: This method will delete all pools with the specified
+ names that match types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.delete_poolRequest"/>
 		<output message="tns:GlobalLB.Pool.delete_poolResponse"/>
@@ -8480,6 +8667,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_all_statistics">
 	<documentation>
  Gets the statistics for all the pools.
+
+ Deprecated behavior: A given statistics entry returned from this method
+ represents a sum of each of the individual statistics on pools of the
+ specified same name and types A, AAAA, and CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_all_statisticsRequest"/>
@@ -8489,6 +8680,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the alternate load balancing methods for the specified pools.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_alternate_lb_methodRequest"/>
 		<output message="tns:GlobalLB.Pool.get_alternate_lb_methodResponse"/>
@@ -8496,6 +8692,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_answers_to_return">
 	<documentation>
  Gets the number of answers to return for the specified pools.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_answers_to_returnRequest"/>
@@ -8505,6 +8706,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the CNAMEs for the specified pools.
 
+ Deprecated behavior: This method will return the name of the static target
+ cname member on each of the specified cname pools. If the cname pool or
+ static target cname member does not exist, and an A or AAAA pool of the
+ specified name does exists, an empty string will be returned. If no pools
+ of the specified name and type A, AAAA, or CNAME exist, it is an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_cnameRequest"/>
 		<output message="tns:GlobalLB.Pool.get_cnameResponse"/>
@@ -8512,6 +8719,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_description">
 	<documentation>
  Gets the descriptions for a set of pools.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_descriptionRequest"/>
@@ -8521,6 +8733,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the states to indicate whether to use dynamic ratio to modify the behavior of QOS.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_dynamic_ratio_stateRequest"/>
 		<output message="tns:GlobalLB.Pool.get_dynamic_ratio_stateResponse"/>
@@ -8528,6 +8745,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_enabled_state">
 	<documentation>
  Gets the enabled state of the specified pools.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_enabled_stateRequest"/>
@@ -8537,7 +8759,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the fallback/emergency failure IP for the specified pools.
  This method is deprecated; new designs should use get_fallback_ip{v4,v6}.
- 
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. The field will be returned from a type A pool of the
+ specified name, unless that does not exist. In that case then the field from
+ the type AAAA pool is used and if that also does not exist, this method
+ produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_fallback_ipRequest"/>
 		<output message="tns:GlobalLB.Pool.get_fallback_ipResponse"/>
@@ -8545,7 +8773,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_fallback_ipv4">
 	<documentation>
  Gets the fallback/emergency failure IPv4 address for the specified pools.
- 
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name and of type A. If the given type A pool does not exist,
+ this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_fallback_ipv4Request"/>
 		<output message="tns:GlobalLB.Pool.get_fallback_ipv4Response"/>
@@ -8553,7 +8785,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_fallback_ipv6">
 	<documentation>
  Gets the fallback/emergency failure IPv6 address for the specified pools.
- 
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name and of type AAAA. If the given type AAAA pool does not
+ exist, this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_fallback_ipv6Request"/>
 		<output message="tns:GlobalLB.Pool.get_fallback_ipv6Response"/>
@@ -8561,6 +8797,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_fallback_lb_method">
 	<documentation>
  Gets the fallback load balancing methods for the specified pools.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_fallback_lb_methodRequest"/>
@@ -8570,6 +8811,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets all metrics limits for a sequence of pools.
 
+ Deprecated behavior: This method returns the limits from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ limits returned are obtained from either the A or AAAA pool, in that order.
+ If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_limitRequest"/>
 		<output message="tns:GlobalLB.Pool.get_limitResponse"/>
@@ -8577,6 +8823,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_list">
 	<documentation>
  Gets a list of pools.
+
+ Deprecated behavior: This method returns a list of unique pool names. If
+ there is more than one pool with the same name (but of different types A,
+ AAAA, or CNAME), only one of these pools is reported.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_listRequest"/>
@@ -8586,6 +8836,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the states indicating whether to disable pool members when pool member status
  goes from Green to Red.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_manual_resume_stateRequest"/>
@@ -8598,6 +8853,9 @@ All other trademarks mentioned in this document are the property of their respec
 
  Gets a list of pool members.
 
+ Deprecated behavior: This method returns a list of members on the specified
+ pools of type A and AAAA.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_memberRequest"/>
 		<output message="tns:GlobalLB.Pool.get_memberResponse"/>
@@ -8607,6 +8865,10 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the virtual servers that the specified members of the
  specified pools depend on.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_member_dependencyRequest"/>
 		<output message="tns:GlobalLB.Pool.get_member_dependencyResponse"/>
@@ -8614,6 +8876,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_member_description">
 	<documentation>
  Gets the description of a set of pool members in a set of pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_member_descriptionRequest"/>
@@ -8624,6 +8890,10 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the enabled states for the specified members of the specified
  pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_member_enabled_stateRequest"/>
 		<output message="tns:GlobalLB.Pool.get_member_enabled_stateResponse"/>
@@ -8632,6 +8902,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the metric limits for the specified members of the specified
  pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_member_limitRequest"/>
@@ -8642,6 +8916,10 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the monitor rules for the specified members of the specified
  pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_member_monitor_ruleRequest"/>
 		<output message="tns:GlobalLB.Pool.get_member_monitor_ruleResponse"/>
@@ -8649,6 +8927,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_member_object_status">
 	<documentation>
  Gets the statuses for the specified members of the specified pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_member_object_statusRequest"/>
@@ -8658,6 +8940,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the orders for the specified members of the specified pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_member_orderRequest"/>
 		<output message="tns:GlobalLB.Pool.get_member_orderResponse"/>
@@ -8665,6 +8951,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_member_ratio">
 	<documentation>
  Gets the ratios for the specified members of the specified pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_member_ratioRequest"/>
@@ -8675,6 +8965,10 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the statistics for the specified members of the specified
  pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_member_statisticsRequest"/>
 		<output message="tns:GlobalLB.Pool.get_member_statisticsResponse"/>
@@ -8682,6 +8976,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_member_v2">
 	<documentation>
  Gets the members of a set of pools.
+
+ Deprecated behavior: This method returns a list of members on the specified
+ pools of type A and AAAA.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_member_v2Request"/>
@@ -8699,6 +8996,11 @@ All other trademarks mentioned in this document are the property of their respec
  In addition to name/value pair, metadata also has a persistence
  attribute. See Common::MetadataPersistence for its definition.
 
+ Deprecated behavior: This method returns a list of unique metadata
+ objects. Therefore if there is more than one metadata of the same
+ name on the specified pool name (but of different type A, AAAA,
+ or CNAME), only one of these duplicate metadata objects is reported.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_metadataRequest"/>
 		<output message="tns:GlobalLB.Pool.get_metadataResponse"/>
@@ -8708,6 +9010,12 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the metadata descriptions for the specified metadata.
  For definition of the metadata, refer to the get_metadata method
  description.
+
+ Deprecated behavior: This method returns the field from a pool
+ metadata matching the specified name. Since multiple pool metadatas
+ with this name may exist, the value returned is obtained from either
+ the A, AAAA, or CNAME pool metadata, in that order. If none of these
+ pool metadatas exist, this method produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_metadata_descriptionRequest"/>
@@ -8719,6 +9027,12 @@ All other trademarks mentioned in this document are the property of their respec
  For definition of the metadata, refer to the get_metadata method
  description.
 
+ Deprecated behavior: This method returns the field from a pool
+ metadata matching the specified name. Since multiple pool metadatas
+ with this name may exist, the value returned is obtained from either
+ the A, AAAA, or CNAME pool metadata, in that order. If none of these
+ pool metadatas exist, this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_metadata_persistenceRequest"/>
 		<output message="tns:GlobalLB.Pool.get_metadata_persistenceResponse"/>
@@ -8729,6 +9043,12 @@ All other trademarks mentioned in this document are the property of their respec
  For definition of the metadata, refer to the get_metadata method
  description.
 
+ Deprecated behavior: This method returns the field from a pool
+ metadata matching the specified name. Since multiple pool metadatas
+ with this name may exist, the value returned is obtained from either
+ the A, AAAA, or CNAME pool metadata, in that order. If none of these
+ pool metadatas exist, this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_metadata_valueRequest"/>
 		<output message="tns:GlobalLB.Pool.get_metadata_valueResponse"/>
@@ -8736,6 +9056,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_monitor_association">
 	<documentation>
  Gets the monitor associations for the specified pools, i.e. the monitor rules used by the pools.
+
+ Deprecated behavior: This method returns the monitors from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ monitor returned is obtained from either the A or AAAA pool, in that order.
+ If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_monitor_associationRequest"/>
@@ -8745,6 +9070,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the statuses of the specified pools.
 
+ Deprecated behavior: This method returns the best possible answer based on
+ the availability status. For example, if the A pool with the specified name
+ has an 'AVAILABILITY_STATUS_RED' status and the AAAA pool with the
+ specified name has an 'AVAILABILITY_STATUS_GREEN' status, then the full object
+ status of the AAAA pool will be returned as the status of the specified pool.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_object_statusRequest"/>
 		<output message="tns:GlobalLB.Pool.get_object_statusResponse"/>
@@ -8753,6 +9084,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the preferred load balancing methods for the specified pools.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_preferred_lb_methodRequest"/>
 		<output message="tns:GlobalLB.Pool.get_preferred_lb_methodResponse"/>
@@ -8760,6 +9096,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_qos_coefficient_bps">
 	<documentation>
  Gets the relative weight for bits per second when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_qos_coefficient_bpsRequest"/>
@@ -8770,6 +9111,11 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the relative weight for connection rate when the load balancing mode is set to LB_METHOD_QOS.
  This function is deprecated and new applications should use vs_score.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_qos_coefficient_connection_rateRequest"/>
 		<output message="tns:GlobalLB.Pool.get_qos_coefficient_connection_rateResponse"/>
@@ -8777,6 +9123,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_qos_coefficient_hit_ratio">
 	<documentation>
  Gets the relative weight for ping packet completion rate when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_qos_coefficient_hit_ratioRequest"/>
@@ -8786,6 +9137,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the relative weight for hops when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_qos_coefficient_hopsRequest"/>
 		<output message="tns:GlobalLB.Pool.get_qos_coefficient_hopsResponse"/>
@@ -8793,6 +9149,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_qos_coefficient_lcs">
 	<documentation>
  Gets the relative weight for link capacity when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_qos_coefficient_lcsRequest"/>
@@ -8802,6 +9163,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the relative weight for packet rate when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_qos_coefficient_packet_rateRequest"/>
 		<output message="tns:GlobalLB.Pool.get_qos_coefficient_packet_rateResponse"/>
@@ -8809,6 +9175,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_qos_coefficient_rtt">
 	<documentation>
  Gets the relative weight for round-trip time when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_qos_coefficient_rttRequest"/>
@@ -8818,6 +9189,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the relative weight for topology when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_qos_coefficient_topologyRequest"/>
 		<output message="tns:GlobalLB.Pool.get_qos_coefficient_topologyResponse"/>
@@ -8825,6 +9201,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_qos_coefficient_vs_capacity">
 	<documentation>
  Gets the relative weight for virtual server capacity when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_qos_coefficient_vs_capacityRequest"/>
@@ -8834,6 +9215,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the relative weight for virtual server (VS) score when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_qos_coefficient_vs_scoreRequest"/>
 		<output message="tns:GlobalLB.Pool.get_qos_coefficient_vs_scoreResponse"/>
@@ -8841,6 +9227,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_statistics">
 	<documentation>
  Gets the statistics for the specified pools.
+
+ Deprecated behavior: A given statistics entry returned from this method
+ represents a sum of each of the individual statistics on pools of the
+ specified same name and types A, AAAA, and CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_statisticsRequest"/>
@@ -8850,6 +9240,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the TTL values for the specified pools.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_ttlRequest"/>
 		<output message="tns:GlobalLB.Pool.get_ttlResponse"/>
@@ -8858,6 +9253,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the states to indicate whether to check the availability of pool member availability before using them.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_verify_member_availability_stateRequest"/>
@@ -8866,7 +9265,6 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_version">
 	<documentation>
  Gets the version information for this interface.
-
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.get_versionRequest"/>
@@ -8877,6 +9275,10 @@ All other trademarks mentioned in this document are the property of their respec
  Removes all virtual servers that the specified members of the
  specified pools depend on.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.remove_all_member_dependenciesRequest"/>
 		<output message="tns:GlobalLB.Pool.remove_all_member_dependenciesResponse"/>
@@ -8885,6 +9287,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Removes all members from the specified pools.
 
+ Deprecated behavior: This method will remove all members from the
+ specified pool of the matching type type A or AAAA.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.remove_all_membersRequest"/>
 		<output message="tns:GlobalLB.Pool.remove_all_membersResponse"/>
@@ -8892,6 +9297,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="remove_all_metadata">
 	<documentation>
  Removes all the metadata instances for the specified pools.
+
+ Deprecated behavior: This method removes all metadata from all specified
+ pools matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.remove_all_metadataRequest"/>
@@ -8904,6 +9312,13 @@ All other trademarks mentioned in this document are the property of their respec
 
  Removes members from the specified pools.
 
+ Deprecated behavior: This method will remove the members from the
+ specified pool of the matching type type A or AAAA, depending
+ on if the member is backed by an IPv4 or IPv6 address,
+ respectively. If a member is specified and the specified
+ pool of the corresponding type (A for IPv4 members and AAAA
+ for IPv6 members) does not exist, it is an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.remove_memberRequest"/>
 		<output message="tns:GlobalLB.Pool.remove_memberResponse"/>
@@ -8913,6 +9328,10 @@ All other trademarks mentioned in this document are the property of their respec
  Removes virtual servers that the specified members of the specified
  pools depend on.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.remove_member_dependencyRequest"/>
 		<output message="tns:GlobalLB.Pool.remove_member_dependencyResponse"/>
@@ -8920,6 +9339,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="remove_member_v2">
 	<documentation>
  Removes members from the specified pools.
+
+ Deprecated behavior: This method will remove the members from the
+ specified pool of the matching type type A or AAAA, depending
+ on if the member is backed by an IPv4 or IPv6 address,
+ respectively. If a member is specified and the specified
+ pool of the corresponding type (A for IPv4 members and AAAA
+ for IPv6 members) does not exist, it is an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.remove_member_v2Request"/>
@@ -8931,15 +9357,24 @@ All other trademarks mentioned in this document are the property of their respec
  For definition of the metadata, refer to the get_metadata method
  description.
 
+ Deprecated behavior: This method removes the specified metadata
+ from all specified pools matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.remove_metadataRequest"/>
 		<output message="tns:GlobalLB.Pool.remove_metadataResponse"/>
 	</operation>
 	<operation name="remove_monitor_association">
 	<documentation>
- Removes the monitor associations for the specified pools.  This basically deletes the monitor
+ Removes the monitor associations for the specified pools. This basically deletes the monitor
  associations between a pool and a monitor rule, i.e. the specified pools will no longer
  be monitored.
+
+ Deprecated behavior: This method returns the limits from a pool matching
+ the specified name. The limits will be returned from a type A pool of the
+ specified name, unless that does not exist. In that case then the limits from
+ the type AAAA pool are used and if that also does not exist, this method
+ produces an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.remove_monitor_associationRequest"/>
@@ -8950,6 +9385,10 @@ All other trademarks mentioned in this document are the property of their respec
  Resets the statistics for the specified of members of the specified
  pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.reset_member_statisticsRequest"/>
 		<output message="tns:GlobalLB.Pool.reset_member_statisticsResponse"/>
@@ -8957,6 +9396,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_statistics">
 	<documentation>
  Resets the statistics for the specified pools.
+
+ Deprecated behavior: This method will clear all statistics on each of the
+ pools of the specified name and matching the type A, AAAA, or CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.reset_statisticsRequest"/>
@@ -8966,6 +9408,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the alternate load balancing methods for the specified pools.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_alternate_lb_methodRequest"/>
 		<output message="tns:GlobalLB.Pool.set_alternate_lb_methodResponse"/>
@@ -8974,6 +9419,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the number of answers to return for the specified pools.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A or AAAA. Note that CNAME pools can only return
+ one answer (the default), so this value will not be set on any
+ specified CNAME pools.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_answers_to_returnRequest"/>
 		<output message="tns:GlobalLB.Pool.set_answers_to_returnResponse"/>
@@ -8981,6 +9431,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_cname">
 	<documentation>
  Sets the CNAMEs for the specified pools.
+
+ Deprecated behavior: This method will create each specified pool as a
+ CNAME type, if it does not already exist. If it does already exist, it
+ will clear any existing members from each specified pool and add a
+ single static target cname member of the specified cname to the pool.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_cnameRequest"/>
@@ -8992,6 +9447,9 @@ All other trademarks mentioned in this document are the property of their respec
 
  This is an arbitrary field which can be used for any purpose.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_descriptionRequest"/>
 		<output message="tns:GlobalLB.Pool.set_descriptionResponse"/>
@@ -9000,6 +9458,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the states to indicate whether to use dynamic ratio to modify the behavior of QOS.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_dynamic_ratio_stateRequest"/>
 		<output message="tns:GlobalLB.Pool.set_dynamic_ratio_stateResponse"/>
@@ -9007,6 +9468,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_enabled_state">
 	<documentation>
  Sets the enabled state of the specified pools.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_enabled_stateRequest"/>
@@ -9017,6 +9481,12 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the fallback/emergency failure IP for the specified pools.
  This method is deprecated; new designs should use set_fallback_ip{v4,v6}.
 
+ Deprecated behavior: If the specified ip address is IPv4, we will attempt
+ to set on a type A pool of the specified name. If the specified ip address
+ is IPv6, we will attempt to set this ip on the type AAAA pool of the
+ specified name. If the type of pool corresponding to the ip address does
+ not exist, it is an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_fallback_ipRequest"/>
 		<output message="tns:GlobalLB.Pool.set_fallback_ipResponse"/>
@@ -9024,6 +9494,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_fallback_ipv4">
 	<documentation>
  Sets the fallback/emergency failure IPv4 address for the specified pools.
+
+ Deprecated behavior: This method will attempt to set each ip address on a
+ type A pool of the specified name. If the A type of pool does not exist,
+ it is an error.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_fallback_ipv4Request"/>
@@ -9033,6 +9507,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the fallback/emergency failure IPv6 address for the specified pools.
 
+ Deprecated behavior: This method will attempt to set each ip address on a
+ type AAAA pool of the specified name. If the AAAA type of pool does not
+ exist, it is an error.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_fallback_ipv6Request"/>
 		<output message="tns:GlobalLB.Pool.set_fallback_ipv6Response"/>
@@ -9041,6 +9519,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the fallback load balancing methods for the specified pools.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_fallback_lb_methodRequest"/>
 		<output message="tns:GlobalLB.Pool.set_fallback_lb_methodResponse"/>
@@ -9048,6 +9529,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_limit">
 	<documentation>
  Sets the limits for pool metrics.
+
+ Deprecated behavior: The specified limits will be set on all specified pools
+ matching types A or AAAA.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_limitRequest"/>
@@ -9058,6 +9542,9 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the states indicating whether to disable pool members when pool member status
  goes from Green to Red.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_manual_resume_stateRequest"/>
 		<output message="tns:GlobalLB.Pool.set_manual_resume_stateResponse"/>
@@ -9065,6 +9552,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_member_description">
 	<documentation>
  Sets the description of a set of pool members in a set of pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_member_descriptionRequest"/>
@@ -9075,6 +9566,10 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the enabled states for the specified members of the specified
  pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_member_enabled_stateRequest"/>
 		<output message="tns:GlobalLB.Pool.set_member_enabled_stateResponse"/>
@@ -9084,6 +9579,10 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the metric limits for the specified members of the specified
  pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_member_limitRequest"/>
 		<output message="tns:GlobalLB.Pool.set_member_limitResponse"/>
@@ -9092,6 +9591,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the monitor rules for the specified members of the specified
  pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_member_monitor_ruleRequest"/>
@@ -9105,6 +9608,17 @@ All other trademarks mentioned in this document are the property of their respec
  system maintains the relative order but not the absolute numbers
  originally specified for ordering.
 
+ Deprecated behavior: This method splits the members for a given
+ pool into two lists, one of IPv4 address type members and one of
+ IPv6 address type members. The orders specified are set on the
+ given member but each of these two lists are reordered seperately,
+ starting with 0 and with no gaps. Therefore you could potentially
+ see two members on the same pool (name) with the same order, if
+ one member is backed by an IPv4 address and another member is
+ backed by an IPv6 address. This is because one is on the A type
+ pool of the given name and the other is on the AAAA type pool
+ of the same name.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_member_orderRequest"/>
 		<output message="tns:GlobalLB.Pool.set_member_orderResponse"/>
@@ -9112,6 +9626,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_member_ratio">
 	<documentation>
  Sets the ratios for the specified members of the specified pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_member_ratioRequest"/>
@@ -9123,6 +9641,9 @@ All other trademarks mentioned in this document are the property of their respec
  For definition of the metadata, refer to the get_metadata method
  description.
 
+ Deprecated behavior: This field will be set on all specified pool
+ metadatas matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_metadata_descriptionRequest"/>
 		<output message="tns:GlobalLB.Pool.set_metadata_descriptionResponse"/>
@@ -9132,6 +9653,9 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the persistence for the specified metadata.
  For definition of the metadata, refer to the get_metadata method
  description.
+
+ Deprecated behavior: This field will be set on all specified pool
+ metadatas matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_metadata_persistenceRequest"/>
@@ -9143,6 +9667,9 @@ All other trademarks mentioned in this document are the property of their respec
  For definition of the metadata, refer to the get_metadata method
  description.
 
+ Deprecated behavior: This field will be set on all specified pool
+ metadatas matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_metadata_valueRequest"/>
 		<output message="tns:GlobalLB.Pool.set_metadata_valueResponse"/>
@@ -9151,8 +9678,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets/creates the monitor associations for the specified pools. This basically creates the monitor associations
  between a pool and a monitor rule. The 'none' monitor is no longer a valid monitor_template for a MonitorRule.
- Any monitor associations created using the keyword 'none' will be adjusted accordingly and the 'none' monitor 
+ Any monitor associations created using the keyword 'none' will be adjusted accordingly and the 'none' monitor
  removed.
+
+ Deprecated behavior: The specified monitors will be set on all specified pools
+ matching types A or AAAA.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_monitor_associationRequest"/>
@@ -9162,13 +9692,19 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the preferred load balancing methods for the specified pools.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_preferred_lb_methodRequest"/>
 		<output message="tns:GlobalLB.Pool.set_preferred_lb_methodResponse"/>
 	</operation>
 	<operation name="set_qos_coefficient_bps">
 	<documentation>
- Sets the relative weight for bits per second when the load balancing mode is set to LB_METHOD_QOS.
+ Sets the relative weight for kilobits per second when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_qos_coefficient_bpsRequest"/>
@@ -9179,6 +9715,9 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the relative weight for connection rate when the load balancing mode is set to LB_METHOD_QOS.
  This function is deprecated and new applications should use vs_score.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_qos_coefficient_connection_rateRequest"/>
 		<output message="tns:GlobalLB.Pool.set_qos_coefficient_connection_rateResponse"/>
@@ -9186,6 +9725,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_qos_coefficient_hit_ratio">
 	<documentation>
  Sets the relative weight for ping packet completion rate when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_qos_coefficient_hit_ratioRequest"/>
@@ -9195,6 +9737,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the relative weight for hops when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_qos_coefficient_hopsRequest"/>
 		<output message="tns:GlobalLB.Pool.set_qos_coefficient_hopsResponse"/>
@@ -9202,6 +9747,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_qos_coefficient_lcs">
 	<documentation>
  Sets the relative weight for link capacity when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_qos_coefficient_lcsRequest"/>
@@ -9211,6 +9759,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the relative weight for packet rate when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_qos_coefficient_packet_rateRequest"/>
 		<output message="tns:GlobalLB.Pool.set_qos_coefficient_packet_rateResponse"/>
@@ -9218,6 +9769,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_qos_coefficient_rtt">
 	<documentation>
  Sets the relative weight for round-trip time when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_qos_coefficient_rttRequest"/>
@@ -9227,6 +9781,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the relative weight for topology when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_qos_coefficient_topologyRequest"/>
 		<output message="tns:GlobalLB.Pool.set_qos_coefficient_topologyResponse"/>
@@ -9234,6 +9791,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_qos_coefficient_vs_capacity">
 	<documentation>
  Sets the relative weight for virtual server capacity when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_qos_coefficient_vs_capacityRequest"/>
@@ -9243,6 +9803,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the relative weight for virtual server (VS) score when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_qos_coefficient_vs_scoreRequest"/>
 		<output message="tns:GlobalLB.Pool.set_qos_coefficient_vs_scoreResponse"/>
@@ -9251,6 +9814,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the TTL values for the specified pools.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_ttlRequest"/>
 		<output message="tns:GlobalLB.Pool.set_ttlResponse"/>
@@ -9258,6 +9824,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_verify_member_availability_state">
 	<documentation>
  Sets the states to indicate whether to check the availability of pool member availability before using them.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<input message="tns:GlobalLB.Pool.set_verify_member_availability_stateRequest"/>
@@ -9281,6 +9850,13 @@ All other trademarks mentioned in this document are the property of their respec
  order but not the absolute numbers originally specified for
  ordering.
 
+ Deprecated behavior: This method will add the members to the
+ specified pool of the matching type type A or AAAA, depending
+ on if the member is backed by an IPv4 or IPv6 address,
+ respectively. If a member is specified and the specified
+ pool of the corresponding type (A for IPv4 members and AAAA
+ for IPv6 members) does not exist, it is an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9301,6 +9877,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Adds virtual servers that the specified members of the specified
  pools depend on.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9326,6 +9906,13 @@ All other trademarks mentioned in this document are the property of their respec
  system maintains the relative order but not the absolute numbers
  originally specified for ordering.
 
+ Deprecated behavior: This method will add the members to the
+ specified pool of the matching type type A or AAAA, depending
+ on if the member is backed by an IPv4 or IPv6 address,
+ respectively. If a member is specified and the specified
+ pool of the corresponding type (A for IPv4 members and AAAA
+ for IPv6 members) does not exist, it is an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9347,6 +9934,9 @@ All other trademarks mentioned in this document are the property of their respec
  Adds the metadata for the specified pools.
  For definition of the metadata, refer to the get_metadata method
  description.
+
+ Deprecated behavior: This method adds the specified metadata
+ on the specified pools matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9376,6 +9966,11 @@ All other trademarks mentioned in this document are the property of their respec
  order but not the absolute numbers originally specified for
  ordering.
 
+ Deprecated behavior: This method will create an A and AAAA type pool
+ and add the members to the pool of the matching type type A or AAAA,
+ depending on if the member is backed by an IPv4 or IPv6 address,
+ respectively.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9400,6 +9995,11 @@ All other trademarks mentioned in this document are the property of their respec
  system maintains the relative order but not the absolute numbers
  originally specified for ordering.
 
+ Deprecated behavior: This method will create an A and AAAA type pool
+ and add the members to the pool of the matching type type A or AAAA,
+ depending on if the member is backed by an IPv4 or IPv6 address,
+ respectively.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9419,6 +10019,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="delete_all_pools">
 	<documentation>
  Deletes all pools.
+
+ Deprecated behavior: This method will delete all pools matching types A,
+ AAAA, or CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9440,6 +10043,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Deletes the specified pools.
 
+ Deprecated behavior: This method will delete all pools with the specified
+ names that match types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9459,6 +10065,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_all_statistics">
 	<documentation>
  Gets the statistics for all the pools.
+
+ Deprecated behavior: A given statistics entry returned from this method
+ represents a sum of each of the individual statistics on pools of the
+ specified same name and types A, AAAA, and CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9480,6 +10090,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the alternate load balancing methods for the specified pools.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9499,6 +10114,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_answers_to_return">
 	<documentation>
  Gets the number of answers to return for the specified pools.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9520,6 +10140,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the CNAMEs for the specified pools.
 
+ Deprecated behavior: This method will return the name of the static target
+ cname member on each of the specified cname pools. If the cname pool or
+ static target cname member does not exist, and an A or AAAA pool of the
+ specified name does exists, an empty string will be returned. If no pools
+ of the specified name and type A, AAAA, or CNAME exist, it is an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9539,6 +10165,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_description">
 	<documentation>
  Gets the descriptions for a set of pools.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9560,6 +10191,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the states to indicate whether to use dynamic ratio to modify the behavior of QOS.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9579,6 +10215,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_enabled_state">
 	<documentation>
  Gets the enabled state of the specified pools.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9600,7 +10241,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the fallback/emergency failure IP for the specified pools.
  This method is deprecated; new designs should use get_fallback_ip{v4,v6}.
- 
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. The field will be returned from a type A pool of the
+ specified name, unless that does not exist. In that case then the field from
+ the type AAAA pool is used and if that also does not exist, this method
+ produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9620,7 +10267,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_fallback_ipv4">
 	<documentation>
  Gets the fallback/emergency failure IPv4 address for the specified pools.
- 
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name and of type A. If the given type A pool does not exist,
+ this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9640,7 +10291,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_fallback_ipv6">
 	<documentation>
  Gets the fallback/emergency failure IPv6 address for the specified pools.
- 
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name and of type AAAA. If the given type AAAA pool does not
+ exist, this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9660,6 +10315,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_fallback_lb_method">
 	<documentation>
  Gets the fallback load balancing methods for the specified pools.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9681,6 +10341,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets all metrics limits for a sequence of pools.
 
+ Deprecated behavior: This method returns the limits from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ limits returned are obtained from either the A or AAAA pool, in that order.
+ If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9700,6 +10365,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_list">
 	<documentation>
  Gets a list of pools.
+
+ Deprecated behavior: This method returns a list of unique pool names. If
+ there is more than one pool with the same name (but of different types A,
+ AAAA, or CNAME), only one of these pools is reported.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9721,6 +10390,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the states indicating whether to disable pool members when pool member status
  goes from Green to Red.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9745,6 +10419,9 @@ All other trademarks mentioned in this document are the property of their respec
 
  Gets a list of pool members.
 
+ Deprecated behavior: This method returns a list of members on the specified
+ pools of type A and AAAA.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9766,6 +10443,10 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the virtual servers that the specified members of the
  specified pools depend on.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9785,6 +10466,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_member_description">
 	<documentation>
  Gets the description of a set of pool members in a set of pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9807,6 +10492,10 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the enabled states for the specified members of the specified
  pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9827,6 +10516,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the metric limits for the specified members of the specified
  pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9849,6 +10542,10 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the monitor rules for the specified members of the specified
  pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9868,6 +10565,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_member_object_status">
 	<documentation>
  Gets the statuses for the specified members of the specified pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9889,6 +10590,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the orders for the specified members of the specified pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9908,6 +10613,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_member_ratio">
 	<documentation>
  Gets the ratios for the specified members of the specified pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9930,6 +10639,10 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the statistics for the specified members of the specified
  pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9949,6 +10662,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_member_v2">
 	<documentation>
  Gets the members of a set of pools.
+
+ Deprecated behavior: This method returns a list of members on the specified
+ pools of type A and AAAA.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -9978,6 +10694,11 @@ All other trademarks mentioned in this document are the property of their respec
  In addition to name/value pair, metadata also has a persistence
  attribute. See Common::MetadataPersistence for its definition.
 
+ Deprecated behavior: This method returns a list of unique metadata
+ objects. Therefore if there is more than one metadata of the same
+ name on the specified pool name (but of different type A, AAAA,
+ or CNAME), only one of these duplicate metadata objects is reported.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -9999,6 +10720,12 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the metadata descriptions for the specified metadata.
  For definition of the metadata, refer to the get_metadata method
  description.
+
+ Deprecated behavior: This method returns the field from a pool
+ metadata matching the specified name. Since multiple pool metadatas
+ with this name may exist, the value returned is obtained from either
+ the A, AAAA, or CNAME pool metadata, in that order. If none of these
+ pool metadatas exist, this method produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10022,6 +10749,12 @@ All other trademarks mentioned in this document are the property of their respec
  For definition of the metadata, refer to the get_metadata method
  description.
 
+ Deprecated behavior: This method returns the field from a pool
+ metadata matching the specified name. Since multiple pool metadatas
+ with this name may exist, the value returned is obtained from either
+ the A, AAAA, or CNAME pool metadata, in that order. If none of these
+ pool metadatas exist, this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10044,6 +10777,12 @@ All other trademarks mentioned in this document are the property of their respec
  For definition of the metadata, refer to the get_metadata method
  description.
 
+ Deprecated behavior: This method returns the field from a pool
+ metadata matching the specified name. Since multiple pool metadatas
+ with this name may exist, the value returned is obtained from either
+ the A, AAAA, or CNAME pool metadata, in that order. If none of these
+ pool metadatas exist, this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10063,6 +10802,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_monitor_association">
 	<documentation>
  Gets the monitor associations for the specified pools, i.e. the monitor rules used by the pools.
+
+ Deprecated behavior: This method returns the monitors from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ monitor returned is obtained from either the A or AAAA pool, in that order.
+ If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10084,6 +10828,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the statuses of the specified pools.
 
+ Deprecated behavior: This method returns the best possible answer based on
+ the availability status. For example, if the A pool with the specified name
+ has an 'AVAILABILITY_STATUS_RED' status and the AAAA pool with the
+ specified name has an 'AVAILABILITY_STATUS_GREEN' status, then the full object
+ status of the AAAA pool will be returned as the status of the specified pool.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10104,6 +10854,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the preferred load balancing methods for the specified pools.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10123,6 +10878,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_qos_coefficient_bps">
 	<documentation>
  Gets the relative weight for bits per second when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10145,6 +10905,11 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the relative weight for connection rate when the load balancing mode is set to LB_METHOD_QOS.
  This function is deprecated and new applications should use vs_score.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10164,6 +10929,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_qos_coefficient_hit_ratio">
 	<documentation>
  Gets the relative weight for ping packet completion rate when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10185,6 +10955,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the relative weight for hops when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10204,6 +10979,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_qos_coefficient_lcs">
 	<documentation>
  Gets the relative weight for link capacity when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10225,6 +11005,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the relative weight for packet rate when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10244,6 +11029,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_qos_coefficient_rtt">
 	<documentation>
  Gets the relative weight for round-trip time when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10265,6 +11055,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the relative weight for topology when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10284,6 +11079,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_qos_coefficient_vs_capacity">
 	<documentation>
  Gets the relative weight for virtual server capacity when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10305,6 +11105,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the relative weight for virtual server (VS) score when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10324,6 +11129,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_statistics">
 	<documentation>
  Gets the statistics for the specified pools.
+
+ Deprecated behavior: A given statistics entry returned from this method
+ represents a sum of each of the individual statistics on pools of the
+ specified same name and types A, AAAA, and CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10345,6 +11154,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the TTL values for the specified pools.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10365,6 +11179,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the states to indicate whether to check the availability of pool member availability before using them.
 
+ Deprecated behavior: This method returns the field from a pool matching
+ the specified name. Since multiple pools with this name may exist, the
+ value returned is obtained from either the A, AAAA, or CNAME pool, in
+ that order. If none of these pools exist, this method produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10385,7 +11203,6 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_version">
 	<documentation>
  Gets the version information for this interface.
-
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10408,6 +11225,10 @@ All other trademarks mentioned in this document are the property of their respec
  Removes all virtual servers that the specified members of the
  specified pools depend on.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10428,6 +11249,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Removes all members from the specified pools.
 
+ Deprecated behavior: This method will remove all members from the
+ specified pool of the matching type type A or AAAA.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10447,6 +11271,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="remove_all_metadata">
 	<documentation>
  Removes all the metadata instances for the specified pools.
+
+ Deprecated behavior: This method removes all metadata from all specified
+ pools matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10471,6 +11298,13 @@ All other trademarks mentioned in this document are the property of their respec
 
  Removes members from the specified pools.
 
+ Deprecated behavior: This method will remove the members from the
+ specified pool of the matching type type A or AAAA, depending
+ on if the member is backed by an IPv4 or IPv6 address,
+ respectively. If a member is specified and the specified
+ pool of the corresponding type (A for IPv4 members and AAAA
+ for IPv6 members) does not exist, it is an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10492,6 +11326,10 @@ All other trademarks mentioned in this document are the property of their respec
  Removes virtual servers that the specified members of the specified
  pools depend on.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10511,6 +11349,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="remove_member_v2">
 	<documentation>
  Removes members from the specified pools.
+
+ Deprecated behavior: This method will remove the members from the
+ specified pool of the matching type type A or AAAA, depending
+ on if the member is backed by an IPv4 or IPv6 address,
+ respectively. If a member is specified and the specified
+ pool of the corresponding type (A for IPv4 members and AAAA
+ for IPv6 members) does not exist, it is an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10534,6 +11379,9 @@ All other trademarks mentioned in this document are the property of their respec
  For definition of the metadata, refer to the get_metadata method
  description.
 
+ Deprecated behavior: This method removes the specified metadata
+ from all specified pools matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10552,9 +11400,15 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="remove_monitor_association">
 	<documentation>
- Removes the monitor associations for the specified pools.  This basically deletes the monitor
+ Removes the monitor associations for the specified pools. This basically deletes the monitor
  associations between a pool and a monitor rule, i.e. the specified pools will no longer
  be monitored.
+
+ Deprecated behavior: This method returns the limits from a pool matching
+ the specified name. The limits will be returned from a type A pool of the
+ specified name, unless that does not exist. In that case then the limits from
+ the type AAAA pool are used and if that also does not exist, this method
+ produces an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10577,6 +11431,10 @@ All other trademarks mentioned in this document are the property of their respec
  Resets the statistics for the specified of members of the specified
  pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10596,6 +11454,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_statistics">
 	<documentation>
  Resets the statistics for the specified pools.
+
+ Deprecated behavior: This method will clear all statistics on each of the
+ pools of the specified name and matching the type A, AAAA, or CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10617,6 +11478,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the alternate load balancing methods for the specified pools.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10637,6 +11501,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the number of answers to return for the specified pools.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A or AAAA. Note that CNAME pools can only return
+ one answer (the default), so this value will not be set on any
+ specified CNAME pools.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10656,6 +11525,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_cname">
 	<documentation>
  Sets the CNAMEs for the specified pools.
+
+ Deprecated behavior: This method will create each specified pool as a
+ CNAME type, if it does not already exist. If it does already exist, it
+ will clear any existing members from each specified pool and add a
+ single static target cname member of the specified cname to the pool.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10679,6 +11553,9 @@ All other trademarks mentioned in this document are the property of their respec
 
  This is an arbitrary field which can be used for any purpose.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10699,6 +11576,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the states to indicate whether to use dynamic ratio to modify the behavior of QOS.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10718,6 +11598,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_enabled_state">
 	<documentation>
  Sets the enabled state of the specified pools.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10740,6 +11623,12 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the fallback/emergency failure IP for the specified pools.
  This method is deprecated; new designs should use set_fallback_ip{v4,v6}.
 
+ Deprecated behavior: If the specified ip address is IPv4, we will attempt
+ to set on a type A pool of the specified name. If the specified ip address
+ is IPv6, we will attempt to set this ip on the type AAAA pool of the
+ specified name. If the type of pool corresponding to the ip address does
+ not exist, it is an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10759,6 +11648,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_fallback_ipv4">
 	<documentation>
  Sets the fallback/emergency failure IPv4 address for the specified pools.
+
+ Deprecated behavior: This method will attempt to set each ip address on a
+ type A pool of the specified name. If the A type of pool does not exist,
+ it is an error.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10780,6 +11673,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the fallback/emergency failure IPv6 address for the specified pools.
 
+ Deprecated behavior: This method will attempt to set each ip address on a
+ type AAAA pool of the specified name. If the AAAA type of pool does not
+ exist, it is an error.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10800,6 +11697,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the fallback load balancing methods for the specified pools.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10819,6 +11719,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_limit">
 	<documentation>
  Sets the limits for pool metrics.
+
+ Deprecated behavior: The specified limits will be set on all specified pools
+ matching types A or AAAA.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10841,6 +11744,9 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the states indicating whether to disable pool members when pool member status
  goes from Green to Red.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10860,6 +11766,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_member_description">
 	<documentation>
  Sets the description of a set of pool members in a set of pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10882,6 +11792,10 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the enabled states for the specified members of the specified
  pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10903,6 +11817,10 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the metric limits for the specified members of the specified
  pools.
 
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10923,6 +11841,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the monitor rules for the specified members of the specified
  pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10948,6 +11870,17 @@ All other trademarks mentioned in this document are the property of their respec
  system maintains the relative order but not the absolute numbers
  originally specified for ordering.
 
+ Deprecated behavior: This method splits the members for a given
+ pool into two lists, one of IPv4 address type members and one of
+ IPv6 address type members. The orders specified are set on the
+ given member but each of these two lists are reordered seperately,
+ starting with 0 and with no gaps. Therefore you could potentially
+ see two members on the same pool (name) with the same order, if
+ one member is backed by an IPv4 address and another member is
+ backed by an IPv6 address. This is because one is on the A type
+ pool of the given name and the other is on the AAAA type pool
+ of the same name.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -10967,6 +11900,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_member_ratio">
 	<documentation>
  Sets the ratios for the specified members of the specified pools.
+
+ Deprecated behavior: There is no change in behavior since the type
+ of pool is implicit in the IP address type of the member (IPv4
+ members on type A pools and IPv6 members on type AAAA pools).
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -10990,6 +11927,9 @@ All other trademarks mentioned in this document are the property of their respec
  For definition of the metadata, refer to the get_metadata method
  description.
 
+ Deprecated behavior: This field will be set on all specified pool
+ metadatas matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -11011,6 +11951,9 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the persistence for the specified metadata.
  For definition of the metadata, refer to the get_metadata method
  description.
+
+ Deprecated behavior: This field will be set on all specified pool
+ metadatas matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -11034,6 +11977,9 @@ All other trademarks mentioned in this document are the property of their respec
  For definition of the metadata, refer to the get_metadata method
  description.
 
+ Deprecated behavior: This field will be set on all specified pool
+ metadatas matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -11054,8 +12000,11 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets/creates the monitor associations for the specified pools. This basically creates the monitor associations
  between a pool and a monitor rule. The 'none' monitor is no longer a valid monitor_template for a MonitorRule.
- Any monitor associations created using the keyword 'none' will be adjusted accordingly and the 'none' monitor 
+ Any monitor associations created using the keyword 'none' will be adjusted accordingly and the 'none' monitor
  removed.
+
+ Deprecated behavior: The specified monitors will be set on all specified pools
+ matching types A or AAAA.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -11077,6 +12026,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the preferred load balancing methods for the specified pools.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -11095,7 +12047,10 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="set_qos_coefficient_bps">
 	<documentation>
- Sets the relative weight for bits per second when the load balancing mode is set to LB_METHOD_QOS.
+ Sets the relative weight for kilobits per second when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -11118,6 +12073,9 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the relative weight for connection rate when the load balancing mode is set to LB_METHOD_QOS.
  This function is deprecated and new applications should use vs_score.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -11137,6 +12095,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_qos_coefficient_hit_ratio">
 	<documentation>
  Sets the relative weight for ping packet completion rate when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -11158,6 +12119,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the relative weight for hops when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -11177,6 +12141,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_qos_coefficient_lcs">
 	<documentation>
  Sets the relative weight for link capacity when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -11198,6 +12165,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the relative weight for packet rate when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -11217,6 +12187,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_qos_coefficient_rtt">
 	<documentation>
  Sets the relative weight for round-trip time when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -11238,6 +12211,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the relative weight for topology when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -11257,6 +12233,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_qos_coefficient_vs_capacity">
 	<documentation>
  Sets the relative weight for virtual server capacity when the load balancing mode is set to LB_METHOD_QOS.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -11278,6 +12257,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the relative weight for virtual server (VS) score when the load balancing mode is set to LB_METHOD_QOS.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -11298,6 +12280,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the TTL values for the specified pools.
 
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
 		<input>
@@ -11317,6 +12302,9 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_verify_member_availability_state">
 	<documentation>
  Sets the states to indicate whether to check the availability of pool member availability before using them.
+
+ Deprecated behavior: This field will be set on all specified pools
+ matching types A, AAAA, or CNAME.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Pool"/>
@@ -11339,6 +12327,12 @@ All other trademarks mentioned in this document are the property of their respec
 
 <service name="GlobalLB.Pool">
 	<documentation>
+ *IMPORTANT*  Due to changing pool key definitions (pools are now identified by a name
+ and a query type), this entire interface is deprecated as of BIG-IP_v12.0.0. Please use the
+ GlobalLB::PoolV2 interface to work with pools; continuing to use the deprecated
+ GlobalLB::Pool interface against BIG-IP_v12.0.0 and later versions can result in unintended
+ configurations and behavior.
+
  The Pool interface enables you to work with pools and their attributes.
 
         	</documentation>

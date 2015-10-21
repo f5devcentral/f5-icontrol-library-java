@@ -176,6 +176,14 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="Networking.ProfileV6RD.set_v4_prefixResponse">
 </message>
 
+<message name="Networking.ProfileV6RD.set_v4_prefix_and_lengthRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="prefixes" type="tns:Common.ProfileIPAddressSequence"/>
+	<part name="lengths" type="tns:Common.ProfileULongSequence"/>
+</message>
+<message name="Networking.ProfileV6RD.set_v4_prefix_and_lengthResponse">
+</message>
+
 <message name="Networking.ProfileV6RD.set_v4_prefix_lengthRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="lengths" type="tns:Common.ProfileULongSequence"/>
@@ -188,6 +196,14 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="prefixes" type="tns:Common.ProfileIPAddressSequence"/>
 </message>
 <message name="Networking.ProfileV6RD.set_v6_prefixResponse">
+</message>
+
+<message name="Networking.ProfileV6RD.set_v6_prefix_and_lengthRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="prefixes" type="tns:Common.ProfileIPAddressSequence"/>
+	<part name="lengths" type="tns:Common.ProfileULongSequence"/>
+</message>
+<message name="Networking.ProfileV6RD.set_v6_prefix_and_lengthResponse">
 </message>
 
 <message name="Networking.ProfileV6RD.set_v6_prefix_lengthRequest">
@@ -343,6 +359,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Networking.ProfileV6RD.set_v4_prefixRequest"/>
 		<output message="tns:Networking.ProfileV6RD.set_v4_prefixResponse"/>
 	</operation>
+	<operation name="set_v4_prefix_and_length">
+	<documentation>
+ Sets both the IPv4 address prefixes and lengths of 6RD tunnel profiles.
+
+        	</documentation>
+		<input message="tns:Networking.ProfileV6RD.set_v4_prefix_and_lengthRequest"/>
+		<output message="tns:Networking.ProfileV6RD.set_v4_prefix_and_lengthResponse"/>
+	</operation>
 	<operation name="set_v4_prefix_length">
 	<documentation>
  Sets the 6RD domain IPv4 prefix lengths for 6RD tunnel profiles.
@@ -358,6 +382,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Networking.ProfileV6RD.set_v6_prefixRequest"/>
 		<output message="tns:Networking.ProfileV6RD.set_v6_prefixResponse"/>
+	</operation>
+	<operation name="set_v6_prefix_and_length">
+	<documentation>
+ Sets both the IPv6 address prefixes and lengths of 6RD tunnel profiles.
+
+        	</documentation>
+		<input message="tns:Networking.ProfileV6RD.set_v6_prefix_and_lengthRequest"/>
+		<output message="tns:Networking.ProfileV6RD.set_v6_prefix_and_lengthResponse"/>
 	</operation>
 	<operation name="set_v6_prefix_length">
 	<documentation>
@@ -708,6 +740,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_v4_prefix_and_length">
+	<documentation>
+ Sets both the IPv4 address prefixes and lengths of 6RD tunnel profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Networking/ProfileV6RD"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/ProfileV6RD"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/ProfileV6RD"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_v4_prefix_length">
 	<documentation>
  Sets the 6RD domain IPv4 prefix lengths for 6RD tunnel profiles.
@@ -731,6 +783,26 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_v6_prefix">
 	<documentation>
  Sets the 6RD prefixes for 6RD tunnel profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Networking/ProfileV6RD"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/ProfileV6RD"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/ProfileV6RD"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_v6_prefix_and_length">
+	<documentation>
+ Sets both the IPv6 address prefixes and lengths of 6RD tunnel profiles.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/ProfileV6RD"/>

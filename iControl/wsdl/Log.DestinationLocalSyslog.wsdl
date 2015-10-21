@@ -456,10 +456,10 @@ All other trademarks mentioned in this document are the property of their respec
 <service name="Log.DestinationLocalSyslog">
 	<documentation>
  The DestinationLocalSyslog interface enables you to modify the local
- syslog destination. This destination will format messages to be logged
- on the system. There will be only one local syslog destination, and it
- cannot be created or deleted. The local syslog destination is named
- "local-syslog". Supply this key to the methods in the interface.
+ syslog destination. This forwarding destination will format messages to
+ be logged on the system. There will be only one local syslog destination,
+ and it cannot be created or deleted. The local syslog destination is
+ named "local-syslog". Supply this key to the methods in the interface.
 
         	</documentation>
 	<port name="Log.DestinationLocalSyslogPort" binding="tns:Log.DestinationLocalSyslogBinding">

@@ -7279,6 +7279,156 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_FW_RULE_LAST_HIT_TIME</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ASSOCIATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ASSOCIATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CLOSING">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CLOSING</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_UNCONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_UNCONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_INACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_INACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CLIENTLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CLIENTLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SERVERLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SERVERLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_FTPS_SESSIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_FTPS_SESSIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_READ_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_READ_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_WRITE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_WRITE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_PASSTHRU_TRANSITIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_PASSTHRU_TRANSITIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_DISCARDED_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_DISCARDED_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_INSPECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_INSPECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_MALFORMED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_MALFORMED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_LOOKUPS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_LOOKUPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_RESPONSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_RESPONSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_VCMP_RED_PACKETS_IN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_VCMP_RED_PACKETS_IN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_CIPHER_CAMELLIA_BULK">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_CIPHER_CAMELLIA_BULK</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_NAPTR_REQS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_NAPTR_REQS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="Common.DoubleSequence">
@@ -7523,6 +7673,12 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="System.Statistics.get_authentication_statisticsRequest">
 </message>
 <message name="System.Statistics.get_authentication_statisticsResponse">
+	<part name="return" type="tns:System.Statistics.SystemStatistics"/>
+</message>
+
+<message name="System.Statistics.get_client_ldap_statisticsRequest">
+</message>
+<message name="System.Statistics.get_client_ldap_statisticsResponse">
 	<part name="return" type="tns:System.Statistics.SystemStatistics"/>
 </message>
 
@@ -7829,6 +7985,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:System.Statistics.SystemStatistics"/>
 </message>
 
+<message name="System.Statistics.get_server_ldap_statisticsRequest">
+</message>
+<message name="System.Statistics.get_server_ldap_statisticsResponse">
+	<part name="return" type="tns:System.Statistics.SystemStatistics"/>
+</message>
+
 <message name="System.Statistics.get_server_ssl_statisticsRequest">
 </message>
 <message name="System.Statistics.get_server_ssl_statisticsResponse">
@@ -7868,6 +8030,12 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="System.Statistics.get_tcp_statisticsRequest">
 </message>
 <message name="System.Statistics.get_tcp_statisticsResponse">
+	<part name="return" type="tns:System.Statistics.SystemStatistics"/>
+</message>
+
+<message name="System.Statistics.get_tftp_statisticsRequest">
+</message>
+<message name="System.Statistics.get_tftp_statisticsResponse">
 	<part name="return" type="tns:System.Statistics.SystemStatistics"/>
 </message>
 
@@ -7917,6 +8085,11 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="System.Statistics.reset_authentication_statisticsRequest">
 </message>
 <message name="System.Statistics.reset_authentication_statisticsResponse">
+</message>
+
+<message name="System.Statistics.reset_client_ldap_statisticsRequest">
+</message>
+<message name="System.Statistics.reset_client_ldap_statisticsResponse">
 </message>
 
 <message name="System.Statistics.reset_client_ssl_statisticsRequest">
@@ -8098,6 +8271,11 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="System.Statistics.reset_sctp_statisticsResponse">
 </message>
 
+<message name="System.Statistics.reset_server_ldap_statisticsRequest">
+</message>
+<message name="System.Statistics.reset_server_ldap_statisticsResponse">
+</message>
+
 <message name="System.Statistics.reset_server_ssl_statisticsRequest">
 </message>
 <message name="System.Statistics.reset_server_ssl_statisticsResponse">
@@ -8133,6 +8311,11 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="System.Statistics.reset_tcp_statisticsResponse">
 </message>
 
+<message name="System.Statistics.reset_tftp_statisticsRequest">
+</message>
+<message name="System.Statistics.reset_tftp_statisticsResponse">
+</message>
+
 <message name="System.Statistics.reset_udp_statisticsRequest">
 </message>
 <message name="System.Statistics.reset_udp_statisticsResponse">
@@ -8163,7 +8346,7 @@ All other trademarks mentioned in this document are the property of their respec
  get_all_gtm_iquery_statistics_v2 in the future.
 
  Gets the statistics for all the iQueries.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_all_gtm_iquery_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_all_gtm_iquery_statisticsResponse"/>
@@ -8171,7 +8354,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_all_gtm_iquery_statistics_v2">
 	<documentation>
  Gets the statistics for all the iQueries.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_all_gtm_iquery_statistics_v2Request"/>
 		<output message="tns:System.Statistics.get_all_gtm_iquery_statistics_v2Response"/>
@@ -8180,7 +8363,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets all of the system's host statistics.
  Note that CPU usage statistics by host are available but not retrieved by this method.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_all_host_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_all_host_statisticsResponse"/>
@@ -8188,7 +8371,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_all_pva_statistics">
 	<documentation>
  Gets all of the system's PVA statistics.
- 
+
+ Note: The pva_id field in each PVAStatisticEntry of the PVAStatistics
+ returned will be '0.0'.
+
         	</documentation>
 		<input message="tns:System.Statistics.get_all_pva_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_all_pva_statisticsResponse"/>
@@ -8196,7 +8382,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_all_tmm_statistics">
 	<documentation>
  Gets all of the system's TMOS processing agent statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_all_tmm_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_all_tmm_statisticsResponse"/>
@@ -8207,25 +8393,34 @@ All other trademarks mentioned in this document are the property of their respec
  internal, implementation-specific details.
 
  Gets the statistics for all the virtual compression devices.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_all_virtual_compression_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_all_virtual_compression_statisticsResponse"/>
 	</operation>
 	<operation name="get_authentication_statistics">
 	<documentation>
- Gets the system's global authentication statistics. These are the roll-ups of all the individual 
+ Gets the system's global authentication statistics. These are the roll-ups of all the individual
  authentication profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_authentication_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_authentication_statisticsResponse"/>
 	</operation>
+	<operation name="get_client_ldap_statistics">
+	<documentation>
+ Gets the system's global client LDAP statistics. These are the roll-ups of all the individual
+ client LDAP profiles' statistics.
+
+        	</documentation>
+		<input message="tns:System.Statistics.get_client_ldap_statisticsRequest"/>
+		<output message="tns:System.Statistics.get_client_ldap_statisticsResponse"/>
+	</operation>
 	<operation name="get_client_ssl_statistics">
 	<documentation>
- Gets the system's global client SSL statistics. These are the roll-ups of all the individual 
+ Gets the system's global client SSL statistics. These are the roll-ups of all the individual
  client SSL profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_client_ssl_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_client_ssl_statisticsResponse"/>
@@ -8235,42 +8430,42 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the system's global Diameter statistics. These are the
  roll-ups of all the individual Diameter profiles'
  statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_diameter_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_diameter_statisticsResponse"/>
 	</operation>
 	<operation name="get_dns_server_statistics">
 	<documentation>
- Gets the system's global DNS server statistics. These are the roll-ups of all the individual 
+ Gets the system's global DNS server statistics. These are the roll-ups of all the individual
  DNS servers' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_dns_server_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_dns_server_statisticsResponse"/>
 	</operation>
 	<operation name="get_dns_statistics">
 	<documentation>
- Gets the system's global DNS profile statistics. These are the roll-ups of all the individual 
+ Gets the system's global DNS profile statistics. These are the roll-ups of all the individual
  DNS profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_dns_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_dns_statisticsResponse"/>
 	</operation>
 	<operation name="get_dnssec_statistics">
 	<documentation>
- Gets the system's global DNSSEC zone statistics. These are the roll-ups of all the individual 
+ Gets the system's global DNSSEC zone statistics. These are the roll-ups of all the individual
  DNSSEC zones' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_dnssec_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_dnssec_statisticsResponse"/>
 	</operation>
 	<operation name="get_fasthttp_statistics">
-	<documentation> 
- Gets the system's global Fast HTTP statistics. These are the roll-ups of 
- all the individual Fast HTTP profiles' statistics. 
+	<documentation>
+ Gets the system's global Fast HTTP statistics. These are the roll-ups of
+ all the individual Fast HTTP profiles' statistics.
 
         	</documentation>
 		<input message="tns:System.Statistics.get_fasthttp_statisticsRequest"/>
@@ -8278,9 +8473,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_fastl4_statistics">
 	<documentation>
- Gets the system's global FastL4 statistics. These are the roll-ups of all the individual 
+ Gets the system's global FastL4 statistics. These are the roll-ups of all the individual
  FastL4 profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_fastl4_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_fastl4_statisticsResponse"/>
@@ -8296,9 +8491,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_ftp_statistics">
 	<documentation>
- Gets the system's global FTP statistics. These are the roll-ups of all the individual 
+ Gets the system's global FTP statistics. These are the roll-ups of all the individual
  FTP profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_ftp_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_ftp_statisticsResponse"/>
@@ -8311,7 +8506,7 @@ All other trademarks mentioned in this document are the property of their respec
  This gets one set of combined ("rolled up") statistics for all hosts.  It is not
  to be confused with get_all_host_statistics, which gets all individual host statistics,
  one for each host.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_global_host_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_global_host_statisticsResponse"/>
@@ -8319,12 +8514,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_global_pva_statistics">
 	<documentation>
  Gets the system's global PVA statistics.
- 
+
  This gets one set of combined ("rolled up") statistics for
  all PVAs.  It is not to be confused with
  get_all_pva_statistics, which gets all individual PVA
  statistics, one for each PVA.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_global_pva_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_global_pva_statisticsResponse"/>
@@ -8332,7 +8527,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_global_statistics">
 	<documentation>
  Gets the system's global statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_global_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_global_statisticsResponse"/>
@@ -8340,22 +8535,22 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_global_tmm_statistics">
 	<documentation>
  Gets the system's global TMOS processing agent statistics.
- 
+
  This gets one set of combined ("rolled up") statistics for
  all TMOS processing agents.  It is not to be confused with
  get_all_tmm_statistics, which gets all individual TMOS
  processing agent statistics, one for each TMOS processing
  agent.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_global_tmm_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_global_tmm_statisticsResponse"/>
 	</operation>
 	<operation name="get_gtm_global_statistics">
 	<documentation>
- Gets the GTM global statistics. These are the roll-ups of all the individual 
+ Gets the GTM global statistics. These are the roll-ups of all the individual
  wide IPs' and iQueries statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_gtm_global_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_gtm_global_statisticsResponse"/>
@@ -8366,7 +8561,7 @@ All other trademarks mentioned in this document are the property of their respec
  get_gtm_iquery_statistics_v2 in the future.
 
  Gets the statistics for the specified iQueries.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_gtm_iquery_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_gtm_iquery_statisticsResponse"/>
@@ -8374,7 +8569,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_gtm_iquery_statistics_v2">
 	<documentation>
  Gets the statistics for the specified iQueries.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_gtm_iquery_statistics_v2Request"/>
 		<output message="tns:System.Statistics.get_gtm_iquery_statistics_v2Response"/>
@@ -8382,7 +8577,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_gtm_ldns_statistics">
 	<documentation>
  Gets the statistics for the specified LDNSes.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_gtm_ldns_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_gtm_ldns_statisticsResponse"/>
@@ -8390,7 +8585,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_gtm_memory_usage_statistics">
 	<documentation>
  Gets the memory usage statistics used by GTM.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_gtm_memory_usage_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_gtm_memory_usage_statisticsResponse"/>
@@ -8398,7 +8593,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_gtm_path_statistics">
 	<documentation>
  Gets the statistics for the specified paths (LDNSes and links).
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_gtm_path_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_gtm_path_statisticsResponse"/>
@@ -8407,16 +8602,16 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the system's host statistics (by host id).
  Note that CPU usage statistics by host are available but not retrieved by this method.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_host_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_host_statisticsResponse"/>
 	</operation>
 	<operation name="get_http_statistics">
 	<documentation>
- Gets the system's global HTTP statistics. These are the roll-ups of all the individual 
+ Gets the system's global HTTP statistics. These are the roll-ups of all the individual
  HTTP profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_http_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_http_statisticsResponse"/>
@@ -8433,7 +8628,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_icmp_statistics">
 	<documentation>
  Gets the system's ICMP statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_icmp_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_icmp_statisticsResponse"/>
@@ -8441,16 +8636,16 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_icmpv6_statistics">
 	<documentation>
  Gets the system's ICMPv6 statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_icmpv6_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_icmpv6_statisticsResponse"/>
 	</operation>
 	<operation name="get_iiop_statistics">
 	<documentation>
- Gets the system's global IIOP statistics. These are the roll-ups of all the individual 
+ Gets the system's global IIOP statistics. These are the roll-ups of all the individual
  IIOP profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_iiop_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_iiop_statisticsResponse"/>
@@ -8463,7 +8658,7 @@ All other trademarks mentioned in this document are the property of their respec
 
  Gets the system's global IP Intelligence statistics. These are the roll-ups of all the individual
  IP Intelligence profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_ip_intelligence_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_ip_intelligence_statisticsResponse"/>
@@ -8471,7 +8666,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_ip_statistics">
 	<documentation>
  Gets the system's IP statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_ip_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_ip_statisticsResponse"/>
@@ -8479,7 +8674,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_ipv6_statistics">
 	<documentation>
  Gets the system's IPv6 statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_ipv6_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_ipv6_statisticsResponse"/>
@@ -8487,15 +8682,19 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_list_of_hosts">
 	<documentation>
  Gets a list of all hosts.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_list_of_hostsRequest"/>
 		<output message="tns:System.Statistics.get_list_of_hostsResponse"/>
 	</operation>
 	<operation name="get_list_of_pvas">
 	<documentation>
+ This method is deprecated. The PVA ID is no longer populated for PVA
+ statistics. Calling this method will return a list of strings
+ containing '0.0'.
+
  Gets a list of all PVAs.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_list_of_pvasRequest"/>
 		<output message="tns:System.Statistics.get_list_of_pvasResponse"/>
@@ -8503,7 +8702,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_list_of_tmms">
 	<documentation>
  Gets a list of all TMOS processing agents.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_list_of_tmmsRequest"/>
 		<output message="tns:System.Statistics.get_list_of_tmmsResponse"/>
@@ -8512,40 +8711,40 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the system's global LSN Pool statistics. These are the roll-ups of all
  the individual LSN Pools' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_lsn_pool_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_lsn_pool_statisticsResponse"/>
 	</operation>
 	<operation name="get_oneconnect_statistics">
 	<documentation>
- Gets the system's global OneConnect statistics. These are the roll-ups of all the individual 
+ Gets the system's global OneConnect statistics. These are the roll-ups of all the individual
  OneConnect profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_oneconnect_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_oneconnect_statisticsResponse"/>
 	</operation>
 	<operation name="get_pem_action_statistics">
 	<documentation>
- Gets the system's Policy Enforcement Magager (PEM) action 
- statistics. Action means the steps to take for the policy, 
+ Gets the system's Policy Enforcement Magager (PEM) action
+ statistics. Action means the steps to take for the policy,
  e.g. drop flows, clone flows etc.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_pem_action_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_pem_action_statisticsResponse"/>
 	</operation>
 	<operation name="get_pem_gx_statistics">
 	<documentation>
- Gets the system's Policy Enforcement Magager (PEM) Gx 
- statistics. The Gx protocol is used for provisioning and removal 
- of Policy and Charging Control (PCC) rules from the Policy 
- Control and Charging Rules Function (PCRF) to the Policy Control 
+ Gets the system's Policy Enforcement Magager (PEM) Gx
+ statistics. The Gx protocol is used for provisioning and removal
+ of Policy and Charging Control (PCC) rules from the Policy
+ Control and Charging Rules Function (PCRF) to the Policy Control
  and Enforcement Function (PCEF) and the transmission of traffic
- plane events from the PCEF to PCRF. In this case, the system will 
+ plane events from the PCEF to PCRF. In this case, the system will
  be acting as PCEF.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_pem_gx_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_pem_gx_statisticsResponse"/>
@@ -8553,7 +8752,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_pem_gy_statistics">
 	<documentation>
  Gets the system's Policy Enforcement Manager (PEM) Gy statistics.
- This table contains counters and peak values for state of Gy 
+ This table contains counters and peak values for state of Gy
  sessions and per different types of Gy messages.
 
         	</documentation>
@@ -8562,9 +8761,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_pem_hsl_statistics">
 	<documentation>
- Gets the system's Policy Enforcement Manager (PEM) High Speed 
+ Gets the system's Policy Enforcement Manager (PEM) High Speed
  Logging statistics.
- This table includes conters related to sending different types 
+ This table includes conters related to sending different types
  of PEM reporting records sent using HSL infrastructure.
 
         	</documentation>
@@ -8573,9 +8772,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_pem_radius_statistics">
 	<documentation>
- Gets the system's Policy Enforcement Manager (PEM) Radius 
+ Gets the system's Policy Enforcement Manager (PEM) Radius
  statistics.
- This table includes counters related to different type of Radius 
+ This table includes counters related to different type of Radius
  messages intercepted by the system.
 
         	</documentation>
@@ -8584,24 +8783,24 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_pem_session_statistics">
 	<documentation>
- This method has been deprecated; please use 
+ This method has been deprecated; please use
  get_pem_subscriber_statistics in the future.
- Gets the system's run-time Subscriber Policy Manager (SPM) 
- session statistics. A subscriber session is the period of time 
- from when a subscriber logs into the network (authenticated) and 
- logs out, or when the session is terminated by other means. The 
+ Gets the system's run-time Subscriber Policy Manager (SPM)
+ session statistics. A subscriber session is the period of time
+ from when a subscriber logs into the network (authenticated) and
+ logs out, or when the session is terminated by other means. The
  session is identified by subscriber IP address.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_pem_session_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_pem_session_statisticsResponse"/>
 	</operation>
 	<operation name="get_pem_subscriber_statistics">
 	<documentation>
- Gets the system's Policy Enforcement Manager (PEM) Subscriber 
+ Gets the system's Policy Enforcement Manager (PEM) Subscriber
  statistics.
- This table shows various metrics related to the subscribers 
- configured in PEM including peak values of counters measured 
+ This table shows various metrics related to the subscribers
+ configured in PEM including peak values of counters measured
  from the resetting the statistics.
 
         	</documentation>
@@ -8611,7 +8810,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_performance_graph_csv_statistics">
 	<documentation>
  Gets the statistical data in CSV format for the specified graphs/tables.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_performance_graph_csv_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_performance_graph_csv_statisticsResponse"/>
@@ -8619,7 +8818,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_performance_graph_list">
 	<documentation>
  Gets the list of available statistical graphs as seen in the GUI's Performance Graph.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_performance_graph_listRequest"/>
 		<output message="tns:System.Statistics.get_performance_graph_listResponse"/>
@@ -8627,7 +8826,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_performance_table_list">
 	<documentation>
  Gets the list of available statistical tables.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_performance_table_listRequest"/>
 		<output message="tns:System.Statistics.get_performance_table_listResponse"/>
@@ -8635,24 +8834,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_performance_table_statistics">
 	<documentation>
  Gets the statistical data tables.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_performance_table_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_performance_table_statisticsResponse"/>
 	</operation>
 	<operation name="get_pptp_statistics">
 	<documentation>
- Gets the system's global PPTP profile statistics. These are the roll-ups of all the 
+ Gets the system's global PPTP profile statistics. These are the roll-ups of all the
  individual PPTP profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_pptp_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_pptp_statisticsResponse"/>
 	</operation>
 	<operation name="get_pva_statistics">
 	<documentation>
+ *IMPORTANT* This method is deprecated immediately. Attempting to
+ perform this operation will return a not-implemented exception.
+
  Gets the system's PVA statistics (by PVA id).
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_pva_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_pva_statisticsResponse"/>
@@ -8662,43 +8864,52 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the system's global RADIUS statistics. These are the
  roll-ups of all the individual RADIUS profiles'
  statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_radius_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_radius_statisticsResponse"/>
 	</operation>
 	<operation name="get_rtsp_statistics">
 	<documentation>
- Gets the system's global RTSP statistics. These are the roll-ups of all the individual 
+ Gets the system's global RTSP statistics. These are the roll-ups of all the individual
  RTSP profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_rtsp_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_rtsp_statisticsResponse"/>
 	</operation>
 	<operation name="get_sctp_statistics">
 	<documentation>
- Gets the system's global SCTP statistics. These are the roll-ups of all the individual 
+ Gets the system's global SCTP statistics. These are the roll-ups of all the individual
  SCTP profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_sctp_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_sctp_statisticsResponse"/>
 	</operation>
+	<operation name="get_server_ldap_statistics">
+	<documentation>
+ Gets the system's global server LDAP statistics. These are the roll-ups of all the individual
+ server LDAP profiles' statistics.
+
+        	</documentation>
+		<input message="tns:System.Statistics.get_server_ldap_statisticsRequest"/>
+		<output message="tns:System.Statistics.get_server_ldap_statisticsResponse"/>
+	</operation>
 	<operation name="get_server_ssl_statistics">
 	<documentation>
- Gets the system's global server SSL statistics. These are the roll-ups of all the individual 
+ Gets the system's global server SSL statistics. These are the roll-ups of all the individual
  server SSL profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_server_ssl_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_server_ssl_statisticsResponse"/>
 	</operation>
 	<operation name="get_sip_statistics">
 	<documentation>
- Gets the system's global SIP profile statistics. These are the roll-ups of 
+ Gets the system's global SIP profile statistics. These are the roll-ups of
  all the individual SIP profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_sip_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_sip_statisticsResponse"/>
@@ -8725,42 +8936,51 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the system's global SPDY statistics. These are the roll-ups of all
  the individual SPDY profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_spdy_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_spdy_statisticsResponse"/>
 	</operation>
 	<operation name="get_stream_statistics">
 	<documentation>
- Gets the system's global stream statistics. These are the roll-ups of all the individual 
+ Gets the system's global stream statistics. These are the roll-ups of all the individual
  stream profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_stream_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_stream_statisticsResponse"/>
 	</operation>
 	<operation name="get_tcp_statistics">
 	<documentation>
- Gets the system's global TCP statistics. These are the roll-ups of all the individual 
+ Gets the system's global TCP statistics. These are the roll-ups of all the individual
  TCP profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_tcp_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_tcp_statisticsResponse"/>
 	</operation>
+	<operation name="get_tftp_statistics">
+	<documentation>
+ Gets the system's global TFTP statistics. These are the roll-ups of all the individual
+ TFTP profiles' statistics.
+
+        	</documentation>
+		<input message="tns:System.Statistics.get_tftp_statisticsRequest"/>
+		<output message="tns:System.Statistics.get_tftp_statisticsResponse"/>
+	</operation>
 	<operation name="get_tmm_statistics">
 	<documentation>
  Gets the system's TMOS processing agent statistics (by TMOS processing agent id).
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_tmm_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_tmm_statisticsResponse"/>
 	</operation>
 	<operation name="get_udp_statistics">
 	<documentation>
- Gets the system's global UDP statistics. These are the roll-ups of all the individual 
+ Gets the system's global UDP statistics. These are the roll-ups of all the individual
  UDP profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_udp_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_udp_statisticsResponse"/>
@@ -8779,7 +8999,7 @@ All other trademarks mentioned in this document are the property of their respec
  internal, implementation-specific details.
 
  Gets the statistics for the specified virtual compression devices.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_virtual_compression_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_virtual_compression_statisticsResponse"/>
@@ -8788,14 +9008,14 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the system's global Web Acceleration statistics. These are the roll-ups of all
  the individual Web Acceleration profiles' statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.get_webacceleration_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_webacceleration_statisticsResponse"/>
 	</operation>
 	<operation name="get_xml_statistics">
 	<documentation>
- Gets the system's global XML statistics. These are the roll-ups of all the individual 
+ Gets the system's global XML statistics. These are the roll-ups of all the individual
  XML profiles' statistics.
 
         	</documentation>
@@ -8804,9 +9024,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="reset_all_statistics">
 	<documentation>
- Resets all statistics in the system, including all global statistics as well as 
+ Resets all statistics in the system, including all global statistics as well as
  all object-level statistics such as pool, virtual server statistics....
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_all_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_all_statisticsResponse"/>
@@ -8814,15 +9034,23 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_authentication_statistics">
 	<documentation>
  Resets the system's global authentication statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_authentication_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_authentication_statisticsResponse"/>
 	</operation>
+	<operation name="reset_client_ldap_statistics">
+	<documentation>
+ Resets the system's global client LDAP statistics.
+
+        	</documentation>
+		<input message="tns:System.Statistics.reset_client_ldap_statisticsRequest"/>
+		<output message="tns:System.Statistics.reset_client_ldap_statisticsResponse"/>
+	</operation>
 	<operation name="reset_client_ssl_statistics">
 	<documentation>
  Resets the system's global client SSL statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_client_ssl_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_client_ssl_statisticsResponse"/>
@@ -8830,7 +9058,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_diameter_statistics">
 	<documentation>
  Resets the system's global Diameter statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_diameter_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_diameter_statisticsResponse"/>
@@ -8838,7 +9066,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_dns_server_statistics">
 	<documentation>
  Resets the system's global DNS server statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_dns_server_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_dns_server_statisticsResponse"/>
@@ -8846,7 +9074,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_dns_statistics">
 	<documentation>
  Resets the system's global DNS statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_dns_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_dns_statisticsResponse"/>
@@ -8854,14 +9082,14 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_dnssec_statistics">
 	<documentation>
  Resets the system's global DNSSEC zone statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_dnssec_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_dnssec_statisticsResponse"/>
 	</operation>
 	<operation name="reset_fasthttp_statistics">
-	<documentation> 
- Resets the system's global Fast HTTP statistics. 
+	<documentation>
+ Resets the system's global Fast HTTP statistics.
 
         	</documentation>
 		<input message="tns:System.Statistics.reset_fasthttp_statisticsRequest"/>
@@ -8870,7 +9098,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_fastl4_statistics">
 	<documentation>
  Resets the system's global FastL4 statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_fastl4_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_fastl4_statisticsResponse"/>
@@ -8886,7 +9114,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_ftp_statistics">
 	<documentation>
  Resets the system's global FTP statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_ftp_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_ftp_statisticsResponse"/>
@@ -8894,7 +9122,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_global_statistics">
 	<documentation>
  Resets the system's global statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_global_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_global_statisticsResponse"/>
@@ -8902,7 +9130,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_gtm_global_statistics">
 	<documentation>
  Resets the GTM global statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_gtm_global_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_gtm_global_statisticsResponse"/>
@@ -8910,7 +9138,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_gtm_iquery_statistics">
 	<documentation>
  Resets the statistics for the specified iQueries.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_gtm_iquery_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_gtm_iquery_statisticsResponse"/>
@@ -8918,7 +9146,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_gtm_ldns_statistics">
 	<documentation>
  Resets the statistics for the specified LDNSes.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_gtm_ldns_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_gtm_ldns_statisticsResponse"/>
@@ -8926,7 +9154,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_gtm_path_statistics">
 	<documentation>
  Resets the statistics for the specified paths.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_gtm_path_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_gtm_path_statisticsResponse"/>
@@ -8934,7 +9162,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_http_statistics">
 	<documentation>
  Resets the system's global HTTP statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_http_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_http_statisticsResponse"/>
@@ -8942,7 +9170,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_httpcompression_statistics">
 	<documentation>
  Resets the system's global HTTP Compression statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_httpcompression_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_httpcompression_statisticsResponse"/>
@@ -8950,7 +9178,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_icmp_statistics">
 	<documentation>
  Resets the system's ICMP statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_icmp_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_icmp_statisticsResponse"/>
@@ -8958,7 +9186,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_icmpv6_statistics">
 	<documentation>
  Resets the system's ICMPv6 statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_icmpv6_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_icmpv6_statisticsResponse"/>
@@ -8966,7 +9194,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_iiop_statistics">
 	<documentation>
  Resets the system's global IIOP statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_iiop_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_iiop_statisticsResponse"/>
@@ -8978,7 +9206,7 @@ All other trademarks mentioned in this document are the property of their respec
  return a not-implemented exception.
 
  Resets the system's global IP Intelligence statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_ip_intelligence_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_ip_intelligence_statisticsResponse"/>
@@ -8986,7 +9214,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_ip_statistics">
 	<documentation>
  Resets the system's IP statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_ip_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_ip_statisticsResponse"/>
@@ -8994,7 +9222,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_ipv6_statistics">
 	<documentation>
  Resets the system's IPv6 statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_ipv6_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_ipv6_statisticsResponse"/>
@@ -9002,7 +9230,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_lsn_pool_statistics">
 	<documentation>
  Resets the system's global LSN Pool statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_lsn_pool_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_lsn_pool_statisticsResponse"/>
@@ -9010,32 +9238,32 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_oneconnect_statistics">
 	<documentation>
  Resets the system's global OneConnect statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_oneconnect_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_oneconnect_statisticsResponse"/>
 	</operation>
 	<operation name="reset_pem_action_statistics">
 	<documentation>
- Resets the system's Policy Enforcement Magager (PEM) action 
+ Resets the system's Policy Enforcement Magager (PEM) action
  statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_pem_action_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_pem_action_statisticsResponse"/>
 	</operation>
 	<operation name="reset_pem_gx_statistics">
 	<documentation>
- Resets the system's Policy Enforcement Magager (PEM) Gx 
+ Resets the system's Policy Enforcement Magager (PEM) Gx
  statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_pem_gx_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_pem_gx_statisticsResponse"/>
 	</operation>
 	<operation name="reset_pem_gy_statistics">
 	<documentation>
- Resets the system's PEM Gy statistics. 
+ Resets the system's PEM Gy statistics.
 
         	</documentation>
 		<input message="tns:System.Statistics.reset_pem_gy_statisticsRequest"/>
@@ -9043,7 +9271,7 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="reset_pem_hsl_statistics">
 	<documentation>
- Resets the system's PEM High Speed Logging statistics. 
+ Resets the system's PEM High Speed Logging statistics.
 
         	</documentation>
 		<input message="tns:System.Statistics.reset_pem_hsl_statisticsRequest"/>
@@ -9051,7 +9279,7 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="reset_pem_radius_statistics">
 	<documentation>
- Resets the system's PEM Radius statistics. 
+ Resets the system's PEM Radius statistics.
 
         	</documentation>
 		<input message="tns:System.Statistics.reset_pem_radius_statisticsRequest"/>
@@ -9059,18 +9287,18 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="reset_pem_session_statistics">
 	<documentation>
- This method has been deprecated; please use 
+ This method has been deprecated; please use
  reset_pem_subscriber_statistics in the future.
- Resets the system's run-time Subscriber Policy Manager (SPM) 
+ Resets the system's run-time Subscriber Policy Manager (SPM)
  session statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_pem_session_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_pem_session_statisticsResponse"/>
 	</operation>
 	<operation name="reset_pem_subscriber_statistics">
 	<documentation>
- Resets the system's PEM Subscriber statistics. 
+ Resets the system's PEM Subscriber statistics.
 
         	</documentation>
 		<input message="tns:System.Statistics.reset_pem_subscriber_statisticsRequest"/>
@@ -9079,7 +9307,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_pptp_statistics">
 	<documentation>
  Resets the system's global PPTP profile statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_pptp_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_pptp_statisticsResponse"/>
@@ -9087,7 +9315,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_radius_statistics">
 	<documentation>
  Resets the system's global RADIUS statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_radius_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_radius_statisticsResponse"/>
@@ -9095,7 +9323,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_rtsp_statistics">
 	<documentation>
  Resets the system's global RTSP statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_rtsp_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_rtsp_statisticsResponse"/>
@@ -9103,15 +9331,23 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_sctp_statistics">
 	<documentation>
  Resets the system's global SCTP statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_sctp_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_sctp_statisticsResponse"/>
 	</operation>
+	<operation name="reset_server_ldap_statistics">
+	<documentation>
+ Resets the system's global server LDAP statistics.
+
+        	</documentation>
+		<input message="tns:System.Statistics.reset_server_ldap_statisticsRequest"/>
+		<output message="tns:System.Statistics.reset_server_ldap_statisticsResponse"/>
+	</operation>
 	<operation name="reset_server_ssl_statistics">
 	<documentation>
  Resets the system's global server SSL statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_server_ssl_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_server_ssl_statisticsResponse"/>
@@ -9119,7 +9355,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_sip_statistics">
 	<documentation>
  Resets the system's global SIP profile statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_sip_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_sip_statisticsResponse"/>
@@ -9143,7 +9379,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_spdy_statistics">
 	<documentation>
  Resets the system's global SPDY statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_spdy_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_spdy_statisticsResponse"/>
@@ -9151,7 +9387,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_stream_statistics">
 	<documentation>
  Resets the system's global stream statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_stream_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_stream_statisticsResponse"/>
@@ -9159,15 +9395,23 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_tcp_statistics">
 	<documentation>
  Resets the system's global TCP statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_tcp_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_tcp_statisticsResponse"/>
 	</operation>
+	<operation name="reset_tftp_statistics">
+	<documentation>
+ Resets the system's global TFTP statistics.
+
+        	</documentation>
+		<input message="tns:System.Statistics.reset_tftp_statisticsRequest"/>
+		<output message="tns:System.Statistics.reset_tftp_statisticsResponse"/>
+	</operation>
 	<operation name="reset_udp_statistics">
 	<documentation>
  Resets the system's global UDP statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_udp_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_udp_statisticsResponse"/>
@@ -9178,7 +9422,7 @@ All other trademarks mentioned in this document are the property of their respec
  internal, implementation-specific details.
 
  Resets the statistics for the specified virtual compression devices.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_virtual_compression_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_virtual_compression_statisticsResponse"/>
@@ -9186,7 +9430,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_webacceleration_statistics">
 	<documentation>
  Resets the system's global Web Acceleration statistics.
- 
+
         	</documentation>
 		<input message="tns:System.Statistics.reset_webacceleration_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_webacceleration_statisticsResponse"/>
@@ -9211,7 +9455,7 @@ All other trademarks mentioned in this document are the property of their respec
  get_all_gtm_iquery_statistics_v2 in the future.
 
  Gets the statistics for all the iQueries.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9231,7 +9475,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_all_gtm_iquery_statistics_v2">
 	<documentation>
  Gets the statistics for all the iQueries.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9252,7 +9496,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets all of the system's host statistics.
  Note that CPU usage statistics by host are available but not retrieved by this method.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9272,7 +9516,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_all_pva_statistics">
 	<documentation>
  Gets all of the system's PVA statistics.
- 
+
+ Note: The pva_id field in each PVAStatisticEntry of the PVAStatistics
+ returned will be '0.0'.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9292,7 +9539,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_all_tmm_statistics">
 	<documentation>
  Gets all of the system's TMOS processing agent statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9315,7 +9562,7 @@ All other trademarks mentioned in this document are the property of their respec
  internal, implementation-specific details.
 
  Gets the statistics for all the virtual compression devices.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9334,9 +9581,30 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_authentication_statistics">
 	<documentation>
- Gets the system's global authentication statistics. These are the roll-ups of all the individual 
+ Gets the system's global authentication statistics. These are the roll-ups of all the individual
  authentication profiles' statistics.
- 
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/Statistics"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_client_ldap_statistics">
+	<documentation>
+ Gets the system's global client LDAP statistics. These are the roll-ups of all the individual
+ client LDAP profiles' statistics.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9355,9 +9623,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_client_ssl_statistics">
 	<documentation>
- Gets the system's global client SSL statistics. These are the roll-ups of all the individual 
+ Gets the system's global client SSL statistics. These are the roll-ups of all the individual
  client SSL profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9379,7 +9647,7 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the system's global Diameter statistics. These are the
  roll-ups of all the individual Diameter profiles'
  statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9398,9 +9666,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_dns_server_statistics">
 	<documentation>
- Gets the system's global DNS server statistics. These are the roll-ups of all the individual 
+ Gets the system's global DNS server statistics. These are the roll-ups of all the individual
  DNS servers' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9419,9 +9687,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_dns_statistics">
 	<documentation>
- Gets the system's global DNS profile statistics. These are the roll-ups of all the individual 
+ Gets the system's global DNS profile statistics. These are the roll-ups of all the individual
  DNS profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9440,9 +9708,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_dnssec_statistics">
 	<documentation>
- Gets the system's global DNSSEC zone statistics. These are the roll-ups of all the individual 
+ Gets the system's global DNSSEC zone statistics. These are the roll-ups of all the individual
  DNSSEC zones' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9460,9 +9728,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 
 	<operation name="get_fasthttp_statistics">
-	<documentation> 
- Gets the system's global Fast HTTP statistics. These are the roll-ups of 
- all the individual Fast HTTP profiles' statistics. 
+	<documentation>
+ Gets the system's global Fast HTTP statistics. These are the roll-ups of
+ all the individual Fast HTTP profiles' statistics.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
@@ -9482,9 +9750,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_fastl4_statistics">
 	<documentation>
- Gets the system's global FastL4 statistics. These are the roll-ups of all the individual 
+ Gets the system's global FastL4 statistics. These are the roll-ups of all the individual
  FastL4 profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9524,9 +9792,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_ftp_statistics">
 	<documentation>
- Gets the system's global FTP statistics. These are the roll-ups of all the individual 
+ Gets the system's global FTP statistics. These are the roll-ups of all the individual
  FTP profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9551,7 +9819,7 @@ All other trademarks mentioned in this document are the property of their respec
  This gets one set of combined ("rolled up") statistics for all hosts.  It is not
  to be confused with get_all_host_statistics, which gets all individual host statistics,
  one for each host.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9571,12 +9839,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_global_pva_statistics">
 	<documentation>
  Gets the system's global PVA statistics.
- 
+
  This gets one set of combined ("rolled up") statistics for
  all PVAs.  It is not to be confused with
  get_all_pva_statistics, which gets all individual PVA
  statistics, one for each PVA.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9596,7 +9864,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_global_statistics">
 	<documentation>
  Gets the system's global statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9616,13 +9884,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_global_tmm_statistics">
 	<documentation>
  Gets the system's global TMOS processing agent statistics.
- 
+
  This gets one set of combined ("rolled up") statistics for
  all TMOS processing agents.  It is not to be confused with
  get_all_tmm_statistics, which gets all individual TMOS
  processing agent statistics, one for each TMOS processing
  agent.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9641,9 +9909,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_gtm_global_statistics">
 	<documentation>
- Gets the GTM global statistics. These are the roll-ups of all the individual 
+ Gets the GTM global statistics. These are the roll-ups of all the individual
  wide IPs' and iQueries statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9666,7 +9934,7 @@ All other trademarks mentioned in this document are the property of their respec
  get_gtm_iquery_statistics_v2 in the future.
 
  Gets the statistics for the specified iQueries.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9686,7 +9954,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_gtm_iquery_statistics_v2">
 	<documentation>
  Gets the statistics for the specified iQueries.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9706,7 +9974,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_gtm_ldns_statistics">
 	<documentation>
  Gets the statistics for the specified LDNSes.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9726,7 +9994,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_gtm_memory_usage_statistics">
 	<documentation>
  Gets the memory usage statistics used by GTM.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9746,7 +10014,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_gtm_path_statistics">
 	<documentation>
  Gets the statistics for the specified paths (LDNSes and links).
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9767,7 +10035,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the system's host statistics (by host id).
  Note that CPU usage statistics by host are available but not retrieved by this method.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9786,9 +10054,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_http_statistics">
 	<documentation>
- Gets the system's global HTTP statistics. These are the roll-ups of all the individual 
+ Gets the system's global HTTP statistics. These are the roll-ups of all the individual
  HTTP profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9829,7 +10097,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_icmp_statistics">
 	<documentation>
  Gets the system's ICMP statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9849,7 +10117,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_icmpv6_statistics">
 	<documentation>
  Gets the system's ICMPv6 statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9868,9 +10136,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_iiop_statistics">
 	<documentation>
- Gets the system's global IIOP statistics. These are the roll-ups of all the individual 
+ Gets the system's global IIOP statistics. These are the roll-ups of all the individual
  IIOP profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9895,7 +10163,7 @@ All other trademarks mentioned in this document are the property of their respec
 
  Gets the system's global IP Intelligence statistics. These are the roll-ups of all the individual
  IP Intelligence profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9915,7 +10183,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_ip_statistics">
 	<documentation>
  Gets the system's IP statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9935,7 +10203,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_ipv6_statistics">
 	<documentation>
  Gets the system's IPv6 statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9955,7 +10223,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_list_of_hosts">
 	<documentation>
  Gets a list of all hosts.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9974,8 +10242,12 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_list_of_pvas">
 	<documentation>
+ This method is deprecated. The PVA ID is no longer populated for PVA
+ statistics. Calling this method will return a list of strings
+ containing '0.0'.
+
  Gets a list of all PVAs.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -9995,7 +10267,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_list_of_tmms">
 	<documentation>
  Gets a list of all TMOS processing agents.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10016,7 +10288,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the system's global LSN Pool statistics. These are the roll-ups of all
  the individual LSN Pools' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10035,9 +10307,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_oneconnect_statistics">
 	<documentation>
- Gets the system's global OneConnect statistics. These are the roll-ups of all the individual 
+ Gets the system's global OneConnect statistics. These are the roll-ups of all the individual
  OneConnect profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10056,10 +10328,10 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_pem_action_statistics">
 	<documentation>
- Gets the system's Policy Enforcement Magager (PEM) action 
- statistics. Action means the steps to take for the policy, 
+ Gets the system's Policy Enforcement Magager (PEM) action
+ statistics. Action means the steps to take for the policy,
  e.g. drop flows, clone flows etc.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10078,14 +10350,14 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_pem_gx_statistics">
 	<documentation>
- Gets the system's Policy Enforcement Magager (PEM) Gx 
- statistics. The Gx protocol is used for provisioning and removal 
- of Policy and Charging Control (PCC) rules from the Policy 
- Control and Charging Rules Function (PCRF) to the Policy Control 
+ Gets the system's Policy Enforcement Magager (PEM) Gx
+ statistics. The Gx protocol is used for provisioning and removal
+ of Policy and Charging Control (PCC) rules from the Policy
+ Control and Charging Rules Function (PCRF) to the Policy Control
  and Enforcement Function (PCEF) and the transmission of traffic
- plane events from the PCEF to PCRF. In this case, the system will 
+ plane events from the PCEF to PCRF. In this case, the system will
  be acting as PCEF.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10105,7 +10377,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_pem_gy_statistics">
 	<documentation>
  Gets the system's Policy Enforcement Manager (PEM) Gy statistics.
- This table contains counters and peak values for state of Gy 
+ This table contains counters and peak values for state of Gy
  sessions and per different types of Gy messages.
 
         	</documentation>
@@ -10126,9 +10398,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_pem_hsl_statistics">
 	<documentation>
- Gets the system's Policy Enforcement Manager (PEM) High Speed 
+ Gets the system's Policy Enforcement Manager (PEM) High Speed
  Logging statistics.
- This table includes conters related to sending different types 
+ This table includes conters related to sending different types
  of PEM reporting records sent using HSL infrastructure.
 
         	</documentation>
@@ -10149,9 +10421,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_pem_radius_statistics">
 	<documentation>
- Gets the system's Policy Enforcement Manager (PEM) Radius 
+ Gets the system's Policy Enforcement Manager (PEM) Radius
  statistics.
- This table includes counters related to different type of Radius 
+ This table includes counters related to different type of Radius
  messages intercepted by the system.
 
         	</documentation>
@@ -10172,14 +10444,14 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_pem_session_statistics">
 	<documentation>
- This method has been deprecated; please use 
+ This method has been deprecated; please use
  get_pem_subscriber_statistics in the future.
- Gets the system's run-time Subscriber Policy Manager (SPM) 
- session statistics. A subscriber session is the period of time 
- from when a subscriber logs into the network (authenticated) and 
- logs out, or when the session is terminated by other means. The 
+ Gets the system's run-time Subscriber Policy Manager (SPM)
+ session statistics. A subscriber session is the period of time
+ from when a subscriber logs into the network (authenticated) and
+ logs out, or when the session is terminated by other means. The
  session is identified by subscriber IP address.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10198,10 +10470,10 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_pem_subscriber_statistics">
 	<documentation>
- Gets the system's Policy Enforcement Manager (PEM) Subscriber 
+ Gets the system's Policy Enforcement Manager (PEM) Subscriber
  statistics.
- This table shows various metrics related to the subscribers 
- configured in PEM including peak values of counters measured 
+ This table shows various metrics related to the subscribers
+ configured in PEM including peak values of counters measured
  from the resetting the statistics.
 
         	</documentation>
@@ -10223,7 +10495,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_performance_graph_csv_statistics">
 	<documentation>
  Gets the statistical data in CSV format for the specified graphs/tables.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10243,7 +10515,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_performance_graph_list">
 	<documentation>
  Gets the list of available statistical graphs as seen in the GUI's Performance Graph.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10263,7 +10535,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_performance_table_list">
 	<documentation>
  Gets the list of available statistical tables.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10283,7 +10555,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_performance_table_statistics">
 	<documentation>
  Gets the statistical data tables.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10302,9 +10574,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_pptp_statistics">
 	<documentation>
- Gets the system's global PPTP profile statistics. These are the roll-ups of all the 
+ Gets the system's global PPTP profile statistics. These are the roll-ups of all the
  individual PPTP profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10323,8 +10595,11 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_pva_statistics">
 	<documentation>
+ *IMPORTANT* This method is deprecated immediately. Attempting to
+ perform this operation will return a not-implemented exception.
+
  Gets the system's PVA statistics (by PVA id).
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10346,7 +10621,7 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the system's global RADIUS statistics. These are the
  roll-ups of all the individual RADIUS profiles'
  statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10365,9 +10640,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_rtsp_statistics">
 	<documentation>
- Gets the system's global RTSP statistics. These are the roll-ups of all the individual 
+ Gets the system's global RTSP statistics. These are the roll-ups of all the individual
  RTSP profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10386,9 +10661,30 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_sctp_statistics">
 	<documentation>
- Gets the system's global SCTP statistics. These are the roll-ups of all the individual 
+ Gets the system's global SCTP statistics. These are the roll-ups of all the individual
  SCTP profiles' statistics.
- 
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/Statistics"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_server_ldap_statistics">
+	<documentation>
+ Gets the system's global server LDAP statistics. These are the roll-ups of all the individual
+ server LDAP profiles' statistics.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10407,9 +10703,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_server_ssl_statistics">
 	<documentation>
- Gets the system's global server SSL statistics. These are the roll-ups of all the individual 
+ Gets the system's global server SSL statistics. These are the roll-ups of all the individual
  server SSL profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10428,9 +10724,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_sip_statistics">
 	<documentation>
- Gets the system's global SIP profile statistics. These are the roll-ups of 
+ Gets the system's global SIP profile statistics. These are the roll-ups of
  all the individual SIP profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10493,7 +10789,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the system's global SPDY statistics. These are the roll-ups of all
  the individual SPDY profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10512,9 +10808,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_stream_statistics">
 	<documentation>
- Gets the system's global stream statistics. These are the roll-ups of all the individual 
+ Gets the system's global stream statistics. These are the roll-ups of all the individual
  stream profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10533,9 +10829,30 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_tcp_statistics">
 	<documentation>
- Gets the system's global TCP statistics. These are the roll-ups of all the individual 
+ Gets the system's global TCP statistics. These are the roll-ups of all the individual
  TCP profiles' statistics.
- 
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/Statistics"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_tftp_statistics">
+	<documentation>
+ Gets the system's global TFTP statistics. These are the roll-ups of all the individual
+ TFTP profiles' statistics.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10555,7 +10872,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_tmm_statistics">
 	<documentation>
  Gets the system's TMOS processing agent statistics (by TMOS processing agent id).
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10574,9 +10891,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_udp_statistics">
 	<documentation>
- Gets the system's global UDP statistics. These are the roll-ups of all the individual 
+ Gets the system's global UDP statistics. These are the roll-ups of all the individual
  UDP profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10619,7 +10936,7 @@ All other trademarks mentioned in this document are the property of their respec
  internal, implementation-specific details.
 
  Gets the statistics for the specified virtual compression devices.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10640,7 +10957,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the system's global Web Acceleration statistics. These are the roll-ups of all
  the individual Web Acceleration profiles' statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10659,7 +10976,7 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_xml_statistics">
 	<documentation>
- Gets the system's global XML statistics. These are the roll-ups of all the individual 
+ Gets the system's global XML statistics. These are the roll-ups of all the individual
  XML profiles' statistics.
 
         	</documentation>
@@ -10680,9 +10997,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="reset_all_statistics">
 	<documentation>
- Resets all statistics in the system, including all global statistics as well as 
+ Resets all statistics in the system, including all global statistics as well as
  all object-level statistics such as pool, virtual server statistics....
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10702,7 +11019,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_authentication_statistics">
 	<documentation>
  Resets the system's global authentication statistics.
- 
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/Statistics"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="reset_client_ldap_statistics">
+	<documentation>
+ Resets the system's global client LDAP statistics.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10722,7 +11059,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_client_ssl_statistics">
 	<documentation>
  Resets the system's global client SSL statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10742,7 +11079,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_diameter_statistics">
 	<documentation>
  Resets the system's global Diameter statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10762,7 +11099,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_dns_server_statistics">
 	<documentation>
  Resets the system's global DNS server statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10782,7 +11119,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_dns_statistics">
 	<documentation>
  Resets the system's global DNS statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10802,7 +11139,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_dnssec_statistics">
 	<documentation>
  Resets the system's global DNSSEC zone statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10820,8 +11157,8 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 
 	<operation name="reset_fasthttp_statistics">
-	<documentation> 
- Resets the system's global Fast HTTP statistics. 
+	<documentation>
+ Resets the system's global Fast HTTP statistics.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
@@ -10842,7 +11179,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_fastl4_statistics">
 	<documentation>
  Resets the system's global FastL4 statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10882,7 +11219,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_ftp_statistics">
 	<documentation>
  Resets the system's global FTP statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10902,7 +11239,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_global_statistics">
 	<documentation>
  Resets the system's global statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10922,7 +11259,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_gtm_global_statistics">
 	<documentation>
  Resets the GTM global statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10942,7 +11279,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_gtm_iquery_statistics">
 	<documentation>
  Resets the statistics for the specified iQueries.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10962,7 +11299,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_gtm_ldns_statistics">
 	<documentation>
  Resets the statistics for the specified LDNSes.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -10982,7 +11319,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_gtm_path_statistics">
 	<documentation>
  Resets the statistics for the specified paths.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11002,7 +11339,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_http_statistics">
 	<documentation>
  Resets the system's global HTTP statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11022,7 +11359,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_httpcompression_statistics">
 	<documentation>
  Resets the system's global HTTP Compression statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11042,7 +11379,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_icmp_statistics">
 	<documentation>
  Resets the system's ICMP statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11062,7 +11399,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_icmpv6_statistics">
 	<documentation>
  Resets the system's ICMPv6 statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11082,7 +11419,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_iiop_statistics">
 	<documentation>
  Resets the system's global IIOP statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11106,7 +11443,7 @@ All other trademarks mentioned in this document are the property of their respec
  return a not-implemented exception.
 
  Resets the system's global IP Intelligence statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11126,7 +11463,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_ip_statistics">
 	<documentation>
  Resets the system's IP statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11146,7 +11483,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_ipv6_statistics">
 	<documentation>
  Resets the system's IPv6 statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11166,7 +11503,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_lsn_pool_statistics">
 	<documentation>
  Resets the system's global LSN Pool statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11186,7 +11523,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_oneconnect_statistics">
 	<documentation>
  Resets the system's global OneConnect statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11205,9 +11542,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="reset_pem_action_statistics">
 	<documentation>
- Resets the system's Policy Enforcement Magager (PEM) action 
+ Resets the system's Policy Enforcement Magager (PEM) action
  statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11226,9 +11563,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="reset_pem_gx_statistics">
 	<documentation>
- Resets the system's Policy Enforcement Magager (PEM) Gx 
+ Resets the system's Policy Enforcement Magager (PEM) Gx
  statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11247,7 +11584,7 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="reset_pem_gy_statistics">
 	<documentation>
- Resets the system's PEM Gy statistics. 
+ Resets the system's PEM Gy statistics.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
@@ -11267,7 +11604,7 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="reset_pem_hsl_statistics">
 	<documentation>
- Resets the system's PEM High Speed Logging statistics. 
+ Resets the system's PEM High Speed Logging statistics.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
@@ -11287,7 +11624,7 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="reset_pem_radius_statistics">
 	<documentation>
- Resets the system's PEM Radius statistics. 
+ Resets the system's PEM Radius statistics.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
@@ -11307,11 +11644,11 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="reset_pem_session_statistics">
 	<documentation>
- This method has been deprecated; please use 
+ This method has been deprecated; please use
  reset_pem_subscriber_statistics in the future.
- Resets the system's run-time Subscriber Policy Manager (SPM) 
+ Resets the system's run-time Subscriber Policy Manager (SPM)
  session statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11330,7 +11667,7 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="reset_pem_subscriber_statistics">
 	<documentation>
- Resets the system's PEM Subscriber statistics. 
+ Resets the system's PEM Subscriber statistics.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
@@ -11351,7 +11688,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_pptp_statistics">
 	<documentation>
  Resets the system's global PPTP profile statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11371,7 +11708,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_radius_statistics">
 	<documentation>
  Resets the system's global RADIUS statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11391,7 +11728,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_rtsp_statistics">
 	<documentation>
  Resets the system's global RTSP statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11411,7 +11748,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_sctp_statistics">
 	<documentation>
  Resets the system's global SCTP statistics.
- 
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/Statistics"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="reset_server_ldap_statistics">
+	<documentation>
+ Resets the system's global server LDAP statistics.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11431,7 +11788,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_server_ssl_statistics">
 	<documentation>
  Resets the system's global server SSL statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11451,7 +11808,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_sip_statistics">
 	<documentation>
  Resets the system's global SIP profile statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11511,7 +11868,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_spdy_statistics">
 	<documentation>
  Resets the system's global SPDY statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11531,7 +11888,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_stream_statistics">
 	<documentation>
  Resets the system's global stream statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11551,7 +11908,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_tcp_statistics">
 	<documentation>
  Resets the system's global TCP statistics.
- 
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/Statistics"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="reset_tftp_statistics">
+	<documentation>
+ Resets the system's global TFTP statistics.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11571,7 +11948,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_udp_statistics">
 	<documentation>
  Resets the system's global UDP statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11594,7 +11971,7 @@ All other trademarks mentioned in this document are the property of their respec
  internal, implementation-specific details.
 
  Resets the statistics for the specified virtual compression devices.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>
@@ -11614,7 +11991,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_webacceleration_statistics">
 	<documentation>
  Resets the system's global Web Acceleration statistics.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
 		<input>

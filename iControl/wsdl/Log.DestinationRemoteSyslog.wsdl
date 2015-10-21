@@ -185,6 +185,15 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="Log.DestinationRemoteSyslog.createResponse">
 </message>
 
+<message name="Log.DestinationRemoteSyslog.create_v2Request">
+	<part name="destinations" type="tns:Common.StringSequence"/>
+	<part name="facilities" type="tns:Log.SyslogFacilitySequence"/>
+	<part name="levels" type="tns:Log.SyslogLevelSequence"/>
+	<part name="forwarding_destinations" type="tns:Common.StringSequence"/>
+</message>
+<message name="Log.DestinationRemoteSyslog.create_v2Response">
+</message>
+
 <message name="Log.DestinationRemoteSyslog.delete_all_remote_syslog_destinationsRequest">
 </message>
 <message name="Log.DestinationRemoteSyslog.delete_all_remote_syslog_destinationsResponse">
@@ -222,6 +231,13 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="Log.DestinationRemoteSyslog.get_formatResponse">
 	<part name="return" type="tns:Log.SyslogFormatSequence"/>
+</message>
+
+<message name="Log.DestinationRemoteSyslog.get_forwarding_destinationRequest">
+	<part name="destinations" type="tns:Common.StringSequence"/>
+</message>
+<message name="Log.DestinationRemoteSyslog.get_forwarding_destinationResponse">
+	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
 <message name="Log.DestinationRemoteSyslog.get_listRequest">
@@ -271,6 +287,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="Log.DestinationRemoteSyslog.set_formatResponse">
 </message>
 
+<message name="Log.DestinationRemoteSyslog.set_forwarding_destinationRequest">
+	<part name="destinations" type="tns:Common.StringSequence"/>
+	<part name="forwarding_destinations" type="tns:Common.StringSequence"/>
+</message>
+<message name="Log.DestinationRemoteSyslog.set_forwarding_destinationResponse">
+</message>
+
 <message name="Log.DestinationRemoteSyslog.set_remote_high_speed_log_destinationRequest">
 	<part name="destinations" type="tns:Common.StringSequence"/>
 	<part name="hsl_destinations" type="tns:Common.StringSequence"/>
@@ -283,11 +306,20 @@ All other trademarks mentioned in this document are the property of their respec
 <portType name="Log.DestinationRemoteSyslogPortType">
 	<operation name="create">
      	<documentation>
+ Note: This method is now deprecated; please use create_v2 instead.
  Creates a remote syslog destination.
 
         	</documentation>
 		<input message="tns:Log.DestinationRemoteSyslog.createRequest"/>
 		<output message="tns:Log.DestinationRemoteSyslog.createResponse"/>
+	</operation>
+	<operation name="create_v2">
+	<documentation>
+ Creates a remote syslog destination.
+
+        	</documentation>
+		<input message="tns:Log.DestinationRemoteSyslog.create_v2Request"/>
+		<output message="tns:Log.DestinationRemoteSyslog.create_v2Response"/>
 	</operation>
 	<operation name="delete_all_remote_syslog_destinations">
 	<documentation>
@@ -339,6 +371,15 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Log.DestinationRemoteSyslog.get_formatRequest"/>
 		<output message="tns:Log.DestinationRemoteSyslog.get_formatResponse"/>
 	</operation>
+	<operation name="get_forwarding_destination">
+	<documentation>
+ Gets the forwarding log destination for the specifed remote
+ syslog destinations.
+
+        	</documentation>
+		<input message="tns:Log.DestinationRemoteSyslog.get_forwarding_destinationRequest"/>
+		<output message="tns:Log.DestinationRemoteSyslog.get_forwarding_destinationResponse"/>
+	</operation>
 	<operation name="get_list">
 	<documentation>
  Gets the list of remote syslog destinations.
@@ -349,7 +390,8 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_remote_high_speed_log_destination">
 	<documentation>
- Gets the remote high-speed log destinations for the specified 
+ This method is now deprecated; please use get_forwarding_destination instead.
+ Gets the remote high-speed log destinations for the specified
  remote syslog destinations.
 
         	</documentation>
@@ -367,7 +409,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_default_facility">
 	<documentation>
  Sets the default facility for the specified remote syslog
- destinations. Syslog messages that come in without a 
+ destinations. Syslog messages that come in without a
  facility specified are given the default facility. See
  Log::SyslogFacility for more details.
 
@@ -397,7 +439,7 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="set_format">
 	<documentation>
- Sets the syslog format for the specified remote syslog destinations. 
+ Sets the syslog format for the specified remote syslog destinations.
  The format is the format of the syslog messages sent to the remote
  syslog server. See SyslogFormat for more details.
 
@@ -405,10 +447,21 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Log.DestinationRemoteSyslog.set_formatRequest"/>
 		<output message="tns:Log.DestinationRemoteSyslog.set_formatResponse"/>
 	</operation>
+	<operation name="set_forwarding_destination">
+	<documentation>
+ Sets the forwarding log destination for the specifed remote
+ syslog destinations. Attempting to forward to another remote
+ syslog destination will result in an error.
+
+        	</documentation>
+		<input message="tns:Log.DestinationRemoteSyslog.set_forwarding_destinationRequest"/>
+		<output message="tns:Log.DestinationRemoteSyslog.set_forwarding_destinationResponse"/>
+	</operation>
 	<operation name="set_remote_high_speed_log_destination">
 	<documentation>
- Sets the remote high-speed log destination for the specifed remote
- syslog destinations.
+ This method is now deprecated; please use set_forwarding_destination instead.
+ Sets the log destination that will be used to forward Syslog formatted
+ messages for the specified Remote Syslog destinations.
 
         	</documentation>
 		<input message="tns:Log.DestinationRemoteSyslog.set_remote_high_speed_log_destinationRequest"/>
@@ -421,6 +474,27 @@ All other trademarks mentioned in this document are the property of their respec
 <binding name="Log.DestinationRemoteSyslogBinding" type="tns:Log.DestinationRemoteSyslogPortType">
 	<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
 	<operation name="create">
+	<documentation>
+ Note: This method is now deprecated; please use create_v2 instead.
+ Creates a remote syslog destination.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Log/DestinationRemoteSyslog"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Log/DestinationRemoteSyslog"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Log/DestinationRemoteSyslog"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="create_v2">
 	<documentation>
  Creates a remote syslog destination.
 
@@ -562,6 +636,27 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_forwarding_destination">
+	<documentation>
+ Gets the forwarding log destination for the specifed remote
+ syslog destinations.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Log/DestinationRemoteSyslog"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Log/DestinationRemoteSyslog"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Log/DestinationRemoteSyslog"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_list">
 	<documentation>
  Gets the list of remote syslog destinations.
@@ -584,7 +679,8 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_remote_high_speed_log_destination">
 	<documentation>
- Gets the remote high-speed log destinations for the specified 
+ This method is now deprecated; please use get_forwarding_destination instead.
+ Gets the remote high-speed log destinations for the specified
  remote syslog destinations.
 
         	</documentation>
@@ -626,7 +722,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_default_facility">
 	<documentation>
  Sets the default facility for the specified remote syslog
- destinations. Syslog messages that come in without a 
+ destinations. Syslog messages that come in without a
  facility specified are given the default facility. See
  Log::SyslogFacility for more details.
 
@@ -692,7 +788,7 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="set_format">
 	<documentation>
- Sets the syslog format for the specified remote syslog destinations. 
+ Sets the syslog format for the specified remote syslog destinations.
  The format is the format of the syslog messages sent to the remote
  syslog server. See SyslogFormat for more details.
 
@@ -712,10 +808,33 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_forwarding_destination">
+	<documentation>
+ Sets the forwarding log destination for the specifed remote
+ syslog destinations. Attempting to forward to another remote
+ syslog destination will result in an error.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Log/DestinationRemoteSyslog"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Log/DestinationRemoteSyslog"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Log/DestinationRemoteSyslog"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_remote_high_speed_log_destination">
 	<documentation>
- Sets the remote high-speed log destination for the specifed remote
- syslog destinations.
+ This method is now deprecated; please use set_forwarding_destination instead.
+ Sets the log destination that will be used to forward Syslog formatted
+ messages for the specified Remote Syslog destinations.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Log/DestinationRemoteSyslog"/>
@@ -739,9 +858,10 @@ All other trademarks mentioned in this document are the property of their respec
 <service name="Log.DestinationRemoteSyslog">
 	<documentation>
  The DestinationRemoteSyslog interface enables you to create and modify
- remote syslog destinations. This destination will take unformatted logs 
- and convert them to various syslog formats to be sent to a remote high-
- speed log destination.
+ remote syslog destinations which are forwarding destinations. This
+ destination will take unformatted logs and convert them to various syslog
+ formats to other forwarding destinations except other remote syslog
+ destinations.
 
         	</documentation>
 	<port name="Log.DestinationRemoteSyslogPort" binding="tns:Log.DestinationRemoteSyslogBinding">

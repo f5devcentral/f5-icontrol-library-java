@@ -7180,6 +7180,156 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_FW_RULE_LAST_HIT_TIME</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ASSOCIATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ASSOCIATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CLOSING">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CLOSING</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_UNCONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_UNCONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_INACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_INACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CLIENTLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CLIENTLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SERVERLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SERVERLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_FTPS_SESSIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_FTPS_SESSIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_READ_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_READ_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_WRITE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_WRITE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_PASSTHRU_TRANSITIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_PASSTHRU_TRANSITIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_DISCARDED_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_DISCARDED_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_INSPECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_INSPECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_MALFORMED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_MALFORMED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_LOOKUPS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_LOOKUPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_RESPONSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_RESPONSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_VCMP_RED_PACKETS_IN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_VCMP_RED_PACKETS_IN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_CIPHER_CAMELLIA_BULK">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_CIPHER_CAMELLIA_BULK</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_NAPTR_REQS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_NAPTR_REQS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="LocalLB.FlowEvictionPolicy.PortProtocolPairSequenceSequence">
@@ -7356,10 +7506,31 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:Common.ULongSequence"/>
 </message>
 
+<message name="LocalLB.FlowEvictionPolicy.get_eviction_strategy_bias_fast_delayRequest">
+	<part name="policies" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.FlowEvictionPolicy.get_eviction_strategy_bias_fast_delayResponse">
+	<part name="return" type="tns:Common.ULongSequence"/>
+</message>
+
+<message name="LocalLB.FlowEvictionPolicy.get_eviction_strategy_bias_slow_delayRequest">
+	<part name="policies" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.FlowEvictionPolicy.get_eviction_strategy_bias_slow_delayResponse">
+	<part name="return" type="tns:Common.ULongSequence"/>
+</message>
+
 <message name="LocalLB.FlowEvictionPolicy.get_eviction_strategy_bytes_stateRequest">
 	<part name="policies" type="tns:Common.StringSequence"/>
 </message>
 <message name="LocalLB.FlowEvictionPolicy.get_eviction_strategy_bytes_stateResponse">
+	<part name="return" type="tns:Common.EnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.FlowEvictionPolicy.get_eviction_strategy_fast_stateRequest">
+	<part name="policies" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.FlowEvictionPolicy.get_eviction_strategy_fast_stateResponse">
 	<part name="return" type="tns:Common.EnabledStateSequence"/>
 </message>
 
@@ -7410,6 +7581,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="policies" type="tns:Common.StringSequence"/>
 </message>
 <message name="LocalLB.FlowEvictionPolicy.get_eviction_strategy_route_domain_stateResponse">
+	<part name="return" type="tns:Common.EnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.FlowEvictionPolicy.get_eviction_strategy_slow_stateRequest">
+	<part name="policies" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.FlowEvictionPolicy.get_eviction_strategy_slow_stateResponse">
 	<part name="return" type="tns:Common.EnabledStateSequence"/>
 </message>
 
@@ -7581,11 +7759,32 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_bias_bytes_delayResponse">
 </message>
 
+<message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_bias_fast_delayRequest">
+	<part name="policies" type="tns:Common.StringSequence"/>
+	<part name="delays" type="tns:Common.ULongSequence"/>
+</message>
+<message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_bias_fast_delayResponse">
+</message>
+
+<message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_bias_slow_delayRequest">
+	<part name="policies" type="tns:Common.StringSequence"/>
+	<part name="delays" type="tns:Common.ULongSequence"/>
+</message>
+<message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_bias_slow_delayResponse">
+</message>
+
 <message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_bytes_stateRequest">
 	<part name="policies" type="tns:Common.StringSequence"/>
 	<part name="states" type="tns:Common.EnabledStateSequence"/>
 </message>
 <message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_bytes_stateResponse">
+</message>
+
+<message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_fast_stateRequest">
+	<part name="policies" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:Common.EnabledStateSequence"/>
+</message>
+<message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_fast_stateResponse">
 </message>
 
 <message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_geography_stateRequest">
@@ -7629,6 +7828,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="states" type="tns:Common.EnabledStateSequence"/>
 </message>
 <message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_route_domain_stateResponse">
+</message>
+
+<message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_slow_stateRequest">
+	<part name="policies" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:Common.EnabledStateSequence"/>
+</message>
+<message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_slow_stateResponse">
 </message>
 
 <message name="LocalLB.FlowEvictionPolicy.set_eviction_strategy_virtual_server_stateRequest">
@@ -7768,20 +7974,45 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_eviction_strategy_bias_bytes_delay">
 	<documentation>
- Get the delay for the set of bias bytes flow eviction policies.
+ Get the delay in seconds for the set of bias bytes flow eviction policies.
 
         	</documentation>
 		<input message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_bias_bytes_delayRequest"/>
 		<output message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_bias_bytes_delayResponse"/>
 	</operation>
+	<operation name="get_eviction_strategy_bias_fast_delay">
+	<documentation>
+ Get the delay in seconds for the set of bias fast flow eviction policies.
+
+        	</documentation>
+		<input message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_bias_fast_delayRequest"/>
+		<output message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_bias_fast_delayResponse"/>
+	</operation>
+	<operation name="get_eviction_strategy_bias_slow_delay">
+	<documentation>
+ Get the delay in seconds for the set of bias slow flow eviction policies.
+
+        	</documentation>
+		<input message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_bias_slow_delayRequest"/>
+		<output message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_bias_slow_delayResponse"/>
+	</operation>
 	<operation name="get_eviction_strategy_bytes_state">
 	<documentation>
- Get the state which enables or disables bias bytes eviction strategy for the set 
+ Get the state which enables or disables using the bias bytes eviction strategy for the set 
  of flow eviction policies.
 
         	</documentation>
 		<input message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_bytes_stateRequest"/>
 		<output message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_bytes_stateResponse"/>
+	</operation>
+	<operation name="get_eviction_strategy_fast_state">
+	<documentation>
+ Get the state which enables or disables using the bias fast eviction strategy for the set
+ of flow eviction policies.
+
+        	</documentation>
+		<input message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_fast_stateRequest"/>
+		<output message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_fast_stateResponse"/>
 	</operation>
 	<operation name="get_eviction_strategy_geography_state">
 	<documentation>
@@ -7803,8 +8034,8 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_eviction_strategy_oldest_state">
 	<documentation>
- Get the state which enables or disables bias oldest eviction strategy for the set 
- of flow eviction policies.
+ Get the state which enables or disables using the bias oldest
+ eviction strategy for the set of flow eviction policies.
 
         	</documentation>
 		<input message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_oldest_stateRequest"/>
@@ -7843,6 +8074,15 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_route_domain_stateRequest"/>
 		<output message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_route_domain_stateResponse"/>
+	</operation>
+	<operation name="get_eviction_strategy_slow_state">
+	<documentation>
+ Get the state which enables or disables using the bias slow eviction strategy for the set
+ of flow eviction policies.
+
+        	</documentation>
+		<input message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_slow_stateRequest"/>
+		<output message="tns:LocalLB.FlowEvictionPolicy.get_eviction_strategy_slow_stateResponse"/>
 	</operation>
 	<operation name="get_eviction_strategy_virtual_server_state">
 	<documentation>
@@ -8052,22 +8292,50 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="set_eviction_strategy_bias_bytes_delay">
 	<documentation>
- Set the delay for the set of bias bytes flow eviction policies. Flows alive for
+ Set the delay in seconds for the set of bias bytes flow eviction policies. Flows alive for
  shorter than the delay are not pruned by the bias bytes algorithm.
 
         	</documentation>
 		<input message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_bias_bytes_delayRequest"/>
 		<output message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_bias_bytes_delayResponse"/>
 	</operation>
+	<operation name="set_eviction_strategy_bias_fast_delay">
+	<documentation>
+ Set the delay in seconds for the set of bias fast flow eviction policies. Flows alive for
+ shorter than the delay are not pruned by the bias fast algorithm.
+
+        	</documentation>
+		<input message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_bias_fast_delayRequest"/>
+		<output message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_bias_fast_delayResponse"/>
+	</operation>
+	<operation name="set_eviction_strategy_bias_slow_delay">
+	<documentation>
+ Set the delay in seconds for the set of bias slow flow eviction policies. Flows alive for
+ shorter than the delay are not pruned by the bias slow algorithm.
+
+        	</documentation>
+		<input message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_bias_slow_delayRequest"/>
+		<output message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_bias_slow_delayResponse"/>
+	</operation>
 	<operation name="set_eviction_strategy_bytes_state">
 	<documentation>
- Set the state which enables or disables bias bytes eviction strategy for the set of 
+ Set the state which enables or disables using the bias bytes eviction strategy for the set of
  flow eviction policies. The bias bytes eviction strategy selects flows for removal
  that have sent the fewest bytes since the connection was established.
 
         	</documentation>
 		<input message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_bytes_stateRequest"/>
 		<output message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_bytes_stateResponse"/>
+	</operation>
+	<operation name="set_eviction_strategy_fast_state">
+	<documentation>
+ Set the state which enables or disables using the bias fast eviction strategy for the set of
+ flow eviction policies. The bias fast eviction strategy selects flows for removal
+ that have the fastest rate of transfer since the connection was established.
+
+        	</documentation>
+		<input message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_fast_stateRequest"/>
+		<output message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_fast_stateResponse"/>
 	</operation>
 	<operation name="set_eviction_strategy_geography_state">
 	<documentation>
@@ -8127,6 +8395,16 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_route_domain_stateRequest"/>
 		<output message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_route_domain_stateResponse"/>
+	</operation>
+	<operation name="set_eviction_strategy_slow_state">
+	<documentation>
+ Set the state which enables or disables using the bias slow eviction strategy for the set of
+ flow eviction policies. The bias slow eviction strategy selects flows for removal
+ that have the slowest rate of transfer since the connection was established.
+
+        	</documentation>
+		<input message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_slow_stateRequest"/>
+		<output message="tns:LocalLB.FlowEvictionPolicy.set_eviction_strategy_slow_stateResponse"/>
 	</operation>
 	<operation name="set_eviction_strategy_virtual_server_state">
 	<documentation>
@@ -8402,7 +8680,47 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_eviction_strategy_bias_bytes_delay">
 	<documentation>
- Get the delay for the set of bias bytes flow eviction policies.
+ Get the delay in seconds for the set of bias bytes flow eviction policies.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_eviction_strategy_bias_fast_delay">
+	<documentation>
+ Get the delay in seconds for the set of bias fast flow eviction policies.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_eviction_strategy_bias_slow_delay">
+	<documentation>
+ Get the delay in seconds for the set of bias slow flow eviction policies.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
@@ -8422,7 +8740,28 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_eviction_strategy_bytes_state">
 	<documentation>
- Get the state which enables or disables bias bytes eviction strategy for the set 
+ Get the state which enables or disables using the bias bytes eviction strategy for the set 
+ of flow eviction policies.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_eviction_strategy_fast_state">
+	<documentation>
+ Get the state which enables or disables using the bias fast eviction strategy for the set
  of flow eviction policies.
 
         	</documentation>
@@ -8485,8 +8824,8 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_eviction_strategy_oldest_state">
 	<documentation>
- Get the state which enables or disables bias oldest eviction strategy for the set 
- of flow eviction policies.
+ Get the state which enables or disables using the bias oldest
+ eviction strategy for the set of flow eviction policies.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
@@ -8569,6 +8908,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Get the state for low priority route domain eviction strategy for the
  set of flow eviction policies.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_eviction_strategy_slow_state">
+	<documentation>
+ Get the state which enables or disables using the bias slow eviction strategy for the set
+ of flow eviction policies.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
@@ -9082,8 +9442,50 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="set_eviction_strategy_bias_bytes_delay">
 	<documentation>
- Set the delay for the set of bias bytes flow eviction policies. Flows alive for
+ Set the delay in seconds for the set of bias bytes flow eviction policies. Flows alive for
  shorter than the delay are not pruned by the bias bytes algorithm.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_eviction_strategy_bias_fast_delay">
+	<documentation>
+ Set the delay in seconds for the set of bias fast flow eviction policies. Flows alive for
+ shorter than the delay are not pruned by the bias fast algorithm.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_eviction_strategy_bias_slow_delay">
+	<documentation>
+ Set the delay in seconds for the set of bias slow flow eviction policies. Flows alive for
+ shorter than the delay are not pruned by the bias slow algorithm.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
@@ -9103,9 +9505,31 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="set_eviction_strategy_bytes_state">
 	<documentation>
- Set the state which enables or disables bias bytes eviction strategy for the set of 
+ Set the state which enables or disables using the bias bytes eviction strategy for the set of
  flow eviction policies. The bias bytes eviction strategy selects flows for removal
  that have sent the fewest bytes since the connection was established.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_eviction_strategy_fast_state">
+	<documentation>
+ Set the state which enables or disables using the bias fast eviction strategy for the set of
+ flow eviction policies. The bias fast eviction strategy selects flows for removal
+ that have the fastest rate of transfer since the connection was established.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
@@ -9237,6 +9661,28 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Set the state for low priority route domain eviction strategy for the
  set of flow eviction policies.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/FlowEvictionPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_eviction_strategy_slow_state">
+	<documentation>
+ Set the state which enables or disables using the bias slow eviction strategy for the set of
+ flow eviction policies. The bias slow eviction strategy selects flows for removal
+ that have the slowest rate of transfer since the connection was established.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/FlowEvictionPolicy"/>
@@ -9441,7 +9887,8 @@ All other trademarks mentioned in this document are the property of their respec
  It provides a user-controlled way to adjust how and when flows are swept,
  based on virtual server, route domain, and global constraints. In this context,
  a flow refers to a TCP connection. These policies define how the connections
- are evicted from the connection flow table in TMM.  
+ are evicted from the connection flow table in TMM. Multiple bias algorithms
+ can be enabled at the same time.
 
         	</documentation>
 	<port name="LocalLB.FlowEvictionPolicyPort" binding="tns:LocalLB.FlowEvictionPolicyBinding">

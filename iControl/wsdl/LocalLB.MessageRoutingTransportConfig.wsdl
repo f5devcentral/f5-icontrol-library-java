@@ -322,6 +322,11 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>PROFILE_TYPE_SERVER_LDAP</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="PROFILE_TYPE_TFTP">
+					<xsd:annotation>
+						<xsd:documentation>PROFILE_TYPE_TFTP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="Common.StringSequenceSequence">

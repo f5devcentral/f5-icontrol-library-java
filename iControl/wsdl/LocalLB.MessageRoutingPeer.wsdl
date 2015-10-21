@@ -43,6 +43,11 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>CONNECTION_MODE_PER_TMM</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="CONNECTION_MODE_PER_CLIENT">
+					<xsd:annotation>
+						<xsd:documentation>CONNECTION_MODE_PER_CLIENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="Common.StringSequence">

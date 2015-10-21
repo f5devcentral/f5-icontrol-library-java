@@ -55,6 +55,13 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:complexType name="Common.ULong64Sequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.ULong64[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:simpleType name="Common.UnitType">
 			<xsd:restriction base="xsd:string">
 				<xsd:enumeration value="UNIT_UNKNOWN">
@@ -269,6 +276,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:Common.RateUnitSequence"/>
 </message>
 
+<message name="Networking.BWControllerPolicy.get_maximum_user_rate_ppsRequest">
+	<part name="policies" type="tns:Common.StringSequence"/>
+</message>
+<message name="Networking.BWControllerPolicy.get_maximum_user_rate_ppsResponse">
+	<part name="return" type="tns:Common.ULong64Sequence"/>
+</message>
+
 <message name="Networking.BWControllerPolicy.get_measurement_stateRequest">
 	<part name="policies" type="tns:Common.StringSequence"/>
 </message>
@@ -374,6 +388,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="rates" type="tns:Common.RateUnitSequence"/>
 </message>
 <message name="Networking.BWControllerPolicy.set_maximum_user_rateResponse">
+</message>
+
+<message name="Networking.BWControllerPolicy.set_maximum_user_rate_ppsRequest">
+	<part name="policies" type="tns:Common.StringSequence"/>
+	<part name="rates" type="tns:Common.ULong64Sequence"/>
+</message>
+<message name="Networking.BWControllerPolicy.set_maximum_user_rate_ppsResponse">
 </message>
 
 <message name="Networking.BWControllerPolicy.set_measurement_stateRequest">
@@ -550,6 +571,15 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Networking.BWControllerPolicy.get_maximum_user_rateRequest"/>
 		<output message="tns:Networking.BWControllerPolicy.get_maximum_user_rateResponse"/>
 	</operation>
+	<operation name="get_maximum_user_rate_pps">
+	<documentation>
+ Gets the maximum user rate in packets per second (PPS) for the
+ specified Bandwidth Controller policies.
+
+        	</documentation>
+		<input message="tns:Networking.BWControllerPolicy.get_maximum_user_rate_ppsRequest"/>
+		<output message="tns:Networking.BWControllerPolicy.get_maximum_user_rate_ppsResponse"/>
+	</operation>
 	<operation name="get_measurement_state">
 	<documentation>
  Gets the currently configured enabled/disabled setting for the
@@ -710,6 +740,19 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Networking.BWControllerPolicy.set_maximum_user_rateRequest"/>
 		<output message="tns:Networking.BWControllerPolicy.set_maximum_user_rateResponse"/>
+	</operation>
+	<operation name="set_maximum_user_rate_pps">
+	<documentation>
+ Sets the maximum user rate in packets per second (PPS) for the
+ specified Bandwidth Controller policies.
+ The maximum user rate is the maximum bandwidth allowed for all the flows
+ going through this dynamically created instance of the Bandwidth Controller policy.
+ The maximum user rate cannot be higher than the maximum rate specified
+ for that Bandwidth Controller policy.
+
+        	</documentation>
+		<input message="tns:Networking.BWControllerPolicy.set_maximum_user_rate_ppsRequest"/>
+		<output message="tns:Networking.BWControllerPolicy.set_maximum_user_rate_ppsResponse"/>
 	</operation>
 	<operation name="set_measurement_state">
 	<documentation>
@@ -1118,6 +1161,27 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_maximum_user_rate_pps">
+	<documentation>
+ Gets the maximum user rate in packets per second (PPS) for the
+ specified Bandwidth Controller policies.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Networking/BWControllerPolicy"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/BWControllerPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/BWControllerPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_measurement_state">
 	<documentation>
  Gets the currently configured enabled/disabled setting for the
@@ -1442,6 +1506,31 @@ All other trademarks mentioned in this document are the property of their respec
  policy. Maximum user rate value should be between 5000 bps and 2000000000 bps.
  Maximum user rate cannot be higher than maximum rate specified for that
  Bandwidth Controller policy.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Networking/BWControllerPolicy"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/BWControllerPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/BWControllerPolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_maximum_user_rate_pps">
+	<documentation>
+ Sets the maximum user rate in packets per second (PPS) for the
+ specified Bandwidth Controller policies.
+ The maximum user rate is the maximum bandwidth allowed for all the flows
+ going through this dynamically created instance of the Bandwidth Controller policy.
+ The maximum user rate cannot be higher than the maximum rate specified
+ for that Bandwidth Controller policy.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/BWControllerPolicy"/>

@@ -7525,6 +7525,156 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_FW_RULE_LAST_HIT_TIME</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ASSOCIATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ASSOCIATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CLOSING">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CLOSING</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_UNCONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_UNCONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_INACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_INACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CLIENTLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CLIENTLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SERVERLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SERVERLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_FTPS_SESSIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_FTPS_SESSIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_READ_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_READ_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_WRITE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_WRITE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_PASSTHRU_TRANSITIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_PASSTHRU_TRANSITIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_DISCARDED_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_DISCARDED_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_INSPECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_INSPECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_MALFORMED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_MALFORMED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_LOOKUPS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_LOOKUPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_RESPONSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_RESPONSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_VCMP_RED_PACKETS_IN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_VCMP_RED_PACKETS_IN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_CIPHER_CAMELLIA_BULK">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_CIPHER_CAMELLIA_BULK</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_NAPTR_REQS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_NAPTR_REQS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="Common.SFlowGlobalTypeSequence">

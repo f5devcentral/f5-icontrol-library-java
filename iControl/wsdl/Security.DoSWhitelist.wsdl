@@ -118,10 +118,25 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="Security.DoSWhitelist.add_entryResponse">
 </message>
 
+<message name="Security.DoSWhitelist.get_descriptionRequest">
+	<part name="whitelists" type="tns:Common.StringSequence"/>
+</message>
+<message name="Security.DoSWhitelist.get_descriptionResponse">
+	<part name="return" type="tns:Common.StringSequence"/>
+</message>
+
 <message name="Security.DoSWhitelist.get_entryRequest">
 	<part name="whitelists" type="tns:Common.StringSequence"/>
 </message>
 <message name="Security.DoSWhitelist.get_entryResponse">
+	<part name="return" type="tns:Common.StringSequenceSequence"/>
+</message>
+
+<message name="Security.DoSWhitelist.get_entry_descriptionRequest">
+	<part name="whitelists" type="tns:Common.StringSequence"/>
+	<part name="entries" type="tns:Common.StringSequenceSequence"/>
+</message>
+<message name="Security.DoSWhitelist.get_entry_descriptionResponse">
 	<part name="return" type="tns:Common.StringSequenceSequence"/>
 </message>
 
@@ -190,6 +205,21 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="Security.DoSWhitelist.remove_entryResponse">
 </message>
 
+<message name="Security.DoSWhitelist.set_descriptionRequest">
+	<part name="whitelists" type="tns:Common.StringSequence"/>
+	<part name="descriptions" type="tns:Common.StringSequence"/>
+</message>
+<message name="Security.DoSWhitelist.set_descriptionResponse">
+</message>
+
+<message name="Security.DoSWhitelist.set_entry_descriptionRequest">
+	<part name="whitelists" type="tns:Common.StringSequence"/>
+	<part name="entries" type="tns:Common.StringSequenceSequence"/>
+	<part name="descriptions" type="tns:Common.StringSequenceSequence"/>
+</message>
+<message name="Security.DoSWhitelist.set_entry_descriptionResponse">
+</message>
+
 <message name="Security.DoSWhitelist.set_entry_destination_addressRequest">
 	<part name="whitelists" type="tns:Common.StringSequence"/>
 	<part name="entries" type="tns:Common.StringSequenceSequence"/>
@@ -241,6 +271,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Security.DoSWhitelist.add_entryRequest"/>
 		<output message="tns:Security.DoSWhitelist.add_entryResponse"/>
 	</operation>
+	<operation name="get_description">
+	<documentation>
+ Gets the descriptions for the specified DoS whitelists.
+
+        	</documentation>
+		<input message="tns:Security.DoSWhitelist.get_descriptionRequest"/>
+		<output message="tns:Security.DoSWhitelist.get_descriptionResponse"/>
+	</operation>
 	<operation name="get_entry">
 	<documentation>
  Gets entries for the specified DoS whitelists.
@@ -250,6 +288,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Security.DoSWhitelist.get_entryRequest"/>
 		<output message="tns:Security.DoSWhitelist.get_entryResponse"/>
+	</operation>
+	<operation name="get_entry_description">
+	<documentation>
+ Gets the descriptions for the specified DoS whitelist entries.
+
+        	</documentation>
+		<input message="tns:Security.DoSWhitelist.get_entry_descriptionRequest"/>
+		<output message="tns:Security.DoSWhitelist.get_entry_descriptionResponse"/>
 	</operation>
 	<operation name="get_entry_destination_address">
 	<documentation>
@@ -325,6 +371,24 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Security.DoSWhitelist.remove_entryRequest"/>
 		<output message="tns:Security.DoSWhitelist.remove_entryResponse"/>
 	</operation>
+	<operation name="set_description">
+	<documentation>
+ Sets the descriptions for the specified DoS whitelists.
+ This is an arbitrary field which can be used for any purpose.
+
+        	</documentation>
+		<input message="tns:Security.DoSWhitelist.set_descriptionRequest"/>
+		<output message="tns:Security.DoSWhitelist.set_descriptionResponse"/>
+	</operation>
+	<operation name="set_entry_description">
+	<documentation>
+ Sets the descriptions for the specified DoS whitelist entries.
+ This is an arbitrary field which can be used for any purpose.
+
+        	</documentation>
+		<input message="tns:Security.DoSWhitelist.set_entry_descriptionRequest"/>
+		<output message="tns:Security.DoSWhitelist.set_entry_descriptionResponse"/>
+	</operation>
 	<operation name="set_entry_destination_address">
 	<documentation>
  Sets the destination addresses for the specified entries.
@@ -398,11 +462,51 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_description">
+	<documentation>
+ Gets the descriptions for the specified DoS whitelists.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Security/DoSWhitelist"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Security/DoSWhitelist"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Security/DoSWhitelist"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_entry">
 	<documentation>
  Gets entries for the specified DoS whitelists.
  You can add or remove whitelist entries. Each entry specifies an 
  IP address, and can optionally specify other information.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Security/DoSWhitelist"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Security/DoSWhitelist"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Security/DoSWhitelist"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_entry_description">
+	<documentation>
+ Gets the descriptions for the specified DoS whitelist entries.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Security/DoSWhitelist"/>
@@ -585,6 +689,48 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="remove_entry">
 	<documentation>
  Removes a list of entries from the specified DoS whitelists.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Security/DoSWhitelist"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Security/DoSWhitelist"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Security/DoSWhitelist"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_description">
+	<documentation>
+ Sets the descriptions for the specified DoS whitelists.
+ This is an arbitrary field which can be used for any purpose.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Security/DoSWhitelist"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Security/DoSWhitelist"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Security/DoSWhitelist"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_entry_description">
+	<documentation>
+ Sets the descriptions for the specified DoS whitelist entries.
+ This is an arbitrary field which can be used for any purpose.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Security/DoSWhitelist"/>

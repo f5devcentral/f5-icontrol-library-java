@@ -2962,7 +2962,7 @@ All other trademarks mentioned in this document are the property of their respec
  This is relevant only for the remote storage of type remote, since Splunk and ArcSight have their fixed format.
  
  Field delimiter specifies which delimiter the remote machine uses to separate the fields in the logging file.
- You may not use the % character. The default delimiter is the comma character, for Comma Separated Value (CSV).
+ You may not use the &amp;#37; character. The default delimiter is the comma character, for Comma Separated Value (CSV).
 
         	</documentation>
 		<input message="tns:Security.LogProfile.set_application_field_delimiterRequest"/>
@@ -6007,7 +6007,7 @@ All other trademarks mentioned in this document are the property of their respec
  This is relevant only for the remote storage of type remote, since Splunk and ArcSight have their fixed format.
  
  Field delimiter specifies which delimiter the remote machine uses to separate the fields in the logging file.
- You may not use the % character. The default delimiter is the comma character, for Comma Separated Value (CSV).
+ You may not use the &amp;#37; character. The default delimiter is the comma character, for Comma Separated Value (CSV).
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Security/LogProfile"/>

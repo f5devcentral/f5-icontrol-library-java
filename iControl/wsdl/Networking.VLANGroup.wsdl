@@ -226,6 +226,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:Common.IPAddressSequence"/>
 </message>
 
+<message name="Networking.VLANGroup.get_if_indexRequest">
+	<part name="vlan_groups" type="tns:Common.StringSequence"/>
+</message>
+<message name="Networking.VLANGroup.get_if_indexResponse">
+	<part name="return" type="tns:Common.ULongSequence"/>
+</message>
+
 <message name="Networking.VLANGroup.get_listRequest">
 </message>
 <message name="Networking.VLANGroup.get_listResponse">
@@ -488,6 +495,16 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Networking.VLANGroup.get_global_proxy_exclusionRequest"/>
 		<output message="tns:Networking.VLANGroup.get_global_proxy_exclusionResponse"/>
+	</operation>
+	<operation name="get_if_index">
+	<documentation>
+ Gets the IF indices for the specified VLAN groups. This is a
+ unique identifier assigned to all objects displayed in
+ the SNMP IF-MIB.
+
+        	</documentation>
+		<input message="tns:Networking.VLANGroup.get_if_indexRequest"/>
+		<output message="tns:Networking.VLANGroup.get_if_indexResponse"/>
 	</operation>
 	<operation name="get_list">
 	<documentation>
@@ -947,6 +964,28 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the global lists of IP addresses that proxy ARP will ignore for all VLAN groups.
  
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Networking/VLANGroup"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/VLANGroup"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/VLANGroup"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_if_index">
+	<documentation>
+ Gets the IF indices for the specified VLAN groups. This is a
+ unique identifier assigned to all objects displayed in
+ the SNMP IF-MIB.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/VLANGroup"/>
 		<input>

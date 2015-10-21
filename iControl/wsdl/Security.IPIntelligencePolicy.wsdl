@@ -42,6 +42,30 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
+		<xsd:simpleType name="Security.IPIntelligencePolicy.IPIntelligencePolicyMatchDirection">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="IP_INTELLIGENCE_POLICY_MATCH_DIRECTION_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>IP_INTELLIGENCE_POLICY_MATCH_DIRECTION_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IP_INTELLIGENCE_POLICY_MATCH_DIRECTION_SOURCE">
+					<xsd:annotation>
+						<xsd:documentation>IP_INTELLIGENCE_POLICY_MATCH_DIRECTION_SOURCE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IP_INTELLIGENCE_POLICY_MATCH_DIRECTION_DESTINATION">
+					<xsd:annotation>
+						<xsd:documentation>IP_INTELLIGENCE_POLICY_MATCH_DIRECTION_DESTINATION</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IP_INTELLIGENCE_POLICY_MATCH_DIRECTION_SOURCE_AND_DESTINATION">
+					<xsd:annotation>
+						<xsd:documentation>IP_INTELLIGENCE_POLICY_MATCH_DIRECTION_SOURCE_AND_DESTINATION</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:complexType name="Common.StringSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -77,6 +101,13 @@ All other trademarks mentioned in this document are the property of their respec
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Security.IPIntelligencePolicy.IPIntelligencePolicyBlacklistCategoryLogType[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="Security.IPIntelligencePolicy.IPIntelligencePolicyMatchDirectionSequenceSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Security.IPIntelligencePolicy.IPIntelligencePolicyMatchDirectionSequence[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -125,6 +156,13 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
+		<xsd:complexType name="Security.IPIntelligencePolicy.IPIntelligencePolicyMatchDirectionSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Security.IPIntelligencePolicy.IPIntelligencePolicyMatchDirection[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:complexType name="Common.EnabledStateSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -205,6 +243,14 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="Security.IPIntelligencePolicy.get_blacklist_category_log_blacklist_whitelist_hit_settingResponse">
 	<part name="return" type="tns:Security.IPIntelligencePolicy.IPIntelligencePolicyBlacklistCategoryLogTypeSequenceSequence"/>
+</message>
+
+<message name="Security.IPIntelligencePolicy.get_blacklist_category_match_directionRequest">
+	<part name="policies" type="tns:Common.StringSequence"/>
+	<part name="categories" type="tns:Common.StringSequenceSequence"/>
+</message>
+<message name="Security.IPIntelligencePolicy.get_blacklist_category_match_directionResponse">
+	<part name="return" type="tns:Security.IPIntelligencePolicy.IPIntelligencePolicyMatchDirectionSequenceSequence"/>
 </message>
 
 <message name="Security.IPIntelligencePolicy.get_default_action_typeRequest">
@@ -310,6 +356,14 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="hits" type="tns:Security.IPIntelligencePolicy.IPIntelligencePolicyBlacklistCategoryLogTypeSequenceSequence"/>
 </message>
 <message name="Security.IPIntelligencePolicy.set_blacklist_category_log_blacklist_whitelist_hit_settingResponse">
+</message>
+
+<message name="Security.IPIntelligencePolicy.set_blacklist_category_match_directionRequest">
+	<part name="policies" type="tns:Common.StringSequence"/>
+	<part name="categories" type="tns:Common.StringSequenceSequence"/>
+	<part name="directions" type="tns:Security.IPIntelligencePolicy.IPIntelligencePolicyMatchDirectionSequenceSequence"/>
+</message>
+<message name="Security.IPIntelligencePolicy.set_blacklist_category_match_directionResponse">
 </message>
 
 <message name="Security.IPIntelligencePolicy.set_default_action_typeRequest">
@@ -428,6 +482,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Security.IPIntelligencePolicy.get_blacklist_category_log_blacklist_whitelist_hit_settingRequest"/>
 		<output message="tns:Security.IPIntelligencePolicy.get_blacklist_category_log_blacklist_whitelist_hit_settingResponse"/>
+	</operation>
+	<operation name="get_blacklist_category_match_direction">
+	<documentation>
+ Gets the match directions for the specified blacklist categories.
+
+        	</documentation>
+		<input message="tns:Security.IPIntelligencePolicy.get_blacklist_category_match_directionRequest"/>
+		<output message="tns:Security.IPIntelligencePolicy.get_blacklist_category_match_directionResponse"/>
 	</operation>
 	<operation name="get_default_action_type">
 	<documentation>
@@ -568,6 +630,16 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Security.IPIntelligencePolicy.set_blacklist_category_log_blacklist_whitelist_hit_settingRequest"/>
 		<output message="tns:Security.IPIntelligencePolicy.set_blacklist_category_log_blacklist_whitelist_hit_settingResponse"/>
+	</operation>
+	<operation name="set_blacklist_category_match_direction">
+	<documentation>
+ Sets the match directions for the specified blacklist categories.
+ Specifies the match direction for this blacklist category within
+ this policy. This can be set to source, destination, or both.
+
+        	</documentation>
+		<input message="tns:Security.IPIntelligencePolicy.set_blacklist_category_match_directionRequest"/>
+		<output message="tns:Security.IPIntelligencePolicy.set_blacklist_category_match_directionResponse"/>
 	</operation>
 	<operation name="set_default_action_type">
 	<documentation>
@@ -824,6 +896,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_blacklist_category_match_direction">
+	<documentation>
+ Gets the match directions for the specified blacklist categories.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Security/IPIntelligencePolicy"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Security/IPIntelligencePolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Security/IPIntelligencePolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_default_action_type">
 	<documentation>
  Gets the default action types for the specified policies.
@@ -1127,6 +1219,28 @@ All other trademarks mentioned in this document are the property of their respec
  Specifies if a log message will be generated if the packet is
  categorized with this blacklist and the packet's IP is listed in
  a whitelist.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Security/IPIntelligencePolicy"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Security/IPIntelligencePolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Security/IPIntelligencePolicy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_blacklist_category_match_direction">
+	<documentation>
+ Sets the match directions for the specified blacklist categories.
+ Specifies the match direction for this blacklist category within
+ this policy. This can be set to source, destination, or both.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Security/IPIntelligencePolicy"/>

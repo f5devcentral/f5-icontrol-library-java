@@ -98,13 +98,21 @@ All other trademarks mentioned in this document are the property of their respec
     	<documentation>
  Creates new scripts.
 
+ IMPORTANT: As of BIG-IP_v12.0.0, only users with the administrator
+ role on the relevant partition have permission to create or edit
+ iCall scripts.
+
         	</documentation>
 		<input message="tns:iCall.Script.createRequest"/>
 		<output message="tns:iCall.Script.createResponse"/>
 	</operation>
 	<operation name="delete_all_scripts">
 	<documentation>
- Deletes all user-defined (non-root) scripts.  
+ Deletes all user-defined (non-root) scripts.
+
+ IMPORTANT: As of BIG-IP_v12.0.0, only users with the administrator
+ role on the relevant partition have permission to create or edit
+ iCall scripts.
 
         	</documentation>
 		<input message="tns:iCall.Script.delete_all_scriptsRequest"/>
@@ -114,6 +122,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Deletes the specified scripts.
 
+ IMPORTANT: As of BIG-IP_v12.0.0, only users with the administrator
+ role on the relevant partition have permission to create or edit
+ iCall scripts.
+
         	</documentation>
 		<input message="tns:iCall.Script.delete_scriptRequest"/>
 		<output message="tns:iCall.Script.delete_scriptResponse"/>
@@ -121,6 +133,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_definition">
 	<documentation>
  Gets the definitions for a set of scripts.
+
+ IMPORTANT: As of BIG-IP_v12.0.0, only users with the administrator
+ role on the relevant partition have permission to create or edit
+ iCall scripts.
 
         	</documentation>
 		<input message="tns:iCall.Script.get_definitionRequest"/>
@@ -154,6 +170,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the definition for a set of scripts.
 
+ IMPORTANT: As of BIG-IP_v12.0.0, only users with the administrator
+ role on the relevant partition have permission to create or edit
+ iCall scripts.
+
         	</documentation>
 		<input message="tns:iCall.Script.set_definitionRequest"/>
 		<output message="tns:iCall.Script.set_definitionResponse"/>
@@ -178,6 +198,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Creates new scripts.
 
+ IMPORTANT: As of BIG-IP_v12.0.0, only users with the administrator
+ role on the relevant partition have permission to create or edit
+ iCall scripts.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:iCall/Script"/>
 		<input>
@@ -196,7 +220,11 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="delete_all_scripts">
 	<documentation>
- Deletes all user-defined (non-root) scripts.  
+ Deletes all user-defined (non-root) scripts.
+
+ IMPORTANT: As of BIG-IP_v12.0.0, only users with the administrator
+ role on the relevant partition have permission to create or edit
+ iCall scripts.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:iCall/Script"/>
@@ -218,6 +246,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Deletes the specified scripts.
 
+ IMPORTANT: As of BIG-IP_v12.0.0, only users with the administrator
+ role on the relevant partition have permission to create or edit
+ iCall scripts.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:iCall/Script"/>
 		<input>
@@ -237,6 +269,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_definition">
 	<documentation>
  Gets the definitions for a set of scripts.
+
+ IMPORTANT: As of BIG-IP_v12.0.0, only users with the administrator
+ role on the relevant partition have permission to create or edit
+ iCall scripts.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:iCall/Script"/>
@@ -317,6 +353,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_definition">
 	<documentation>
  Sets the definition for a set of scripts.
+
+ IMPORTANT: As of BIG-IP_v12.0.0, only users with the administrator
+ role on the relevant partition have permission to create or edit
+ iCall scripts.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:iCall/Script"/>

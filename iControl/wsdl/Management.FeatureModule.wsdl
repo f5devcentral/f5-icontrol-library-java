@@ -171,6 +171,11 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>TMOS_MODULE_FPS</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="TMOS_MODULE_ILX">
+					<xsd:annotation>
+						<xsd:documentation>TMOS_MODULE_ILX</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="Common.EnabledStateSequence">

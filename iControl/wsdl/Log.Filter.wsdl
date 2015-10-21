@@ -800,6 +800,81 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>LOG_SOURCE_WR_URLDBD</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_ERRDEFSD">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_ERRDEFSD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_FIPS">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_FIPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_FW_FQDN">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_FW_FQDN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_HWPD">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_HWPD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_IPFIXPROXY">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_IPFIXPROXY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_PGADMIND">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_PGADMIND</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_SCIM">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_SCIM</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_SCTP">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_SCTP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_SDMD">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_SDMD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_SHMMAPD">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_SHMMAPD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_SPOLICY">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_SPOLICY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_STATED">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_STATED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_STATUSD">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_STATUSD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_TFTP">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_TFTP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_TMROUTED">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_TMROUTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:simpleType name="Log.SyslogLevel">

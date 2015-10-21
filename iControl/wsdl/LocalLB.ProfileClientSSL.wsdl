@@ -7299,6 +7299,156 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_FW_RULE_LAST_HIT_TIME</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ASSOCIATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ASSOCIATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CLOSING">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CLOSING</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_UNCONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_UNCONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_INACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_INACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CLIENTLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CLIENTLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SERVERLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SERVERLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_FTPS_SESSIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_FTPS_SESSIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_READ_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_READ_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_WRITE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_WRITE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_PASSTHRU_TRANSITIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_PASSTHRU_TRANSITIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_DISCARDED_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_DISCARDED_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_INSPECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_INSPECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_MALFORMED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_MALFORMED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_LOOKUPS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_LOOKUPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_RESPONSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_RESPONSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_VCMP_RED_PACKETS_IN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_VCMP_RED_PACKETS_IN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_CIPHER_CAMELLIA_BULK">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_CIPHER_CAMELLIA_BULK</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_NAPTR_REQS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_NAPTR_REQS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="LocalLB.ProfileSSLCertificateExtensionSequence">
@@ -7774,6 +7924,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileClientSSL.ProfileClientSSLStatistics"/>
 </message>
 
+<message name="LocalLB.ProfileClientSSL.get_allow_expired_crl_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.get_allow_expired_crl_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
 <message name="LocalLB.ProfileClientSSL.get_allow_nonssl_stateRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -8058,6 +8215,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
 </message>
 
+<message name="LocalLB.ProfileClientSSL.get_inherit_certkeychain_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.get_inherit_certkeychain_stateResponse">
+	<part name="return" type="tns:Common.BooleanSequence"/>
+</message>
+
 <message name="LocalLB.ProfileClientSSL.get_key_fileRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -8190,6 +8354,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
+<message name="LocalLB.ProfileClientSSL.get_session_ticket_timeoutRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.get_session_ticket_timeoutResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+
 <message name="LocalLB.ProfileClientSSL.get_sni_default_stateRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -8202,6 +8373,13 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="LocalLB.ProfileClientSSL.get_sni_require_stateResponse">
 	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.ProfileClientSSL.get_ssl_maximum_aggregate_renegotiations_per_minuteRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.get_ssl_maximum_aggregate_renegotiations_per_minuteResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
 </message>
 
 <message name="LocalLB.ProfileClientSSL.get_ssl_maximum_renegotiations_per_minuteRequest">
@@ -8299,6 +8477,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="timeouts" type="tns:LocalLB.ProfileULongSequence"/>
 </message>
 <message name="LocalLB.ProfileClientSSL.set_alert_timeoutResponse">
+</message>
+
+<message name="LocalLB.ProfileClientSSL.set_allow_expired_crl_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.set_allow_expired_crl_stateResponse">
 </message>
 
 <message name="LocalLB.ProfileClientSSL.set_allow_nonssl_stateRequest">
@@ -8708,6 +8893,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfileClientSSL.set_session_ticket_stateResponse">
 </message>
 
+<message name="LocalLB.ProfileClientSSL.set_session_ticket_timeoutRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.set_session_ticket_timeoutResponse">
+</message>
+
 <message name="LocalLB.ProfileClientSSL.set_sni_default_stateRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
@@ -8720,6 +8912,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 <message name="LocalLB.ProfileClientSSL.set_sni_require_stateResponse">
+</message>
+
+<message name="LocalLB.ProfileClientSSL.set_ssl_maximum_aggregate_renegotiations_per_minuteRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.set_ssl_maximum_aggregate_renegotiations_per_minuteResponse">
 </message>
 
 <message name="LocalLB.ProfileClientSSL.set_ssl_maximum_renegotiations_per_minuteRequest">
@@ -8843,6 +9042,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileClientSSL.get_all_statisticsRequest"/>
 		<output message="tns:LocalLB.ProfileClientSSL.get_all_statisticsResponse"/>
+	</operation>
+	<operation name="get_allow_expired_crl_state">
+	<documentation>
+ Gets the states to allow using an expired CRL file.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.get_allow_expired_crl_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.get_allow_expired_crl_stateResponse"/>
 	</operation>
 	<operation name="get_allow_nonssl_state">
 	<documentation>
@@ -9258,6 +9465,20 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileClientSSL.get_handshake_timeoutRequest"/>
 		<output message="tns:LocalLB.ProfileClientSSL.get_handshake_timeoutResponse"/>
 	</operation>
+	<operation name="get_inherit_certkeychain_state">
+	<documentation>
+ Gets the inherit-certificate-key-chain states for the specified client SSL
+ profiles that are used to indicate whether the profiles's certificate-key-chains
+ are inherited and changed along with their parents' profiles' certificate-key-chains.
+ There will not be a set method for setting the inherit-certificate-key-chain state.
+ The inherit-certificate-key-chain state will be set to true when a client SSL
+ profile is created and will be set to false when the certificate-key-chain of
+ the profile is explicitly set.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.get_inherit_certkeychain_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.get_inherit_certkeychain_stateResponse"/>
+	</operation>
 	<operation name="get_key_file">
 	<documentation>
  Certificate keys are officially managed as certificate key
@@ -9438,6 +9659,15 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileClientSSL.get_session_ticket_stateRequest"/>
 		<output message="tns:LocalLB.ProfileClientSSL.get_session_ticket_stateResponse"/>
 	</operation>
+	<operation name="get_session_ticket_timeout">
+	<documentation>
+ Gets the SSL session ticket timeouts (in seconds) which determines
+ the lifetime of the session ticket for the specified client SSL profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.get_session_ticket_timeoutRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.get_session_ticket_timeoutResponse"/>
+	</operation>
 	<operation name="get_sni_default_state">
 	<documentation>
  Gets the SNI default states for the specified client SSL profiles.
@@ -9453,6 +9683,16 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileClientSSL.get_sni_require_stateRequest"/>
 		<output message="tns:LocalLB.ProfileClientSSL.get_sni_require_stateResponse"/>
+	</operation>
+	<operation name="get_ssl_maximum_aggregate_renegotiations_per_minute">
+	<documentation>
+ Gets the per-profile maximum number of aggregate renegotiation attempts allowed
+ within a minute for the specified client SSL profiles. 0 means that the feature
+ is disabled.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.get_ssl_maximum_aggregate_renegotiations_per_minuteRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.get_ssl_maximum_aggregate_renegotiations_per_minuteResponse"/>
 	</operation>
 	<operation name="get_ssl_maximum_renegotiations_per_minute">
 	<documentation>
@@ -9580,6 +9820,15 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileClientSSL.set_alert_timeoutRequest"/>
 		<output message="tns:LocalLB.ProfileClientSSL.set_alert_timeoutResponse"/>
+	</operation>
+	<operation name="set_allow_expired_crl_state">
+	<documentation>
+ Sets the states to allow using an expired CRL file.
+ If the state is enabled, use the CRL file even if it has expired.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.set_allow_expired_crl_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.set_allow_expired_crl_stateResponse"/>
 	</operation>
 	<operation name="set_allow_nonssl_state">
 	<documentation>
@@ -10226,6 +10475,16 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileClientSSL.set_session_ticket_stateRequest"/>
 		<output message="tns:LocalLB.ProfileClientSSL.set_session_ticket_stateResponse"/>
 	</operation>
+	<operation name="set_session_ticket_timeout">
+	<documentation>
+ Sets the SSL session ticket timeouts (in seconds) which determines
+ the lifetime of the session ticket for the specified client SSL profiles.
+ The default is 0 which means the SSL session cache lifetime is used.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.set_session_ticket_timeoutRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.set_session_ticket_timeoutResponse"/>
+	</operation>
 	<operation name="set_sni_default_state">
 	<documentation>
  Sets the SNI default states for the specified client SSL profiles.
@@ -10247,6 +10506,16 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileClientSSL.set_sni_require_stateRequest"/>
 		<output message="tns:LocalLB.ProfileClientSSL.set_sni_require_stateResponse"/>
+	</operation>
+	<operation name="set_ssl_maximum_aggregate_renegotiations_per_minute">
+	<documentation>
+ Sets the per-profile maximum number of aggregate renegotiation attempts allowed
+ within a minute for the specified client SSL profiles. 0 means that the feature
+ is disabled.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.set_ssl_maximum_aggregate_renegotiations_per_minuteRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.set_ssl_maximum_aggregate_renegotiations_per_minuteResponse"/>
 	</operation>
 	<operation name="set_ssl_maximum_renegotiations_per_minute">
 	<documentation>
@@ -10450,6 +10719,26 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_all_statistics">
 	<documentation>
  Gets the statistics for all the client SSL profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_allow_expired_crl_state">
+	<documentation>
+ Gets the states to allow using an expired CRL file.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
@@ -11361,6 +11650,32 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_inherit_certkeychain_state">
+	<documentation>
+ Gets the inherit-certificate-key-chain states for the specified client SSL
+ profiles that are used to indicate whether the profiles's certificate-key-chains
+ are inherited and changed along with their parents' profiles' certificate-key-chains.
+ There will not be a set method for setting the inherit-certificate-key-chain state.
+ The inherit-certificate-key-chain state will be set to true when a client SSL
+ profile is created and will be set to false when the certificate-key-chain of
+ the profile is explicitly set.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_key_file">
 	<documentation>
  Certificate keys are officially managed as certificate key
@@ -11769,6 +12084,27 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_session_ticket_timeout">
+	<documentation>
+ Gets the SSL session ticket timeouts (in seconds) which determines
+ the lifetime of the session ticket for the specified client SSL profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_sni_default_state">
 	<documentation>
  Gets the SNI default states for the specified client SSL profiles.
@@ -11792,6 +12128,28 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_sni_require_state">
 	<documentation>
  Gets the SNI require states for the specified client SSL profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_ssl_maximum_aggregate_renegotiations_per_minute">
+	<documentation>
+ Gets the per-profile maximum number of aggregate renegotiation attempts allowed
+ within a minute for the specified client SSL profiles. 0 means that the feature
+ is disabled.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
@@ -12087,6 +12445,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_alert_timeout">
 	<documentation>
  Sets the connection timeouts (in seconds) after sending an alert for the specified client SSL profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_allow_expired_crl_state">
+	<documentation>
+ Sets the states to allow using an expired CRL file.
+ If the state is enabled, use the CRL file even if it has expired.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
@@ -13433,6 +13812,28 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_session_ticket_timeout">
+	<documentation>
+ Sets the SSL session ticket timeouts (in seconds) which determines
+ the lifetime of the session ticket for the specified client SSL profiles.
+ The default is 0 which means the SSL session cache lifetime is used.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_sni_default_state">
 	<documentation>
  Sets the SNI default states for the specified client SSL profiles.
@@ -13462,6 +13863,28 @@ All other trademarks mentioned in this document are the property of their respec
  When this is set to true, SNI support is required for the peer and if a client
  connection does not specify a known server name, or does not specify any server name
  at all, the handshake will fail. The default value is false.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_ssl_maximum_aggregate_renegotiations_per_minute">
+	<documentation>
+ Sets the per-profile maximum number of aggregate renegotiation attempts allowed
+ within a minute for the specified client SSL profiles. 0 means that the feature
+ is disabled.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>

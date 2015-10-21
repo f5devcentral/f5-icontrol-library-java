@@ -400,7 +400,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="download_file">
 	<documentation>
  A generic file download mechanism to download a file from the device.
- 
+
+ Depending on your system settings (including settings like appliance
+ mode, FIPS, and Common Criteria), the set of files that can be
+ operated on may be restricted. If any of these restrictions occur,
+ an OperationFailed error will be generated.
+
         	</documentation>
 		<input message="tns:System.ConfigSync.download_fileRequest"/>
 		<output message="tns:System.ConfigSync.download_fileResponse"/>
@@ -656,7 +661,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="upload_file">
 	<documentation>
  A generic file upload mechanism to transfer a file to the device.
- 
+
+ Depending on your system settings (including settings like appliance
+ mode, FIPS, and Common Criteria), the set of files that can be
+ operated on may be restricted. If any of these restrictions occur,
+ an OperationFailed error will be generated.
+
         	</documentation>
 		<input message="tns:System.ConfigSync.upload_fileRequest"/>
 		<output message="tns:System.ConfigSync.upload_fileResponse"/>
@@ -738,7 +748,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="download_file">
 	<documentation>
  A generic file download mechanism to download a file from the device.
- 
+
+ Depending on your system settings (including settings like appliance
+ mode, FIPS, and Common Criteria), the set of files that can be
+ operated on may be restricted. If any of these restrictions occur,
+ an OperationFailed error will be generated.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/ConfigSync"/>
 		<input>
@@ -1258,7 +1273,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="upload_file">
 	<documentation>
  A generic file upload mechanism to transfer a file to the device.
- 
+
+ Depending on your system settings (including settings like appliance
+ mode, FIPS, and Common Criteria), the set of files that can be
+ operated on may be restricted. If any of these restrictions occur,
+ an OperationFailed error will be generated.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/ConfigSync"/>
 		<input>

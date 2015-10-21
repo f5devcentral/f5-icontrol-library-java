@@ -42,6 +42,45 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
+		<xsd:simpleType name="GlobalLB.DNSReturnCode">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="RETURN_CODE_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>RETURN_CODE_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="RETURN_CODE_NO_ERROR">
+					<xsd:annotation>
+						<xsd:documentation>RETURN_CODE_NO_ERROR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="RETURN_CODE_FORMAT_ERROR">
+					<xsd:annotation>
+						<xsd:documentation>RETURN_CODE_FORMAT_ERROR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="RETURN_CODE_SERVER_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>RETURN_CODE_SERVER_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="RETURN_CODE_NON_EXISTENT_DOMAIN">
+					<xsd:annotation>
+						<xsd:documentation>RETURN_CODE_NON_EXISTENT_DOMAIN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="RETURN_CODE_NOT_IMPLEMENTED">
+					<xsd:annotation>
+						<xsd:documentation>RETURN_CODE_NOT_IMPLEMENTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="RETURN_CODE_REFUSED">
+					<xsd:annotation>
+						<xsd:documentation>RETURN_CODE_REFUSED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:simpleType name="GlobalLB.DomainNameCheckMode">
 			<xsd:restriction base="xsd:string">
 				<xsd:enumeration value="DOMAIN_NAME_CHECK_MODE_UNKNOWN">
@@ -300,6 +339,24 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="GlobalLB.Globals.get_dump_topology_stateResponse">
 	<part name="return" type="tns:Common.EnabledState"/>
+</message>
+
+<message name="GlobalLB.Globals.get_failure_response_return_codeRequest">
+</message>
+<message name="GlobalLB.Globals.get_failure_response_return_codeResponse">
+	<part name="return" type="tns:GlobalLB.DNSReturnCode"/>
+</message>
+
+<message name="GlobalLB.Globals.get_failure_response_return_code_stateRequest">
+</message>
+<message name="GlobalLB.Globals.get_failure_response_return_code_stateResponse">
+	<part name="return" type="tns:Common.EnabledState"/>
+</message>
+
+<message name="GlobalLB.Globals.get_failure_response_return_code_ttlRequest">
+</message>
+<message name="GlobalLB.Globals.get_failure_response_return_code_ttlResponse">
+	<part name="return" type="xsd:long"/>
 </message>
 
 <message name="GlobalLB.Globals.get_fb_respect_acl_stateRequest">
@@ -721,6 +778,24 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="state" type="tns:Common.EnabledState"/>
 </message>
 <message name="GlobalLB.Globals.set_dump_topology_stateResponse">
+</message>
+
+<message name="GlobalLB.Globals.set_failure_response_return_codeRequest">
+	<part name="return_code" type="tns:GlobalLB.DNSReturnCode"/>
+</message>
+<message name="GlobalLB.Globals.set_failure_response_return_codeResponse">
+</message>
+
+<message name="GlobalLB.Globals.set_failure_response_return_code_stateRequest">
+	<part name="state" type="tns:Common.EnabledState"/>
+</message>
+<message name="GlobalLB.Globals.set_failure_response_return_code_stateResponse">
+</message>
+
+<message name="GlobalLB.Globals.set_failure_response_return_code_ttlRequest">
+	<part name="value" type="xsd:long"/>
+</message>
+<message name="GlobalLB.Globals.set_failure_response_return_code_ttlResponse">
 </message>
 
 <message name="GlobalLB.Globals.set_fb_respect_acl_stateRequest">
@@ -1198,6 +1273,31 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:GlobalLB.Globals.get_dump_topology_stateRequest"/>
 		<output message="tns:GlobalLB.Globals.get_dump_topology_stateResponse"/>
+	</operation>
+	<operation name="get_failure_response_return_code">
+	<documentation>
+ Gets the global failure response return code.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Globals.get_failure_response_return_codeRequest"/>
+		<output message="tns:GlobalLB.Globals.get_failure_response_return_codeResponse"/>
+	</operation>
+	<operation name="get_failure_response_return_code_state">
+	<documentation>
+ Gets the state indicating whether globally the system should return the
+ failure response return code to failed requests.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Globals.get_failure_response_return_code_stateRequest"/>
+		<output message="tns:GlobalLB.Globals.get_failure_response_return_code_stateResponse"/>
+	</operation>
+	<operation name="get_failure_response_return_code_ttl">
+	<documentation>
+ Gets the global failure response return code caching TTL value.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Globals.get_failure_response_return_code_ttlRequest"/>
+		<output message="tns:GlobalLB.Globals.get_failure_response_return_code_ttlResponse"/>
 	</operation>
 	<operation name="get_fb_respect_acl_state">
 	<documentation>
@@ -1876,6 +1976,36 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:GlobalLB.Globals.set_dump_topology_stateRequest"/>
 		<output message="tns:GlobalLB.Globals.set_dump_topology_stateResponse"/>
+	</operation>
+	<operation name="set_failure_response_return_code">
+	<documentation>
+ Sets the global failure response return code. The default value is
+ RETURN_CODE_NO_ERROR.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Globals.set_failure_response_return_codeRequest"/>
+		<output message="tns:GlobalLB.Globals.set_failure_response_return_codeResponse"/>
+	</operation>
+	<operation name="set_failure_response_return_code_state">
+	<documentation>
+ Sets the state indicating whether globally the system should return
+ the failure response return code to failed requests. With this option
+ enabled, the system responds faster to requests for which it does not
+ have a pool or pool member available. The default is disabled.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Globals.set_failure_response_return_code_stateRequest"/>
+		<output message="tns:GlobalLB.Globals.set_failure_response_return_code_stateResponse"/>
+	</operation>
+	<operation name="set_failure_response_return_code_ttl">
+	<documentation>
+ Sets the global failure response return code caching TTL value (in seconds).
+ The value indicates the time to maintain the negative answer by a downstream
+ DNS cache. The default value is 0.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Globals.set_failure_response_return_code_ttlRequest"/>
+		<output message="tns:GlobalLB.Globals.set_failure_response_return_code_ttlResponse"/>
 	</operation>
 	<operation name="set_fb_respect_acl_state">
 	<documentation>
@@ -2762,6 +2892,67 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_failure_response_return_code">
+	<documentation>
+ Gets the global failure response return code.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Globals"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Globals"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Globals"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_failure_response_return_code_state">
+	<documentation>
+ Gets the state indicating whether globally the system should return the
+ failure response return code to failed requests.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Globals"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Globals"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Globals"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_failure_response_return_code_ttl">
+	<documentation>
+ Gets the global failure response return code caching TTL value.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Globals"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Globals"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Globals"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_fb_respect_acl_state">
 	<documentation>
  This method is deprecated (immediately) and should not be
@@ -4263,6 +4454,72 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the state to indicate whether to dump the topology.
 
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Globals"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Globals"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Globals"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_failure_response_return_code">
+	<documentation>
+ Sets the global failure response return code. The default value is
+ RETURN_CODE_NO_ERROR.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Globals"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Globals"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Globals"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_failure_response_return_code_state">
+	<documentation>
+ Sets the state indicating whether globally the system should return
+ the failure response return code to failed requests. With this option
+ enabled, the system responds faster to requests for which it does not
+ have a pool or pool member available. The default is disabled.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Globals"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Globals"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Globals"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_failure_response_return_code_ttl">
+	<documentation>
+ Sets the global failure response return code caching TTL value (in seconds).
+ The value indicates the time to maintain the negative answer by a downstream
+ DNS cache. The default value is 0.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Globals"/>

@@ -84,6 +84,13 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:element name="time_stamp" type="tns:Common.TimeStamp"/>
 			</xsd:sequence>
 		</xsd:complexType>
+		<xsd:complexType name="Common.IPAddressSequenceSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.IPAddressSequence[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:complexType name="Common.BooleanSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -7198,6 +7205,156 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_FW_RULE_LAST_HIT_TIME</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ASSOCIATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ASSOCIATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CLOSING">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CLOSING</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_CONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_CONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_UNCONFIRMED_ADDRESSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_UNCONFIRMED_ADDRESSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_ACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_ACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SCTP_INACTIVE_PATHS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SCTP_INACTIVE_PATHS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CLIENTLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CLIENTLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SERVERLDAP_CONNECTIONS_TLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SERVERLDAP_CONNECTIONS_TLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_AGGREGATE_RENEGOTIATIONS_REJECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_FTPS_SESSIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_FTPS_SESSIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_READ_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_READ_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_WRITE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_WRITE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_FTP_PASSTHRU_TRANSITIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_FTP_PASSTHRU_TRANSITIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TFTP_DISCARDED_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TFTP_DISCARDED_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_INSPECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_INSPECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_MALFORMED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_MALFORMED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_LOOKUPS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_LOOKUPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_HW_CACHE_RESPONSES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_HW_CACHE_RESPONSES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_VCMP_RED_PACKETS_IN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_VCMP_RED_PACKETS_IN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_SESSION_MIRRORING_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_PEER_READY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_CTX_RECV</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_HS_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_FAILURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CONNECTION_MIRRORING_HA_TIMEOUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_DTLS_TX_PUSHBACKS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_CIPHER_CAMELLIA_BULK">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_CIPHER_CAMELLIA_BULK</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_NAPTR_REQS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_NAPTR_REQS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="LocalLB.ProfileString">
@@ -7210,6 +7367,13 @@ All other trademarks mentioned in this document are the property of their respec
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.StringSequence[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="Common.IPAddressSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='xsd:string[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -7258,6 +7422,13 @@ All other trademarks mentioned in this document are the property of their respec
 
 <!-- message -->
 
+<message name="LocalLB.ProfileSCTP.add_multi_homing_addressRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="addresses" type="tns:Common.IPAddressSequenceSequence"/>
+</message>
+<message name="LocalLB.ProfileSCTP.add_multi_homing_addressResponse">
+</message>
+
 <message name="LocalLB.ProfileSCTP.createRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -7279,6 +7450,13 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="LocalLB.ProfileSCTP.get_all_statisticsResponse">
 	<part name="return" type="tns:LocalLB.ProfileSCTP.ProfileSCTPStatistics"/>
+</message>
+
+<message name="LocalLB.ProfileSCTP.get_client_side_multi_homing_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileSCTP.get_client_side_multi_homing_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
 <message name="LocalLB.ProfileSCTP.get_connect_maximum_retryRequest">
@@ -7371,6 +7549,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
 </message>
 
+<message name="LocalLB.ProfileSCTP.get_maximum_communication_pathsRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileSCTP.get_maximum_communication_pathsResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+
+<message name="LocalLB.ProfileSCTP.get_maximum_path_retransmit_limitRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileSCTP.get_maximum_path_retransmit_limitResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+
+<message name="LocalLB.ProfileSCTP.get_multi_homing_addressRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileSCTP.get_multi_homing_addressResponse">
+	<part name="return" type="tns:Common.IPAddressSequenceSequence"/>
+</message>
+
 <message name="LocalLB.ProfileSCTP.get_order_receive_message_stateRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -7448,6 +7647,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
+<message name="LocalLB.ProfileSCTP.get_server_side_multi_homing_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileSCTP.get_server_side_multi_homing_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
 <message name="LocalLB.ProfileSCTP.get_statisticsRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -7490,6 +7696,19 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:Common.BooleanSequence"/>
 </message>
 
+<message name="LocalLB.ProfileSCTP.remove_all_multi_homing_addressesRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileSCTP.remove_all_multi_homing_addressesResponse">
+</message>
+
+<message name="LocalLB.ProfileSCTP.remove_multi_homing_addressRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="addresses" type="tns:Common.IPAddressSequenceSequence"/>
+</message>
+<message name="LocalLB.ProfileSCTP.remove_multi_homing_addressResponse">
+</message>
+
 <message name="LocalLB.ProfileSCTP.reset_statisticsRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -7501,6 +7720,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="virtual_names" type="tns:Common.StringSequenceSequence"/>
 </message>
 <message name="LocalLB.ProfileSCTP.reset_statistics_by_virtualResponse">
+</message>
+
+<message name="LocalLB.ProfileSCTP.set_client_side_multi_homing_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileSCTP.set_client_side_multi_homing_stateResponse">
 </message>
 
 <message name="LocalLB.ProfileSCTP.set_connect_maximum_retryRequest">
@@ -7587,6 +7813,20 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfileSCTP.set_max_burstResponse">
 </message>
 
+<message name="LocalLB.ProfileSCTP.set_maximum_communication_pathsRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileSCTP.set_maximum_communication_pathsResponse">
+</message>
+
+<message name="LocalLB.ProfileSCTP.set_maximum_path_retransmit_limitRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileSCTP.set_maximum_path_retransmit_limitResponse">
+</message>
+
 <message name="LocalLB.ProfileSCTP.set_order_receive_message_stateRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
@@ -7664,6 +7904,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfileSCTP.set_send_partial_data_stateResponse">
 </message>
 
+<message name="LocalLB.ProfileSCTP.set_server_side_multi_homing_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileSCTP.set_server_side_multi_homing_stateResponse">
+</message>
+
 <message name="LocalLB.ProfileSCTP.set_transmit_chunk_bufferRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="buffers" type="tns:LocalLB.ProfileULongSequence"/>
@@ -7674,8 +7921,19 @@ All other trademarks mentioned in this document are the property of their respec
 <!-- portType -->
 
 <portType name="LocalLB.ProfileSCTPPortType">
-	<operation name="create">
+	<operation name="add_multi_homing_address">
      	<documentation>
+ Adds client-side multi-homing destination addresses used with this SCTP profile.
+ If the allowed clients is restricted, a separate API call needs to be made to
+ set the source prefix subnet value to something different than the default which
+ allows all source IPs.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSCTP.add_multi_homing_addressRequest"/>
+		<output message="tns:LocalLB.ProfileSCTP.add_multi_homing_addressResponse"/>
+	</operation>
+	<operation name="create">
+	<documentation>
  Creates the specified SCTP profiles.
  
         	</documentation>
@@ -7705,6 +7963,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileSCTP.get_all_statisticsRequest"/>
 		<output message="tns:LocalLB.ProfileSCTP.get_all_statisticsResponse"/>
+	</operation>
+	<operation name="get_client_side_multi_homing_state">
+	<documentation>
+ Gets the client side multi-homing state for the specified profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSCTP.get_client_side_multi_homing_stateRequest"/>
+		<output message="tns:LocalLB.ProfileSCTP.get_client_side_multi_homing_stateResponse"/>
 	</operation>
 	<operation name="get_connect_maximum_retry">
 	<documentation>
@@ -7815,6 +8081,31 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileSCTP.get_max_burstRequest"/>
 		<output message="tns:LocalLB.ProfileSCTP.get_max_burstResponse"/>
 	</operation>
+	<operation name="get_maximum_communication_paths">
+	<documentation>
+ Gets the maximum number of communication paths.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSCTP.get_maximum_communication_pathsRequest"/>
+		<output message="tns:LocalLB.ProfileSCTP.get_maximum_communication_pathsResponse"/>
+	</operation>
+	<operation name="get_maximum_path_retransmit_limit">
+	<documentation>
+ Gets the maximum path retransmit limit.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSCTP.get_maximum_path_retransmit_limitRequest"/>
+		<output message="tns:LocalLB.ProfileSCTP.get_maximum_path_retransmit_limitResponse"/>
+	</operation>
+	<operation name="get_multi_homing_address">
+	<documentation>
+ Gets the list of client-side multi-homing destination addresses used with
+ this SCTP profile.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSCTP.get_multi_homing_addressRequest"/>
+		<output message="tns:LocalLB.ProfileSCTP.get_multi_homing_addressResponse"/>
+	</operation>
 	<operation name="get_order_receive_message_state">
 	<documentation>
  Gets the state that if true, SCTP will order the received messages
@@ -7908,6 +8199,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileSCTP.get_send_partial_data_stateRequest"/>
 		<output message="tns:LocalLB.ProfileSCTP.get_send_partial_data_stateResponse"/>
 	</operation>
+	<operation name="get_server_side_multi_homing_state">
+	<documentation>
+ Gets the server side multi-homing state for the specified profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSCTP.get_server_side_multi_homing_stateRequest"/>
+		<output message="tns:LocalLB.ProfileSCTP.get_server_side_multi_homing_stateResponse"/>
+	</operation>
 	<operation name="get_statistics">
 	<documentation>
  Gets the statistics for the specified SCTP profiles.
@@ -7963,6 +8262,24 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileSCTP.is_system_profileRequest"/>
 		<output message="tns:LocalLB.ProfileSCTP.is_system_profileResponse"/>
 	</operation>
+	<operation name="remove_all_multi_homing_addresses">
+	<documentation>
+ Removes all client-side multi-homing addresses used with
+ this SCTP profile.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSCTP.remove_all_multi_homing_addressesRequest"/>
+		<output message="tns:LocalLB.ProfileSCTP.remove_all_multi_homing_addressesResponse"/>
+	</operation>
+	<operation name="remove_multi_homing_address">
+	<documentation>
+ Removes client-side multi-homing addresses used with
+ this SCTP profile.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSCTP.remove_multi_homing_addressRequest"/>
+		<output message="tns:LocalLB.ProfileSCTP.remove_multi_homing_addressResponse"/>
+	</operation>
 	<operation name="reset_statistics">
 	<documentation>
  Resets the statistics for the specified SCTP profiles.
@@ -7979,6 +8296,15 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileSCTP.reset_statistics_by_virtualRequest"/>
 		<output message="tns:LocalLB.ProfileSCTP.reset_statistics_by_virtualResponse"/>
+	</operation>
+	<operation name="set_client_side_multi_homing_state">
+	<documentation>
+ Sets the client side multi-homing state for the specified profiles. When enabled,
+ the virtual server source address translation mode is used for SCTP traffic.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSCTP.set_client_side_multi_homing_stateRequest"/>
+		<output message="tns:LocalLB.ProfileSCTP.set_client_side_multi_homing_stateResponse"/>
 	</operation>
 	<operation name="set_connect_maximum_retry">
 	<documentation>
@@ -8083,6 +8409,31 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileSCTP.set_max_burstRequest"/>
 		<output message="tns:LocalLB.ProfileSCTP.set_max_burstResponse"/>
 	</operation>
+	<operation name="set_maximum_communication_paths">
+	<documentation>
+ Sets the maximum number of communication paths. A communication path is
+ a set of a local address and remote address used to send and receive
+ traffic between endpoints. This parameters sets the maximum number
+ of paths allowed between the local and remote endpoints to establish the
+ multi-homing association for alternate failover paths. The default is 16,
+ and the value is stored as a 16 bit value.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSCTP.set_maximum_communication_pathsRequest"/>
+		<output message="tns:LocalLB.ProfileSCTP.set_maximum_communication_pathsResponse"/>
+	</operation>
+	<operation name="set_maximum_path_retransmit_limit">
+	<documentation>
+ Sets the maximum path retransmit limit. This the number of retries attempted
+ before failing over a particular path between local and remote endpoints.
+ When a path is not responsive anymore, one of the alternate paths that has
+ established the association as a multi-homing endpoint is chosen to take over
+ the traffic. The default number of retries to declare a path unusable is 5.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSCTP.set_maximum_path_retransmit_limitRequest"/>
+		<output message="tns:LocalLB.ProfileSCTP.set_maximum_path_retransmit_limitResponse"/>
+	</operation>
 	<operation name="set_order_receive_message_state">
 	<documentation>
  Sets the state that if true, SCTP will order the received messages
@@ -8176,6 +8527,15 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileSCTP.set_send_partial_data_stateRequest"/>
 		<output message="tns:LocalLB.ProfileSCTP.set_send_partial_data_stateResponse"/>
 	</operation>
+	<operation name="set_server_side_multi_homing_state">
+	<documentation>
+ Sets the server side multi-homing state for the specified profiles. When enabled,
+ the virtual server source address translation mode is used for SCTP traffic.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSCTP.set_server_side_multi_homing_stateRequest"/>
+		<output message="tns:LocalLB.ProfileSCTP.set_server_side_multi_homing_stateResponse"/>
+	</operation>
 	<operation name="set_transmit_chunk_buffer">
 	<documentation>
  Sets the number of TX chunk buffers used by the specified SCTP profiles.
@@ -8190,6 +8550,29 @@ All other trademarks mentioned in this document are the property of their respec
 
 <binding name="LocalLB.ProfileSCTPBinding" type="tns:LocalLB.ProfileSCTPPortType">
 	<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+	<operation name="add_multi_homing_address">
+	<documentation>
+ Adds client-side multi-homing destination addresses used with this SCTP profile.
+ If the allowed clients is restricted, a separate API call needs to be made to
+ set the source prefix subnet value to something different than the default which
+ allows all source IPs.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="create">
 	<documentation>
  Creates the specified SCTP profiles.
@@ -8254,6 +8637,26 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the statistics for all the SCTP profiles.
  
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_client_side_multi_homing_state">
+	<documentation>
+ Gets the client side multi-homing state for the specified profiles.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
 		<input>
@@ -8535,6 +8938,67 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_maximum_communication_paths">
+	<documentation>
+ Gets the maximum number of communication paths.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_maximum_path_retransmit_limit">
+	<documentation>
+ Gets the maximum path retransmit limit.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_multi_homing_address">
+	<documentation>
+ Gets the list of client-side multi-homing destination addresses used with
+ this SCTP profile.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_order_receive_message_state">
 	<documentation>
  Gets the state that if true, SCTP will order the received messages
@@ -8760,6 +9224,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_server_side_multi_homing_state">
+	<documentation>
+ Gets the server side multi-homing state for the specified profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_statistics">
 	<documentation>
  Gets the statistics for the specified SCTP profiles.
@@ -8887,6 +9371,48 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="remove_all_multi_homing_addresses">
+	<documentation>
+ Removes all client-side multi-homing addresses used with
+ this SCTP profile.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="remove_multi_homing_address">
+	<documentation>
+ Removes client-side multi-homing addresses used with
+ this SCTP profile.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="reset_statistics">
 	<documentation>
  Resets the statistics for the specified SCTP profiles.
@@ -8912,6 +9438,27 @@ All other trademarks mentioned in this document are the property of their respec
  Resets the statistics for the specified profiles, for
  specified virtual servers.
  
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_client_side_multi_homing_state">
+	<documentation>
+ Sets the client side multi-homing state for the specified profiles. When enabled,
+ the virtual server source address translation mode is used for SCTP traffic.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
 		<input>
@@ -9175,6 +9722,55 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_maximum_communication_paths">
+	<documentation>
+ Sets the maximum number of communication paths. A communication path is
+ a set of a local address and remote address used to send and receive
+ traffic between endpoints. This parameters sets the maximum number
+ of paths allowed between the local and remote endpoints to establish the
+ multi-homing association for alternate failover paths. The default is 16,
+ and the value is stored as a 16 bit value.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_maximum_path_retransmit_limit">
+	<documentation>
+ Sets the maximum path retransmit limit. This the number of retries attempted
+ before failing over a particular path between local and remote endpoints.
+ When a path is not responsive anymore, one of the alternate paths that has
+ established the association as a multi-homing endpoint is chosen to take over
+ the traffic. The default number of retries to declare a path unusable is 5.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_order_receive_message_state">
 	<documentation>
  Sets the state that if true, SCTP will order the received messages
@@ -9384,6 +9980,27 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the state that indicates whether SCTP will accept and send partial 
  application data.
  
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSCTP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_server_side_multi_homing_state">
+	<documentation>
+ Sets the server side multi-homing state for the specified profiles. When enabled,
+ the virtual server source address translation mode is used for SCTP traffic.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSCTP"/>
 		<input>

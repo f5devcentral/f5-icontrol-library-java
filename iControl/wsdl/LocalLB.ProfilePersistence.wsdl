@@ -372,6 +372,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
 </message>
 
+<message name="LocalLB.ProfilePersistence.get_cookie_httponly_attributeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfilePersistence.get_cookie_httponly_attributeResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
 <message name="LocalLB.ProfilePersistence.get_cookie_nameRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -384,6 +391,13 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="LocalLB.ProfilePersistence.get_cookie_persistence_methodResponse">
 	<part name="return" type="tns:LocalLB.ProfileCookiePersistenceMethodSequence"/>
+</message>
+
+<message name="LocalLB.ProfilePersistence.get_cookie_secure_attributeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfilePersistence.get_cookie_secure_attributeResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
 <message name="LocalLB.ProfilePersistence.get_default_profileRequest">
@@ -615,6 +629,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfilePersistence.set_cookie_hash_offsetResponse">
 </message>
 
+<message name="LocalLB.ProfilePersistence.set_cookie_httponly_attributeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfilePersistence.set_cookie_httponly_attributeResponse">
+</message>
+
 <message name="LocalLB.ProfilePersistence.set_cookie_nameRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="cookie_names" type="tns:LocalLB.ProfileStringSequence"/>
@@ -627,6 +648,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="methods" type="tns:LocalLB.ProfileCookiePersistenceMethodSequence"/>
 </message>
 <message name="LocalLB.ProfilePersistence.set_cookie_persistence_methodResponse">
+</message>
+
+<message name="LocalLB.ProfilePersistence.set_cookie_secure_attributeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfilePersistence.set_cookie_secure_attributeResponse">
 </message>
 
 <message name="LocalLB.ProfilePersistence.set_default_profileRequest">
@@ -882,6 +910,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfilePersistence.get_cookie_hash_offsetRequest"/>
 		<output message="tns:LocalLB.ProfilePersistence.get_cookie_hash_offsetResponse"/>
 	</operation>
+	<operation name="get_cookie_httponly_attribute">
+	<documentation>
+ Gets the cookie's HTTPonly attribute state for the specified profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfilePersistence.get_cookie_httponly_attributeRequest"/>
+		<output message="tns:LocalLB.ProfilePersistence.get_cookie_httponly_attributeResponse"/>
+	</operation>
 	<operation name="get_cookie_name">
 	<documentation>
  Gets the cookie names for the specified Persistence profiles.
@@ -899,6 +935,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfilePersistence.get_cookie_persistence_methodRequest"/>
 		<output message="tns:LocalLB.ProfilePersistence.get_cookie_persistence_methodResponse"/>
+	</operation>
+	<operation name="get_cookie_secure_attribute">
+	<documentation>
+ Gets the cookie's Secure attribute state for the specified profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfilePersistence.get_cookie_secure_attributeRequest"/>
+		<output message="tns:LocalLB.ProfilePersistence.get_cookie_secure_attributeResponse"/>
 	</operation>
 	<operation name="get_default_profile">
 	<documentation>
@@ -1230,6 +1274,19 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfilePersistence.set_cookie_hash_offsetRequest"/>
 		<output message="tns:LocalLB.ProfilePersistence.set_cookie_hash_offsetResponse"/>
 	</operation>
+	<operation name="set_cookie_httponly_attribute">
+	<documentation>
+ Sets the cookie's HTTPonly attribute state for the specified profiles.
+ When enabled, sets the value of the httponly attribute for inserted
+ cookies in HTTP response.
+ This is applicable only when the profile has persistence mode of
+ PERSISTENCE_MODE_COOKIE and a cookie persistence method of
+ COOKIE_PERSISTENCE_METHOD_INSERT.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfilePersistence.set_cookie_httponly_attributeRequest"/>
+		<output message="tns:LocalLB.ProfilePersistence.set_cookie_httponly_attributeResponse"/>
+	</operation>
 	<operation name="set_cookie_name">
 	<documentation>
  Sets the cookie names for the specified Persistence profiles.
@@ -1247,6 +1304,19 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfilePersistence.set_cookie_persistence_methodRequest"/>
 		<output message="tns:LocalLB.ProfilePersistence.set_cookie_persistence_methodResponse"/>
+	</operation>
+	<operation name="set_cookie_secure_attribute">
+	<documentation>
+ Sets the cookie's Secure attribute state for the specified profiles.
+ When enabled, sets the value of the secure attribute for inserted
+ cookies in HTTP response.
+ This is applicable only when the profile has persistence mode of
+ PERSISTENCE_MODE_COOKIE and a cookie persistence method of
+ COOKIE_PERSISTENCE_METHOD_INSERT.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfilePersistence.set_cookie_secure_attributeRequest"/>
+		<output message="tns:LocalLB.ProfilePersistence.set_cookie_secure_attributeResponse"/>
 	</operation>
 	<operation name="set_default_profile">
 	<documentation>
@@ -1729,6 +1799,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_cookie_httponly_attribute">
+	<documentation>
+ Gets the cookie's HTTPonly attribute state for the specified profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfilePersistence"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfilePersistence"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfilePersistence"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_cookie_name">
 	<documentation>
  Gets the cookie names for the specified Persistence profiles.
@@ -1754,6 +1844,26 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets the cookie persistence methods to be used when in cookie persistence mode.
  Applicable when persistence mode is PERSISTENCE_MODE_COOKIE.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfilePersistence"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfilePersistence"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfilePersistence"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_cookie_secure_attribute">
+	<documentation>
+ Gets the cookie's Secure attribute state for the specified profiles.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfilePersistence"/>
@@ -2497,6 +2607,31 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_cookie_httponly_attribute">
+	<documentation>
+ Sets the cookie's HTTPonly attribute state for the specified profiles.
+ When enabled, sets the value of the httponly attribute for inserted
+ cookies in HTTP response.
+ This is applicable only when the profile has persistence mode of
+ PERSISTENCE_MODE_COOKIE and a cookie persistence method of
+ COOKIE_PERSISTENCE_METHOD_INSERT.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfilePersistence"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfilePersistence"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfilePersistence"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_cookie_name">
 	<documentation>
  Sets the cookie names for the specified Persistence profiles.
@@ -2522,6 +2657,31 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the cookie persistence methods to be used when in cookie persistence mode.
  Applicable when persistence mode is PERSISTENCE_MODE_COOKIE.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfilePersistence"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfilePersistence"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfilePersistence"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_cookie_secure_attribute">
+	<documentation>
+ Sets the cookie's Secure attribute state for the specified profiles.
+ When enabled, sets the value of the secure attribute for inserted
+ cookies in HTTP response.
+ This is applicable only when the profile has persistence mode of
+ PERSISTENCE_MODE_COOKIE and a cookie persistence method of
+ COOKIE_PERSISTENCE_METHOD_INSERT.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfilePersistence"/>

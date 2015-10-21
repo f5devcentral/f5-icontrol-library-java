@@ -438,6 +438,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
+<message name="Networking.VLAN.get_dag_round_robin_stateRequest">
+	<part name="vlans" type="tns:Common.StringSequence"/>
+</message>
+<message name="Networking.VLAN.get_dag_round_robin_stateResponse">
+	<part name="return" type="tns:Common.EnabledStateSequence"/>
+</message>
+
 <message name="Networking.VLAN.get_descriptionRequest">
 	<part name="vlans" type="tns:Common.StringSequence"/>
 </message>
@@ -645,6 +652,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="Networking.VLAN.set_customer_idResponse">
 </message>
 
+<message name="Networking.VLAN.set_dag_round_robin_stateRequest">
+	<part name="vlans" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:Common.EnabledStateSequence"/>
+</message>
+<message name="Networking.VLAN.set_dag_round_robin_stateResponse">
+</message>
+
 <message name="Networking.VLAN.set_descriptionRequest">
 	<part name="vlans" type="tns:Common.StringSequence"/>
 	<part name="descriptions" type="tns:Common.StringSequence"/>
@@ -831,6 +845,15 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Networking.VLAN.get_customer_idRequest"/>
 		<output message="tns:Networking.VLAN.get_customer_idResponse"/>
+	</operation>
+	<operation name="get_dag_round_robin_state">
+	<documentation>
+ Gets the state that, if enabled, forces a VLAN to disaggregrate stateless traffic
+ using a round-robin order instead of using a static hash
+
+        	</documentation>
+		<input message="tns:Networking.VLAN.get_dag_round_robin_stateRequest"/>
+		<output message="tns:Networking.VLAN.get_dag_round_robin_stateResponse"/>
 	</operation>
 	<operation name="get_description">
 	<documentation>
@@ -1088,6 +1111,16 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Networking.VLAN.set_customer_idRequest"/>
 		<output message="tns:Networking.VLAN.set_customer_idResponse"/>
 	</operation>
+	<operation name="set_dag_round_robin_state">
+	<documentation>
+ Sets the state that, if enabled, forces a VLAN to disaggregrate
+ stateless traffic using a round-robin order instead of using a static hash.
+ The default state is disabled.
+
+        	</documentation>
+		<input message="tns:Networking.VLAN.set_dag_round_robin_stateRequest"/>
+		<output message="tns:Networking.VLAN.set_dag_round_robin_stateResponse"/>
+	</operation>
 	<operation name="set_description">
 	<documentation>
  Sets the description for a set of VLANs.
@@ -1109,7 +1142,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_failsafe_state">
 	<documentation>
  Sets the failsafe states for the specified VLANs.
- 
+
         	</documentation>
 		<input message="tns:Networking.VLAN.set_failsafe_stateRequest"/>
 		<output message="tns:Networking.VLAN.set_failsafe_stateResponse"/>
@@ -1445,6 +1478,27 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_dag_round_robin_state">
+	<documentation>
+ Gets the state that, if enabled, forces a VLAN to disaggregrate stateless traffic
+ using a round-robin order instead of using a static hash
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Networking/VLAN"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/VLAN"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/VLAN"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_description">
 	<documentation>
  Gets the descriptions for a set of VLANs.
@@ -2061,6 +2115,28 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_dag_round_robin_state">
+	<documentation>
+ Sets the state that, if enabled, forces a VLAN to disaggregrate
+ stateless traffic using a round-robin order instead of using a static hash.
+ The default state is disabled.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Networking/VLAN"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/VLAN"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/VLAN"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_description">
 	<documentation>
  Sets the description for a set of VLANs.
@@ -2106,7 +2182,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_failsafe_state">
 	<documentation>
  Sets the failsafe states for the specified VLANs.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/VLAN"/>
 		<input>

@@ -129,6 +129,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:Common.ULongSequence"/>
 </message>
 
+<message name="LocalLB.OCSPStaplingParameters.get_descriptionRequest">
+	<part name="stapling_parameters" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.OCSPStaplingParameters.get_descriptionResponse">
+	<part name="return" type="tns:Common.StringSequence"/>
+</message>
+
 <message name="LocalLB.OCSPStaplingParameters.get_dns_resolverRequest">
 	<part name="stapling_parameters" type="tns:Common.StringSequence"/>
 </message>
@@ -244,6 +251,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="values" type="tns:Common.ULongSequence"/>
 </message>
 <message name="LocalLB.OCSPStaplingParameters.set_clock_skewResponse">
+</message>
+
+<message name="LocalLB.OCSPStaplingParameters.set_descriptionRequest">
+	<part name="stapling_parameters" type="tns:Common.StringSequence"/>
+	<part name="descriptions" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.OCSPStaplingParameters.set_descriptionResponse">
 </message>
 
 <message name="LocalLB.OCSPStaplingParameters.set_dns_resolverRequest">
@@ -392,6 +406,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.OCSPStaplingParameters.get_clock_skewRequest"/>
 		<output message="tns:LocalLB.OCSPStaplingParameters.get_clock_skewResponse"/>
+	</operation>
+	<operation name="get_description">
+	<documentation>
+ Gets the descriptions for a set of OCSP stapling parameters.
+
+        	</documentation>
+		<input message="tns:LocalLB.OCSPStaplingParameters.get_descriptionRequest"/>
+		<output message="tns:LocalLB.OCSPStaplingParameters.get_descriptionResponse"/>
 	</operation>
 	<operation name="get_dns_resolver">
 	<documentation>
@@ -546,6 +568,16 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.OCSPStaplingParameters.set_clock_skewRequest"/>
 		<output message="tns:LocalLB.OCSPStaplingParameters.set_clock_skewResponse"/>
 	</operation>
+	<operation name="set_description">
+	<documentation>
+ Sets the description for a set of OCSP stapling parameters.
+
+ This is an arbitrary field which can be used for any purpose.
+
+        	</documentation>
+		<input message="tns:LocalLB.OCSPStaplingParameters.set_descriptionRequest"/>
+		<output message="tns:LocalLB.OCSPStaplingParameters.set_descriptionResponse"/>
+	</operation>
 	<operation name="set_dns_resolver">
 	<documentation>
  Sets the DNS resolver for the specified OCSP stapling parameters.
@@ -613,10 +645,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_status_age">
 	<documentation>
  Sets the status age, in seconds, for the specified OCSP stapling parameters.
- If the next update time is omitted from a response then the
- new status information is immediately available. In this case, it
- is checked to see if age of the response from the time it was
- received is not older than the value specified in the status age.
+ This specifies the maximum allowed lag time for the 'thisUpdate' time in the
+ OCSP response that the BIG-IP accepts. If this maximum is exceeded, the
+ response is dropped. If this value is set to '0', this validation is skipped.
+ The default value is 86400 seconds.
 
         	</documentation>
 		<input message="tns:LocalLB.OCSPStaplingParameters.set_status_ageRequest"/>
@@ -803,6 +835,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_description">
+	<documentation>
+ Gets the descriptions for a set of OCSP stapling parameters.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/OCSPStaplingParameters"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/OCSPStaplingParameters"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/OCSPStaplingParameters"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_dns_resolver">
 	<documentation>
  Gets the DNS resolver for the specified OCSP stapling parameters.
@@ -1160,6 +1212,28 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_description">
+	<documentation>
+ Sets the description for a set of OCSP stapling parameters.
+
+ This is an arbitrary field which can be used for any purpose.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/OCSPStaplingParameters"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/OCSPStaplingParameters"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/OCSPStaplingParameters"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_dns_resolver">
 	<documentation>
  Sets the DNS resolver for the specified OCSP stapling parameters.
@@ -1311,10 +1385,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_status_age">
 	<documentation>
  Sets the status age, in seconds, for the specified OCSP stapling parameters.
- If the next update time is omitted from a response then the
- new status information is immediately available. In this case, it
- is checked to see if age of the response from the time it was
- received is not older than the value specified in the status age.
+ This specifies the maximum allowed lag time for the 'thisUpdate' time in the
+ OCSP response that the BIG-IP accepts. If this maximum is exceeded, the
+ response is dropped. If this value is set to '0', this validation is skipped.
+ The default value is 86400 seconds.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/OCSPStaplingParameters"/>

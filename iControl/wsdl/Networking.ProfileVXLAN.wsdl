@@ -50,6 +50,11 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>PROFILE_VXLAN_FLOODING_TYPE_MULTIPOINT</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="PROFILE_VXLAN_FLOODING_TYPE_REPLICATOR">
+					<xsd:annotation>
+						<xsd:documentation>PROFILE_VXLAN_FLOODING_TYPE_REPLICATOR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="Common.ProfilePortNumberSequence">

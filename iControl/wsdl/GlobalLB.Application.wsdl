@@ -28,6 +28,45 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:simpleType name="GlobalLB.GTMQueryType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="GTM_QUERY_TYPE_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>GTM_QUERY_TYPE_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="GTM_QUERY_TYPE_A">
+					<xsd:annotation>
+						<xsd:documentation>GTM_QUERY_TYPE_A</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="GTM_QUERY_TYPE_CNAME">
+					<xsd:annotation>
+						<xsd:documentation>GTM_QUERY_TYPE_CNAME</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="GTM_QUERY_TYPE_MX">
+					<xsd:annotation>
+						<xsd:documentation>GTM_QUERY_TYPE_MX</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="GTM_QUERY_TYPE_AAAA">
+					<xsd:annotation>
+						<xsd:documentation>GTM_QUERY_TYPE_AAAA</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="GTM_QUERY_TYPE_SRV">
+					<xsd:annotation>
+						<xsd:documentation>GTM_QUERY_TYPE_SRV</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="GTM_QUERY_TYPE_NAPTR">
+					<xsd:annotation>
+						<xsd:documentation>GTM_QUERY_TYPE_NAPTR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:complexType name="GlobalLB.Application.ApplicationContextObject">
 			<xsd:sequence>
 				<xsd:element name="application_name" type="xsd:string"/>
@@ -176,6 +215,26 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.WideIPIDSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:GlobalLB.WideIPID[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.WideIPID">
+			<xsd:sequence>
+				<xsd:element name="wideip_name" type="xsd:string"/>
+				<xsd:element name="wideip_type" type="tns:GlobalLB.GTMQueryType"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.WideIPIDSequenceSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:GlobalLB.WideIPIDSequence[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:complexType name="GlobalLB.Application.ApplicationContextObjectSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -208,6 +267,13 @@ All other trademarks mentioned in this document are the property of their respec
 </types>
 
 <!-- message -->
+
+<message name="GlobalLB.Application.add_wide_ipRequest">
+	<part name="applications" type="tns:Common.StringSequence"/>
+	<part name="wideips" type="tns:GlobalLB.WideIPIDSequenceSequence"/>
+</message>
+<message name="GlobalLB.Application.add_wide_ipResponse">
+</message>
 
 <message name="GlobalLB.Application.createRequest">
 	<part name="applications" type="tns:Common.StringSequence"/>
@@ -306,11 +372,31 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="xsd:string"/>
 </message>
 
+<message name="GlobalLB.Application.get_wide_ip_v2Request">
+	<part name="applications" type="tns:Common.StringSequence"/>
+</message>
+<message name="GlobalLB.Application.get_wide_ip_v2Response">
+	<part name="return" type="tns:GlobalLB.WideIPIDSequenceSequence"/>
+</message>
+
 <message name="GlobalLB.Application.get_wide_ipsRequest">
 	<part name="applications" type="tns:Common.StringSequence"/>
 </message>
 <message name="GlobalLB.Application.get_wide_ipsResponse">
 	<part name="return" type="tns:Common.StringSequenceSequence"/>
+</message>
+
+<message name="GlobalLB.Application.remove_all_wide_ipsRequest">
+	<part name="applications" type="tns:Common.StringSequence"/>
+</message>
+<message name="GlobalLB.Application.remove_all_wide_ipsResponse">
+</message>
+
+<message name="GlobalLB.Application.remove_wide_ipRequest">
+	<part name="applications" type="tns:Common.StringSequence"/>
+	<part name="wideips" type="tns:GlobalLB.WideIPIDSequenceSequence"/>
+</message>
+<message name="GlobalLB.Application.remove_wide_ipResponse">
 </message>
 
 <message name="GlobalLB.Application.set_availability_dependencyRequest">
@@ -344,8 +430,17 @@ All other trademarks mentioned in this document are the property of their respec
 <!-- portType -->
 
 <portType name="GlobalLB.ApplicationPortType">
-	<operation name="create">
+	<operation name="add_wide_ip">
     	<documentation>
+ Adds wide IPs to the specified distributed applications. A given distributed
+ application can have more than one wide IP but it must be of type A or AAAA.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Application.add_wide_ipRequest"/>
+		<output message="tns:GlobalLB.Application.add_wide_ipResponse"/>
+	</operation>
+	<operation name="create">
+	<documentation>
  Creates the specified applications. 
 
 
@@ -477,14 +572,42 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:GlobalLB.Application.get_versionRequest"/>
 		<output message="tns:GlobalLB.Application.get_versionResponse"/>
 	</operation>
+	<operation name="get_wide_ip_v2">
+	<documentation>
+ Gets the lists of wide IPs the specified distributed applications are
+ associated with.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Application.get_wide_ip_v2Request"/>
+		<output message="tns:GlobalLB.Application.get_wide_ip_v2Response"/>
+	</operation>
 	<operation name="get_wide_ips">
 	<documentation>
- Gets the wide IPs associated with a set of distributed
+ This method had been deprecated due to changes in wide IP key
+ definitions. Please use get_wide_ip_v2.
+
+ Gets the wide IP names associated with a set of distributed
  applications.
 
         	</documentation>
 		<input message="tns:GlobalLB.Application.get_wide_ipsRequest"/>
 		<output message="tns:GlobalLB.Application.get_wide_ipsResponse"/>
+	</operation>
+	<operation name="remove_all_wide_ips">
+	<documentation>
+ Removes all wide IPs from the specified distributed applications.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Application.remove_all_wide_ipsRequest"/>
+		<output message="tns:GlobalLB.Application.remove_all_wide_ipsResponse"/>
+	</operation>
+	<operation name="remove_wide_ip">
+	<documentation>
+ Removes wide IPs from the specified distributed applications.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Application.remove_wide_ipRequest"/>
+		<output message="tns:GlobalLB.Application.remove_wide_ipResponse"/>
 	</operation>
 	<operation name="set_availability_dependency">
 	<documentation>
@@ -529,6 +652,27 @@ All other trademarks mentioned in this document are the property of their respec
 
 <binding name="GlobalLB.ApplicationBinding" type="tns:GlobalLB.ApplicationPortType">
 	<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+	<operation name="add_wide_ip">
+	<documentation>
+ Adds wide IPs to the specified distributed applications. A given distributed
+ application can have more than one wide IP but it must be of type A or AAAA.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Application"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Application"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Application"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="create">
 	<documentation>
  Creates the specified applications. 
@@ -842,10 +986,74 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_wide_ip_v2">
+	<documentation>
+ Gets the lists of wide IPs the specified distributed applications are
+ associated with.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Application"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Application"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Application"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_wide_ips">
 	<documentation>
- Gets the wide IPs associated with a set of distributed
+ This method had been deprecated due to changes in wide IP key
+ definitions. Please use get_wide_ip_v2.
+
+ Gets the wide IP names associated with a set of distributed
  applications.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Application"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Application"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Application"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="remove_all_wide_ips">
+	<documentation>
+ Removes all wide IPs from the specified distributed applications.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Application"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Application"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Application"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="remove_wide_ip">
+	<documentation>
+ Removes wide IPs from the specified distributed applications.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Application"/>
