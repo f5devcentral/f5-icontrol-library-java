@@ -63,24 +63,32 @@ All other trademarks mentioned in this document are the property of their respec
  loading files.
 
  Order of precedence for IPv4 mapping:
+ (as of version 12.1.0)
 
- /shared/GeoIP/GeoIPCity.dat
- /shared/GeoIP/GeoIPRegion.dat
- /shared/GeoIP/GeoIP.dat
+ /shared/GeoIP/F5GeoIPCity.dat
+ /shared/GeoIP/v2/F5GeoIP.dat
+ /shared/GeoIP/F5GeoIP.dat
+ /usr/share/GeoIP/v2/F5GeoIP.dat
  /usr/share/GeoIP/F5GeoIP.dat
 
  Order of precedence for IPv6 mapping:
 
- /shared/GeoIP/GeoIPv6.dat
- /usr/share/GeoIP/F5GeoIPv6.dat
+ /shared/GeoIP/v2/F5GeoIP.dat
+ /shared/GeoIP/F5GeoIPv6.dat
+ /usr/share/GeoIP/v2/F5GeoIP.dat
+ /usr/share/GeoIP/F5GeoIP.dat
 
  ISP:
 
- /shared/GeoIP/GeoIPISP.dat
+ /shared/GeoIP/v2/F5GeoIPISP.dat (contains both IPv4 and IPv6)
+ /shared/GeoIP/F5GeoIPISP.dat
+ /usr/share/GeoIP/v2/F5GeoIPISP.dat (contains both IPv4 and IPv6)
+ /usr/share/GeoIP/F5GeoIPISP.dat
 
  Organization:
 
- /shared/GeoIP/GeoIPOrg.dat
+ /shared/GeoIP/v2/F5GeoIPOrg.dat (contains both IPv4 and IPv6)
+ /shared/GeoIP/F5GeoIPOrg.dat
 
         	</documentation>
 		<input message="tns:System.GeoIP.loadRequest"/>
@@ -127,24 +135,32 @@ All other trademarks mentioned in this document are the property of their respec
  loading files.
 
  Order of precedence for IPv4 mapping:
+ (as of version 12.1.0)
 
- /shared/GeoIP/GeoIPCity.dat
- /shared/GeoIP/GeoIPRegion.dat
- /shared/GeoIP/GeoIP.dat
+ /shared/GeoIP/F5GeoIPCity.dat
+ /shared/GeoIP/v2/F5GeoIP.dat
+ /shared/GeoIP/F5GeoIP.dat
+ /usr/share/GeoIP/v2/F5GeoIP.dat
  /usr/share/GeoIP/F5GeoIP.dat
 
  Order of precedence for IPv6 mapping:
 
- /shared/GeoIP/GeoIPv6.dat
- /usr/share/GeoIP/F5GeoIPv6.dat
+ /shared/GeoIP/v2/F5GeoIP.dat
+ /shared/GeoIP/F5GeoIPv6.dat
+ /usr/share/GeoIP/v2/F5GeoIP.dat
+ /usr/share/GeoIP/F5GeoIP.dat
 
  ISP:
 
- /shared/GeoIP/GeoIPISP.dat
+ /shared/GeoIP/v2/F5GeoIPISP.dat (contains both IPv4 and IPv6)
+ /shared/GeoIP/F5GeoIPISP.dat
+ /usr/share/GeoIP/v2/F5GeoIPISP.dat (contains both IPv4 and IPv6)
+ /usr/share/GeoIP/F5GeoIPISP.dat
 
  Organization:
 
- /shared/GeoIP/GeoIPOrg.dat
+ /shared/GeoIP/v2/F5GeoIPOrg.dat (contains both IPv4 and IPv6)
+ /shared/GeoIP/F5GeoIPOrg.dat
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/GeoIP"/>

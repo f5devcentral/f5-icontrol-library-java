@@ -188,6 +188,11 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>ELLIPTIC_CURVE_SECP384R1</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="ELLIPTIC_CURVE_SECP521R1">
+					<xsd:annotation>
+						<xsd:documentation>ELLIPTIC_CURVE_SECP521R1</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:simpleType name="Management.KeyCertificate.ManagementModeType">
@@ -748,6 +753,14 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:Management.KeyCertificate.CertificateRequestInformationSequence_v2"/>
 </message>
 
+<message name="Management.KeyCertificate.get_certificate_request_subject_alternative_nameRequest">
+	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
+	<part name="files" type="tns:Common.StringSequence"/>
+</message>
+<message name="Management.KeyCertificate.get_certificate_request_subject_alternative_nameResponse">
+	<part name="return" type="tns:Common.StringSequence"/>
+</message>
+
 <message name="Management.KeyCertificate.get_certificate_subject_alternative_nameRequest">
 	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
 	<part name="file_names" type="tns:Common.StringSequence"/>
@@ -1131,8 +1144,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="export_all_to_archive_file">
 	<documentation>
- Exports all currently installed keys and certificates into the specified archive file.
- The archive file is a .tgz file that will contain all keys and certificates.
+ Exports all currently installed keys and certificates in the current session active
+ folder into the specified archive file. The archive file is a .tgz file that will
+ contain all keys and certificates.
  
         	</documentation>
 		<input message="tns:Management.KeyCertificate.export_all_to_archive_fileRequest"/>
@@ -1140,9 +1154,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="export_all_to_archive_stream">
 	<documentation>
- Exports all currently installed keys and certificates into the returned archive stream.
- The returned archive stream is basically the contents of a .tgz file that contains 
- all keys and certificates.
+ Exports all currently installed keys and certificates in the current session active
+ folder into the returned archive stream. The returned archive stream is basically the
+ contents of a .tgz file that contains all keys and certificates.
  
         	</documentation>
 		<input message="tns:Management.KeyCertificate.export_all_to_archive_streamRequest"/>
@@ -1240,6 +1254,15 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Management.KeyCertificate.get_certificate_request_list_v2Request"/>
 		<output message="tns:Management.KeyCertificate.get_certificate_request_list_v2Response"/>
 	</operation>
+	<operation name="get_certificate_request_subject_alternative_name">
+	<documentation>
+ Gets the list of all certificate request subject alternative names in the certificate request file
+ objects as specified by the files.
+
+        	</documentation>
+		<input message="tns:Management.KeyCertificate.get_certificate_request_subject_alternative_nameRequest"/>
+		<output message="tns:Management.KeyCertificate.get_certificate_request_subject_alternative_nameResponse"/>
+	</operation>
 	<operation name="get_certificate_subject_alternative_name">
 	<documentation>
  Gets the list of all certificate subject alternative names in the certificate file objects 
@@ -1307,8 +1330,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="import_all_from_archive_file">
 	<documentation>
- Imports/installs all keys and certificates from the specified archive file.
- The archive file should be a .tgz file that contains all keys and certificates.
+ Imports/installs all keys and certificates from the specified archive file into
+ current session active folder. The archive file should be a .tgz file that contains
+ all keys and certificates.
  
         	</documentation>
 		<input message="tns:Management.KeyCertificate.import_all_from_archive_fileRequest"/>
@@ -1316,9 +1340,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="import_all_from_archive_stream">
 	<documentation>
- Imports/installs all keys and certificates from the incoming archive stream.
- The archive stream should be the contents of a .tgz file that contains all 
- keys and certificates.
+ Imports/installs all keys and certificates from the incoming archive stream into
+ current session active folder. The archive stream should be the contents of a .tgz
+ file that contains all keys and certificates.
  
         	</documentation>
 		<input message="tns:Management.KeyCertificate.import_all_from_archive_streamRequest"/>
@@ -1894,8 +1918,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="export_all_to_archive_file">
 	<documentation>
- Exports all currently installed keys and certificates into the specified archive file.
- The archive file is a .tgz file that will contain all keys and certificates.
+ Exports all currently installed keys and certificates in the current session active
+ folder into the specified archive file. The archive file is a .tgz file that will
+ contain all keys and certificates.
  
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
@@ -1915,9 +1940,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="export_all_to_archive_stream">
 	<documentation>
- Exports all currently installed keys and certificates into the returned archive stream.
- The returned archive stream is basically the contents of a .tgz file that contains 
- all keys and certificates.
+ Exports all currently installed keys and certificates in the current session active
+ folder into the returned archive stream. The returned archive stream is basically the
+ contents of a .tgz file that contains all keys and certificates.
  
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
@@ -2123,6 +2148,27 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_certificate_request_subject_alternative_name">
+	<documentation>
+ Gets the list of all certificate request subject alternative names in the certificate request file
+ objects as specified by the files.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_certificate_subject_alternative_name">
 	<documentation>
  Gets the list of all certificate subject alternative names in the certificate file objects 
@@ -2262,8 +2308,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="import_all_from_archive_file">
 	<documentation>
- Imports/installs all keys and certificates from the specified archive file.
- The archive file should be a .tgz file that contains all keys and certificates.
+ Imports/installs all keys and certificates from the specified archive file into
+ current session active folder. The archive file should be a .tgz file that contains
+ all keys and certificates.
  
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
@@ -2283,9 +2330,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="import_all_from_archive_stream">
 	<documentation>
- Imports/installs all keys and certificates from the incoming archive stream.
- The archive stream should be the contents of a .tgz file that contains all 
- keys and certificates.
+ Imports/installs all keys and certificates from the incoming archive stream into
+ current session active folder. The archive stream should be the contents of a .tgz
+ file that contains all keys and certificates.
  
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>

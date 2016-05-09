@@ -923,6 +923,11 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="set_profile">
 	<documentation>
+ *IMPORTANT* As of v12.1.0, once a tunnel is created, the profile of
+ the tunnel cannot be changed to a profile of a different type.
+ You must delete the tunnel and recreate with a new profile setting if
+ you wish to change the profile to one of a different profile type.
+
  Sets the profile specifying the tunneling protocol for the specified
  tunnels (e.g. IPIP, GRE, WCCP-GRE tunnel profiles).
 
@@ -1808,6 +1813,11 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="set_profile">
 	<documentation>
+ *IMPORTANT* As of v12.1.0, once a tunnel is created, the profile of
+ the tunnel cannot be changed to a profile of a different type.
+ You must delete the tunnel and recreate with a new profile setting if
+ you wish to change the profile to one of a different profile type.
+
  Sets the profile specifying the tunneling protocol for the specified
  tunnels (e.g. IPIP, GRE, WCCP-GRE tunnel profiles).
 

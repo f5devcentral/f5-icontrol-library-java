@@ -487,6 +487,14 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.MessageRoutingTransportConfig.set_source_address_translation_poolResponse">
 </message>
 
+<message name="LocalLB.MessageRoutingTransportConfig.set_source_address_translation_pool_with_typeRequest">
+	<part name="transport_configs" type="tns:Common.StringSequence"/>
+	<part name="pools" type="tns:Common.StringSequence"/>
+	<part name="types" type="tns:LocalLB.MessageRoutingTransportConfig.SourceAddressTranslationTypeSequence"/>
+</message>
+<message name="LocalLB.MessageRoutingTransportConfig.set_source_address_translation_pool_with_typeResponse">
+</message>
+
 <message name="LocalLB.MessageRoutingTransportConfig.set_source_address_translation_typeRequest">
 	<part name="transport_configs" type="tns:Common.StringSequence"/>
 	<part name="types" type="tns:LocalLB.MessageRoutingTransportConfig.SourceAddressTranslationTypeSequence"/>
@@ -658,6 +666,16 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.MessageRoutingTransportConfig.set_source_address_translation_poolRequest"/>
 		<output message="tns:LocalLB.MessageRoutingTransportConfig.set_source_address_translation_poolResponse"/>
+	</operation>
+	<operation name="set_source_address_translation_pool_with_type">
+	<documentation>
+ Sets the source address translation pool and the source address translation
+ type for the specified transport config. This is a convenience method
+ that allows you to set these values without using a transaction.
+
+        	</documentation>
+		<input message="tns:LocalLB.MessageRoutingTransportConfig.set_source_address_translation_pool_with_typeRequest"/>
+		<output message="tns:LocalLB.MessageRoutingTransportConfig.set_source_address_translation_pool_with_typeResponse"/>
 	</operation>
 	<operation name="set_source_address_translation_type">
 	<documentation>
@@ -1036,6 +1054,28 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Sets the Source Address Translation pool for the specified transport
  config.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/MessageRoutingTransportConfig"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/MessageRoutingTransportConfig"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/MessageRoutingTransportConfig"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_source_address_translation_pool_with_type">
+	<documentation>
+ Sets the source address translation pool and the source address translation
+ type for the specified transport config. This is a convenience method
+ that allows you to set these values without using a transaction.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/MessageRoutingTransportConfig"/>

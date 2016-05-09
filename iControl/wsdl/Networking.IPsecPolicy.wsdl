@@ -266,6 +266,21 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>IPSEC_DIFFIE_HELLMAN_GROUP_MODP8192</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="IPSEC_ECDH_GROUP_ECP256">
+					<xsd:annotation>
+						<xsd:documentation>IPSEC_ECDH_GROUP_ECP256</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IPSEC_ECDH_GROUP_ECP384">
+					<xsd:annotation>
+						<xsd:documentation>IPSEC_ECDH_GROUP_ECP384</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IPSEC_ECDH_GROUP_ECP521">
+					<xsd:annotation>
+						<xsd:documentation>IPSEC_ECDH_GROUP_ECP521</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="Networking.IPsecSaAuthAlgorithmSequence">

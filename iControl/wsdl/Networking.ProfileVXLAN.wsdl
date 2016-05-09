@@ -21,6 +21,13 @@ All other trademarks mentioned in this document are the property of their respec
 		xmlns='http://www.w3.org/2001/XMLSchema'
 		xmlns:SOAP-ENC='http://schemas.xmlsoap.org/soap/encoding/'
 		xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'>
+		<xsd:complexType name="Networking.ProfileVXLAN.ProfileVXLANEncapsulationTypeSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Networking.ProfileVXLAN.ProfileVXLANEncapsulationType[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:complexType name="Common.StringSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -71,12 +78,37 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:complexType name="Networking.ProfileVXLAN.ProfileVXLANEncapsulationType">
+			<xsd:sequence>
+				<xsd:element name="value" type="tns:Networking.ProfileVXLAN.VXLANEncapsulationType"/>
+				<xsd:element name="default_flag" type="xsd:boolean"/>
+			</xsd:sequence>
+		</xsd:complexType>
 		<xsd:complexType name="Networking.ProfileVXLAN.ProfileVXLANFloodingType">
 			<xsd:sequence>
 				<xsd:element name="value" type="tns:Networking.ProfileVXLAN.VXLANFloodingType"/>
 				<xsd:element name="default_flag" type="xsd:boolean"/>
 			</xsd:sequence>
 		</xsd:complexType>
+		<xsd:simpleType name="Networking.ProfileVXLAN.VXLANEncapsulationType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="PROFILE_VXLAN_ENCAPSULATION_TYPE_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>PROFILE_VXLAN_ENCAPSULATION_TYPE_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROFILE_VXLAN_ENCAPSULATION_TYPE_VXLAN">
+					<xsd:annotation>
+						<xsd:documentation>PROFILE_VXLAN_ENCAPSULATION_TYPE_VXLAN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROFILE_VXLAN_ENCAPSULATION_TYPE_VXLAN_GPE">
+					<xsd:annotation>
+						<xsd:documentation>PROFILE_VXLAN_ENCAPSULATION_TYPE_VXLAN_GPE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:complexType name="Networking.ProfileVXLAN.ProfileVXLANFloodingTypeSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -124,6 +156,13 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="Networking.ProfileVXLAN.get_descriptionResponse">
 	<part name="return" type="tns:Common.StringSequence"/>
+</message>
+
+<message name="Networking.ProfileVXLAN.get_encapsulation_typeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="Networking.ProfileVXLAN.get_encapsulation_typeResponse">
+	<part name="return" type="tns:Networking.ProfileVXLAN.ProfileVXLANEncapsulationTypeSequence"/>
 </message>
 
 <message name="Networking.ProfileVXLAN.get_flooding_typeRequest">
@@ -178,6 +217,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="descriptions" type="tns:Common.StringSequence"/>
 </message>
 <message name="Networking.ProfileVXLAN.set_descriptionResponse">
+</message>
+
+<message name="Networking.ProfileVXLAN.set_encapsulation_typeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="encapsulation_types" type="tns:Networking.ProfileVXLAN.ProfileVXLANEncapsulationTypeSequence"/>
+</message>
+<message name="Networking.ProfileVXLAN.set_encapsulation_typeResponse">
 </message>
 
 <message name="Networking.ProfileVXLAN.set_flooding_typeRequest">
@@ -238,6 +284,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Networking.ProfileVXLAN.get_descriptionRequest"/>
 		<output message="tns:Networking.ProfileVXLAN.get_descriptionResponse"/>
+	</operation>
+	<operation name="get_encapsulation_type">
+	<documentation>
+ Gets the encapsulation type for the specified VXLAN profiles.
+
+        	</documentation>
+		<input message="tns:Networking.ProfileVXLAN.get_encapsulation_typeRequest"/>
+		<output message="tns:Networking.ProfileVXLAN.get_encapsulation_typeResponse"/>
 	</operation>
 	<operation name="get_flooding_type">
 	<documentation>
@@ -316,6 +370,16 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Networking.ProfileVXLAN.set_descriptionRequest"/>
 		<output message="tns:Networking.ProfileVXLAN.set_descriptionResponse"/>
+	</operation>
+	<operation name="set_encapsulation_type">
+	<documentation>
+ Sets the encapsulation type to use to transmit multicast, broadcast and
+ unknown destination frames. The default is
+ PROFILE_VXLAN_ENCAPSULATION_TYPE_VXLAN.
+
+        	</documentation>
+		<input message="tns:Networking.ProfileVXLAN.set_encapsulation_typeRequest"/>
+		<output message="tns:Networking.ProfileVXLAN.set_encapsulation_typeResponse"/>
 	</operation>
 	<operation name="set_flooding_type">
 	<documentation>
@@ -444,6 +508,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_encapsulation_type">
+	<documentation>
+ Gets the encapsulation type for the specified VXLAN profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Networking/ProfileVXLAN"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/ProfileVXLAN"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/ProfileVXLAN"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_flooding_type">
 	<documentation>
  Gets the flooding type for the specified VXLAN profiles.
@@ -601,6 +685,28 @@ All other trademarks mentioned in this document are the property of their respec
 
  This is an arbitrary field which can be used to describe the VXLAN
    tunnel profile.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Networking/ProfileVXLAN"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/ProfileVXLAN"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/ProfileVXLAN"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_encapsulation_type">
+	<documentation>
+ Sets the encapsulation type to use to transmit multicast, broadcast and
+ unknown destination frames. The default is
+ PROFILE_VXLAN_ENCAPSULATION_TYPE_VXLAN.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/ProfileVXLAN"/>

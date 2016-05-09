@@ -1,8 +1,10 @@
 @Echo On
 	setlocal EnableDelayedExpansion
-	:set JAVAHOME=c:\jdk1.5.0_22
+	
+:	set JAVAHOME=c:\jdk1.5.0_22
 :	set JAVAHOME=c:\jdk1.6.0_20
-	set JAVAHOME=c:\Progra~1\Java\jdk1.6.0_45
+:	set JAVAHOME=c:\Progra~1\Java\jdk1.6.0_45
+	set JAVAHOME=c:\Progra~1\Java\jdk1.8.0_45
 	Set JAVA=%JAVAHOME%\bin\java
 	Set JAVAC=%JAVAHOME%\bin\javac
 	Set JAR=%JAVAHOME%\bin\jar

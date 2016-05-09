@@ -238,6 +238,21 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>IPSEC_DIFFIE_HELLMAN_GROUP_MODP8192</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="IPSEC_ECDH_GROUP_ECP256">
+					<xsd:annotation>
+						<xsd:documentation>IPSEC_ECDH_GROUP_ECP256</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IPSEC_ECDH_GROUP_ECP384">
+					<xsd:annotation>
+						<xsd:documentation>IPSEC_ECDH_GROUP_ECP384</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IPSEC_ECDH_GROUP_ECP521">
+					<xsd:annotation>
+						<xsd:documentation>IPSEC_ECDH_GROUP_ECP521</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="Networking.IPsecIkePeerIDTypeSequence">
@@ -359,6 +374,26 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:enumeration value="IPSEC_AUTH_METHOD_RSA_SIGNATURE">
 					<xsd:annotation>
 						<xsd:documentation>IPSEC_AUTH_METHOD_RSA_SIGNATURE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IPSEC_AUTH_METHOD_DSS">
+					<xsd:annotation>
+						<xsd:documentation>IPSEC_AUTH_METHOD_DSS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IPSEC_AUTH_METHOD_ECDSA_256">
+					<xsd:annotation>
+						<xsd:documentation>IPSEC_AUTH_METHOD_ECDSA_256</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IPSEC_AUTH_METHOD_ECDSA_384">
+					<xsd:annotation>
+						<xsd:documentation>IPSEC_AUTH_METHOD_ECDSA_384</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IPSEC_AUTH_METHOD_ECDSA_521">
+					<xsd:annotation>
+						<xsd:documentation>IPSEC_AUTH_METHOD_ECDSA_521</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
 			</xsd:restriction>
@@ -570,6 +605,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="peers" type="tns:Common.StringSequence"/>
 </message>
 <message name="Networking.IPsecIkePeer.get_my_certificate_key_fileResponse">
+	<part name="return" type="tns:Common.StringSequence"/>
+</message>
+
+<message name="Networking.IPsecIkePeer.get_my_certificate_key_passphraseRequest">
+	<part name="peers" type="tns:Common.StringSequence"/>
+</message>
+<message name="Networking.IPsecIkePeer.get_my_certificate_key_passphraseResponse">
 	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
@@ -808,6 +850,16 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="Networking.IPsecIkePeer.set_modeResponse">
 </message>
 
+<message name="Networking.IPsecIkePeer.set_my_certificate_authenticationRequest">
+	<part name="peers" type="tns:Common.StringSequence"/>
+	<part name="methods" type="tns:Networking.IPsecSaMethodSequence"/>
+	<part name="certs" type="tns:Common.StringSequence"/>
+	<part name="keys" type="tns:Common.StringSequence"/>
+	<part name="passphrases" type="tns:Common.StringSequence"/>
+</message>
+<message name="Networking.IPsecIkePeer.set_my_certificate_authenticationResponse">
+</message>
+
 <message name="Networking.IPsecIkePeer.set_my_certificate_fileRequest">
 	<part name="peers" type="tns:Common.StringSequence"/>
 	<part name="files" type="tns:Common.StringSequence"/>
@@ -820,6 +872,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="files" type="tns:Common.StringSequence"/>
 </message>
 <message name="Networking.IPsecIkePeer.set_my_certificate_key_fileResponse">
+</message>
+
+<message name="Networking.IPsecIkePeer.set_my_certificate_key_passphraseRequest">
+	<part name="peers" type="tns:Common.StringSequence"/>
+	<part name="passphrases" type="tns:Common.StringSequence"/>
+</message>
+<message name="Networking.IPsecIkePeer.set_my_certificate_key_passphraseResponse">
 </message>
 
 <message name="Networking.IPsecIkePeer.set_my_id_typeRequest">
@@ -1002,7 +1061,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_certificate_type">
 	<documentation>
- Gets the IPsec IKE peer certification types for a list of IPsec IKE peers.
+ Gets the IPsec IKE peer certification types for a list of
+ IPsec IKE peers. Note that this function is only valid in
+ IKEv1 peer configuration.
 
         	</documentation>
 		<input message="tns:Networking.IPsecIkePeer.get_certificate_typeRequest"/>
@@ -1096,8 +1157,8 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_my_certificate_file">
 	<documentation>
- Gets the name of the ssl-crt file object for the BIG-IP certificate file
- for each IPsec IKE peer.
+ Gets the name of the certificate file object for each IPsec
+ IKE peer.
 
         	</documentation>
 		<input message="tns:Networking.IPsecIkePeer.get_my_certificate_fileRequest"/>
@@ -1105,12 +1166,22 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_my_certificate_key_file">
 	<documentation>
- Gets the name of the ssl-key file object for the BIG-IP certificate file
-  for each IPsec IKE peer.
+ Gets the name of the certificate key file object for each
+  IPsec IKE peer.
 
         	</documentation>
 		<input message="tns:Networking.IPsecIkePeer.get_my_certificate_key_fileRequest"/>
 		<output message="tns:Networking.IPsecIkePeer.get_my_certificate_key_fileResponse"/>
+	</operation>
+	<operation name="get_my_certificate_key_passphrase">
+	<documentation>
+ Gets the certificate key passphrases (if any) for the specified IKEv2 peers.
+
+ The user should not rely on the 'default_flag' in the returned sequence of passphrases.
+
+        	</documentation>
+		<input message="tns:Networking.IPsecIkePeer.get_my_certificate_key_passphraseRequest"/>
+		<output message="tns:Networking.IPsecIkePeer.get_my_certificate_key_passphraseResponse"/>
 	</operation>
 	<operation name="get_my_id_type">
 	<documentation>
@@ -1149,7 +1220,8 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_peer_certificate_file">
 	<documentation>
- Gets the peer certificate file name.
+ Gets the peer certificate file name. Note that this
+ function is only valid in IKEv1 peer configuration.
 
         	</documentation>
 		<input message="tns:Networking.IPsecIkePeer.get_peer_certificate_fileRequest"/>
@@ -1214,8 +1286,7 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_preshared_key">
 	<documentation>
- Gets the preshared key (if any) for each specified
-      IPsec IKE peer.
+ Gets the preshared key (if any) for each specified IPsec IKE peer.
 
         	</documentation>
 		<input message="tns:Networking.IPsecIkePeer.get_preshared_keyRequest"/>
@@ -1326,7 +1397,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="set_certificate_type">
 	<documentation>
- Sets the IPsec IKE peer certificate types for a list of IPsec IKE peers.
+ Sets the IPsec IKE peer certificate types for a list of
+ IPsec IKE peers. Note that this function is only valid in
+ IKEv1 peer configuration.
 
         	</documentation>
 		<input message="tns:Networking.IPsecIkePeer.set_certificate_typeRequest"/>
@@ -1403,10 +1476,21 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Networking.IPsecIkePeer.set_modeRequest"/>
 		<output message="tns:Networking.IPsecIkePeer.set_modeResponse"/>
 	</operation>
+	<operation name="set_my_certificate_authentication">
+	<documentation>
+ Sets certificate-based authentication methods in a batch with
+      certificates, keys and corresponding key passphrases
+      (if any) for the specified IKEv2 peers.
+
+        	</documentation>
+		<input message="tns:Networking.IPsecIkePeer.set_my_certificate_authenticationRequest"/>
+		<output message="tns:Networking.IPsecIkePeer.set_my_certificate_authenticationResponse"/>
+	</operation>
 	<operation name="set_my_certificate_file">
 	<documentation>
- Sets the name of ssl-crt file object for the certificate file
- for each of the specified IPsec IKE peers.
+ Sets the name of certificate file object for each of the
+ specified IPsec IKE peers. Note that there are no default
+ certificate files for DSS and ECDSA authentication methods.
 
         	</documentation>
 		<input message="tns:Networking.IPsecIkePeer.set_my_certificate_fileRequest"/>
@@ -1414,12 +1498,21 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="set_my_certificate_key_file">
 	<documentation>
- Sets the name of the ssl-key file object for the certificate file
-      for each IPsec IKE peer.
+ Sets the name of the certificate key file object for each
+ IPsec IKE peer. Note that there are no default certificate
+ key files for DSS and ECDSA authentication methods.
 
         	</documentation>
 		<input message="tns:Networking.IPsecIkePeer.set_my_certificate_key_fileRequest"/>
 		<output message="tns:Networking.IPsecIkePeer.set_my_certificate_key_fileResponse"/>
+	</operation>
+	<operation name="set_my_certificate_key_passphrase">
+	<documentation>
+ Sets the certificate key passphrases (if any) for the specified IKEv2 peers.
+
+        	</documentation>
+		<input message="tns:Networking.IPsecIkePeer.set_my_certificate_key_passphraseRequest"/>
+		<output message="tns:Networking.IPsecIkePeer.set_my_certificate_key_passphraseResponse"/>
 	</operation>
 	<operation name="set_my_id_type">
 	<documentation>
@@ -1459,9 +1552,11 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="set_peer_certificate_file">
 	<documentation>
- Sets the peer certificate file object name. If the peer certificate file
- is defined, the isakmp daemon ignores the CERT payload from the peer,
- and uses this certificate as the peer's certificate.
+ Sets the peer certificate file object name. If the peer
+ certificate file is defined, the isakmp daemon ignores the
+ CERT payload from the peer, and uses this certificate as
+ the peer's certificate. Note that this function is only
+ valid in IKEv1 peer configuration.
 
         	</documentation>
 		<input message="tns:Networking.IPsecIkePeer.set_peer_certificate_fileRequest"/>
@@ -1738,7 +1833,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_certificate_type">
 	<documentation>
- Gets the IPsec IKE peer certification types for a list of IPsec IKE peers.
+ Gets the IPsec IKE peer certification types for a list of
+ IPsec IKE peers. Note that this function is only valid in
+ IKEv1 peer configuration.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/IPsecIkePeer"/>
@@ -1964,8 +2061,8 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_my_certificate_file">
 	<documentation>
- Gets the name of the ssl-crt file object for the BIG-IP certificate file
- for each IPsec IKE peer.
+ Gets the name of the certificate file object for each IPsec
+ IKE peer.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/IPsecIkePeer"/>
@@ -1985,8 +2082,30 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_my_certificate_key_file">
 	<documentation>
- Gets the name of the ssl-key file object for the BIG-IP certificate file
-  for each IPsec IKE peer.
+ Gets the name of the certificate key file object for each
+  IPsec IKE peer.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Networking/IPsecIkePeer"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/IPsecIkePeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/IPsecIkePeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_my_certificate_key_passphrase">
+	<documentation>
+ Gets the certificate key passphrases (if any) for the specified IKEv2 peers.
+
+ The user should not rely on the 'default_flag' in the returned sequence of passphrases.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/IPsecIkePeer"/>
@@ -2089,7 +2208,8 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_peer_certificate_file">
 	<documentation>
- Gets the peer certificate file name.
+ Gets the peer certificate file name. Note that this
+ function is only valid in IKEv1 peer configuration.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/IPsecIkePeer"/>
@@ -2250,8 +2370,7 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_preshared_key">
 	<documentation>
- Gets the preshared key (if any) for each specified
-      IPsec IKE peer.
+ Gets the preshared key (if any) for each specified IPsec IKE peer.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/IPsecIkePeer"/>
@@ -2518,7 +2637,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="set_certificate_type">
 	<documentation>
- Sets the IPsec IKE peer certificate types for a list of IPsec IKE peers.
+ Sets the IPsec IKE peer certificate types for a list of
+ IPsec IKE peers. Note that this function is only valid in
+ IKEv1 peer configuration.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/IPsecIkePeer"/>
@@ -2703,10 +2824,33 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_my_certificate_authentication">
+	<documentation>
+ Sets certificate-based authentication methods in a batch with
+      certificates, keys and corresponding key passphrases
+      (if any) for the specified IKEv2 peers.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Networking/IPsecIkePeer"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/IPsecIkePeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/IPsecIkePeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_my_certificate_file">
 	<documentation>
- Sets the name of ssl-crt file object for the certificate file
- for each of the specified IPsec IKE peers.
+ Sets the name of certificate file object for each of the
+ specified IPsec IKE peers. Note that there are no default
+ certificate files for DSS and ECDSA authentication methods.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/IPsecIkePeer"/>
@@ -2726,8 +2870,29 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="set_my_certificate_key_file">
 	<documentation>
- Sets the name of the ssl-key file object for the certificate file
-      for each IPsec IKE peer.
+ Sets the name of the certificate key file object for each
+ IPsec IKE peer. Note that there are no default certificate
+ key files for DSS and ECDSA authentication methods.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Networking/IPsecIkePeer"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/IPsecIkePeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Networking/IPsecIkePeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_my_certificate_key_passphrase">
+	<documentation>
+ Sets the certificate key passphrases (if any) for the specified IKEv2 peers.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/IPsecIkePeer"/>
@@ -2831,9 +2996,11 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="set_peer_certificate_file">
 	<documentation>
- Sets the peer certificate file object name. If the peer certificate file
- is defined, the isakmp daemon ignores the CERT payload from the peer,
- and uses this certificate as the peer's certificate.
+ Sets the peer certificate file object name. If the peer
+ certificate file is defined, the isakmp daemon ignores the
+ CERT payload from the peer, and uses this certificate as
+ the peer's certificate. Note that this function is only
+ valid in IKEv1 peer configuration.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Networking/IPsecIkePeer"/>

@@ -815,6 +815,11 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>LOG_SOURCE_FW_FQDN</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_FW_NAT">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_FW_NAT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="LOG_SOURCE_HWPD">
 					<xsd:annotation>
 						<xsd:documentation>LOG_SOURCE_HWPD</xsd:documentation>

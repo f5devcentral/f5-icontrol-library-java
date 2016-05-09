@@ -7295,6 +7295,296 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_DNS_NAPTR_REQS</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IP_MULTICAST_TRANSMITTED_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IP_MULTICAST_TRANSMITTED_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IP_MULTICAST_RECEIVED_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IP_MULTICAST_RECEIVED_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IP_MULTICAST_DROPPED_RPF">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IP_MULTICAST_DROPPED_RPF</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IP_MULTICAST_DROPPED_WRONG_INTERFACE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IP_MULTICAST_DROPPED_WRONG_INTERFACE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IP_MULTICAST_DROPPED_NO_ROUTE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IP_MULTICAST_DROPPED_NO_ROUTE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IP_MULTICAST_DROPPED_ROUTE_LOOKUP_TIMEOUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IP_MULTICAST_DROPPED_ROUTE_LOOKUP_TIMEOUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IP_MULTICAST_DROPPED_MAX_PENDING_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IP_MULTICAST_DROPPED_MAX_PENDING_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IP_MULTICAST_DROPPED_MAX_PENDING_ROUTES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IP_MULTICAST_DROPPED_MAX_PENDING_ROUTES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPV6_MULTICAST_TRANSMITTED_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPV6_MULTICAST_TRANSMITTED_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPV6_MULTICAST_RECEIVED_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPV6_MULTICAST_RECEIVED_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPV6_MULTICAST_DROPPED_RPF">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPV6_MULTICAST_DROPPED_RPF</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPV6_MULTICAST_DROPPED_WRONG_INTERFACE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPV6_MULTICAST_DROPPED_WRONG_INTERFACE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPV6_MULTICAST_DROPPED_NO_ROUTE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPV6_MULTICAST_DROPPED_NO_ROUTE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPV6_MULTICAST_DROPPED_ROUTE_LOOKUP_TIMEOUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPV6_MULTICAST_DROPPED_ROUTE_LOOKUP_TIMEOUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPV6_MULTICAST_DROPPED_MAX_PENDING_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPV6_MULTICAST_DROPPED_MAX_PENDING_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPV6_MULTICAST_DROPPED_MAX_PENDING_ROUTES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPV6_MULTICAST_DROPPED_MAX_PENDING_ROUTES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_ACTIVE_HANDSHAKES_REJECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_ACTIVE_HANDSHAKES_REJECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_CURRENT_ACTIVE_HANDSHAKES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_CURRENT_ACTIVE_HANDSHAKES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_1K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_1K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_2K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_2K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_3K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_3K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_4K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_4K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_5K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_5K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_6K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_6K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_7K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_7K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_8K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_8K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_9K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_9K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_10K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_10K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_11K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_11K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_12K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_12K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_13K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_13K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_14K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_14K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_15K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_15K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_DYNAMIC_RECORD_16K">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_DYNAMIC_RECORD_16K</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_STANDBY_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_STANDBY_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_REQUEST_ENTITY_TOO_LARGE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_REQUEST_ENTITY_TOO_LARGE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_REQUEST_ENTITY_TOO_LARGE_413_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_REQUEST_ENTITY_TOO_LARGE_413_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_UNSUPPORTED_URI_SCHEME">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_UNSUPPORTED_URI_SCHEME</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_UNSUPPORTED_URI_SCHEME_416_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_UNSUPPORTED_URI_SCHEME_416_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_TEMPORARILY_UNAVAILABLE_480_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_TEMPORARILY_UNAVAILABLE_480_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_LOOP_DETECTED_482_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_LOOP_DETECTED_482_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_TOO_MANY_HOPS_483_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_TOO_MANY_HOPS_483_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_ADDRESS_INCOMPLETE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_ADDRESS_INCOMPLETE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_ADDRESS_INCOMPLETE_484_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_ADDRESS_INCOMPLETE_484_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_NOT_ACCEPTABLE_HERE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_NOT_ACCEPTABLE_HERE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_NOT_ACCEPTABLE_HERE_488_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_NOT_ACCEPTABLE_HERE_488_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_SERVER_INTERNAL_ERROR_500_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_SERVER_INTERNAL_ERROR_500_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_NOT_IMPLEMENTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_NOT_IMPLEMENTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_NOT_IMPLEMENTED_501_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_NOT_IMPLEMENTED_501_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_SERVICE_UNAVAILABLE_503_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_SERVICE_UNAVAILABLE_503_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_VERSION_NOT_SUPPORTED_505_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_VERSION_NOT_SUPPORTED_505_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_BADMSGS_REQ">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_BADMSGS_REQ</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_DROPS_REQ">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_DROPS_REQ</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_INFO">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_INFO</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_REFER">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_REFER</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_UPDATE_REQ">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_UPDATE_REQ</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_BAD_REQUEST_400_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_BAD_REQUEST_400_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPSESSION_NOT_FOUND_404_SENT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPSESSION_NOT_FOUND_404_SENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="LocalLB.SNATPoolMember.SNATPoolMemberStatisticsSequence">

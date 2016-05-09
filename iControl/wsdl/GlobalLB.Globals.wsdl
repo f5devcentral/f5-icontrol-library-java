@@ -1931,7 +1931,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_domain_name_check_mode">
 	<documentation>
  Sets the mode for GTM to use when performing domain
- name checking. The default value is DOMAIN_NAME_CHECK_MODE_STRICT.
+ name checking. The default value is DOMAIN_NAME_CHECK_MODE_ALLOW_UNDERSCORE.
 
         	</documentation>
 		<input message="tns:GlobalLB.Globals.set_domain_name_check_modeRequest"/>
@@ -4365,7 +4365,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_domain_name_check_mode">
 	<documentation>
  Sets the mode for GTM to use when performing domain
- name checking. The default value is DOMAIN_NAME_CHECK_MODE_STRICT.
+ name checking. The default value is DOMAIN_NAME_CHECK_MODE_ALLOW_UNDERSCORE.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Globals"/>
