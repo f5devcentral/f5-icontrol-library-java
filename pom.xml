@@ -9,13 +9,33 @@
   <version>12.1.0</version>
 
   <build>
-    <sourceDirectory>src/generated/java</sourceDirectory>
+
     <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <id>add-source</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>src/generated/java</source>
+		<source>src/main/java</source>
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
       <plugin>
 	<groupId>org.codehaus.mojo</groupId>
 	<artifactId>axistools-maven-plugin</artifactId>
 	<version>1.4</version>
-
 	<configuration>
 	  <packageSpace>iControl</packageSpace>
 	  <sourceDirectory>src/main/resources/wsdl</sourceDirectory>
