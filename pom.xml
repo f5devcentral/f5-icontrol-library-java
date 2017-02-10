@@ -24,7 +24,7 @@
             </goals>
             <configuration>
               <sources>
-                <source>src/generated/java</source>
+		<source>src/generated/java</source>
 		<source>src/main/java</source>
               </sources>
             </configuration>
@@ -66,6 +66,7 @@
       <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
 	<artifactId>maven-source-plugin</artifactId>
+	<version>3.0.1</version>
 	<executions>
 	  <execution>
 	    <id>attach-sources</id>
@@ -75,18 +76,15 @@
 	  </execution>
 	</executions>
       </plugin>
-
     </plugins>
   </build>
 
   <dependencies>
-
     <dependency>
       <groupId>org.apache.axis</groupId>
       <artifactId>axis</artifactId>
       <version>1.4</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
     <dependency>
       <groupId>commons-logging</groupId>
       <artifactId>commons-logging</artifactId>
@@ -114,13 +112,13 @@
     </dependency>
     <dependency>
       <groupId>javax.mail</groupId>
-      <artifactId>mail</artifactId>
-      <version>1.4.1</version>
+      <artifactId>javax.mail-api</artifactId>
+      <version>1.5.6</version>
     </dependency>
     <dependency>
       <groupId>javax.activation</groupId>
       <artifactId>activation</artifactId>
-      <version>1.1</version>
+      <version>1.1.1</version>
     </dependency>
   </dependencies>
 
