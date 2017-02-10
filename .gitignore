@@ -1,2 +1,8 @@
 src/generated/*
 target/
+
+#Ignore Eclipse Artifacts
+.settings/
+.project
+.classpath
+bin/

@@ -1,7 +1,7 @@
 //===========================================================================
 //
 // File         : Interfaces.java
-//                   
+//
 //---------------------------------------------------------------------------
 //
 // The contents of this file are subject to the "END USER LICENSE AGREEMENT FOR F5
@@ -77,10 +77,10 @@ private GlobalLBVirtualServerBindingStub m_GlobalLBVirtualServer = null;
 private GlobalLBVirtualServerV2BindingStub m_GlobalLBVirtualServerV2 = null;
 private GlobalLBWideIPBindingStub m_GlobalLBWideIP = null;
 private GlobalLBWideIPV2BindingStub m_GlobalLBWideIPV2 = null;
-private iCallPeriodicHandlerBindingStub m_iCallPeriodicHandler = null;
-private iCallPerpetualHandlerBindingStub m_iCallPerpetualHandler = null;
-private iCallScriptBindingStub m_iCallScript = null;
-private iCallTriggeredHandlerBindingStub m_iCallTriggeredHandler = null;
+private ICallPeriodicHandlerBindingStub m_iCallPeriodicHandler = null;
+private ICallPerpetualHandlerBindingStub m_iCallPerpetualHandler = null;
+private ICallScriptBindingStub m_iCallScript = null;
+private ICallTriggeredHandlerBindingStub m_iCallTriggeredHandler = null;
 private LocalLBALGLogProfileBindingStub m_LocalLBALGLogProfile = null;
 private LocalLBClassBindingStub m_LocalLBClass = null;
 private LocalLBContentPolicyBindingStub m_LocalLBContentPolicy = null;
@@ -93,8 +93,8 @@ private LocalLBDNSServerBindingStub m_LocalLBDNSServer = null;
 private LocalLBDNSTSIGKeyBindingStub m_LocalLBDNSTSIGKey = null;
 private LocalLBDNSZoneBindingStub m_LocalLBDNSZone = null;
 private LocalLBFlowEvictionPolicyBindingStub m_LocalLBFlowEvictionPolicy = null;
-private LocalLBiFileBindingStub m_LocalLBiFile = null;
-private LocalLBiFileFileBindingStub m_LocalLBiFileFile = null;
+private LocalLBIFileBindingStub m_LocalLBiFile = null;
+private LocalLBIFileFileBindingStub m_LocalLBiFileFile = null;
 private LocalLBLSNLogProfileBindingStub m_LocalLBLSNLogProfile = null;
 private LocalLBLSNPoolBindingStub m_LocalLBLSNPool = null;
 private LocalLBMessageRoutingPeerBindingStub m_LocalLBMessageRoutingPeer = null;
@@ -227,14 +227,14 @@ private NetworkingIPsecIkePeerBindingStub m_NetworkingIPsecIkePeer = null;
 private NetworkingIPsecManualSecurityAssociationBindingStub m_NetworkingIPsecManualSecurityAssociation = null;
 private NetworkingIPsecPolicyBindingStub m_NetworkingIPsecPolicy = null;
 private NetworkingIPsecTrafficSelectorBindingStub m_NetworkingIPsecTrafficSelector = null;
-private NetworkingiSessionAdvertisedRouteBindingStub m_NetworkingiSessionAdvertisedRoute = null;
-private NetworkingiSessionAdvertisedRouteV2BindingStub m_NetworkingiSessionAdvertisedRouteV2 = null;
-private NetworkingiSessionDatastorBindingStub m_NetworkingiSessionDatastor = null;
-private NetworkingiSessionDeduplicationBindingStub m_NetworkingiSessionDeduplication = null;
-private NetworkingiSessionLocalInterfaceBindingStub m_NetworkingiSessionLocalInterface = null;
-private NetworkingiSessionPeerDiscoveryBindingStub m_NetworkingiSessionPeerDiscovery = null;
-private NetworkingiSessionRemoteInterfaceBindingStub m_NetworkingiSessionRemoteInterface = null;
-private NetworkingiSessionRemoteInterfaceV2BindingStub m_NetworkingiSessionRemoteInterfaceV2 = null;
+private NetworkingISessionAdvertisedRouteBindingStub m_NetworkingiSessionAdvertisedRoute = null;
+private NetworkingISessionAdvertisedRouteV2BindingStub m_NetworkingiSessionAdvertisedRouteV2 = null;
+private NetworkingISessionDatastorBindingStub m_NetworkingiSessionDatastor = null;
+private NetworkingISessionDeduplicationBindingStub m_NetworkingiSessionDeduplication = null;
+private NetworkingISessionLocalInterfaceBindingStub m_NetworkingiSessionLocalInterface = null;
+private NetworkingISessionPeerDiscoveryBindingStub m_NetworkingiSessionPeerDiscovery = null;
+private NetworkingISessionRemoteInterfaceBindingStub m_NetworkingiSessionRemoteInterface = null;
+private NetworkingISessionRemoteInterfaceV2BindingStub m_NetworkingiSessionRemoteInterfaceV2 = null;
 private NetworkingLLDPGlobalsBindingStub m_NetworkingLLDPGlobals = null;
 private NetworkingMulticastRouteBindingStub m_NetworkingMulticastRoute = null;
 private NetworkingPacketFilterBindingStub m_NetworkingPacketFilter = null;
@@ -312,7 +312,7 @@ private SystemVCMPBindingStub m_SystemVCMP = null;
 private WebAcceleratorApplicationsBindingStub m_WebAcceleratorApplications = null;
 private WebAcceleratorPoliciesBindingStub m_WebAcceleratorPolicies = null;
 
-  
+
 	private Boolean m_bInitialized = false;
 	private int m_timeout = 60000;
 	private String m_hostname = "";
@@ -322,9 +322,9 @@ private WebAcceleratorPoliciesBindingStub m_WebAcceleratorPolicies = null;
 
 	private void setupInterface(org.apache.axis.client.Stub stub)
 	{
-		stub.setTimeout(m_timeout); stub.setUsername(m_username); stub.setPassword(m_password); 
+		stub.setTimeout(m_timeout); stub.setUsername(m_username); stub.setPassword(m_password);
 	}
-	
+
 	//-------------------------------------------------------------------
 	// public member accessors
 	//-------------------------------------------------------------------
@@ -358,10 +358,10 @@ public GlobalLBVirtualServerBindingStub getGlobalLBVirtualServer() throws Except
 public GlobalLBVirtualServerV2BindingStub getGlobalLBVirtualServerV2() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_GlobalLBVirtualServerV2 ) { m_GlobalLBVirtualServerV2 = (iControl.GlobalLBVirtualServerV2BindingStub) new iControl.GlobalLBVirtualServerV2Locator().getGlobalLBVirtualServerV2Port(new java.net.URL(buildURL())); } setupInterface(m_GlobalLBVirtualServerV2); return m_GlobalLBVirtualServerV2;}
 public GlobalLBWideIPBindingStub getGlobalLBWideIP() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_GlobalLBWideIP ) { m_GlobalLBWideIP = (iControl.GlobalLBWideIPBindingStub) new iControl.GlobalLBWideIPLocator().getGlobalLBWideIPPort(new java.net.URL(buildURL())); } setupInterface(m_GlobalLBWideIP); return m_GlobalLBWideIP;}
 public GlobalLBWideIPV2BindingStub getGlobalLBWideIPV2() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_GlobalLBWideIPV2 ) { m_GlobalLBWideIPV2 = (iControl.GlobalLBWideIPV2BindingStub) new iControl.GlobalLBWideIPV2Locator().getGlobalLBWideIPV2Port(new java.net.URL(buildURL())); } setupInterface(m_GlobalLBWideIPV2); return m_GlobalLBWideIPV2;}
-public iCallPeriodicHandlerBindingStub getiCallPeriodicHandler() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_iCallPeriodicHandler ) { m_iCallPeriodicHandler = (iControl.iCallPeriodicHandlerBindingStub) new iControl.iCallPeriodicHandlerLocator().getiCallPeriodicHandlerPort(new java.net.URL(buildURL())); } setupInterface(m_iCallPeriodicHandler); return m_iCallPeriodicHandler;}
-public iCallPerpetualHandlerBindingStub getiCallPerpetualHandler() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_iCallPerpetualHandler ) { m_iCallPerpetualHandler = (iControl.iCallPerpetualHandlerBindingStub) new iControl.iCallPerpetualHandlerLocator().getiCallPerpetualHandlerPort(new java.net.URL(buildURL())); } setupInterface(m_iCallPerpetualHandler); return m_iCallPerpetualHandler;}
-public iCallScriptBindingStub getiCallScript() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_iCallScript ) { m_iCallScript = (iControl.iCallScriptBindingStub) new iControl.iCallScriptLocator().getiCallScriptPort(new java.net.URL(buildURL())); } setupInterface(m_iCallScript); return m_iCallScript;}
-public iCallTriggeredHandlerBindingStub getiCallTriggeredHandler() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_iCallTriggeredHandler ) { m_iCallTriggeredHandler = (iControl.iCallTriggeredHandlerBindingStub) new iControl.iCallTriggeredHandlerLocator().getiCallTriggeredHandlerPort(new java.net.URL(buildURL())); } setupInterface(m_iCallTriggeredHandler); return m_iCallTriggeredHandler;}
+public ICallPeriodicHandlerBindingStub getiCallPeriodicHandler() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_iCallPeriodicHandler ) { m_iCallPeriodicHandler = (iControl.ICallPeriodicHandlerBindingStub) new iControl.ICallPeriodicHandlerLocator().getICallPeriodicHandlerPort(new java.net.URL(buildURL())); } setupInterface(m_iCallPeriodicHandler); return m_iCallPeriodicHandler;}
+public ICallPerpetualHandlerBindingStub getiCallPerpetualHandler() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_iCallPerpetualHandler ) { m_iCallPerpetualHandler = (iControl.ICallPerpetualHandlerBindingStub) new iControl.ICallPerpetualHandlerLocator().getICallPerpetualHandlerPort(new java.net.URL(buildURL())); } setupInterface(m_iCallPerpetualHandler); return m_iCallPerpetualHandler;}
+public ICallScriptBindingStub getiCallScript() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_iCallScript ) { m_iCallScript = (iControl.ICallScriptBindingStub) new iControl.ICallScriptLocator().getICallScriptPort(new java.net.URL(buildURL())); } setupInterface(m_iCallScript); return m_iCallScript;}
+public ICallTriggeredHandlerBindingStub getiCallTriggeredHandler() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_iCallTriggeredHandler ) { m_iCallTriggeredHandler = (iControl.ICallTriggeredHandlerBindingStub) new iControl.ICallTriggeredHandlerLocator().getICallTriggeredHandlerPort(new java.net.URL(buildURL())); } setupInterface(m_iCallTriggeredHandler); return m_iCallTriggeredHandler;}
 public LocalLBALGLogProfileBindingStub getLocalLBALGLogProfile() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_LocalLBALGLogProfile ) { m_LocalLBALGLogProfile = (iControl.LocalLBALGLogProfileBindingStub) new iControl.LocalLBALGLogProfileLocator().getLocalLBALGLogProfilePort(new java.net.URL(buildURL())); } setupInterface(m_LocalLBALGLogProfile); return m_LocalLBALGLogProfile;}
 public LocalLBClassBindingStub getLocalLBClass() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_LocalLBClass ) { m_LocalLBClass = (iControl.LocalLBClassBindingStub) new iControl.LocalLBClassLocator().getLocalLBClassPort(new java.net.URL(buildURL())); } setupInterface(m_LocalLBClass); return m_LocalLBClass;}
 public LocalLBContentPolicyBindingStub getLocalLBContentPolicy() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_LocalLBContentPolicy ) { m_LocalLBContentPolicy = (iControl.LocalLBContentPolicyBindingStub) new iControl.LocalLBContentPolicyLocator().getLocalLBContentPolicyPort(new java.net.URL(buildURL())); } setupInterface(m_LocalLBContentPolicy); return m_LocalLBContentPolicy;}
@@ -374,8 +374,8 @@ public LocalLBDNSServerBindingStub getLocalLBDNSServer() throws Exception { if (
 public LocalLBDNSTSIGKeyBindingStub getLocalLBDNSTSIGKey() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_LocalLBDNSTSIGKey ) { m_LocalLBDNSTSIGKey = (iControl.LocalLBDNSTSIGKeyBindingStub) new iControl.LocalLBDNSTSIGKeyLocator().getLocalLBDNSTSIGKeyPort(new java.net.URL(buildURL())); } setupInterface(m_LocalLBDNSTSIGKey); return m_LocalLBDNSTSIGKey;}
 public LocalLBDNSZoneBindingStub getLocalLBDNSZone() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_LocalLBDNSZone ) { m_LocalLBDNSZone = (iControl.LocalLBDNSZoneBindingStub) new iControl.LocalLBDNSZoneLocator().getLocalLBDNSZonePort(new java.net.URL(buildURL())); } setupInterface(m_LocalLBDNSZone); return m_LocalLBDNSZone;}
 public LocalLBFlowEvictionPolicyBindingStub getLocalLBFlowEvictionPolicy() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_LocalLBFlowEvictionPolicy ) { m_LocalLBFlowEvictionPolicy = (iControl.LocalLBFlowEvictionPolicyBindingStub) new iControl.LocalLBFlowEvictionPolicyLocator().getLocalLBFlowEvictionPolicyPort(new java.net.URL(buildURL())); } setupInterface(m_LocalLBFlowEvictionPolicy); return m_LocalLBFlowEvictionPolicy;}
-public LocalLBiFileBindingStub getLocalLBiFile() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_LocalLBiFile ) { m_LocalLBiFile = (iControl.LocalLBiFileBindingStub) new iControl.LocalLBiFileLocator().getLocalLBiFilePort(new java.net.URL(buildURL())); } setupInterface(m_LocalLBiFile); return m_LocalLBiFile;}
-public LocalLBiFileFileBindingStub getLocalLBiFileFile() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_LocalLBiFileFile ) { m_LocalLBiFileFile = (iControl.LocalLBiFileFileBindingStub) new iControl.LocalLBiFileFileLocator().getLocalLBiFileFilePort(new java.net.URL(buildURL())); } setupInterface(m_LocalLBiFileFile); return m_LocalLBiFileFile;}
+public LocalLBIFileBindingStub getLocalLBiFile() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_LocalLBiFile ) { m_LocalLBiFile = (iControl.LocalLBIFileBindingStub) new iControl.LocalLBIFileLocator().getLocalLBIFilePort(new java.net.URL(buildURL())); } setupInterface(m_LocalLBiFile); return m_LocalLBiFile;}
+public LocalLBIFileFileBindingStub getLocalLBiFileFile() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_LocalLBiFileFile ) { m_LocalLBiFileFile = (iControl.LocalLBIFileFileBindingStub) new iControl.LocalLBIFileFileLocator().getLocalLBIFileFilePort(new java.net.URL(buildURL())); } setupInterface(m_LocalLBiFileFile); return m_LocalLBiFileFile;}
 public LocalLBLSNLogProfileBindingStub getLocalLBLSNLogProfile() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_LocalLBLSNLogProfile ) { m_LocalLBLSNLogProfile = (iControl.LocalLBLSNLogProfileBindingStub) new iControl.LocalLBLSNLogProfileLocator().getLocalLBLSNLogProfilePort(new java.net.URL(buildURL())); } setupInterface(m_LocalLBLSNLogProfile); return m_LocalLBLSNLogProfile;}
 public LocalLBLSNPoolBindingStub getLocalLBLSNPool() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_LocalLBLSNPool ) { m_LocalLBLSNPool = (iControl.LocalLBLSNPoolBindingStub) new iControl.LocalLBLSNPoolLocator().getLocalLBLSNPoolPort(new java.net.URL(buildURL())); } setupInterface(m_LocalLBLSNPool); return m_LocalLBLSNPool;}
 public LocalLBMessageRoutingPeerBindingStub getLocalLBMessageRoutingPeer() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_LocalLBMessageRoutingPeer ) { m_LocalLBMessageRoutingPeer = (iControl.LocalLBMessageRoutingPeerBindingStub) new iControl.LocalLBMessageRoutingPeerLocator().getLocalLBMessageRoutingPeerPort(new java.net.URL(buildURL())); } setupInterface(m_LocalLBMessageRoutingPeer); return m_LocalLBMessageRoutingPeer;}
@@ -508,14 +508,14 @@ public NetworkingIPsecIkePeerBindingStub getNetworkingIPsecIkePeer() throws Exce
 public NetworkingIPsecManualSecurityAssociationBindingStub getNetworkingIPsecManualSecurityAssociation() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingIPsecManualSecurityAssociation ) { m_NetworkingIPsecManualSecurityAssociation = (iControl.NetworkingIPsecManualSecurityAssociationBindingStub) new iControl.NetworkingIPsecManualSecurityAssociationLocator().getNetworkingIPsecManualSecurityAssociationPort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingIPsecManualSecurityAssociation); return m_NetworkingIPsecManualSecurityAssociation;}
 public NetworkingIPsecPolicyBindingStub getNetworkingIPsecPolicy() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingIPsecPolicy ) { m_NetworkingIPsecPolicy = (iControl.NetworkingIPsecPolicyBindingStub) new iControl.NetworkingIPsecPolicyLocator().getNetworkingIPsecPolicyPort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingIPsecPolicy); return m_NetworkingIPsecPolicy;}
 public NetworkingIPsecTrafficSelectorBindingStub getNetworkingIPsecTrafficSelector() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingIPsecTrafficSelector ) { m_NetworkingIPsecTrafficSelector = (iControl.NetworkingIPsecTrafficSelectorBindingStub) new iControl.NetworkingIPsecTrafficSelectorLocator().getNetworkingIPsecTrafficSelectorPort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingIPsecTrafficSelector); return m_NetworkingIPsecTrafficSelector;}
-public NetworkingiSessionAdvertisedRouteBindingStub getNetworkingiSessionAdvertisedRoute() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionAdvertisedRoute ) { m_NetworkingiSessionAdvertisedRoute = (iControl.NetworkingiSessionAdvertisedRouteBindingStub) new iControl.NetworkingiSessionAdvertisedRouteLocator().getNetworkingiSessionAdvertisedRoutePort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionAdvertisedRoute); return m_NetworkingiSessionAdvertisedRoute;}
-public NetworkingiSessionAdvertisedRouteV2BindingStub getNetworkingiSessionAdvertisedRouteV2() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionAdvertisedRouteV2 ) { m_NetworkingiSessionAdvertisedRouteV2 = (iControl.NetworkingiSessionAdvertisedRouteV2BindingStub) new iControl.NetworkingiSessionAdvertisedRouteV2Locator().getNetworkingiSessionAdvertisedRouteV2Port(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionAdvertisedRouteV2); return m_NetworkingiSessionAdvertisedRouteV2;}
-public NetworkingiSessionDatastorBindingStub getNetworkingiSessionDatastor() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionDatastor ) { m_NetworkingiSessionDatastor = (iControl.NetworkingiSessionDatastorBindingStub) new iControl.NetworkingiSessionDatastorLocator().getNetworkingiSessionDatastorPort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionDatastor); return m_NetworkingiSessionDatastor;}
-public NetworkingiSessionDeduplicationBindingStub getNetworkingiSessionDeduplication() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionDeduplication ) { m_NetworkingiSessionDeduplication = (iControl.NetworkingiSessionDeduplicationBindingStub) new iControl.NetworkingiSessionDeduplicationLocator().getNetworkingiSessionDeduplicationPort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionDeduplication); return m_NetworkingiSessionDeduplication;}
-public NetworkingiSessionLocalInterfaceBindingStub getNetworkingiSessionLocalInterface() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionLocalInterface ) { m_NetworkingiSessionLocalInterface = (iControl.NetworkingiSessionLocalInterfaceBindingStub) new iControl.NetworkingiSessionLocalInterfaceLocator().getNetworkingiSessionLocalInterfacePort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionLocalInterface); return m_NetworkingiSessionLocalInterface;}
-public NetworkingiSessionPeerDiscoveryBindingStub getNetworkingiSessionPeerDiscovery() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionPeerDiscovery ) { m_NetworkingiSessionPeerDiscovery = (iControl.NetworkingiSessionPeerDiscoveryBindingStub) new iControl.NetworkingiSessionPeerDiscoveryLocator().getNetworkingiSessionPeerDiscoveryPort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionPeerDiscovery); return m_NetworkingiSessionPeerDiscovery;}
-public NetworkingiSessionRemoteInterfaceBindingStub getNetworkingiSessionRemoteInterface() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionRemoteInterface ) { m_NetworkingiSessionRemoteInterface = (iControl.NetworkingiSessionRemoteInterfaceBindingStub) new iControl.NetworkingiSessionRemoteInterfaceLocator().getNetworkingiSessionRemoteInterfacePort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionRemoteInterface); return m_NetworkingiSessionRemoteInterface;}
-public NetworkingiSessionRemoteInterfaceV2BindingStub getNetworkingiSessionRemoteInterfaceV2() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionRemoteInterfaceV2 ) { m_NetworkingiSessionRemoteInterfaceV2 = (iControl.NetworkingiSessionRemoteInterfaceV2BindingStub) new iControl.NetworkingiSessionRemoteInterfaceV2Locator().getNetworkingiSessionRemoteInterfaceV2Port(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionRemoteInterfaceV2); return m_NetworkingiSessionRemoteInterfaceV2;}
+public NetworkingISessionAdvertisedRouteBindingStub getNetworkingiSessionAdvertisedRoute() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionAdvertisedRoute ) { m_NetworkingiSessionAdvertisedRoute = (iControl.NetworkingISessionAdvertisedRouteBindingStub) new iControl.NetworkingISessionAdvertisedRouteLocator().getNetworkingISessionAdvertisedRoutePort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionAdvertisedRoute); return m_NetworkingiSessionAdvertisedRoute;}
+public NetworkingISessionAdvertisedRouteV2BindingStub getNetworkingiSessionAdvertisedRouteV2() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionAdvertisedRouteV2 ) { m_NetworkingiSessionAdvertisedRouteV2 = (iControl.NetworkingISessionAdvertisedRouteV2BindingStub) new iControl.NetworkingISessionAdvertisedRouteV2Locator().getNetworkingISessionAdvertisedRouteV2Port(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionAdvertisedRouteV2); return m_NetworkingiSessionAdvertisedRouteV2;}
+public NetworkingISessionDatastorBindingStub getNetworkingiSessionDatastor() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionDatastor ) { m_NetworkingiSessionDatastor = (iControl.NetworkingISessionDatastorBindingStub) new iControl.NetworkingISessionDatastorLocator().getNetworkingISessionDatastorPort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionDatastor); return m_NetworkingiSessionDatastor;}
+public NetworkingISessionDeduplicationBindingStub getNetworkingiSessionDeduplication() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionDeduplication ) { m_NetworkingiSessionDeduplication = (iControl.NetworkingISessionDeduplicationBindingStub) new iControl.NetworkingISessionDeduplicationLocator().getNetworkingISessionDeduplicationPort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionDeduplication); return m_NetworkingiSessionDeduplication;}
+public NetworkingISessionLocalInterfaceBindingStub getNetworkingiSessionLocalInterface() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionLocalInterface ) { m_NetworkingiSessionLocalInterface = (iControl.NetworkingISessionLocalInterfaceBindingStub) new iControl.NetworkingISessionLocalInterfaceLocator().getNetworkingISessionLocalInterfacePort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionLocalInterface); return m_NetworkingiSessionLocalInterface;}
+public NetworkingISessionPeerDiscoveryBindingStub getNetworkingiSessionPeerDiscovery() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionPeerDiscovery ) { m_NetworkingiSessionPeerDiscovery = (iControl.NetworkingISessionPeerDiscoveryBindingStub) new iControl.NetworkingISessionPeerDiscoveryLocator().getNetworkingISessionPeerDiscoveryPort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionPeerDiscovery); return m_NetworkingiSessionPeerDiscovery;}
+public NetworkingISessionRemoteInterfaceBindingStub getNetworkingiSessionRemoteInterface() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionRemoteInterface ) { m_NetworkingiSessionRemoteInterface = (iControl.NetworkingISessionRemoteInterfaceBindingStub) new iControl.NetworkingISessionRemoteInterfaceLocator().getNetworkingISessionRemoteInterfacePort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionRemoteInterface); return m_NetworkingiSessionRemoteInterface;}
+public NetworkingISessionRemoteInterfaceV2BindingStub getNetworkingiSessionRemoteInterfaceV2() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingiSessionRemoteInterfaceV2 ) { m_NetworkingiSessionRemoteInterfaceV2 = (iControl.NetworkingISessionRemoteInterfaceV2BindingStub) new iControl.NetworkingISessionRemoteInterfaceV2Locator().getNetworkingISessionRemoteInterfaceV2Port(new java.net.URL(buildURL())); } setupInterface(m_NetworkingiSessionRemoteInterfaceV2); return m_NetworkingiSessionRemoteInterfaceV2;}
 public NetworkingLLDPGlobalsBindingStub getNetworkingLLDPGlobals() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingLLDPGlobals ) { m_NetworkingLLDPGlobals = (iControl.NetworkingLLDPGlobalsBindingStub) new iControl.NetworkingLLDPGlobalsLocator().getNetworkingLLDPGlobalsPort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingLLDPGlobals); return m_NetworkingLLDPGlobals;}
 public NetworkingMulticastRouteBindingStub getNetworkingMulticastRoute() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingMulticastRoute ) { m_NetworkingMulticastRoute = (iControl.NetworkingMulticastRouteBindingStub) new iControl.NetworkingMulticastRouteLocator().getNetworkingMulticastRoutePort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingMulticastRoute); return m_NetworkingMulticastRoute;}
 public NetworkingPacketFilterBindingStub getNetworkingPacketFilter() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_NetworkingPacketFilter ) { m_NetworkingPacketFilter = (iControl.NetworkingPacketFilterBindingStub) new iControl.NetworkingPacketFilterLocator().getNetworkingPacketFilterPort(new java.net.URL(buildURL())); } setupInterface(m_NetworkingPacketFilter); return m_NetworkingPacketFilter;}
@@ -602,21 +602,21 @@ public WebAcceleratorPoliciesBindingStub getWebAcceleratorPolicies() throws Exce
 		System.setProperty("javax.net.ssl.trustStore", System.getProperty("user.home") + "/.keystore");
 		XTrustProvider.install();
 	}
-	
+
 	public Interfaces(String hostname, String username, String password)
 	{
 		System.setProperty("javax.net.ssl.trustStore", System.getProperty("user.home") + "/.keystore");
 		XTrustProvider.install();
 		initialize(hostname, username, password);
 	}
-	
+
 	public Interfaces(String hostname, long port, String username, String password)
 	{
 		System.setProperty("javax.net.ssl.trustStore", System.getProperty("user.home") + "/.keystore");
 		XTrustProvider.install();
 		initialize(hostname, port, username, password);
 	}
-	
+
 	//-------------------------------------------------------------------
 	// private methods
 	//-------------------------------------------------------------------
@@ -630,11 +630,11 @@ public WebAcceleratorPoliciesBindingStub getWebAcceleratorPolicies() throws Exce
 		}
 		//url = url + "://" + m_username + ":" + m_password + "@" + m_hostname + ":" + m_port + "/iControl/iControlPortal.cgi";
 		url = url + "://" + m_hostname + ":" + m_port + "/iControl/iControlPortal.cgi";
-		
+
 		return url;
 	}
-	
-	
+
+
 	//-------------------------------------------------------------------
 	// public methods
 	//-------------------------------------------------------------------
@@ -643,7 +643,7 @@ public WebAcceleratorPoliciesBindingStub getWebAcceleratorPolicies() throws Exce
 	{
 		return initialize(hostname, 443, username, password);
 	}
-	
+
 	public Boolean initialize(String hostname, long port, String username, String password)
 	{
 		m_bInitialized = false;
@@ -919,7 +919,7 @@ m_WebAcceleratorApplications = null;
 m_WebAcceleratorPolicies = null;
 
 		m_bInitialized = true;
-		
+
 		return m_bInitialized;
 	}
 };
