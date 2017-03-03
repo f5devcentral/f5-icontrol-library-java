@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--
-Copyright (c) 1996-2009, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
+Copyright (c) 1996-2017, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
 
 F5, F5 Networks, the F5 logo, BIG-IP, 3-DNS, iControl, GLOBAL-SITE, SEE-IT, EDGE-FX, FireGuard, Internet Control Architecture, IP Application Switch, iRules, PACKET VELOCITY, SYN Check, CONTROL YOUR WORLD, OneConnect, ZoneRunner, uRoam, FirePass, and TrafficShield are registered trademarks or trademarks of F5 Networks, Inc., in the U.S. and certain other countries. 
 
@@ -7739,6 +7739,416 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SIPSESSION_NOT_FOUND_404_SENT</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_INVALID_MESSAGES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_INVALID_MESSAGES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_STANDBY_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_STANDBY_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_MAX_RETRIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_MAX_RETRIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_ACTIVE_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_ACTIVE_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_SUCCESSFUL_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_SUCCESSFUL_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_REJECTED_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_REJECTED_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_ACTIVE_REGISTRATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_ACTIVE_REGISTRATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_REJECTED_REGISTRATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_REJECTED_REGISTRATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_IKE_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_IKE_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_TUNNEL_CREATES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_TUNNEL_CREATES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_TUNNEL_TEARDOWNS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_TUNNEL_TEARDOWNS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_FAILURES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_FAILURES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_PENDING_IKE_CONNECTION_LIMIT_DROPS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_PENDING_IKE_CONNECTION_LIMIT_DROPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_BYPASS_HANDSHAKE_ALERT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_BYPASS_HANDSHAKE_ALERT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_BYPASS_FAILED_CLIENT_CERTIFICATE_REQUEST">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_BYPASS_FAILED_CLIENT_CERTIFICATE_REQUEST</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_OPEN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_OPEN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_NOT_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_NOT_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_EXPIRED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_EXPIRED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_MALFORMED_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_MALFORMED_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_ICMP_UNREACHABLE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_ICMP_UNREACHABLE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ISSUED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ISSUED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_REJECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_REJECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ISSUED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ISSUED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_EMBRYONIC_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_EMBRYONIC_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_OCSP_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_OCSP_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_INTERNAL_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_INTERNAL_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_SUCCESSFUL_CACHE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_SUCCESSFUL_CACHE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_HTTP_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_HTTP_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_TIMEOUTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_TIMEOUTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_OTHER_FAILURES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_OTHER_FAILURES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_MALFORMED_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_MALFORMED_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_INTERNAL_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_INTERNAL_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_TRY_LATER_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_TRY_LATER_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_SIGNATURE_REQUIRED_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_SIGNATURE_REQUIRED_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_UNAUTHORIZED_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_UNAUTHORIZED_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_PARSE_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_PARSE_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VERIFICATION_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VERIFICATION_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VALIDITY_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VALIDITY_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_OTHER_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_OTHER_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_GOOD">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_GOOD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_REVOKED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_REVOKED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_RC_BADVERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_RC_BADVERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_RAPID_RESPONSE_BADVERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_RAPID_RESPONSE_BADVERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_IN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_IN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_IN_RESUBMITTED_FOR_RETRY">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_IN_RESUBMITTED_FOR_RETRY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_OUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_OUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_AND_NOT_DELIVERABLE_TO_ORIGINATOR">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_AND_NOT_DELIVERABLE_TO_ORIGINATOR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_ROUTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_ROUTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_UNROUTABLE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_UNROUTABLE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_A_FULL_QUEUE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_A_FULL_QUEUE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_CLOSED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_CLOSED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_AN_INTERNAL_ERROR">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_AN_INTERNAL_ERROR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="LocalLB.ProfileSSLCertificateExtensionSequence">
@@ -8249,6 +8659,20 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
+<message name="LocalLB.ProfileClientSSL.get_bypass_on_failed_client_certificate_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.get_bypass_on_failed_client_certificate_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.ProfileClientSSL.get_bypass_on_handshake_alert_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.get_bypass_on_handshake_alert_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
 <message name="LocalLB.ProfileClientSSL.get_ca_fileRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -8560,6 +8984,20 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
+<message name="LocalLB.ProfileClientSSL.get_notify_certificate_status_to_virtual_server_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.get_notify_certificate_status_to_virtual_server_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.ProfileClientSSL.get_ocsp_stapling_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.get_ocsp_stapling_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
 <message name="LocalLB.ProfileClientSSL.get_passphraseRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -8823,6 +9261,20 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 <message name="LocalLB.ProfileClientSSL.set_authenticate_once_stateResponse">
+</message>
+
+<message name="LocalLB.ProfileClientSSL.set_bypass_on_failed_client_certificate_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.set_bypass_on_failed_client_certificate_stateResponse">
+</message>
+
+<message name="LocalLB.ProfileClientSSL.set_bypass_on_handshake_alert_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.set_bypass_on_handshake_alert_stateResponse">
 </message>
 
 <message name="LocalLB.ProfileClientSSL.set_ca_fileRequest">
@@ -9120,6 +9572,20 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfileClientSSL.set_modssl_emulation_stateResponse">
 </message>
 
+<message name="LocalLB.ProfileClientSSL.set_notify_certificate_status_to_virtual_server_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.set_notify_certificate_status_to_virtual_server_stateResponse">
+</message>
+
+<message name="LocalLB.ProfileClientSSL.set_ocsp_stapling_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.set_ocsp_stapling_stateResponse">
+</message>
+
 <message name="LocalLB.ProfileClientSSL.set_passphraseRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="passphrases" type="tns:LocalLB.ProfileStringSequence"/>
@@ -9415,6 +9881,22 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileClientSSL.get_authenticate_once_stateRequest"/>
 		<output message="tns:LocalLB.ProfileClientSSL.get_authenticate_once_stateResponse"/>
 	</operation>
+	<operation name="get_bypass_on_failed_client_certificate_state">
+	<documentation>
+ Gets the bypass_on_fail_client_certificate state for the specified client SSL profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.get_bypass_on_failed_client_certificate_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.get_bypass_on_failed_client_certificate_stateResponse"/>
+	</operation>
+	<operation name="get_bypass_on_handshake_alert_state">
+	<documentation>
+ Gets the bypass_on_handshake_alert state for the specified client SSL profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.get_bypass_on_handshake_alert_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.get_bypass_on_handshake_alert_stateResponse"/>
+	</operation>
 	<operation name="get_ca_file">
 	<documentation>
  Certificate files are officially managed as certificate file
@@ -9528,8 +10010,14 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_certificate_key_chain_ocsp_stapling_parameters">
 	<documentation>
- Gets the name of the OCSP stapling parameters object in a certificate-key-chain
- object.
+ This method has been deprecated as of v13.0.0.
+
+ Deprecation note:
+ The attribute OCSP stapling parameters of certificate-key-chain
+ is no longer used in v13.0.0. If the user tries to get this value via
+ old TMSH or iControl calls, it will return empty strings.
+ Gets the name of the OCSP stapling parameters object in a
+ certificate-key-chain object.
 
         	</documentation>
 		<input message="tns:LocalLB.ProfileClientSSL.get_certificate_key_chain_ocsp_stapling_parametersRequest"/>
@@ -9888,6 +10376,26 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileClientSSL.get_modssl_emulation_stateRequest"/>
 		<output message="tns:LocalLB.ProfileClientSSL.get_modssl_emulation_stateResponse"/>
 	</operation>
+	<operation name="get_notify_certificate_status_to_virtual_server_state">
+	<documentation>
+ Gets the notify-certificate-status-to-virtual-server enabled states
+ for the specified client SSL profiles that are used to indicate
+ whether the status of the certificats are propagated to the virtual server.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.get_notify_certificate_status_to_virtual_server_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.get_notify_certificate_status_to_virtual_server_stateResponse"/>
+	</operation>
+	<operation name="get_ocsp_stapling_state">
+	<documentation>
+ Gets the OCSP stapling enabled states for the specified client SSL profiles that are used
+ to indicate whether the OCSP stapling feature is in effect for stapling the OCSP responses
+ of the certificates in the TLS/SSL handshakes when the TLS/SSL clients request for it.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.get_ocsp_stapling_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.get_ocsp_stapling_stateResponse"/>
+	</operation>
 	<operation name="get_passphrase">
 	<documentation>
  Gets the key passphrases (if any) for the specified client SSL profiles.
@@ -10225,6 +10733,32 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileClientSSL.set_authenticate_once_stateRequest"/>
 		<output message="tns:LocalLB.ProfileClientSSL.set_authenticate_once_stateResponse"/>
 	</operation>
+	<operation name="set_bypass_on_failed_client_certificate_state">
+	<documentation>
+ Sets the SSL forward proxy bypass_on_failed_client_certificate state for the
+ specified client SSL profiles. When this is enabled, the SSL forward
+ proxy traffic will bypass the system if ServerSSL receives the Certificate
+ Request message in the virtual servers that use this profile, but
+ system is not configured to have the corresponding Client Certificate.
+ The default value is disabled.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.set_bypass_on_failed_client_certificate_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.set_bypass_on_failed_client_certificate_stateResponse"/>
+	</operation>
+	<operation name="set_bypass_on_handshake_alert_state">
+	<documentation>
+ Sets the SSL forward proxy bypass_on_handshake_alert state for the
+ specified client SSL profiles. When this is enabled, the SSL forward
+ proxy traffic will bypass the system if ServerSSL receive the handshake
+ failure(40)/protocol version(70)/unsupported extension(110) alert message
+ in the virtual servers that use this profile.
+ The default value is disabled.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.set_bypass_on_handshake_alert_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.set_bypass_on_handshake_alert_stateResponse"/>
+	</operation>
 	<operation name="set_ca_file">
 	<documentation>
  Certificate files are officially managed as certificate file
@@ -10324,6 +10858,17 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="set_certificate_key_chain_ocsp_stapling_parameters">
 	<documentation>
+ This method has been deprecated as of v13.0.0.
+
+ Deprecation note:
+ The attribute OCSP stapling parameters of certificate-key-chain
+ is no longer used in v13.0.0.
+ This configuration can now be achieved with associating the OCSP validator
+ configuration with the certificate via add_certificate_validator, and then
+ enabling OCSP validation for the certifiate via
+ set_certificate_status_validation_options, and then enabling the
+ OCSP stapling flag for the clientssl profile via set_ocsp_stapling_state.
+
  Sets the OCSP stapling parameters object in a certificate-key-chain object.
 
         	</documentation>
@@ -10710,6 +11255,33 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileClientSSL.set_modssl_emulation_stateRequest"/>
 		<output message="tns:LocalLB.ProfileClientSSL.set_modssl_emulation_stateResponse"/>
+	</operation>
+	<operation name="set_notify_certificate_status_to_virtual_server_state">
+	<documentation>
+ Sets the notify-certificate-status-to-virtual-server enabled states
+ for the specified client SSL profiles, to indicate whether to
+ propagate the status of the certificates to the virtual server. When
+ this is set to enabled, at least one certificate validator
+ configuration on the certificates of each of the specified
+ client SSL profiles is required. The default value is disabled.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.set_notify_certificate_status_to_virtual_server_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.set_notify_certificate_status_to_virtual_server_stateResponse"/>
+	</operation>
+	<operation name="set_ocsp_stapling_state">
+	<documentation>
+ Sets the OCSP stapling enabled states for the specified client SSL profiles.
+ When this is set to enabled, at least one OCSP certificate validator
+ configuration on the certificates of each of the specified
+ client SSL profiles is required; and the OCSP responses of the
+ certificate will be stapled with the TLS/SSL handshake if the TLS/SSL
+ clients request it in the ClientHello handshake message.
+ The default value is disabled.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.set_ocsp_stapling_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.set_ocsp_stapling_stateResponse"/>
 	</operation>
 	<operation name="set_passphrase">
 	<documentation>
@@ -11226,6 +11798,46 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_bypass_on_failed_client_certificate_state">
+	<documentation>
+ Gets the bypass_on_fail_client_certificate state for the specified client SSL profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_bypass_on_handshake_alert_state">
+	<documentation>
+ Gets the bypass_on_handshake_alert state for the specified client SSL profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_ca_file">
 	<documentation>
  Certificate files are officially managed as certificate file
@@ -11459,8 +12071,14 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_certificate_key_chain_ocsp_stapling_parameters">
 	<documentation>
- Gets the name of the OCSP stapling parameters object in a certificate-key-chain
- object.
+ This method has been deprecated as of v13.0.0.
+
+ Deprecation note:
+ The attribute OCSP stapling parameters of certificate-key-chain
+ is no longer used in v13.0.0. If the user tries to get this value via
+ old TMSH or iControl calls, it will return empty strings.
+ Gets the name of the OCSP stapling parameters object in a
+ certificate-key-chain object.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
@@ -12210,6 +12828,50 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_modssl_emulation_state">
 	<documentation>
  Gets the states to emulate modSSL for the specified client SSL profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_notify_certificate_status_to_virtual_server_state">
+	<documentation>
+ Gets the notify-certificate-status-to-virtual-server enabled states
+ for the specified client SSL profiles that are used to indicate
+ whether the status of the certificats are propagated to the virtual server.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_ocsp_stapling_state">
+	<documentation>
+ Gets the OCSP stapling enabled states for the specified client SSL profiles that are used
+ to indicate whether the OCSP stapling feature is in effect for stapling the OCSP responses
+ of the certificates in the TLS/SSL handshakes when the TLS/SSL clients request for it.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
@@ -13020,6 +13682,56 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_bypass_on_failed_client_certificate_state">
+	<documentation>
+ Sets the SSL forward proxy bypass_on_failed_client_certificate state for the
+ specified client SSL profiles. When this is enabled, the SSL forward
+ proxy traffic will bypass the system if ServerSSL receives the Certificate
+ Request message in the virtual servers that use this profile, but
+ system is not configured to have the corresponding Client Certificate.
+ The default value is disabled.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_bypass_on_handshake_alert_state">
+	<documentation>
+ Sets the SSL forward proxy bypass_on_handshake_alert state for the
+ specified client SSL profiles. When this is enabled, the SSL forward
+ proxy traffic will bypass the system if ServerSSL receive the handshake
+ failure(40)/protocol version(70)/unsupported extension(110) alert message
+ in the virtual servers that use this profile.
+ The default value is disabled.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_ca_file">
 	<documentation>
  Certificate files are officially managed as certificate file
@@ -13227,6 +13939,17 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="set_certificate_key_chain_ocsp_stapling_parameters">
 	<documentation>
+ This method has been deprecated as of v13.0.0.
+
+ Deprecation note:
+ The attribute OCSP stapling parameters of certificate-key-chain
+ is no longer used in v13.0.0.
+ This configuration can now be achieved with associating the OCSP validator
+ configuration with the certificate via add_certificate_validator, and then
+ enabling OCSP validation for the certifiate via
+ set_certificate_status_validation_options, and then enabling the
+ OCSP stapling flag for the clientssl profile via set_ocsp_stapling_state.
+
  Sets the OCSP stapling parameters object in a certificate-key-chain object.
 
         	</documentation>
@@ -13981,6 +14704,57 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_modssl_emulation_state">
 	<documentation>
  Sets the states to emulate modSSL for the specified client SSL profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_notify_certificate_status_to_virtual_server_state">
+	<documentation>
+ Sets the notify-certificate-status-to-virtual-server enabled states
+ for the specified client SSL profiles, to indicate whether to
+ propagate the status of the certificates to the virtual server. When
+ this is set to enabled, at least one certificate validator
+ configuration on the certificates of each of the specified
+ client SSL profiles is required. The default value is disabled.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_ocsp_stapling_state">
+	<documentation>
+ Sets the OCSP stapling enabled states for the specified client SSL profiles.
+ When this is set to enabled, at least one OCSP certificate validator
+ configuration on the certificates of each of the specified
+ client SSL profiles is required; and the OCSP responses of the
+ certificate will be stapled with the TLS/SSL handshake if the TLS/SSL
+ clients request it in the ClientHello handshake message.
+ The default value is disabled.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>

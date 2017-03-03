@@ -6,7 +6,7 @@
 
   <groupId>f5</groupId>
   <artifactId>iControl</artifactId>
-  <version>12.1.0</version>
+  <version>13.0.0</version>
 
   <build>
 
@@ -50,6 +50,24 @@
           </execution>
         </executions>
       </plugin>
+
+<plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>exec-maven-plugin</artifactId>
+  <version>1.2.1</version>
+    <executions>
+        <execution>
+            <id>fix-case-in-bindings</id>
+            <phase>generate-sources</phase>
+            <goals>
+                <goal>exec</goal>
+            </goals>
+            <configuration>
+                <executable>./tools/fix.bat</executable>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
 
       <plugin>
 	<artifactId>maven-clean-plugin</artifactId>

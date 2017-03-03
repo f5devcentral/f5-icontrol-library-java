@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--
-Copyright (c) 1996-2009, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
+Copyright (c) 1996-2017, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
 
 F5, F5 Networks, the F5 logo, BIG-IP, 3-DNS, iControl, GLOBAL-SITE, SEE-IT, EDGE-FX, FireGuard, Internet Control Architecture, IP Application Switch, iRules, PACKET VELOCITY, SYN Check, CONTROL YOUR WORLD, OneConnect, ZoneRunner, uRoam, FirePass, and TrafficShield are registered trademarks or trademarks of F5 Networks, Inc., in the U.S. and certain other countries. 
 
@@ -32,6 +32,13 @@ All other trademarks mentioned in this document are the property of their respec
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Management.KeyCertificate.CertificateDetailSequence_v2[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="Management.KeyCertificate.CertificateRequestSequence_v2">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Management.KeyCertificate.CertificateRequest_v2[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -262,6 +269,13 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:complexType name="Management.KeyCertificate.CertificateValidationStatusSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Management.KeyCertificate.CertificateValidationStatus[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:simpleType name="Management.KeyCertificate.SecurityType">
 			<xsd:restriction base="xsd:string">
 				<xsd:enumeration value="STYPE_NORMAL">
@@ -306,6 +320,27 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:element name="value" type="xsd:string"/>
 			</xsd:sequence>
 		</xsd:complexType>
+		<xsd:simpleType name="Management.KeyCertificate.CertificateStatusValidationOption">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="CERT_OPTION_NONE">
+					<xsd:annotation>
+						<xsd:documentation>CERT_OPTION_NONE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="CERT_OPTION_OCSP">
+					<xsd:annotation>
+						<xsd:documentation>CERT_OPTION_OCSP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+		<xsd:complexType name="Management.KeyCertificate.CertificateRequestInformationSequence_v3">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Management.KeyCertificate.CertificateRequestInformation_v3[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:complexType name="Management.KeyCertificate.CertificateInformation">
 			<xsd:sequence>
 				<xsd:element name="is_bundled" type="xsd:boolean"/>
@@ -329,6 +364,96 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:element name="curve_name" type="tns:Management.KeyCertificate.CurveName"/>
 			</xsd:sequence>
 		</xsd:complexType>
+		<xsd:complexType name="Management.KeyCertificate.CertificateValidationStatus">
+			<xsd:sequence>
+				<xsd:element name="cert_status" type="tns:Management.KeyCertificate.CertificateStatus"/>
+				<xsd:element name="ocsp_status" type="tns:Management.KeyCertificate.OCSPStatus"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:simpleType name="Management.KeyCertificate.OCSPStatus">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="OCSP_STATUS_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_NONE">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_NONE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_ENABLED_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_ENABLED_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_CONNECTION_ERR_HTTP">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_CONNECTION_ERR_HTTP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_CONNECTION_ERR_TIMEOUT">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_CONNECTION_ERR_TIMEOUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_CONNECTION_ERR_OTHER">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_CONNECTION_ERR_OTHER</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_RESPONSE_ERR_MALFORMEDREQUEST">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_RESPONSE_ERR_MALFORMEDREQUEST</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_RESPONSE_ERR_INTERNALERROR">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_RESPONSE_ERR_INTERNALERROR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_RESPONSE_ERR_TRYLATER">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_RESPONSE_ERR_TRYLATER</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_RESPONSE_ERR_SIGREQUIRED">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_RESPONSE_ERR_SIGREQUIRED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_RESPONSE_ERR_UNAUTHORIZED">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_RESPONSE_ERR_UNAUTHORIZED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_RESPONSE_VALIDATION_ERR_PARSE">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_RESPONSE_VALIDATION_ERR_PARSE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_RESPONSE_VALIDATION_ERR_VERIFY">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_RESPONSE_VALIDATION_ERR_VERIFY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_RESPONSE_VALIDATION_ERR_VALIDITY">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_RESPONSE_VALIDATION_ERR_VALIDITY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_RESPONSE_VALIDATION_ERR_OTHER">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_RESPONSE_VALIDATION_ERR_OTHER</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="OCSP_STATUS_SUCCESS">
+					<xsd:annotation>
+						<xsd:documentation>OCSP_STATUS_SUCCESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:complexType name="Management.KeyCertificate.CertificateDetail_v2">
 			<xsd:sequence>
 				<xsd:element name="cert_info" type="tns:Management.KeyCertificate.Certificate"/>
@@ -350,6 +475,18 @@ All other trademarks mentioned in this document are the property of their respec
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.StringSequence[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="Management.KeyCertificate.CertificateRequestInformation_v3">
+			<xsd:sequence>
+				<xsd:element name="csr_info" type="tns:Management.KeyCertificate.CertificateRequest_v2"/>
+				<xsd:element name="title" type="xsd:string"/>
+				<xsd:element name="serial_number" type="xsd:string"/>
+				<xsd:element name="file_name" type="xsd:string"/>
+				<xsd:element name="key_type" type="tns:Management.KeyCertificate.KeyType"/>
+				<xsd:element name="bit_length" type="xsd:long"/>
+				<xsd:element name="subject" type="tns:Management.KeyCertificate.X509Data"/>
+				<xsd:element name="curve_name" type="tns:Management.KeyCertificate.CurveName"/>
+			</xsd:sequence>
 		</xsd:complexType>
 		<xsd:complexType name="Management.KeyCertificate.X509Data">
 			<xsd:sequence>
@@ -440,6 +577,55 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
+		<xsd:complexType name="Management.KeyCertificate.CertificateRequest_v2">
+			<xsd:sequence>
+				<xsd:element name="id" type="xsd:string"/>
+				<xsd:element name="email" type="xsd:string"/>
+				<xsd:element name="admin_email" type="xsd:string"/>
+				<xsd:element name="challenge_password" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:complexType name="Management.KeyCertificate.CertificateStatusValidationOptionSequenceSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Management.KeyCertificate.CertificateStatusValidationOptionSequence[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:simpleType name="Management.KeyCertificate.CertificateStatus">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="CERTIFICATE_STATUS_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>CERTIFICATE_STATUS_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="CERTIFICATE_STATUS_NONE">
+					<xsd:annotation>
+						<xsd:documentation>CERTIFICATE_STATUS_NONE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="CERTIFICATE_STATUS_VALIDATOR_RESP_GOOD">
+					<xsd:annotation>
+						<xsd:documentation>CERTIFICATE_STATUS_VALIDATOR_RESP_GOOD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="CERTIFICATE_STATUS_VALIDATOR_RESP_REVOKED">
+					<xsd:annotation>
+						<xsd:documentation>CERTIFICATE_STATUS_VALIDATOR_RESP_REVOKED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="CERTIFICATE_STATUS_VALIDATOR_RESP_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>CERTIFICATE_STATUS_VALIDATOR_RESP_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="CERTIFICATE_STATUS_ERROR">
+					<xsd:annotation>
+						<xsd:documentation>CERTIFICATE_STATUS_ERROR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:complexType name="Management.KeyCertificate.Certificate">
 			<xsd:sequence>
 				<xsd:element name="id" type="xsd:string"/>
@@ -481,6 +667,13 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:complexType name="Management.KeyCertificate.CertificateStatusValidationOptionSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Management.KeyCertificate.CertificateStatusValidationOption[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:complexType name="Management.KeyCertificate.Key">
 			<xsd:sequence>
 				<xsd:element name="id" type="xsd:string"/>
@@ -500,6 +693,14 @@ All other trademarks mentioned in this document are the property of their respec
 </types>
 
 <!-- message -->
+
+<message name="Management.KeyCertificate.add_certificate_validatorRequest">
+	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
+	<part name="cert_ids" type="tns:Common.StringSequence"/>
+	<part name="cert_validators" type="tns:Common.StringSequenceSequence"/>
+</message>
+<message name="Management.KeyCertificate.add_certificate_validatorResponse">
+</message>
 
 <message name="Management.KeyCertificate.certificate_add_file_to_bundleRequest">
 	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
@@ -647,6 +848,15 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="Management.KeyCertificate.certificate_request_generateResponse">
 </message>
 
+<message name="Management.KeyCertificate.certificate_request_generate_v2Request">
+	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
+	<part name="csrs" type="tns:Management.KeyCertificate.CertificateRequestSequence_v2"/>
+	<part name="x509_data" type="tns:Management.KeyCertificate.X509DataSequence"/>
+	<part name="overwrite" type="xsd:boolean"/>
+</message>
+<message name="Management.KeyCertificate.certificate_request_generate_v2Response">
+</message>
+
 <message name="Management.KeyCertificate.certificate_request_generate_with_extensionsRequest">
 	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
 	<part name="csrs" type="tns:Management.KeyCertificate.CertificateRequestSequence"/>
@@ -655,6 +865,16 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="overwrite" type="xsd:boolean"/>
 </message>
 <message name="Management.KeyCertificate.certificate_request_generate_with_extensionsResponse">
+</message>
+
+<message name="Management.KeyCertificate.certificate_request_generate_with_extensions_v2Request">
+	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
+	<part name="csrs" type="tns:Management.KeyCertificate.CertificateRequestSequence_v2"/>
+	<part name="x509_data" type="tns:Management.KeyCertificate.X509DataSequence"/>
+	<part name="extensions" type="tns:Management.KeyCertificate.CertificateExtensionSequenceSequence"/>
+	<part name="overwrite" type="xsd:boolean"/>
+</message>
+<message name="Management.KeyCertificate.certificate_request_generate_with_extensions_v2Response">
 </message>
 
 <message name="Management.KeyCertificate.certificate_request_import_from_fileRequest">
@@ -753,12 +973,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:Management.KeyCertificate.CertificateRequestInformationSequence_v2"/>
 </message>
 
+<message name="Management.KeyCertificate.get_certificate_request_list_v3Request">
+	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
+</message>
+<message name="Management.KeyCertificate.get_certificate_request_list_v3Response">
+	<part name="return" type="tns:Management.KeyCertificate.CertificateRequestInformationSequence_v3"/>
+</message>
+
 <message name="Management.KeyCertificate.get_certificate_request_subject_alternative_nameRequest">
 	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
 	<part name="files" type="tns:Common.StringSequence"/>
 </message>
 <message name="Management.KeyCertificate.get_certificate_request_subject_alternative_nameResponse">
 	<part name="return" type="tns:Common.StringSequence"/>
+</message>
+
+<message name="Management.KeyCertificate.get_certificate_status_validation_optionsRequest">
+	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
+	<part name="cert_ids" type="tns:Common.StringSequence"/>
+</message>
+<message name="Management.KeyCertificate.get_certificate_status_validation_optionsResponse">
+	<part name="return" type="tns:Management.KeyCertificate.CertificateStatusValidationOptionSequenceSequence"/>
 </message>
 
 <message name="Management.KeyCertificate.get_certificate_subject_alternative_nameRequest">
@@ -775,6 +1010,30 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="Management.KeyCertificate.get_certificate_subject_alternative_name_bundleResponse">
 	<part name="return" type="tns:Common.StringSequenceSequence"/>
+</message>
+
+<message name="Management.KeyCertificate.get_certificate_validation_statusRequest">
+	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
+	<part name="cert_ids" type="tns:Common.StringSequence"/>
+</message>
+<message name="Management.KeyCertificate.get_certificate_validation_statusResponse">
+	<part name="return" type="tns:Management.KeyCertificate.CertificateValidationStatusSequence"/>
+</message>
+
+<message name="Management.KeyCertificate.get_certificate_validatorRequest">
+	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
+	<part name="cert_ids" type="tns:Common.StringSequence"/>
+</message>
+<message name="Management.KeyCertificate.get_certificate_validatorResponse">
+	<part name="return" type="tns:Common.StringSequenceSequence"/>
+</message>
+
+<message name="Management.KeyCertificate.get_issuer_certificateRequest">
+	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
+	<part name="cert_ids" type="tns:Common.StringSequence"/>
+</message>
+<message name="Management.KeyCertificate.get_issuer_certificateResponse">
+	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
 <message name="Management.KeyCertificate.get_key_listRequest">
@@ -961,11 +1220,54 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="Management.KeyCertificate.pkcs12_import_from_file_v2Response">
 </message>
 
+<message name="Management.KeyCertificate.remove_all_certificate_validatorsRequest">
+	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
+	<part name="cert_ids" type="tns:Common.StringSequence"/>
+</message>
+<message name="Management.KeyCertificate.remove_all_certificate_validatorsResponse">
+</message>
+
+<message name="Management.KeyCertificate.remove_certificate_validatorRequest">
+	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
+	<part name="cert_ids" type="tns:Common.StringSequence"/>
+	<part name="cert_validators" type="tns:Common.StringSequenceSequence"/>
+</message>
+<message name="Management.KeyCertificate.remove_certificate_validatorResponse">
+</message>
+
+<message name="Management.KeyCertificate.set_certificate_status_validation_optionsRequest">
+	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
+	<part name="cert_ids" type="tns:Common.StringSequence"/>
+	<part name="options" type="tns:Management.KeyCertificate.CertificateStatusValidationOptionSequenceSequence"/>
+</message>
+<message name="Management.KeyCertificate.set_certificate_status_validation_optionsResponse">
+</message>
+
+<message name="Management.KeyCertificate.set_issuer_certificateRequest">
+	<part name="mode" type="tns:Management.KeyCertificate.ManagementModeType"/>
+	<part name="cert_ids" type="tns:Common.StringSequence"/>
+	<part name="issuer_cert_ids" type="tns:Common.StringSequence"/>
+</message>
+<message name="Management.KeyCertificate.set_issuer_certificateResponse">
+</message>
+
 <!-- portType -->
 
 <portType name="Management.KeyCertificatePortType">
-	<operation name="certificate_add_file_to_bundle">
+	<operation name="add_certificate_validator">
        	<documentation>
+ Adds/associates certificate validators to the specified certificates.
+ If a certificate is associated with a certificate validator and
+ it's certificate status validation option is set accordingly
+ (using set_certificate_status_validation_options), then the certificate's
+ status will be monitored and updated by the certificate validator.
+
+        	</documentation>
+		<input message="tns:Management.KeyCertificate.add_certificate_validatorRequest"/>
+		<output message="tns:Management.KeyCertificate.add_certificate_validatorResponse"/>
+	</operation>
+	<operation name="certificate_add_file_to_bundle">
+	<documentation>
  Adds certificates identified by "certificate_files" to the certificate bundles, which are 
  presumed to exist already. Each of the original certificate bundle can theoretically be a 
  normal certificate, i.e. a certificate bundle of one. After the add operation, the bundles 
@@ -1116,6 +1418,16 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Management.KeyCertificate.certificate_request_generateRequest"/>
 		<output message="tns:Management.KeyCertificate.certificate_request_generateResponse"/>
 	</operation>
+	<operation name="certificate_request_generate_v2">
+	<documentation>
+ Generates the specified certificate signing requests.  This assumes that each of the
+ associated keys, having the same identification as each certificate request, has
+ already been created.
+
+        	</documentation>
+		<input message="tns:Management.KeyCertificate.certificate_request_generate_v2Request"/>
+		<output message="tns:Management.KeyCertificate.certificate_request_generate_v2Response"/>
+	</operation>
 	<operation name="certificate_request_generate_with_extensions">
 	<documentation>
  Generates certificate signing requests with the specified certificate extensions.
@@ -1125,6 +1437,16 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Management.KeyCertificate.certificate_request_generate_with_extensionsRequest"/>
 		<output message="tns:Management.KeyCertificate.certificate_request_generate_with_extensionsResponse"/>
+	</operation>
+	<operation name="certificate_request_generate_with_extensions_v2">
+	<documentation>
+ Generates certificate signing requests with the specified certificate extensions.
+ The associated keys, having the same identification as each certificate request, must be created
+ before creating certificate signing requests.
+
+        	</documentation>
+		<input message="tns:Management.KeyCertificate.certificate_request_generate_with_extensions_v2Request"/>
+		<output message="tns:Management.KeyCertificate.certificate_request_generate_with_extensions_v2Response"/>
 	</operation>
 	<operation name="certificate_request_import_from_file">
 	<documentation>
@@ -1254,6 +1576,15 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Management.KeyCertificate.get_certificate_request_list_v2Request"/>
 		<output message="tns:Management.KeyCertificate.get_certificate_request_list_v2Response"/>
 	</operation>
+	<operation name="get_certificate_request_list_v3">
+	<documentation>
+ Gets the list of all CSRs and their information. This method also
+ returns admin email and public key EC curve information.
+
+        	</documentation>
+		<input message="tns:Management.KeyCertificate.get_certificate_request_list_v3Request"/>
+		<output message="tns:Management.KeyCertificate.get_certificate_request_list_v3Response"/>
+	</operation>
 	<operation name="get_certificate_request_subject_alternative_name">
 	<documentation>
  Gets the list of all certificate request subject alternative names in the certificate request file
@@ -1262,6 +1593,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Management.KeyCertificate.get_certificate_request_subject_alternative_nameRequest"/>
 		<output message="tns:Management.KeyCertificate.get_certificate_request_subject_alternative_nameResponse"/>
+	</operation>
+	<operation name="get_certificate_status_validation_options">
+	<documentation>
+ Gets the status validation options for the specified certificates.
+
+        	</documentation>
+		<input message="tns:Management.KeyCertificate.get_certificate_status_validation_optionsRequest"/>
+		<output message="tns:Management.KeyCertificate.get_certificate_status_validation_optionsResponse"/>
 	</operation>
 	<operation name="get_certificate_subject_alternative_name">
 	<documentation>
@@ -1287,6 +1626,30 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Management.KeyCertificate.get_certificate_subject_alternative_name_bundleRequest"/>
 		<output message="tns:Management.KeyCertificate.get_certificate_subject_alternative_name_bundleResponse"/>
+	</operation>
+	<operation name="get_certificate_validation_status">
+	<documentation>
+ Gets the validation status for the specified certificates.
+
+        	</documentation>
+		<input message="tns:Management.KeyCertificate.get_certificate_validation_statusRequest"/>
+		<output message="tns:Management.KeyCertificate.get_certificate_validation_statusResponse"/>
+	</operation>
+	<operation name="get_certificate_validator">
+	<documentation>
+ Gets the names of the certificate validators for the specified certificates.
+
+        	</documentation>
+		<input message="tns:Management.KeyCertificate.get_certificate_validatorRequest"/>
+		<output message="tns:Management.KeyCertificate.get_certificate_validatorResponse"/>
+	</operation>
+	<operation name="get_issuer_certificate">
+	<documentation>
+ Gets the the issuer certificates for the specified certificates.
+
+        	</documentation>
+		<input message="tns:Management.KeyCertificate.get_issuer_certificateRequest"/>
+		<output message="tns:Management.KeyCertificate.get_issuer_certificateResponse"/>
 	</operation>
 	<operation name="get_key_list">
 	<documentation>
@@ -1371,7 +1734,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="is_fips_available">
 	<documentation>
  Checks to see if the device supports FIPS security.
- 
+
         	</documentation>
 		<input message="tns:Management.KeyCertificate.is_fips_availableRequest"/>
 		<output message="tns:Management.KeyCertificate.is_fips_availableResponse"/>
@@ -1492,12 +1855,77 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Management.KeyCertificate.pkcs12_import_from_file_v2Request"/>
 		<output message="tns:Management.KeyCertificate.pkcs12_import_from_file_v2Response"/>
 	</operation>
+	<operation name="remove_all_certificate_validators">
+	<documentation>
+ Removes all certificate validators from the specified certificates.
+
+        	</documentation>
+		<input message="tns:Management.KeyCertificate.remove_all_certificate_validatorsRequest"/>
+		<output message="tns:Management.KeyCertificate.remove_all_certificate_validatorsResponse"/>
+	</operation>
+	<operation name="remove_certificate_validator">
+	<documentation>
+ Removes certificate validators from the specified certificates.
+
+        	</documentation>
+		<input message="tns:Management.KeyCertificate.remove_certificate_validatorRequest"/>
+		<output message="tns:Management.KeyCertificate.remove_certificate_validatorResponse"/>
+	</operation>
+	<operation name="set_certificate_status_validation_options">
+	<documentation>
+ Sets the certificate status validation options for the specified certificates.
+ If a certificate is associated with a certificate validator
+ (using add_certificate_validator) and the certificate status
+ validation option is set accordingly, then the certificate's
+ status will be monitored and updated by the certificate validator.
+ The default value is CERT_OPTION_NONE.
+
+        	</documentation>
+		<input message="tns:Management.KeyCertificate.set_certificate_status_validation_optionsRequest"/>
+		<output message="tns:Management.KeyCertificate.set_certificate_status_validation_optionsResponse"/>
+	</operation>
+	<operation name="set_issuer_certificate">
+	<documentation>
+ Sets the issuer certificates for the specified certificates.
+ If a certificate is monitored by a certificate validator, its
+ issuer certificate is required; sometimes the certificate file itself
+ already contains its issuer certificate - if not, then it
+ needs to be configured using this method.
+
+        	</documentation>
+		<input message="tns:Management.KeyCertificate.set_issuer_certificateRequest"/>
+		<output message="tns:Management.KeyCertificate.set_issuer_certificateResponse"/>
+	</operation>
 </portType>
 
 <!-- binding -->
 
 <binding name="Management.KeyCertificateBinding" type="tns:Management.KeyCertificatePortType">
 	<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+	<operation name="add_certificate_validator">
+	<documentation>
+ Adds/associates certificate validators to the specified certificates.
+ If a certificate is associated with a certificate validator and
+ it's certificate status validation option is set accordingly
+ (using set_certificate_status_validation_options), then the certificate's
+ status will be monitored and updated by the certificate validator.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="certificate_add_file_to_bundle">
 	<documentation>
  Adds certificates identified by "certificate_files" to the certificate bundles, which are 
@@ -1854,7 +2282,51 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="certificate_request_generate_v2">
+	<documentation>
+ Generates the specified certificate signing requests.  This assumes that each of the
+ associated keys, having the same identification as each certificate request, has
+ already been created.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="certificate_request_generate_with_extensions">
+	<documentation>
+ Generates certificate signing requests with the specified certificate extensions.
+ The associated keys, having the same identification as each certificate request, must be created
+ before creating certificate signing requests.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="certificate_request_generate_with_extensions_v2">
 	<documentation>
  Generates certificate signing requests with the specified certificate extensions.
  The associated keys, having the same identification as each certificate request, must be created
@@ -2148,10 +2620,51 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_certificate_request_list_v3">
+	<documentation>
+ Gets the list of all CSRs and their information. This method also
+ returns admin email and public key EC curve information.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_certificate_request_subject_alternative_name">
 	<documentation>
  Gets the list of all certificate request subject alternative names in the certificate request file
  objects as specified by the files.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_certificate_status_validation_options">
+	<documentation>
+ Gets the status validation options for the specified certificates.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
@@ -2201,6 +2714,66 @@ All other trademarks mentioned in this document are the property of their respec
      get_certificate_list/get_certificate_list_v2 indicate
      that there are multiple certificates bundled in a particular
      file.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_certificate_validation_status">
+	<documentation>
+ Gets the validation status for the specified certificates.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_certificate_validator">
+	<documentation>
+ Gets the names of the certificate validators for the specified certificates.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_issuer_certificate">
+	<documentation>
+ Gets the the issuer certificates for the specified certificates.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
@@ -2397,7 +2970,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="is_fips_available">
 	<documentation>
  Checks to see if the device supports FIPS security.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
 		<input>
@@ -2657,6 +3230,95 @@ All other trademarks mentioned in this document are the property of their respec
  Cryptography Standard #12) information from the given
  files. This includes keys and certificates, and each file
  is optionally password-encrypted. The user can select security type for the key.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="remove_all_certificate_validators">
+	<documentation>
+ Removes all certificate validators from the specified certificates.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="remove_certificate_validator">
+	<documentation>
+ Removes certificate validators from the specified certificates.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_certificate_status_validation_options">
+	<documentation>
+ Sets the certificate status validation options for the specified certificates.
+ If a certificate is associated with a certificate validator
+ (using add_certificate_validator) and the certificate status
+ validation option is set accordingly, then the certificate's
+ status will be monitored and updated by the certificate validator.
+ The default value is CERT_OPTION_NONE.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/KeyCertificate"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_issuer_certificate">
+	<documentation>
+ Sets the issuer certificates for the specified certificates.
+ If a certificate is monitored by a certificate validator, its
+ issuer certificate is required; sometimes the certificate file itself
+ already contains its issuer certificate - if not, then it
+ needs to be configured using this method.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Management/KeyCertificate"/>

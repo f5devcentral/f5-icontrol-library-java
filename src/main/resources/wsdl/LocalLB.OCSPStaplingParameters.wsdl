@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--
-Copyright (c) 1996-2009, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
+Copyright (c) 1996-2017, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
 
 F5, F5 Networks, the F5 logo, BIG-IP, 3-DNS, iControl, GLOBAL-SITE, SEE-IT, EDGE-FX, FireGuard, Internet Control Architecture, IP Application Switch, iRules, PACKET VELOCITY, SYN Check, CONTROL YOUR WORLD, OneConnect, ZoneRunner, uRoam, FirePass, and TrafficShield are registered trademarks or trademarks of F5 Networks, Inc., in the U.S. and certain other countries. 
 
@@ -427,7 +427,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets a list of OCSP stapling parameters.
 
-	</documentation>
+        	</documentation>
 		<input message="tns:LocalLB.OCSPStaplingParameters.get_listRequest"/>
 		<output message="tns:LocalLB.OCSPStaplingParameters.get_listResponse"/>
 	</operation>
@@ -503,6 +503,14 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_trusted_certificate_authority">
 	<documentation>
+ This method has been deprecated as of v13.0.0.
+
+ Deprecation note:
+ The attribute trusted certificate authority of
+ OCSP stapling parameters is no longer used in the CertificateValidatorOCSP
+ interface. If the user tries to get this value via old TMSH or
+ iControl calls, it will return empty strings.
+
  Gets the trusted certificate authorities file object names for the
   specified OCSP stapling parameters.
 
@@ -677,6 +685,14 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="set_trusted_certificate_authority">
 	<documentation>
+ This method has been deprecated as of v13.0.0.
+
+ Deprecation note:
+ The attribute trusted certificate authority of
+ OCSP stapling parameters is no longer used in the CertificateValidatorOCSP
+ interface. If the user tries to set this value via old TMSH or
+ iControl calls, it will not result in any effect.
+
  Sets the trusted certificate authorities file object names for the
   specified OCSP stapling parameters.
 
@@ -879,7 +895,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Gets a list of OCSP stapling parameters.
 
-	</documentation>
+        	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/OCSPStaplingParameters"/>
 		<input>
 			<soap:body
@@ -1063,6 +1079,14 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_trusted_certificate_authority">
 	<documentation>
+ This method has been deprecated as of v13.0.0.
+
+ Deprecation note:
+ The attribute trusted certificate authority of
+ OCSP stapling parameters is no longer used in the CertificateValidatorOCSP
+ interface. If the user tries to get this value via old TMSH or
+ iControl calls, it will return empty strings.
+
  Gets the trusted certificate authorities file object names for the
   specified OCSP stapling parameters.
 
@@ -1453,6 +1477,14 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="set_trusted_certificate_authority">
 	<documentation>
+ This method has been deprecated as of v13.0.0.
+
+ Deprecation note:
+ The attribute trusted certificate authority of
+ OCSP stapling parameters is no longer used in the CertificateValidatorOCSP
+ interface. If the user tries to set this value via old TMSH or
+ iControl calls, it will not result in any effect.
+
  Sets the trusted certificate authorities file object names for the
   specified OCSP stapling parameters.
 
@@ -1521,6 +1553,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 <service name="LocalLB.OCSPStaplingParameters">
 	<documentation>
+ *IMPORTANT* This entire interface has been deprecated (as of v13.0.0).
+ The functionality has been moved into the CertificateValidatorOCSP interface.
+
  The OCSPStaplingParameters interface enables you to manipulate the
  Online Certificate Status Protocol stapling parameters.
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--
-Copyright (c) 1996-2009, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
+Copyright (c) 1996-2017, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
 
 F5, F5 Networks, the F5 logo, BIG-IP, 3-DNS, iControl, GLOBAL-SITE, SEE-IT, EDGE-FX, FireGuard, Internet Control Architecture, IP Application Switch, iRules, PACKET VELOCITY, SYN Check, CONTROL YOUR WORLD, OneConnect, ZoneRunner, uRoam, FirePass, and TrafficShield are registered trademarks or trademarks of F5 Networks, Inc., in the U.S. and certain other countries. 
 
@@ -41,6 +41,45 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:element name="low" type="xsd:long"/>
 			</xsd:sequence>
 		</xsd:complexType>
+		<xsd:simpleType name="GlobalLB.ProberSelectionType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="PROBER_SELECTION_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROBER_SELECTION_INSIDE_DATACENTER">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_INSIDE_DATACENTER</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROBER_SELECTION_OUTSIDE_DATACENTER">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_OUTSIDE_DATACENTER</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROBER_SELECTION_POOL">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_POOL</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROBER_SELECTION_ANY_AVAILABLE">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_ANY_AVAILABLE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROBER_SELECTION_INHERIT">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_INHERIT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROBER_SELECTION_NONE">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_NONE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:simpleType name="Common.EnabledState">
 			<xsd:restriction base="xsd:string">
 				<xsd:enumeration value="STATE_DISABLED">
@@ -7689,8 +7728,425 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SIPSESSION_NOT_FOUND_404_SENT</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_INVALID_MESSAGES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_INVALID_MESSAGES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_STANDBY_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_STANDBY_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_MAX_RETRIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_MAX_RETRIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_ACTIVE_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_ACTIVE_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_SUCCESSFUL_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_SUCCESSFUL_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_REJECTED_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_REJECTED_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_ACTIVE_REGISTRATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_ACTIVE_REGISTRATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_REJECTED_REGISTRATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_REJECTED_REGISTRATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_IKE_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_IKE_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_TUNNEL_CREATES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_TUNNEL_CREATES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_TUNNEL_TEARDOWNS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_TUNNEL_TEARDOWNS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_FAILURES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_FAILURES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_PENDING_IKE_CONNECTION_LIMIT_DROPS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_PENDING_IKE_CONNECTION_LIMIT_DROPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_BYPASS_HANDSHAKE_ALERT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_BYPASS_HANDSHAKE_ALERT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_BYPASS_FAILED_CLIENT_CERTIFICATE_REQUEST">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_BYPASS_FAILED_CLIENT_CERTIFICATE_REQUEST</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_OPEN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_OPEN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_NOT_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_NOT_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_EXPIRED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_EXPIRED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_MALFORMED_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_MALFORMED_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_ICMP_UNREACHABLE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_ICMP_UNREACHABLE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ISSUED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ISSUED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_REJECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_REJECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ISSUED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ISSUED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_EMBRYONIC_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_EMBRYONIC_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_OCSP_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_OCSP_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_INTERNAL_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_INTERNAL_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_SUCCESSFUL_CACHE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_SUCCESSFUL_CACHE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_HTTP_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_HTTP_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_TIMEOUTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_TIMEOUTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_OTHER_FAILURES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_OTHER_FAILURES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_MALFORMED_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_MALFORMED_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_INTERNAL_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_INTERNAL_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_TRY_LATER_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_TRY_LATER_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_SIGNATURE_REQUIRED_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_SIGNATURE_REQUIRED_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_UNAUTHORIZED_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_UNAUTHORIZED_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_PARSE_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_PARSE_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VERIFICATION_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VERIFICATION_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VALIDITY_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VALIDITY_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_OTHER_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_OTHER_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_GOOD">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_GOOD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_REVOKED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_REVOKED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_RC_BADVERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_RC_BADVERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_RAPID_RESPONSE_BADVERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_RAPID_RESPONSE_BADVERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_IN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_IN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_IN_RESUBMITTED_FOR_RETRY">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_IN_RESUBMITTED_FOR_RETRY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_OUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_OUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_AND_NOT_DELIVERABLE_TO_ORIGINATOR">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_AND_NOT_DELIVERABLE_TO_ORIGINATOR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_ROUTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_ROUTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_UNROUTABLE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_UNROUTABLE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_A_FULL_QUEUE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_A_FULL_QUEUE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_CLOSED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_CLOSED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_AN_INTERNAL_ERROR">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_AN_INTERNAL_ERROR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
+		<xsd:complexType name="GlobalLB.ProberSelectionSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:GlobalLB.ProberSelection[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:simpleType name="Common.MetadataPersistence">
 			<xsd:restriction base="xsd:string">
 				<xsd:enumeration value="METADATA_UNKNOWN">
@@ -7730,6 +8186,13 @@ All other trademarks mentioned in this document are the property of their respec
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.StringSequence[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.ProberSelection">
+			<xsd:sequence>
+				<xsd:element name="prober_preference" type="tns:GlobalLB.ProberSelectionType"/>
+				<xsd:element name="prober_fallback" type="tns:GlobalLB.ProberSelectionType"/>
+				<xsd:element name="prober_pool" type="xsd:string"/>
+			</xsd:sequence>
 		</xsd:complexType>
 		<xsd:complexType name="GlobalLB.DataCenter.DataCenterStatisticEntrySequence">
 			<xsd:complexContent>
@@ -7901,6 +8364,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
+<message name="GlobalLB.DataCenter.get_prober_selectionRequest">
+	<part name="data_centers" type="tns:Common.StringSequence"/>
+</message>
+<message name="GlobalLB.DataCenter.get_prober_selectionResponse">
+	<part name="return" type="tns:GlobalLB.ProberSelectionSequence"/>
+</message>
+
 <message name="GlobalLB.DataCenter.get_serverRequest">
 	<part name="data_centers" type="tns:Common.StringSequence"/>
 </message>
@@ -7997,6 +8467,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="pools" type="tns:Common.StringSequence"/>
 </message>
 <message name="GlobalLB.DataCenter.set_prober_poolResponse">
+</message>
+
+<message name="GlobalLB.DataCenter.set_prober_selectionRequest">
+	<part name="data_centers" type="tns:Common.StringSequence"/>
+	<part name="prober_selections" type="tns:GlobalLB.ProberSelectionSequence"/>
+</message>
+<message name="GlobalLB.DataCenter.set_prober_selectionResponse">
 </message>
 
 <!-- portType -->
@@ -8164,6 +8641,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:GlobalLB.DataCenter.get_prober_poolRequest"/>
 		<output message="tns:GlobalLB.DataCenter.get_prober_poolResponse"/>
 	</operation>
+	<operation name="get_prober_selection">
+	<documentation>
+ Gets the prober selections for the specified data centers.
+
+        	</documentation>
+		<input message="tns:GlobalLB.DataCenter.get_prober_selectionRequest"/>
+		<output message="tns:GlobalLB.DataCenter.get_prober_selectionResponse"/>
+	</operation>
 	<operation name="get_server">
 	<documentation>
  Gets a list of servers of the specified data centers.
@@ -8294,6 +8779,17 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:GlobalLB.DataCenter.set_prober_poolRequest"/>
 		<output message="tns:GlobalLB.DataCenter.set_prober_poolResponse"/>
+	</operation>
+	<operation name="set_prober_selection">
+	<documentation>
+ Sets the prober selections for the specified data centers.
+
+ Note that if prober selections are not set for a server, the prober selections
+ for the data center are used.
+
+        	</documentation>
+		<input message="tns:GlobalLB.DataCenter.set_prober_selectionRequest"/>
+		<output message="tns:GlobalLB.DataCenter.set_prober_selectionResponse"/>
 	</operation>
 </portType>
 
@@ -8667,6 +9163,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_prober_selection">
+	<documentation>
+ Gets the prober selections for the specified data centers.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/DataCenter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/DataCenter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/DataCenter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_server">
 	<documentation>
  Gets a list of servers of the specified data centers.
@@ -8949,6 +9465,29 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the prober pool for the specified data centers.
  (The system uses a Server's Data Center prober pool, if specified,
  if a prober pool has not been set for the Server).
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/DataCenter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/DataCenter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/DataCenter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_prober_selection">
+	<documentation>
+ Sets the prober selections for the specified data centers.
+
+ Note that if prober selections are not set for a server, the prober selections
+ for the data center are used.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/DataCenter"/>

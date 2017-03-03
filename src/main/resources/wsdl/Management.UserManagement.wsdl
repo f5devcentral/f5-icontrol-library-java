@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--
-Copyright (c) 1996-2009, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
+Copyright (c) 1996-2017, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
 
 F5, F5 Networks, the F5 logo, BIG-IP, 3-DNS, iControl, GLOBAL-SITE, SEE-IT, EDGE-FX, FireGuard, Internet Control Architecture, IP Application Switch, iRules, PACKET VELOCITY, SYN Check, CONTROL YOUR WORLD, OneConnect, ZoneRunner, uRoam, FirePass, and TrafficShield are registered trademarks or trademarks of F5 Networks, Inc., in the U.S. and certain other countries. 
 
@@ -357,6 +357,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
+<message name="Management.UserManagement.get_fallbackRequest">
+</message>
+<message name="Management.UserManagement.get_fallbackResponse">
+	<part name="return" type="xsd:boolean"/>
+</message>
+
 <message name="Management.UserManagement.get_fullnameRequest">
 	<part name="user_names" type="tns:Common.StringSequence"/>
 </message>
@@ -473,6 +479,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="descriptions" type="tns:Common.StringSequence"/>
 </message>
 <message name="Management.UserManagement.set_descriptionResponse">
+</message>
+
+<message name="Management.UserManagement.set_fallbackRequest">
+	<part name="fallback" type="xsd:boolean"/>
+</message>
+<message name="Management.UserManagement.set_fallbackResponse">
 </message>
 
 <message name="Management.UserManagement.set_fullnameRequest">
@@ -653,6 +665,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Management.UserManagement.get_encrypted_passwordRequest"/>
 		<output message="tns:Management.UserManagement.get_encrypted_passwordResponse"/>
 	</operation>
+	<operation name="get_fallback">
+	<documentation>
+ Get the setting for fallback to local for remote authentication.
+
+        	</documentation>
+		<input message="tns:Management.UserManagement.get_fallbackRequest"/>
+		<output message="tns:Management.UserManagement.get_fallbackResponse"/>
+	</operation>
 	<operation name="get_fullname">
 	<documentation> 
  Get the full names for the given users.
@@ -814,6 +834,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Management.UserManagement.set_descriptionRequest"/>
 		<output message="tns:Management.UserManagement.set_descriptionResponse"/>
+	</operation>
+	<operation name="set_fallback">
+	<documentation>
+ Set whether or not to use fallback to local for remote authentication.
+
+        	</documentation>
+		<input message="tns:Management.UserManagement.set_fallbackRequest"/>
+		<output message="tns:Management.UserManagement.set_fallbackResponse"/>
 	</operation>
 	<operation name="set_fullname">
 	<documentation>
@@ -1173,6 +1201,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_fallback">
+	<documentation>
+ Get the setting for fallback to local for remote authentication.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/UserManagement"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/UserManagement"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/UserManagement"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_fullname">
 	<documentation> 
  Get the full names for the given users.
@@ -1534,6 +1582,26 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the description for a set of users.
 
  This is an arbitrary field which can be used for any purpose.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/UserManagement"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/UserManagement"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/UserManagement"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_fallback">
+	<documentation>
+ Set whether or not to use fallback to local for remote authentication.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Management/UserManagement"/>

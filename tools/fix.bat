@@ -1,0 +1,1 @@
+PowerShell -Command .\tools\FixCaseInBindings.ps1

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--
-Copyright (c) 1996-2009, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
+Copyright (c) 1996-2017, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
 
 F5, F5 Networks, the F5 logo, BIG-IP, 3-DNS, iControl, GLOBAL-SITE, SEE-IT, EDGE-FX, FireGuard, Internet Control Architecture, IP Application Switch, iRules, PACKET VELOCITY, SYN Check, CONTROL YOUR WORLD, OneConnect, ZoneRunner, uRoam, FirePass, and TrafficShield are registered trademarks or trademarks of F5 Networks, Inc., in the U.S. and certain other countries. 
 
@@ -180,6 +180,11 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>SERVER_TYPE_RADWARE</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="SERVER_TYPE_BIGIP">
+					<xsd:annotation>
+						<xsd:documentation>SERVER_TYPE_BIGIP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="GlobalLB.MetricLimit">
@@ -194,12 +199,58 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:element name="statistics" type="tns:Common.StatisticSequence"/>
 			</xsd:sequence>
 		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.Server.DeviceSequenceSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:GlobalLB.Server.DeviceSequence[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:complexType name="Common.ULong64">
 			<xsd:sequence>
 				<xsd:element name="high" type="xsd:long"/>
 				<xsd:element name="low" type="xsd:long"/>
 			</xsd:sequence>
 		</xsd:complexType>
+		<xsd:simpleType name="GlobalLB.ProberSelectionType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="PROBER_SELECTION_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROBER_SELECTION_INSIDE_DATACENTER">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_INSIDE_DATACENTER</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROBER_SELECTION_OUTSIDE_DATACENTER">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_OUTSIDE_DATACENTER</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROBER_SELECTION_POOL">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_POOL</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROBER_SELECTION_ANY_AVAILABLE">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_ANY_AVAILABLE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROBER_SELECTION_INHERIT">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_INHERIT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="PROBER_SELECTION_NONE">
+					<xsd:annotation>
+						<xsd:documentation>PROBER_SELECTION_NONE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:simpleType name="Common.EnabledState">
 			<xsd:restriction base="xsd:string">
 				<xsd:enumeration value="STATE_DISABLED">
@@ -244,6 +295,20 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:complexType name="Common.IPAddressSequenceSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.IPAddressSequence[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.Server.DeviceStatisticEntrySequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:GlobalLB.Server.DeviceStatisticEntry[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:simpleType name="GlobalLB.MonitorRuleType">
 			<xsd:restriction base="xsd:string">
 				<xsd:enumeration value="MONITOR_RULE_TYPE_UNDEFINED">
@@ -271,6 +336,11 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>MONITOR_RULE_TYPE_M_OF_N</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="MONITOR_RULE_TYPE_M_FROM_N">
+					<xsd:annotation>
+						<xsd:documentation>MONITOR_RULE_TYPE_M_FROM_N</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="GlobalLB.Server.MonitorAssociationSequence">
@@ -284,6 +354,13 @@ All other trademarks mentioned in this document are the property of their respec
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.Statistic[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.MonitorRuleV2Sequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:GlobalLB.MonitorRuleV2[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -7879,12 +7956,428 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SIPSESSION_NOT_FOUND_404_SENT</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_INVALID_MESSAGES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_INVALID_MESSAGES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_STANDBY_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_STANDBY_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_MAX_RETRIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_MAX_RETRIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_ACTIVE_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_ACTIVE_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_SUCCESSFUL_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_SUCCESSFUL_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_REJECTED_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_REJECTED_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_ACTIVE_REGISTRATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_ACTIVE_REGISTRATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_REJECTED_REGISTRATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_REJECTED_REGISTRATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_IKE_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_IKE_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_TUNNEL_CREATES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_TUNNEL_CREATES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_TUNNEL_TEARDOWNS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_TUNNEL_TEARDOWNS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_FAILURES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_FAILURES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_PENDING_IKE_CONNECTION_LIMIT_DROPS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_PENDING_IKE_CONNECTION_LIMIT_DROPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_BYPASS_HANDSHAKE_ALERT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_BYPASS_HANDSHAKE_ALERT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_BYPASS_FAILED_CLIENT_CERTIFICATE_REQUEST">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_BYPASS_FAILED_CLIENT_CERTIFICATE_REQUEST</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_OPEN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_OPEN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_NOT_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_NOT_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_EXPIRED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_EXPIRED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_MALFORMED_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_MALFORMED_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_ICMP_UNREACHABLE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_ICMP_UNREACHABLE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ISSUED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ISSUED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_REJECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_REJECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ISSUED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ISSUED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_EMBRYONIC_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_EMBRYONIC_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_OCSP_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_OCSP_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_INTERNAL_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_INTERNAL_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_SUCCESSFUL_CACHE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_SUCCESSFUL_CACHE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_HTTP_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_HTTP_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_TIMEOUTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_TIMEOUTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_OTHER_FAILURES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_OTHER_FAILURES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_MALFORMED_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_MALFORMED_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_INTERNAL_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_INTERNAL_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_TRY_LATER_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_TRY_LATER_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_SIGNATURE_REQUIRED_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_SIGNATURE_REQUIRED_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_UNAUTHORIZED_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_UNAUTHORIZED_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_PARSE_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_PARSE_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VERIFICATION_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VERIFICATION_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VALIDITY_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VALIDITY_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_OTHER_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_OTHER_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_GOOD">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_GOOD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_REVOKED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_REVOKED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_RC_BADVERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_RC_BADVERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_RAPID_RESPONSE_BADVERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_RAPID_RESPONSE_BADVERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_IN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_IN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_IN_RESUBMITTED_FOR_RETRY">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_IN_RESUBMITTED_FOR_RETRY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_OUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_OUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_AND_NOT_DELIVERABLE_TO_ORIGINATOR">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_AND_NOT_DELIVERABLE_TO_ORIGINATOR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_ROUTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_ROUTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_UNROUTABLE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_UNROUTABLE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_A_FULL_QUEUE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_A_FULL_QUEUE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_CLOSED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_CLOSED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_AN_INTERNAL_ERROR">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_AN_INTERNAL_ERROR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="GlobalLB.Server.ServerIPs">
 			<xsd:sequence>
 				<xsd:element name="device" type="xsd:string"/>
 				<xsd:element name="addresses_on_device" type="tns:Common.IPAddressSequence"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.Server.DeviceStatistics">
+			<xsd:sequence>
+				<xsd:element name="statistics" type="tns:GlobalLB.Server.DeviceStatisticEntrySequence"/>
+				<xsd:element name="time_stamp" type="tns:Common.TimeStamp"/>
 			</xsd:sequence>
 		</xsd:complexType>
 		<xsd:complexType name="GlobalLB.Server.ServerIPSequence">
@@ -7899,6 +8392,13 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:element name="statistics" type="tns:GlobalLB.Server.ServerStatisticEntrySequence"/>
 				<xsd:element name="time_stamp" type="tns:Common.TimeStamp"/>
 			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.ProberSelectionSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:GlobalLB.ProberSelection[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
 		</xsd:complexType>
 		<xsd:simpleType name="Common.MetadataPersistence">
 			<xsd:restriction base="xsd:string">
@@ -7933,6 +8433,14 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.MonitorRuleV2">
+			<xsd:sequence>
+				<xsd:element name="type" type="tns:GlobalLB.MonitorRuleType"/>
+				<xsd:element name="quorum" type="xsd:long"/>
+				<xsd:element name="prober_count" type="xsd:long"/>
+				<xsd:element name="monitor_templates" type="tns:Common.StringSequence"/>
+			</xsd:sequence>
+		</xsd:complexType>
 		<xsd:complexType name="GlobalLB.Server.ServerIPsSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -7954,12 +8462,32 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.Server.DeviceSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:GlobalLB.Server.DeviceDefinition[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:complexType name="Common.IPAddressSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='xsd:string[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.ProberSelection">
+			<xsd:sequence>
+				<xsd:element name="prober_preference" type="tns:GlobalLB.ProberSelectionType"/>
+				<xsd:element name="prober_fallback" type="tns:GlobalLB.ProberSelectionType"/>
+				<xsd:element name="prober_pool" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.Server.DeviceDefinition">
+			<xsd:sequence>
+				<xsd:element name="server" type="xsd:string"/>
+				<xsd:element name="device" type="xsd:string"/>
+			</xsd:sequence>
 		</xsd:complexType>
 		<xsd:complexType name="Common.MetadataPersistenceSequenceSequence">
 			<xsd:complexContent>
@@ -7987,6 +8515,12 @@ All other trademarks mentioned in this document are the property of their respec
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:GlobalLB.AutoConfigurationState[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="GlobalLB.Server.DeviceStatisticEntry">
+			<xsd:sequence>
+				<xsd:element name="device" type="tns:GlobalLB.Server.DeviceDefinition"/>
+				<xsd:element name="statistics" type="tns:Common.StatisticSequence"/>
+			</xsd:sequence>
 		</xsd:complexType>
 		<xsd:complexType name="GlobalLB.ServerTypeSequence">
 			<xsd:complexContent>
@@ -8028,6 +8562,13 @@ All other trademarks mentioned in this document are the property of their respec
 
 <!-- message -->
 
+<message name="GlobalLB.Server.add_device_ipRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+	<part name="ips" type="tns:Common.IPAddressSequenceSequence"/>
+</message>
+<message name="GlobalLB.Server.add_device_ipResponse">
+</message>
+
 <message name="GlobalLB.Server.add_ipRequest">
 	<part name="ips" type="tns:GlobalLB.Server.ServerIPSequence"/>
 </message>
@@ -8057,6 +8598,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="GlobalLB.Server.createResponse">
 </message>
 
+<message name="GlobalLB.Server.create_deviceRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+	<part name="ips" type="tns:Common.IPAddressSequenceSequence"/>
+</message>
+<message name="GlobalLB.Server.create_deviceResponse">
+</message>
+
 <message name="GlobalLB.Server.create_v2Request">
 	<part name="servers" type="tns:Common.StringSequence"/>
 	<part name="ips" type="tns:GlobalLB.Server.ServerIPsSequenceSequence"/>
@@ -8071,10 +8619,22 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="GlobalLB.Server.delete_all_serversResponse">
 </message>
 
+<message name="GlobalLB.Server.delete_deviceRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+</message>
+<message name="GlobalLB.Server.delete_deviceResponse">
+</message>
+
 <message name="GlobalLB.Server.delete_serverRequest">
 	<part name="servers" type="tns:Common.StringSequence"/>
 </message>
 <message name="GlobalLB.Server.delete_serverResponse">
+</message>
+
+<message name="GlobalLB.Server.get_all_device_statisticsRequest">
+</message>
+<message name="GlobalLB.Server.get_all_device_statisticsResponse">
+	<part name="return" type="tns:GlobalLB.Server.DeviceStatistics"/>
 </message>
 
 <message name="GlobalLB.Server.get_all_statisticsRequest">
@@ -8123,6 +8683,64 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="GlobalLB.Server.get_descriptionResponse">
 	<part name="return" type="tns:Common.StringSequence"/>
+</message>
+
+<message name="GlobalLB.Server.get_device_descriptionRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+</message>
+<message name="GlobalLB.Server.get_device_descriptionResponse">
+	<part name="return" type="tns:Common.StringSequence"/>
+</message>
+
+<message name="GlobalLB.Server.get_device_ipRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+</message>
+<message name="GlobalLB.Server.get_device_ipResponse">
+	<part name="return" type="tns:Common.IPAddressSequenceSequence"/>
+</message>
+
+<message name="GlobalLB.Server.get_device_ip_descriptionRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+	<part name="ips" type="tns:Common.IPAddressSequenceSequence"/>
+</message>
+<message name="GlobalLB.Server.get_device_ip_descriptionResponse">
+	<part name="return" type="tns:Common.StringSequenceSequence"/>
+</message>
+
+<message name="GlobalLB.Server.get_device_ip_explicit_linkRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+	<part name="ips" type="tns:Common.IPAddressSequenceSequence"/>
+</message>
+<message name="GlobalLB.Server.get_device_ip_explicit_linkResponse">
+	<part name="return" type="tns:Common.StringSequenceSequence"/>
+</message>
+
+<message name="GlobalLB.Server.get_device_ip_translationRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+	<part name="ips" type="tns:Common.IPAddressSequenceSequence"/>
+</message>
+<message name="GlobalLB.Server.get_device_ip_translationResponse">
+	<part name="return" type="tns:Common.IPAddressSequenceSequence"/>
+</message>
+
+<message name="GlobalLB.Server.get_device_listRequest">
+</message>
+<message name="GlobalLB.Server.get_device_listResponse">
+	<part name="return" type="tns:GlobalLB.Server.DeviceSequence"/>
+</message>
+
+<message name="GlobalLB.Server.get_device_list_by_serverRequest">
+	<part name="servers" type="tns:Common.StringSequence"/>
+</message>
+<message name="GlobalLB.Server.get_device_list_by_serverResponse">
+	<part name="return" type="tns:GlobalLB.Server.DeviceSequenceSequence"/>
+</message>
+
+<message name="GlobalLB.Server.get_device_statisticsRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+</message>
+<message name="GlobalLB.Server.get_device_statisticsResponse">
+	<part name="return" type="tns:GlobalLB.Server.DeviceStatistics"/>
 </message>
 
 <message name="GlobalLB.Server.get_enabled_stateRequest">
@@ -8204,6 +8822,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:GlobalLB.Server.MonitorAssociationSequence"/>
 </message>
 
+<message name="GlobalLB.Server.get_monitor_ruleRequest">
+	<part name="servers" type="tns:Common.StringSequence"/>
+</message>
+<message name="GlobalLB.Server.get_monitor_ruleResponse">
+	<part name="return" type="tns:GlobalLB.MonitorRuleV2Sequence"/>
+</message>
+
 <message name="GlobalLB.Server.get_object_statusRequest">
 	<part name="servers" type="tns:Common.StringSequence"/>
 </message>
@@ -8225,10 +8850,24 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
+<message name="GlobalLB.Server.get_prober_selectionRequest">
+	<part name="servers" type="tns:Common.StringSequence"/>
+</message>
+<message name="GlobalLB.Server.get_prober_selectionResponse">
+	<part name="return" type="tns:GlobalLB.ProberSelectionSequence"/>
+</message>
+
 <message name="GlobalLB.Server.get_server_typeRequest">
 	<part name="servers" type="tns:Common.StringSequence"/>
 </message>
 <message name="GlobalLB.Server.get_server_typeResponse">
+	<part name="return" type="tns:GlobalLB.ServerTypeSequence"/>
+</message>
+
+<message name="GlobalLB.Server.get_server_type_v2Request">
+	<part name="servers" type="tns:Common.StringSequence"/>
+</message>
+<message name="GlobalLB.Server.get_server_type_v2Response">
 	<part name="return" type="tns:GlobalLB.ServerTypeSequence"/>
 </message>
 
@@ -8249,6 +8888,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="servers" type="tns:Common.StringSequence"/>
 </message>
 <message name="GlobalLB.Server.remove_all_metadataResponse">
+</message>
+
+<message name="GlobalLB.Server.remove_device_ipRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+	<part name="ips" type="tns:Common.IPAddressSequenceSequence"/>
+</message>
+<message name="GlobalLB.Server.remove_device_ipResponse">
 </message>
 
 <message name="GlobalLB.Server.remove_ipRequest">
@@ -8275,6 +8921,18 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="server_names" type="tns:Common.StringSequence"/>
 </message>
 <message name="GlobalLB.Server.remove_monitor_associationResponse">
+</message>
+
+<message name="GlobalLB.Server.remove_monitor_ruleRequest">
+	<part name="servers" type="tns:Common.StringSequence"/>
+</message>
+<message name="GlobalLB.Server.remove_monitor_ruleResponse">
+</message>
+
+<message name="GlobalLB.Server.reset_device_statisticsRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+</message>
+<message name="GlobalLB.Server.reset_device_statisticsResponse">
 </message>
 
 <message name="GlobalLB.Server.reset_statisticsRequest">
@@ -8323,6 +8981,37 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="descriptions" type="tns:Common.StringSequence"/>
 </message>
 <message name="GlobalLB.Server.set_descriptionResponse">
+</message>
+
+<message name="GlobalLB.Server.set_device_descriptionRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+	<part name="descriptions" type="tns:Common.StringSequence"/>
+</message>
+<message name="GlobalLB.Server.set_device_descriptionResponse">
+</message>
+
+<message name="GlobalLB.Server.set_device_ip_descriptionRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+	<part name="ips" type="tns:Common.IPAddressSequenceSequence"/>
+	<part name="descriptions" type="tns:Common.StringSequenceSequence"/>
+</message>
+<message name="GlobalLB.Server.set_device_ip_descriptionResponse">
+</message>
+
+<message name="GlobalLB.Server.set_device_ip_explicit_linkRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+	<part name="ips" type="tns:Common.IPAddressSequenceSequence"/>
+	<part name="links" type="tns:Common.StringSequenceSequence"/>
+</message>
+<message name="GlobalLB.Server.set_device_ip_explicit_linkResponse">
+</message>
+
+<message name="GlobalLB.Server.set_device_ip_translationRequest">
+	<part name="devices" type="tns:GlobalLB.Server.DeviceSequence"/>
+	<part name="ips" type="tns:Common.IPAddressSequenceSequence"/>
+	<part name="translations" type="tns:Common.IPAddressSequenceSequence"/>
+</message>
+<message name="GlobalLB.Server.set_device_ip_translationResponse">
 </message>
 
 <message name="GlobalLB.Server.set_enabled_stateRequest">
@@ -8375,6 +9064,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="GlobalLB.Server.set_monitor_associationResponse">
 </message>
 
+<message name="GlobalLB.Server.set_monitor_ruleRequest">
+	<part name="servers" type="tns:Common.StringSequence"/>
+	<part name="monitor_rules" type="tns:GlobalLB.MonitorRuleV2Sequence"/>
+</message>
+<message name="GlobalLB.Server.set_monitor_ruleResponse">
+</message>
+
 <message name="GlobalLB.Server.set_prober_addressRequest">
 	<part name="servers" type="tns:Common.StringSequence"/>
 	<part name="addresses" type="tns:Common.IPAddressSequence"/>
@@ -8389,6 +9085,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="GlobalLB.Server.set_prober_poolResponse">
 </message>
 
+<message name="GlobalLB.Server.set_prober_selectionRequest">
+	<part name="servers" type="tns:Common.StringSequence"/>
+	<part name="prober_selections" type="tns:GlobalLB.ProberSelectionSequence"/>
+</message>
+<message name="GlobalLB.Server.set_prober_selectionResponse">
+</message>
+
 <message name="GlobalLB.Server.set_server_typeRequest">
 	<part name="servers" type="tns:Common.StringSequence"/>
 	<part name="types" type="tns:GlobalLB.ServerTypeSequence"/>
@@ -8399,8 +9102,17 @@ All other trademarks mentioned in this document are the property of their respec
 <!-- portType -->
 
 <portType name="GlobalLB.ServerPortType">
-	<operation name="add_ip">
+	<operation name="add_device_ip">
  	<documentation>
+ Adds the addresses to the specified devices. Each device must contain
+ at least one address.  These should not be floating addresses.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.add_device_ipRequest"/>
+		<output message="tns:GlobalLB.Server.add_device_ipResponse"/>
+	</operation>
+	<operation name="add_ip">
+	<documentation>
  This method has been deprecated.  Please use add_ip_v2 in its
  stead.
 
@@ -8412,6 +9124,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="add_ip_v2">
 	<documentation>
+ This method has been deprecated.  Please use add_device_ip in its
+ stead.
+
  Adds the IP addresses to the specified servers.
 
         	</documentation>
@@ -8439,6 +9154,18 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:GlobalLB.Server.createRequest"/>
 		<output message="tns:GlobalLB.Server.createResponse"/>
 	</operation>
+	<operation name="create_device">
+	<documentation>
+ Create a new device associated with a server and add device addresses
+ to it. Every server consists of one or more devices. In the case
+ where multiple devices are configured, the assumption is these
+ devices are in a failover group or are logically represented as a
+ single server.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.create_deviceRequest"/>
+		<output message="tns:GlobalLB.Server.create_deviceResponse"/>
+	</operation>
 	<operation name="create_v2">
 	<documentation>
  Creates the specified servers.
@@ -8456,6 +9183,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:GlobalLB.Server.delete_all_serversRequest"/>
 		<output message="tns:GlobalLB.Server.delete_all_serversResponse"/>
 	</operation>
+	<operation name="delete_device">
+	<documentation>
+ Deletes the specified devices.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.delete_deviceRequest"/>
+		<output message="tns:GlobalLB.Server.delete_deviceResponse"/>
+	</operation>
 	<operation name="delete_server">
 	<documentation>
  Deletes the specified servers.
@@ -8464,6 +9199,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:GlobalLB.Server.delete_serverRequest"/>
 		<output message="tns:GlobalLB.Server.delete_serverResponse"/>
+	</operation>
+	<operation name="get_all_device_statistics">
+	<documentation>
+ Gets the statistics for all devices.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.get_all_device_statisticsRequest"/>
+		<output message="tns:GlobalLB.Server.get_all_device_statisticsResponse"/>
 	</operation>
 	<operation name="get_all_statistics">
 	<documentation>
@@ -8528,6 +9271,70 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:GlobalLB.Server.get_descriptionRequest"/>
 		<output message="tns:GlobalLB.Server.get_descriptionResponse"/>
 	</operation>
+	<operation name="get_device_description">
+	<documentation>
+ Gets the descriptions for a set of devices.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.get_device_descriptionRequest"/>
+		<output message="tns:GlobalLB.Server.get_device_descriptionResponse"/>
+	</operation>
+	<operation name="get_device_ip">
+	<documentation>
+ Gets the addresses for a set of devices.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.get_device_ipRequest"/>
+		<output message="tns:GlobalLB.Server.get_device_ipResponse"/>
+	</operation>
+	<operation name="get_device_ip_description">
+	<documentation>
+ Gets the descriptions for a set of device addresses.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.get_device_ip_descriptionRequest"/>
+		<output message="tns:GlobalLB.Server.get_device_ip_descriptionResponse"/>
+	</operation>
+	<operation name="get_device_ip_explicit_link">
+	<documentation>
+ Gets the explicit links for a set of device addresses.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.get_device_ip_explicit_linkRequest"/>
+		<output message="tns:GlobalLB.Server.get_device_ip_explicit_linkResponse"/>
+	</operation>
+	<operation name="get_device_ip_translation">
+	<documentation>
+ Gets the translation addresses for a set of device addresses.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.get_device_ip_translationRequest"/>
+		<output message="tns:GlobalLB.Server.get_device_ip_translationResponse"/>
+	</operation>
+	<operation name="get_device_list">
+	<documentation>
+ Gets a list of all devices in all servers.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.get_device_listRequest"/>
+		<output message="tns:GlobalLB.Server.get_device_listResponse"/>
+	</operation>
+	<operation name="get_device_list_by_server">
+	<documentation>
+ Gets a list of all devices in the specified servers.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.get_device_list_by_serverRequest"/>
+		<output message="tns:GlobalLB.Server.get_device_list_by_serverResponse"/>
+	</operation>
+	<operation name="get_device_statistics">
+	<documentation>
+ Gets the statistics for the specified devices.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.get_device_statisticsRequest"/>
+		<output message="tns:GlobalLB.Server.get_device_statisticsResponse"/>
+	</operation>
 	<operation name="get_enabled_state">
 	<documentation>
  Gets the enabled states for the specified servers.
@@ -8550,6 +9357,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_ip_v2">
 	<documentation>
+ This method has been deprecated.  Please use get_device_ip in its
+ stead.
+
  Gets the IP addresses that belong to the specified servers.
 
         	</documentation>
@@ -8639,6 +9449,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:GlobalLB.Server.get_monitor_associationRequest"/>
 		<output message="tns:GlobalLB.Server.get_monitor_associationResponse"/>
 	</operation>
+	<operation name="get_monitor_rule">
+	<documentation>
+ Gets the monitor rules for a set of servers.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.get_monitor_ruleRequest"/>
+		<output message="tns:GlobalLB.Server.get_monitor_ruleResponse"/>
+	</operation>
 	<operation name="get_object_status">
 	<documentation>
  Gets the statuses of the specified servers.
@@ -8666,14 +9484,36 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:GlobalLB.Server.get_prober_poolRequest"/>
 		<output message="tns:GlobalLB.Server.get_prober_poolResponse"/>
 	</operation>
+	<operation name="get_prober_selection">
+	<documentation>
+ Gets the prober selections for the specified servers.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.get_prober_selectionRequest"/>
+		<output message="tns:GlobalLB.Server.get_prober_selectionResponse"/>
+	</operation>
 	<operation name="get_server_type">
 	<documentation>
+ This method has been deprecated.  Please use get_server_type_v2 in
+ its stead. If the server is SERVER_TYPE_BIGIP and it has more than
+ one device, this will return SERVER_TYPE_BIGIP_REDUNDANT. Otherwise
+ it will return SERVER_TYPE_BIGIP_STANDALONE. This method will
+ never return server type SERVER_TYPE_BIGIP.
+
  Gets the server types of the specified servers.
 
 
         	</documentation>
 		<input message="tns:GlobalLB.Server.get_server_typeRequest"/>
 		<output message="tns:GlobalLB.Server.get_server_typeResponse"/>
+	</operation>
+	<operation name="get_server_type_v2">
+	<documentation>
+ Gets the server types of the specified servers.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.get_server_type_v2Request"/>
+		<output message="tns:GlobalLB.Server.get_server_type_v2Response"/>
 	</operation>
 	<operation name="get_statistics">
 	<documentation>
@@ -8701,6 +9541,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:GlobalLB.Server.remove_all_metadataRequest"/>
 		<output message="tns:GlobalLB.Server.remove_all_metadataResponse"/>
 	</operation>
+	<operation name="remove_device_ip">
+	<documentation>
+ Removes the addresses from the specified devices.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.remove_device_ipRequest"/>
+		<output message="tns:GlobalLB.Server.remove_device_ipResponse"/>
+	</operation>
 	<operation name="remove_ip">
 	<documentation>
  This method has been deprecated.  Please use remove_ip_v2 in its
@@ -8714,6 +9562,9 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="remove_ip_v2">
 	<documentation>
+ This method has been deprecated.  Please use remove_device_ip in its
+ stead.
+
  Removes the IP addresses from the specified servers.
 
         	</documentation>
@@ -8740,6 +9591,23 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:GlobalLB.Server.remove_monitor_associationRequest"/>
 		<output message="tns:GlobalLB.Server.remove_monitor_associationResponse"/>
+	</operation>
+	<operation name="remove_monitor_rule">
+	<documentation>
+ Removes the monitor rules for the specified servers.  The specified
+ servers will no longer be monitored.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.remove_monitor_ruleRequest"/>
+		<output message="tns:GlobalLB.Server.remove_monitor_ruleResponse"/>
+	</operation>
+	<operation name="reset_device_statistics">
+	<documentation>
+ Resets the statistics for the specified devices.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.reset_device_statisticsRequest"/>
+		<output message="tns:GlobalLB.Server.reset_device_statisticsResponse"/>
 	</operation>
 	<operation name="reset_statistics">
 	<documentation>
@@ -8805,6 +9673,45 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:GlobalLB.Server.set_descriptionRequest"/>
 		<output message="tns:GlobalLB.Server.set_descriptionResponse"/>
+	</operation>
+	<operation name="set_device_description">
+	<documentation>
+ Sets the descriptions for a set of devices. This is an arbitrary
+ field which can be used for any purpose.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.set_device_descriptionRequest"/>
+		<output message="tns:GlobalLB.Server.set_device_descriptionResponse"/>
+	</operation>
+	<operation name="set_device_ip_description">
+	<documentation>
+ Sets the descriptions for a set of device addresses. This is an
+ arbitrary field which can be used for any purpose.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.set_device_ip_descriptionRequest"/>
+		<output message="tns:GlobalLB.Server.set_device_ip_descriptionResponse"/>
+	</operation>
+	<operation name="set_device_ip_explicit_link">
+	<documentation>
+ Sets the explicit link for a set of device addresses. The explicit
+ link will override the automatic link association and associate the
+ device address with the specified gateway link.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.set_device_ip_explicit_linkRequest"/>
+		<output message="tns:GlobalLB.Server.set_device_ip_explicit_linkResponse"/>
+	</operation>
+	<operation name="set_device_ip_translation">
+	<documentation>
+ Sets the translation address for a set of device addresses. If
+ address translation is being used, the translation address represents
+ the internal (private) address that corresponds with the external
+ device IP address.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.set_device_ip_translationRequest"/>
+		<output message="tns:GlobalLB.Server.set_device_ip_translationResponse"/>
 	</operation>
 	<operation name="set_enabled_state">
 	<documentation>
@@ -8874,6 +9781,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:GlobalLB.Server.set_monitor_associationRequest"/>
 		<output message="tns:GlobalLB.Server.set_monitor_associationResponse"/>
 	</operation>
+	<operation name="set_monitor_rule">
+	<documentation>
+ Sets the monitor rule for a set of servers.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.set_monitor_ruleRequest"/>
+		<output message="tns:GlobalLB.Server.set_monitor_ruleResponse"/>
+	</operation>
 	<operation name="set_prober_address">
 	<documentation>
  Sets the prober addresses for the specified servers.
@@ -8899,6 +9814,17 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:GlobalLB.Server.set_prober_poolRequest"/>
 		<output message="tns:GlobalLB.Server.set_prober_poolResponse"/>
 	</operation>
+	<operation name="set_prober_selection">
+	<documentation>
+ Sets the prober selections for the specified servers.
+
+ Note that if prober selections are not set for a server, the prober selections
+ for the data center are used.
+
+        	</documentation>
+		<input message="tns:GlobalLB.Server.set_prober_selectionRequest"/>
+		<output message="tns:GlobalLB.Server.set_prober_selectionResponse"/>
+	</operation>
 	<operation name="set_server_type">
 	<documentation>
  Sets the server types of the specified servers.
@@ -8914,6 +9840,27 @@ All other trademarks mentioned in this document are the property of their respec
 
 <binding name="GlobalLB.ServerBinding" type="tns:GlobalLB.ServerPortType">
 	<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+	<operation name="add_device_ip">
+	<documentation>
+ Adds the addresses to the specified devices. Each device must contain
+ at least one address.  These should not be floating addresses.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="add_ip">
 	<documentation>
  This method has been deprecated.  Please use add_ip_v2 in its
@@ -8939,6 +9886,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="add_ip_v2">
 	<documentation>
+ This method has been deprecated.  Please use add_device_ip in its
+ stead.
+
  Adds the IP addresses to the specified servers.
 
         	</documentation>
@@ -9002,6 +9952,30 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="create_device">
+	<documentation>
+ Create a new device associated with a server and add device addresses
+ to it. Every server consists of one or more devices. In the case
+ where multiple devices are configured, the assumption is these
+ devices are in a failover group or are logically represented as a
+ single server.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="create_v2">
 	<documentation>
  Creates the specified servers.
@@ -9043,10 +10017,50 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="delete_device">
+	<documentation>
+ Deletes the specified devices.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="delete_server">
 	<documentation>
  Deletes the specified servers.
 
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_all_device_statistics">
+	<documentation>
+ Gets the statistics for all devices.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
@@ -9211,6 +10225,166 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_device_description">
+	<documentation>
+ Gets the descriptions for a set of devices.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_device_ip">
+	<documentation>
+ Gets the addresses for a set of devices.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_device_ip_description">
+	<documentation>
+ Gets the descriptions for a set of device addresses.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_device_ip_explicit_link">
+	<documentation>
+ Gets the explicit links for a set of device addresses.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_device_ip_translation">
+	<documentation>
+ Gets the translation addresses for a set of device addresses.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_device_list">
+	<documentation>
+ Gets a list of all devices in all servers.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_device_list_by_server">
+	<documentation>
+ Gets a list of all devices in the specified servers.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_device_statistics">
+	<documentation>
+ Gets the statistics for the specified devices.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_enabled_state">
 	<documentation>
  Gets the enabled states for the specified servers.
@@ -9257,6 +10431,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_ip_v2">
 	<documentation>
+ This method has been deprecated.  Please use get_device_ip in its
+ stead.
+
  Gets the IP addresses that belong to the specified servers.
 
         	</documentation>
@@ -9454,6 +10631,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_monitor_rule">
+	<documentation>
+ Gets the monitor rules for a set of servers.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_object_status">
 	<documentation>
  Gets the statuses of the specified servers.
@@ -9517,10 +10714,56 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_prober_selection">
+	<documentation>
+ Gets the prober selections for the specified servers.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_server_type">
 	<documentation>
+ This method has been deprecated.  Please use get_server_type_v2 in
+ its stead. If the server is SERVER_TYPE_BIGIP and it has more than
+ one device, this will return SERVER_TYPE_BIGIP_REDUNDANT. Otherwise
+ it will return SERVER_TYPE_BIGIP_STANDALONE. This method will
+ never return server type SERVER_TYPE_BIGIP.
+
  Gets the server types of the specified servers.
 
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_server_type_v2">
+	<documentation>
+ Gets the server types of the specified servers.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
@@ -9600,6 +10843,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="remove_device_ip">
+	<documentation>
+ Removes the addresses from the specified devices.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="remove_ip">
 	<documentation>
  This method has been deprecated.  Please use remove_ip_v2 in its
@@ -9625,6 +10888,9 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="remove_ip_v2">
 	<documentation>
+ This method has been deprecated.  Please use remove_device_ip in its
+ stead.
+
  Removes the IP addresses from the specified servers.
 
         	</documentation>
@@ -9671,6 +10937,47 @@ All other trademarks mentioned in this document are the property of their respec
  associations between a server and a monitor rule, i.e. the specified servers will no longer
  be monitored.
 
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="remove_monitor_rule">
+	<documentation>
+ Removes the monitor rules for the specified servers.  The specified
+ servers will no longer be monitored.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="reset_device_statistics">
+	<documentation>
+ Resets the statistics for the specified devices.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
@@ -9820,6 +11127,93 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the description for a set of servers.
 
  This is an arbitrary field which can be used for any purpose.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_device_description">
+	<documentation>
+ Sets the descriptions for a set of devices. This is an arbitrary
+ field which can be used for any purpose.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_device_ip_description">
+	<documentation>
+ Sets the descriptions for a set of device addresses. This is an
+ arbitrary field which can be used for any purpose.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_device_ip_explicit_link">
+	<documentation>
+ Sets the explicit link for a set of device addresses. The explicit
+ link will override the automatic link association and associate the
+ device address with the specified gateway link.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_device_ip_translation">
+	<documentation>
+ Sets the translation address for a set of device addresses. If
+ address translation is being used, the translation address represents
+ the internal (private) address that corresponds with the external
+ device IP address.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
@@ -9989,6 +11383,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_monitor_rule">
+	<documentation>
+ Sets the monitor rule for a set of servers.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_prober_address">
 	<documentation>
  Sets the prober addresses for the specified servers.
@@ -10021,6 +11435,29 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the prober pool for the specified servers.
  (The system uses a Server's Data Center prober pool, if specified,
  if a prober pool has not been set for the Server).
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:GlobalLB/Server"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_prober_selection">
+	<documentation>
+ Sets the prober selections for the specified servers.
+
+ Note that if prober selections are not set for a server, the prober selections
+ for the data center are used.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:GlobalLB/Server"/>

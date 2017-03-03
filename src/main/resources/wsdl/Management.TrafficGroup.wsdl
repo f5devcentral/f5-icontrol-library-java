@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--
-Copyright (c) 1996-2009, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
+Copyright (c) 1996-2017, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
 
 F5, F5 Networks, the F5 logo, BIG-IP, 3-DNS, iControl, GLOBAL-SITE, SEE-IT, EDGE-FX, FireGuard, Internet Control Architecture, IP Application Switch, iRules, PACKET VELOCITY, SYN Check, CONTROL YOUR WORLD, OneConnect, ZoneRunner, uRoam, FirePass, and TrafficShield are registered trademarks or trademarks of F5 Networks, Inc., in the U.S. and certain other countries. 
 
@@ -61,6 +61,32 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:element name="device" type="xsd:string"/>
 				<xsd:element name="order" type="xsd:long"/>
 			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:simpleType name="Management.TrafficGroup.FailoverMethod">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="TRAFFIC_GROUP_FAILOVER_METHOD_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>TRAFFIC_GROUP_FAILOVER_METHOD_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TRAFFIC_GROUP_FAILOVER_METHOD_HA_SCORE">
+					<xsd:annotation>
+						<xsd:documentation>TRAFFIC_GROUP_FAILOVER_METHOD_HA_SCORE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TRAFFIC_GROUP_FAILOVER_METHOD_HA_ORDER">
+					<xsd:annotation>
+						<xsd:documentation>TRAFFIC_GROUP_FAILOVER_METHOD_HA_ORDER</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+		<xsd:complexType name="Management.TrafficGroup.FailoverMethodSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Management.TrafficGroup.FailoverMethod[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
 		</xsd:complexType>
 		<xsd:complexType name="Management.TrafficGroup.HAOrderSequenceSequence">
 			<xsd:complexContent>
@@ -135,6 +161,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
+<message name="Management.TrafficGroup.get_failover_methodRequest">
+	<part name="traffic_groups" type="tns:Common.StringSequence"/>
+</message>
+<message name="Management.TrafficGroup.get_failover_methodResponse">
+	<part name="return" type="tns:Management.TrafficGroup.FailoverMethodSequence"/>
+</message>
+
 <message name="Management.TrafficGroup.get_ha_groupRequest">
 	<part name="traffic_groups" type="tns:Common.StringSequence"/>
 </message>
@@ -173,6 +206,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="traffic_groups" type="tns:Common.StringSequence"/>
 </message>
 <message name="Management.TrafficGroup.get_mac_masquerade_addressResponse">
+	<part name="return" type="tns:Common.StringSequence"/>
+</message>
+
+<message name="Management.TrafficGroup.get_monitor_ha_groupRequest">
+	<part name="traffic_groups" type="tns:Common.StringSequence"/>
+</message>
+<message name="Management.TrafficGroup.get_monitor_ha_groupResponse">
 	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
@@ -230,6 +270,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="Management.TrafficGroup.set_descriptionResponse">
 </message>
 
+<message name="Management.TrafficGroup.set_failover_methodRequest">
+	<part name="traffic_groups" type="tns:Common.StringSequence"/>
+	<part name="failover_methods" type="tns:Management.TrafficGroup.FailoverMethodSequence"/>
+</message>
+<message name="Management.TrafficGroup.set_failover_methodResponse">
+</message>
+
 <message name="Management.TrafficGroup.set_ha_groupRequest">
 	<part name="traffic_groups" type="tns:Common.StringSequence"/>
 	<part name="ha_groups" type="tns:Common.StringSequence"/>
@@ -249,6 +296,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="addresses" type="tns:Common.StringSequence"/>
 </message>
 <message name="Management.TrafficGroup.set_mac_masquerade_addressResponse">
+</message>
+
+<message name="Management.TrafficGroup.set_monitor_ha_groupRequest">
+	<part name="traffic_groups" type="tns:Common.StringSequence"/>
+	<part name="ha_groups" type="tns:Common.StringSequence"/>
+</message>
+<message name="Management.TrafficGroup.set_monitor_ha_groupResponse">
 </message>
 
 <!-- portType -->
@@ -320,8 +374,18 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Management.TrafficGroup.get_descriptionRequest"/>
 		<output message="tns:Management.TrafficGroup.get_descriptionResponse"/>
 	</operation>
+	<operation name="get_failover_method">
+	<documentation>
+ Gets the failover method for the specified traffic groups.
+
+        	</documentation>
+		<input message="tns:Management.TrafficGroup.get_failover_methodRequest"/>
+		<output message="tns:Management.TrafficGroup.get_failover_methodResponse"/>
+	</operation>
 	<operation name="get_ha_group">
 	<documentation>
+ This method has been deprecated. Please use get_monitor_ha_group instead.
+
  Gets the HA group for the specified traffic groups.
 
         	</documentation>
@@ -370,6 +434,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Management.TrafficGroup.get_mac_masquerade_addressRequest"/>
 		<output message="tns:Management.TrafficGroup.get_mac_masquerade_addressResponse"/>
+	</operation>
+	<operation name="get_monitor_ha_group">
+	<documentation>
+ Gets the HA group monitor for the specified traffic groups.
+
+        	</documentation>
+		<input message="tns:Management.TrafficGroup.get_monitor_ha_groupRequest"/>
+		<output message="tns:Management.TrafficGroup.get_monitor_ha_groupResponse"/>
 	</operation>
 	<operation name="get_unit_id">
 	<documentation>
@@ -456,8 +528,21 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:Management.TrafficGroup.set_descriptionRequest"/>
 		<output message="tns:Management.TrafficGroup.set_descriptionResponse"/>
 	</operation>
+	<operation name="set_failover_method">
+	<documentation>
+ Sets the failover method for the specified traffic groups.
+
+ HA group must exist before this association.
+
+        	</documentation>
+		<input message="tns:Management.TrafficGroup.set_failover_methodRequest"/>
+		<output message="tns:Management.TrafficGroup.set_failover_methodResponse"/>
+	</operation>
 	<operation name="set_ha_group">
 	<documentation>
+ This method has been deprecated. Please use set_monitor_ha_group instead.
+ Using this deprecated method will also set the failover method to HA score.
+
  Sets and hence associates the HA groups with the specified traffic groups.
  If there is no such assocation, set the HA group name to "".
 
@@ -485,6 +570,18 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Management.TrafficGroup.set_mac_masquerade_addressRequest"/>
 		<output message="tns:Management.TrafficGroup.set_mac_masquerade_addressResponse"/>
+	</operation>
+	<operation name="set_monitor_ha_group">
+	<documentation>
+ Sets a HA group as monitor for the specified traffic groups. This attribute
+ together with the failover method attribute determine the algorithm used to
+ decide when the current device is not healthy enough and the new device that
+ will take take over the respective traffic groups. The HA group must exist
+ before this association.
+
+        	</documentation>
+		<input message="tns:Management.TrafficGroup.set_monitor_ha_groupRequest"/>
+		<output message="tns:Management.TrafficGroup.set_monitor_ha_groupResponse"/>
 	</operation>
 </portType>
 
@@ -642,8 +739,30 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_failover_method">
+	<documentation>
+ Gets the failover method for the specified traffic groups.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/TrafficGroup"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/TrafficGroup"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/TrafficGroup"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_ha_group">
 	<documentation>
+ This method has been deprecated. Please use get_monitor_ha_group instead.
+
  Gets the HA group for the specified traffic groups.
 
         	</documentation>
@@ -748,6 +867,26 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_mac_masquerade_address">
 	<documentation>
  Gets the MAC masquerade addresses for the specified traffic groups.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/TrafficGroup"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/TrafficGroup"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/TrafficGroup"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_monitor_ha_group">
+	<documentation>
+ Gets the HA group monitor for the specified traffic groups.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Management/TrafficGroup"/>
@@ -946,8 +1085,33 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_failover_method">
+	<documentation>
+ Sets the failover method for the specified traffic groups.
+
+ HA group must exist before this association.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/TrafficGroup"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/TrafficGroup"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/TrafficGroup"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_ha_group">
 	<documentation>
+ This method has been deprecated. Please use set_monitor_ha_group instead.
+ Using this deprecated method will also set the failover method to HA score.
+
  Sets and hence associates the HA groups with the specified traffic groups.
  If there is no such assocation, set the HA group name to "".
 
@@ -995,6 +1159,30 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_mac_masquerade_address">
 	<documentation>
  Sets the MAC masquerade addresses for the specified traffic groups.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/TrafficGroup"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/TrafficGroup"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/TrafficGroup"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_monitor_ha_group">
+	<documentation>
+ Sets a HA group as monitor for the specified traffic groups. This attribute
+ together with the failover method attribute determine the algorithm used to
+ decide when the current device is not healthy enough and the new device that
+ will take take over the respective traffic groups. The HA group must exist
+ before this association.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Management/TrafficGroup"/>

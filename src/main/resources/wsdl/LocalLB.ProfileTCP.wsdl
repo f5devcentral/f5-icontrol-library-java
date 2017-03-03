@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--
-Copyright (c) 1996-2009, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
+Copyright (c) 1996-2017, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
 
 F5, F5 Networks, the F5 logo, BIG-IP, 3-DNS, iControl, GLOBAL-SITE, SEE-IT, EDGE-FX, FireGuard, Internet Control Architecture, IP Application Switch, iRules, PACKET VELOCITY, SYN Check, CONTROL YOUR WORLD, OneConnect, ZoneRunner, uRoam, FirePass, and TrafficShield are registered trademarks or trademarks of F5 Networks, Inc., in the U.S. and certain other countries. 
 
@@ -83,6 +83,35 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:element name="default_flag" type="xsd:boolean"/>
 			</xsd:sequence>
 		</xsd:complexType>
+		<xsd:simpleType name="LocalLB.TCPPacketTTLMode">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="TCP_PACKET_IP_TTL_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PACKET_IP_TTL_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_PACKET_IP_TTL_PROXY">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PACKET_IP_TTL_PROXY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_PACKET_IP_TTL_PRESERVE">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PACKET_IP_TTL_PRESERVE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_PACKET_IP_TTL_DECREMENT">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PACKET_IP_TTL_DECREMENT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_PACKET_IP_TTL_SET">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PACKET_IP_TTL_SET</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:complexType name="Common.StringSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -103,6 +132,35 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:simpleType name="LocalLB.TCPPacketDFMode">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="TCP_PACKET_IP_DF_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PACKET_IP_DF_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_PACKET_IP_DF_PMTU">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PACKET_IP_DF_PMTU</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_PACKET_IP_DF_PRESERVE">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PACKET_IP_DF_PRESERVE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_PACKET_IP_DF_SET">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PACKET_IP_DF_SET</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_PACKET_IP_DF_CLEAR">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PACKET_IP_DF_CLEAR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:simpleType name="LocalLB.ProfileTCP.TCPMode">
 			<xsd:restriction base="xsd:string">
 				<xsd:enumeration value="TCP_MODE_UNKNOWN">
@@ -133,6 +191,12 @@ All other trademarks mentioned in this document are the property of their respec
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.Statistic[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="LocalLB.ProfileTCPPacketTTLMode">
+			<xsd:sequence>
+				<xsd:element name="value" type="tns:LocalLB.TCPPacketTTLMode"/>
+				<xsd:element name="default_flag" type="xsd:boolean"/>
+			</xsd:sequence>
 		</xsd:complexType>
 		<xsd:complexType name="LocalLB.ProfileULong">
 			<xsd:sequence>
@@ -7674,6 +7738,416 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SIPSESSION_NOT_FOUND_404_SENT</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_INVALID_MESSAGES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_INVALID_MESSAGES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_STANDBY_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_STANDBY_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_MAX_RETRIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_MAX_RETRIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_ACTIVE_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_ACTIVE_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_SUCCESSFUL_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_SUCCESSFUL_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_REJECTED_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_REJECTED_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_ACTIVE_REGISTRATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_ACTIVE_REGISTRATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_REJECTED_REGISTRATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_REJECTED_REGISTRATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_IKE_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_IKE_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_TUNNEL_CREATES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_TUNNEL_CREATES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_TUNNEL_TEARDOWNS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_TUNNEL_TEARDOWNS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_FAILURES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_FAILURES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_PENDING_IKE_CONNECTION_LIMIT_DROPS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_PENDING_IKE_CONNECTION_LIMIT_DROPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_BYPASS_HANDSHAKE_ALERT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_BYPASS_HANDSHAKE_ALERT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_BYPASS_FAILED_CLIENT_CERTIFICATE_REQUEST">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_BYPASS_FAILED_CLIENT_CERTIFICATE_REQUEST</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_OPEN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_OPEN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_NOT_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_NOT_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_EXPIRED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_EXPIRED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_MALFORMED_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_MALFORMED_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_ICMP_UNREACHABLE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_ICMP_UNREACHABLE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ISSUED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ISSUED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_REJECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_REJECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ISSUED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ISSUED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_EMBRYONIC_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_EMBRYONIC_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_OCSP_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_OCSP_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_INTERNAL_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_INTERNAL_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_SUCCESSFUL_CACHE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_SUCCESSFUL_CACHE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_HTTP_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_HTTP_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_TIMEOUTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_TIMEOUTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_OTHER_FAILURES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_OTHER_FAILURES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_MALFORMED_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_MALFORMED_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_INTERNAL_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_INTERNAL_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_TRY_LATER_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_TRY_LATER_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_SIGNATURE_REQUIRED_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_SIGNATURE_REQUIRED_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_UNAUTHORIZED_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_UNAUTHORIZED_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_PARSE_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_PARSE_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VERIFICATION_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VERIFICATION_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VALIDITY_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VALIDITY_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_OTHER_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_OTHER_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_GOOD">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_GOOD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_REVOKED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_REVOKED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_RC_BADVERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_RC_BADVERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_RAPID_RESPONSE_BADVERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_RAPID_RESPONSE_BADVERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_IN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_IN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_IN_RESUBMITTED_FOR_RETRY">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_IN_RESUBMITTED_FOR_RETRY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_OUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_OUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_AND_NOT_DELIVERABLE_TO_ORIGINATOR">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_AND_NOT_DELIVERABLE_TO_ORIGINATOR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_ROUTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_ROUTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_UNROUTABLE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_UNROUTABLE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_A_FULL_QUEUE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_A_FULL_QUEUE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_CLOSED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_CLOSED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_AN_INTERNAL_ERROR">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_AN_INTERNAL_ERROR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="LocalLB.ProfileTCP.ProfileTCPModeSequence">
@@ -7689,10 +8163,24 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:element name="default_flag" type="xsd:boolean"/>
 			</xsd:sequence>
 		</xsd:complexType>
+		<xsd:complexType name="LocalLB.ProfileTCPPacketDFModeSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.ProfileTCPPacketDFMode[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:complexType name="LocalLB.ProfileTCPCongestionControlModeSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.ProfileTCPCongestionControlMode[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="LocalLB.ProfileTCPPacketTTLModeSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.ProfileTCPPacketTTLMode[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -7766,6 +8254,12 @@ All other trademarks mentioned in this document are the property of their respec
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.StringSequence[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="LocalLB.ProfileTCPPacketDFMode">
+			<xsd:sequence>
+				<xsd:element name="value" type="tns:LocalLB.TCPPacketDFMode"/>
+				<xsd:element name="default_flag" type="xsd:boolean"/>
+			</xsd:sequence>
 		</xsd:complexType>
 		<xsd:complexType name="Common.StatisticSequenceSequenceSequence">
 			<xsd:complexContent>
@@ -7846,6 +8340,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
 <message name="LocalLB.ProfileTCP.get_appropriate_byte_counting_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.ProfileTCP.get_auto_proxy_buffer_size_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_auto_proxy_buffer_size_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.ProfileTCP.get_auto_receive_window_size_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_auto_receive_window_size_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.ProfileTCP.get_auto_send_buffer_size_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_auto_send_buffer_size_stateResponse">
 	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
@@ -8093,6 +8608,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileTCP.ProfileTCPModeSequence"/>
 </message>
 
+<message name="LocalLB.ProfileTCP.get_packet_df_modeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_packet_df_modeResponse">
+	<part name="return" type="tns:LocalLB.ProfileTCPPacketDFModeSequence"/>
+</message>
+
 <message name="LocalLB.ProfileTCP.get_packet_loss_ignore_burstRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -8104,6 +8626,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
 <message name="LocalLB.ProfileTCP.get_packet_loss_ignore_rateResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+
+<message name="LocalLB.ProfileTCP.get_packet_ttl_modeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_packet_ttl_modeResponse">
+	<part name="return" type="tns:LocalLB.ProfileTCPPacketTTLModeSequence"/>
+</message>
+
+<message name="LocalLB.ProfileTCP.get_packet_ttl_v4Request">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_packet_ttl_v4Response">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+
+<message name="LocalLB.ProfileTCP.get_packet_ttl_v6Request">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_packet_ttl_v6Response">
 	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
 </message>
 
@@ -8314,6 +8857,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 <message name="LocalLB.ProfileTCP.set_appropriate_byte_counting_stateResponse">
+</message>
+
+<message name="LocalLB.ProfileTCP.set_auto_proxy_buffer_size_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_auto_proxy_buffer_size_stateResponse">
+</message>
+
+<message name="LocalLB.ProfileTCP.set_auto_receive_window_size_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_auto_receive_window_size_stateResponse">
+</message>
+
+<message name="LocalLB.ProfileTCP.set_auto_send_buffer_size_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_auto_send_buffer_size_stateResponse">
 </message>
 
 <message name="LocalLB.ProfileTCP.set_bandwidth_delay_stateRequest">
@@ -8554,6 +9118,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfileTCP.set_nagle_algorithm_modeResponse">
 </message>
 
+<message name="LocalLB.ProfileTCP.set_packet_df_modeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:LocalLB.ProfileTCPPacketDFModeSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_packet_df_modeResponse">
+</message>
+
 <message name="LocalLB.ProfileTCP.set_packet_loss_ignore_burstRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
@@ -8566,6 +9137,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="thresholds" type="tns:LocalLB.ProfileULongSequence"/>
 </message>
 <message name="LocalLB.ProfileTCP.set_packet_loss_ignore_rateResponse">
+</message>
+
+<message name="LocalLB.ProfileTCP.set_packet_ttl_modeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:LocalLB.ProfileTCPPacketTTLModeSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_packet_ttl_modeResponse">
+</message>
+
+<message name="LocalLB.ProfileTCP.set_packet_ttl_v4Request">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_packet_ttl_v4Response">
+</message>
+
+<message name="LocalLB.ProfileTCP.set_packet_ttl_v6Request">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_packet_ttl_v6Response">
 </message>
 
 <message name="LocalLB.ProfileTCP.set_proxy_buffer_highRequest">
@@ -8771,6 +9363,33 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileTCP.get_appropriate_byte_counting_stateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.get_appropriate_byte_counting_stateResponse"/>
 	</operation>
+	<operation name="get_auto_proxy_buffer_size_state">
+	<documentation>
+ Gets the state that, if enabled, activates support for proxy buffer
+ auto-tuning.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_auto_proxy_buffer_size_stateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_auto_proxy_buffer_size_stateResponse"/>
+	</operation>
+	<operation name="get_auto_receive_window_size_state">
+	<documentation>
+ Gets the state that, if enabled, activates support for receive window
+ auto-tuning.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_auto_receive_window_size_stateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_auto_receive_window_size_stateResponse"/>
+	</operation>
+	<operation name="get_auto_send_buffer_size_state">
+	<documentation>
+ Gets the state that, if enabled, activates support for send buffer
+ auto-tuning.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_auto_send_buffer_size_stateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_auto_send_buffer_size_stateResponse"/>
+	</operation>
 	<operation name="get_bandwidth_delay_state">
 	<documentation>
  Gets the states that if true, attempt to calculate the optimal bandwidth
@@ -8819,7 +9438,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_congestion_control_mode">
 	<documentation>
  Gets the TCP congestion control modes for the specified TCP profiles.
- 
+
         	</documentation>
 		<input message="tns:LocalLB.ProfileTCP.get_congestion_control_modeRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.get_congestion_control_modeResponse"/>
@@ -9086,6 +9705,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileTCP.get_nagle_algorithm_modeRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.get_nagle_algorithm_modeResponse"/>
 	</operation>
+	<operation name="get_packet_df_mode">
+	<documentation>
+ Gets the IP header DF bit modes for the specified TCP profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_packet_df_modeRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_packet_df_modeResponse"/>
+	</operation>
 	<operation name="get_packet_loss_ignore_burst">
 	<documentation>
  Gets values indicating the likelihood of performing
@@ -9107,6 +9734,30 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileTCP.get_packet_loss_ignore_rateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.get_packet_loss_ignore_rateResponse"/>
+	</operation>
+	<operation name="get_packet_ttl_mode">
+	<documentation>
+ Gets the IP header TTL value modes for the specified TCP profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_packet_ttl_modeRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_packet_ttl_modeResponse"/>
+	</operation>
+	<operation name="get_packet_ttl_v4">
+	<documentation>
+ Gets the IPv4 header TTL value for the specified TCP profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_packet_ttl_v4Request"/>
+		<output message="tns:LocalLB.ProfileTCP.get_packet_ttl_v4Response"/>
+	</operation>
+	<operation name="get_packet_ttl_v6">
+	<documentation>
+ Gets the IPv6 header TTL value for the specified TCP profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_packet_ttl_v6Request"/>
+		<output message="tns:LocalLB.ProfileTCP.get_packet_ttl_v6Response"/>
 	</operation>
 	<operation name="get_proxy_buffer_high">
 	<documentation>
@@ -9387,6 +10038,36 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileTCP.set_appropriate_byte_counting_stateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.set_appropriate_byte_counting_stateResponse"/>
 	</operation>
+	<operation name="set_auto_proxy_buffer_size_state">
+	<documentation>
+ Sets the state that, if enabled, activates the support for proxy buffer
+ auto-tuning. When proxy buffer is auto-tuned, the proxy buffer size is
+ determined by network measurements.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_auto_proxy_buffer_size_stateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_auto_proxy_buffer_size_stateResponse"/>
+	</operation>
+	<operation name="set_auto_receive_window_size_state">
+	<documentation>
+ Sets the state that, if enabled, activates the support for receive window
+ auto-tuning. When receive window is auto-tuned, the receive window size is
+ determined by network measurements.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_auto_receive_window_size_stateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_auto_receive_window_size_stateResponse"/>
+	</operation>
+	<operation name="set_auto_send_buffer_size_state">
+	<documentation>
+ Sets the state that, if enabled, activates the support for send buffer
+ auto-tuning. When send buffer is auto-tuned, the send buffer size is
+ determined by network measurements.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_auto_send_buffer_size_stateRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_auto_send_buffer_size_stateResponse"/>
+	</operation>
 	<operation name="set_bandwidth_delay_state">
 	<documentation>
  Sets the states that if true, attempt to calculate the optimal bandwidth
@@ -9437,7 +10118,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_congestion_control_mode">
 	<documentation>
  Sets the TCP congestion control modes for the specified TCP profiles.
- 
+
         	</documentation>
 		<input message="tns:LocalLB.ProfileTCP.set_congestion_control_modeRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.set_congestion_control_modeResponse"/>
@@ -9731,6 +10412,23 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileTCP.set_nagle_algorithm_modeRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.set_nagle_algorithm_modeResponse"/>
 	</operation>
+	<operation name="set_packet_df_mode">
+	<documentation>
+ Sets the IP header DF bit modes for the specified TCP profiles.
+ The DF (Don't Fragment) bit in the IP header of a packet indicates the
+ IP layer implementation to not fragment the outgoing IP packets even
+ if the packet length exceeds the MTU (Maximum Tranfer Unit) of the
+ outgoing interface. This method allows you to set various modes that
+ control the value of DF bit in the IP header of outgoing packets.
+ These modes are to always set, always clear, carry over from the
+ incoming packet's DF bit value or to set the DF bit only if Path MTU
+ is enabled.
+
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_packet_df_modeRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_packet_df_modeResponse"/>
+	</operation>
 	<operation name="set_packet_loss_ignore_burst">
 	<documentation>
  Sets values indicating the likelihood of performing
@@ -9752,6 +10450,41 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileTCP.set_packet_loss_ignore_rateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.set_packet_loss_ignore_rateResponse"/>
+	</operation>
+	<operation name="set_packet_ttl_mode">
+	<documentation>
+ Sets the IP header TTL value modes for the specified TCP profiles.
+ The TTL (Time To Live) field in an IPv4 header represents the number of
+ remaining hops before the packet will be discarded by a receiving IP layer.
+ The field 'hop limit' in IPv6 implements the same functionality as TTL.
+ This method works for both IPv4 and IPv6 traffic.
+ The different modes for outgoing TTL field value are to set it to a
+ constant value or to decrement/retain from the incoming TTL value.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_packet_ttl_modeRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_packet_ttl_modeResponse"/>
+	</operation>
+	<operation name="set_packet_ttl_v4">
+	<documentation>
+ Sets the IPv4 header TTL value for the specified TCP profiles.
+ The TTL (Time To Live) field in an IPv4 header represents the number of
+ remaining hops before the packet will be discarded by a receiving IP layer.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_packet_ttl_v4Request"/>
+		<output message="tns:LocalLB.ProfileTCP.set_packet_ttl_v4Response"/>
+	</operation>
+	<operation name="set_packet_ttl_v6">
+	<documentation>
+ Sets the IPv6 header TTL value for the specified TCP profiles.
+ The TTL (Time To Live) field in an IP header represents the number of
+ remaining hops before the packet will be discarded by a receiving IP layer.
+ The TTL field is known as 'hop limit' in IPv6.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_packet_ttl_v6Request"/>
+		<output message="tns:LocalLB.ProfileTCP.set_packet_ttl_v6Response"/>
 	</operation>
 	<operation name="set_proxy_buffer_high">
 	<documentation>
@@ -10097,6 +10830,69 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_auto_proxy_buffer_size_state">
+	<documentation>
+ Gets the state that, if enabled, activates support for proxy buffer
+ auto-tuning.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_auto_receive_window_size_state">
+	<documentation>
+ Gets the state that, if enabled, activates support for receive window
+ auto-tuning.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_auto_send_buffer_size_state">
+	<documentation>
+ Gets the state that, if enabled, activates support for send buffer
+ auto-tuning.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_bandwidth_delay_state">
 	<documentation>
  Gets the states that if true, attempt to calculate the optimal bandwidth
@@ -10193,7 +10989,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_congestion_control_mode">
 	<documentation>
  Gets the TCP congestion control modes for the specified TCP profiles.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
 		<input>
@@ -10832,6 +11628,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_packet_df_mode">
+	<documentation>
+ Gets the IP header DF bit modes for the specified TCP profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_packet_loss_ignore_burst">
 	<documentation>
  Gets values indicating the likelihood of performing
@@ -10862,6 +11678,66 @@ All other trademarks mentioned in this document are the property of their respec
  system should perform congestion control. Measured in
  packets per million. Valid values are from 0 to 1000000.
  
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_packet_ttl_mode">
+	<documentation>
+ Gets the IP header TTL value modes for the specified TCP profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_packet_ttl_v4">
+	<documentation>
+ Gets the IPv4 header TTL value for the specified TCP profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_packet_ttl_v6">
+	<documentation>
+ Gets the IPv6 header TTL value for the specified TCP profiles.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
 		<input>
@@ -11517,6 +12393,72 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_auto_proxy_buffer_size_state">
+	<documentation>
+ Sets the state that, if enabled, activates the support for proxy buffer
+ auto-tuning. When proxy buffer is auto-tuned, the proxy buffer size is
+ determined by network measurements.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_auto_receive_window_size_state">
+	<documentation>
+ Sets the state that, if enabled, activates the support for receive window
+ auto-tuning. When receive window is auto-tuned, the receive window size is
+ determined by network measurements.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_auto_send_buffer_size_state">
+	<documentation>
+ Sets the state that, if enabled, activates the support for send buffer
+ auto-tuning. When send buffer is auto-tuned, the send buffer size is
+ determined by network measurements.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_bandwidth_delay_state">
 	<documentation>
  Sets the states that if true, attempt to calculate the optimal bandwidth
@@ -11615,7 +12557,7 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_congestion_control_mode">
 	<documentation>
  Sets the TCP congestion control modes for the specified TCP profiles.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
 		<input>
@@ -12269,6 +13211,35 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_packet_df_mode">
+	<documentation>
+ Sets the IP header DF bit modes for the specified TCP profiles.
+ The DF (Don't Fragment) bit in the IP header of a packet indicates the
+ IP layer implementation to not fragment the outgoing IP packets even
+ if the packet length exceeds the MTU (Maximum Tranfer Unit) of the
+ outgoing interface. This method allows you to set various modes that
+ control the value of DF bit in the IP header of outgoing packets.
+ These modes are to always set, always clear, carry over from the
+ incoming packet's DF bit value or to set the DF bit only if Path MTU
+ is enabled.
+
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_packet_loss_ignore_burst">
 	<documentation>
  Sets values indicating the likelihood of performing
@@ -12298,6 +13269,77 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the threshold of packets lost per million at which the
  system should perform congestion control. Measured in
  packets per million. Valid values are from 0 to 1000000.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_packet_ttl_mode">
+	<documentation>
+ Sets the IP header TTL value modes for the specified TCP profiles.
+ The TTL (Time To Live) field in an IPv4 header represents the number of
+ remaining hops before the packet will be discarded by a receiving IP layer.
+ The field 'hop limit' in IPv6 implements the same functionality as TTL.
+ This method works for both IPv4 and IPv6 traffic.
+ The different modes for outgoing TTL field value are to set it to a
+ constant value or to decrement/retain from the incoming TTL value.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_packet_ttl_v4">
+	<documentation>
+ Sets the IPv4 header TTL value for the specified TCP profiles.
+ The TTL (Time To Live) field in an IPv4 header represents the number of
+ remaining hops before the packet will be discarded by a receiving IP layer.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_packet_ttl_v6">
+	<documentation>
+ Sets the IPv6 header TTL value for the specified TCP profiles.
+ The TTL (Time To Live) field in an IP header represents the number of
+ remaining hops before the packet will be discarded by a receiving IP layer.
+ The TTL field is known as 'hop limit' in IPv6.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>

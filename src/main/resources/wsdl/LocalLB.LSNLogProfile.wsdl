@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--
-Copyright (c) 1996-2009, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
+Copyright (c) 1996-2017, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
 
 F5, F5 Networks, the F5 logo, BIG-IP, 3-DNS, iControl, GLOBAL-SITE, SEE-IT, EDGE-FX, FireGuard, Internet Control Architecture, IP Application Switch, iRules, PACKET VELOCITY, SYN Check, CONTROL YOUR WORLD, OneConnect, ZoneRunner, uRoam, FirePass, and TrafficShield are registered trademarks or trademarks of F5 Networks, Inc., in the U.S. and certain other countries. 
 
@@ -52,6 +52,12 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:complexType name="LocalLB.ProfileEnabledState">
+			<xsd:sequence>
+				<xsd:element name="value" type="tns:Common.EnabledState"/>
+				<xsd:element name="default_flag" type="xsd:boolean"/>
+			</xsd:sequence>
+		</xsd:complexType>
 		<xsd:complexType name="LocalLB.ProfileLogElementSequenceSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -59,6 +65,20 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:simpleType name="Common.EnabledState">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="STATE_DISABLED">
+					<xsd:annotation>
+						<xsd:documentation>STATE_DISABLED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATE_ENABLED">
+					<xsd:annotation>
+						<xsd:documentation>STATE_ENABLED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:complexType name="Common.StringSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -100,6 +120,13 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
+		<xsd:complexType name="LocalLB.ProfileEnabledStateSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.ProfileEnabledState[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:complexType name="LocalLB.ProfileLogElementSequence">
 			<xsd:sequence>
 				<xsd:element name="value" type="tns:LocalLB.LogElementSequence"/>
@@ -140,6 +167,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="profiles" type="tns:Common.StringSequence"/>
 </message>
 <message name="LocalLB.LSNLogProfile.delete_lsn_log_profileResponse">
+</message>
+
+<message name="LocalLB.LSNLogProfile.get_csv_format_stateRequest">
+	<part name="profiles" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.LSNLogProfile.get_csv_format_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
 <message name="LocalLB.LSNLogProfile.get_default_profileRequest">
@@ -264,6 +298,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.LSNLogProfile.remove_start_outbound_session_elementResponse">
 </message>
 
+<message name="LocalLB.LSNLogProfile.set_csv_format_stateRequest">
+	<part name="profiles" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.LSNLogProfile.set_csv_format_stateResponse">
+</message>
+
 <message name="LocalLB.LSNLogProfile.set_default_profileRequest">
 	<part name="profiles" type="tns:Common.StringSequence"/>
 	<part name="defaults" type="tns:Common.StringSequence"/>
@@ -362,6 +403,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.LSNLogProfile.delete_lsn_log_profileRequest"/>
 		<output message="tns:LocalLB.LSNLogProfile.delete_lsn_log_profileResponse"/>
+	</operation>
+	<operation name="get_csv_format_state">
+	<documentation>
+ Gets the states that if true, enable support for CSV log format.
+
+        	</documentation>
+		<input message="tns:LocalLB.LSNLogProfile.get_csv_format_stateRequest"/>
+		<output message="tns:LocalLB.LSNLogProfile.get_csv_format_stateResponse"/>
 	</operation>
 	<operation name="get_default_profile">
 	<documentation>
@@ -518,6 +567,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.LSNLogProfile.remove_start_outbound_session_elementRequest"/>
 		<output message="tns:LocalLB.LSNLogProfile.remove_start_outbound_session_elementResponse"/>
+	</operation>
+	<operation name="set_csv_format_state">
+	<documentation>
+ Sets the states that if true, enable support for CSV log format.
+
+        	</documentation>
+		<input message="tns:LocalLB.LSNLogProfile.set_csv_format_stateRequest"/>
+		<output message="tns:LocalLB.LSNLogProfile.set_csv_format_stateResponse"/>
 	</operation>
 	<operation name="set_default_profile">
 	<documentation>
@@ -698,6 +755,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_csv_format_state">
+	<documentation>
+ Gets the states that if true, enable support for CSV log format.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/LSNLogProfile"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/LSNLogProfile"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/LSNLogProfile"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_default_profile">
 	<documentation>
  Gets the names of the default profiles from which the specified profiles will derive
@@ -1053,6 +1130,26 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="remove_start_outbound_session_element">
 	<documentation>
  Removes the optional log elements for the start of outbound session.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/LSNLogProfile"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/LSNLogProfile"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/LSNLogProfile"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_csv_format_state">
+	<documentation>
+ Sets the states that if true, enable support for CSV log format.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/LSNLogProfile"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--
-Copyright (c) 1996-2009, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
+Copyright (c) 1996-2017, F5 Networks, Inc., Seattle, Washington. All rights reserved.  
 
 F5, F5 Networks, the F5 logo, BIG-IP, 3-DNS, iControl, GLOBAL-SITE, SEE-IT, EDGE-FX, FireGuard, Internet Control Architecture, IP Application Switch, iRules, PACKET VELOCITY, SYN Check, CONTROL YOUR WORLD, OneConnect, ZoneRunner, uRoam, FirePass, and TrafficShield are registered trademarks or trademarks of F5 Networks, Inc., in the U.S. and certain other countries. 
 
@@ -7719,6 +7719,416 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SIPSESSION_NOT_FOUND_404_SENT</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CAPABILITIES_EXCHANGE_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DEVICE_WATCHDOG_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_DISCONNECT_PEER_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ACCOUNT_CHARGING_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_CREDIT_CONTROL_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_USER_AUTHORIZATION_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_ANSWERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_ALL_OTHER_MESSAGES_ANSWERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERSESSION_INVALID_MESSAGES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERSESSION_INVALID_MESSAGES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_STANDBY_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_STANDBY_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_MAX_RETRIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_MAX_RETRIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_CURRENT_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_CURRENT_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_AUTO_INIT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_AUTO_INIT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_ACTIVE_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_ACTIVE_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_SUCCESSFUL_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_SUCCESSFUL_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_REJECTED_CALLS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_REJECTED_CALLS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_ACTIVE_REGISTRATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_ACTIVE_REGISTRATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_REJECTED_REGISTRATIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_REJECTED_REGISTRATIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_IKE_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_IKE_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_TUNNEL_CREATES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_TUNNEL_CREATES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_TUNNEL_TEARDOWNS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_TUNNEL_TEARDOWNS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_FAILURES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_FAILURES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_IPSECALG_PENDING_IKE_CONNECTION_LIMIT_DROPS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_IPSECALG_PENDING_IKE_CONNECTION_LIMIT_DROPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_BYPASS_HANDSHAKE_ALERT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_BYPASS_HANDSHAKE_ALERT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_BYPASS_FAILED_CLIENT_CERTIFICATE_REQUEST">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_BYPASS_FAILED_CLIENT_CERTIFICATE_REQUEST</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_OPEN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_OPEN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_NOT_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_NOT_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_EXPIRED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_CONNECTIONS_EXPIRED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_MALFORMED_PACKETS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_MALFORMED_PACKETS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_ICMP_UNREACHABLE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_ICMP_UNREACHABLE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ISSUED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ISSUED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_REJECTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_SYNCOOKIES_REJECTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ISSUED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ISSUED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ACCEPTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_HARDWARE_SYNCOOKIES_ACCEPTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_TRAFFIC_ACCELERATION_EMBRYONIC_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_TRAFFIC_ACCELERATION_EMBRYONIC_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_OCSP_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_OCSP_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_INTERNAL_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_INTERNAL_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_SUCCESSFUL_CACHE_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_SUCCESSFUL_CACHE_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_HTTP_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_HTTP_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_TIMEOUTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_TIMEOUTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_OTHER_FAILURES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CONNECTION_OTHER_FAILURES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_MALFORMED_REQUESTS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_MALFORMED_REQUESTS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_INTERNAL_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_INTERNAL_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_TRY_LATER_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_TRY_LATER_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_SIGNATURE_REQUIRED_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_SIGNATURE_REQUIRED_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_UNAUTHORIZED_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_UNAUTHORIZED_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_PARSE_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_PARSE_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VERIFICATION_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VERIFICATION_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VALIDITY_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_VALIDITY_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_OTHER_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_RESPONSE_VALIDATION_OTHER_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_GOOD">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_GOOD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_REVOKED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_REVOKED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_CERT_VALIDATOR_OCSP_CERTIFICATE_STATUS_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_RC_BADVERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_RC_BADVERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DNS_RAPID_RESPONSE_BADVERS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DNS_RAPID_RESPONSE_BADVERS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_IN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_IN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_IN_RESUBMITTED_FOR_RETRY">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_IN_RESUBMITTED_FOR_RETRY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_OUT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_OUT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_AND_NOT_DELIVERABLE_TO_ORIGINATOR">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_AND_NOT_DELIVERABLE_TO_ORIGINATOR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_ROUTED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_ROUTED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_UNROUTABLE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_UNROUTABLE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_A_FULL_QUEUE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_A_FULL_QUEUE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_DROPPED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_DROPPED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_CLOSED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_CONNECTION_CLOSED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_AN_INTERNAL_ERROR">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_AN_INTERNAL_ERROR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="Common.DoubleSequence">
@@ -8140,6 +8550,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:System.Statistics.SystemStatistics"/>
 </message>
 
+<message name="System.Statistics.get_ipsecalg_statisticsRequest">
+</message>
+<message name="System.Statistics.get_ipsecalg_statisticsResponse">
+	<part name="return" type="tns:System.Statistics.SystemStatistics"/>
+</message>
+
 <message name="System.Statistics.get_ipv6_statisticsRequest">
 </message>
 <message name="System.Statistics.get_ipv6_statisticsResponse">
@@ -8489,6 +8905,11 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="System.Statistics.reset_ip_statisticsRequest">
 </message>
 <message name="System.Statistics.reset_ip_statisticsResponse">
+</message>
+
+<message name="System.Statistics.reset_ipsecalg_statisticsRequest">
+</message>
+<message name="System.Statistics.reset_ipsecalg_statisticsResponse">
 </message>
 
 <message name="System.Statistics.reset_ipv6_statisticsRequest">
@@ -8933,6 +9354,7 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_iiop_statistics">
 	<documentation>
+ *IMPORTANT* This method has been deprecated immediately.
  Gets the system's global IIOP statistics. These are the roll-ups of all the individual
  IIOP profiles' statistics.
 
@@ -8960,6 +9382,15 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:System.Statistics.get_ip_statisticsRequest"/>
 		<output message="tns:System.Statistics.get_ip_statisticsResponse"/>
+	</operation>
+	<operation name="get_ipsecalg_statistics">
+	<documentation>
+ Gets the system's global IPsecALG statistics. These are the roll-ups of all the individual
+ IPsecALG profiles' statistics.
+
+        	</documentation>
+		<input message="tns:System.Statistics.get_ipsecalg_statisticsRequest"/>
+		<output message="tns:System.Statistics.get_ipsecalg_statisticsResponse"/>
 	</operation>
 	<operation name="get_ipv6_statistics">
 	<documentation>
@@ -9224,6 +9655,10 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_spdy_statistics">
 	<documentation>
+ *IMPORTANT* Function 'get_spdy_statistics' has been deprecated immediately.
+ As of BIG-IP_v13.0.0, attempting to perform the function will return
+ a not-implemented exception.
+
  Gets the system's global SPDY statistics. These are the roll-ups of all
  the individual SPDY profiles' statistics.
 
@@ -9483,6 +9918,7 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="reset_iiop_statistics">
 	<documentation>
+ *IMPORTANT* This method has been deprecated immediately.
  Resets the system's global IIOP statistics.
 
         	</documentation>
@@ -9508,6 +9944,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:System.Statistics.reset_ip_statisticsRequest"/>
 		<output message="tns:System.Statistics.reset_ip_statisticsResponse"/>
+	</operation>
+	<operation name="reset_ipsecalg_statistics">
+	<documentation>
+ Resets the system's global IPsecALG statistics.
+
+        	</documentation>
+		<input message="tns:System.Statistics.reset_ipsecalg_statisticsRequest"/>
+		<output message="tns:System.Statistics.reset_ipsecalg_statisticsResponse"/>
 	</operation>
 	<operation name="reset_ipv6_statistics">
 	<documentation>
@@ -9668,6 +10112,10 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="reset_spdy_statistics">
 	<documentation>
+ *IMPORTANT* Function 'reset_spdy_statistics' has been deprecated immediately.
+ As of BIG-IP_v13.0.0, attempting to perform the function will return
+ a not-implemented exception.
+
  Resets the system's global SPDY statistics.
 
         	</documentation>
@@ -10426,6 +10874,7 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_iiop_statistics">
 	<documentation>
+ *IMPORTANT* This method has been deprecated immediately.
  Gets the system's global IIOP statistics. These are the roll-ups of all the individual
  IIOP profiles' statistics.
 
@@ -10473,6 +10922,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_ip_statistics">
 	<documentation>
  Gets the system's IP statistics.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/Statistics"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_ipsecalg_statistics">
+	<documentation>
+ Gets the system's global IPsecALG statistics. These are the roll-ups of all the individual
+ IPsecALG profiles' statistics.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
@@ -11077,6 +11547,10 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_spdy_statistics">
 	<documentation>
+ *IMPORTANT* Function 'get_spdy_statistics' has been deprecated immediately.
+ As of BIG-IP_v13.0.0, attempting to perform the function will return
+ a not-implemented exception.
+
  Gets the system's global SPDY statistics. These are the roll-ups of all
  the individual SPDY profiles' statistics.
 
@@ -11708,6 +12182,7 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="reset_iiop_statistics">
 	<documentation>
+ *IMPORTANT* This method has been deprecated immediately.
  Resets the system's global IIOP statistics.
 
         	</documentation>
@@ -11753,6 +12228,26 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="reset_ip_statistics">
 	<documentation>
  Resets the system's IP statistics.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/Statistics"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/Statistics"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="reset_ipsecalg_statistics">
+	<documentation>
+ Resets the system's global IPsecALG statistics.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:System/Statistics"/>
@@ -12157,6 +12652,10 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="reset_spdy_statistics">
 	<documentation>
+ *IMPORTANT* Function 'reset_spdy_statistics' has been deprecated immediately.
+ As of BIG-IP_v13.0.0, attempting to perform the function will return
+ a not-implemented exception.
+
  Resets the system's global SPDY statistics.
 
         	</documentation>
