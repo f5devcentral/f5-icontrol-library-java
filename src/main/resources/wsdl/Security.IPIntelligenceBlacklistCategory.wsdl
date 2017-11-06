@@ -533,9 +533,9 @@ All other trademarks mentioned in this document are the property of their respec
  (Web Attacks), /Common/botnets (BotNets), /Common/scanners
  (Scanners), /Common/denial_of_service (Denial of Service),
  /Common/infected_sources (Infected Sources), /Common/phishing
- (Phishing), /Common/proxy (Proxy), /Common/illegal_websites
- (Illegal Websites),  /Common/cloud_provider_networks
- (Cloud Provider Networks) and /Common/application_denial_of_service 
+ (Phishing), /Common/proxy (Proxy), /Common/cloud_provider_networks
+ (Cloud Provider Networks), /Common/mobile_threats (Mobile Threats),
+ /Common/tor_proxy (Tor Proxy) and /Common/application_denial_of_service
  (dosl7). There are 2 ways the global list
  can be updated: 1) Automatically by the system: when
  new categories are auto-learned from the downloaded feeds

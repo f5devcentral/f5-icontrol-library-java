@@ -380,6 +380,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="xsd:boolean"/>
 </message>
 
+<message name="Management.LicenseAdministration.revoke_licenseRequest">
+</message>
+<message name="Management.LicenseAdministration.revoke_licenseResponse">
+	<part name="return" type="xsd:boolean"/>
+</message>
+
 <!-- portType -->
 
 <portType name="Management.LicenseAdministrationPortType">
@@ -544,6 +550,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:Management.LicenseAdministration.is_evaluation_licenseRequest"/>
 		<output message="tns:Management.LicenseAdministration.is_evaluation_licenseResponse"/>
+	</operation>
+	<operation name="revoke_license">
+	<documentation>
+ Revokes the currently active license.
+
+        	</documentation>
+		<input message="tns:Management.LicenseAdministration.revoke_licenseRequest"/>
+		<output message="tns:Management.LicenseAdministration.revoke_licenseResponse"/>
 	</operation>
 </portType>
 
@@ -901,6 +915,26 @@ All other trademarks mentioned in this document are the property of their respec
 	<documentation>
  Checks to see whether the device is running with an evaluation license.
  
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/LicenseAdministration"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/LicenseAdministration"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/LicenseAdministration"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="revoke_license">
+	<documentation>
+ Revokes the currently active license.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:Management/LicenseAdministration"/>
 		<input>

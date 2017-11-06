@@ -54,6 +54,40 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:simpleType name="LocalLB.VirtualAddressV2.RouteAdvertisementType">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="RA_TYPE_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>RA_TYPE_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="RA_TYPE_DISABLED">
+					<xsd:annotation>
+						<xsd:documentation>RA_TYPE_DISABLED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="RA_TYPE_ALWAYS">
+					<xsd:annotation>
+						<xsd:documentation>RA_TYPE_ALWAYS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="RA_TYPE_SELECTIVE">
+					<xsd:annotation>
+						<xsd:documentation>RA_TYPE_SELECTIVE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="RA_TYPE_ANY">
+					<xsd:annotation>
+						<xsd:documentation>RA_TYPE_ANY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="RA_TYPE_ALL">
+					<xsd:annotation>
+						<xsd:documentation>RA_TYPE_ALL</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:complexType name="Common.ULong64">
 			<xsd:sequence>
 				<xsd:element name="high" type="xsd:long"/>
@@ -6814,6 +6848,71 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SSL_COMMON_OCSP_STAPLING_OCSP_CONNECTION_FAILURES</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CACHED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CACHED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CERT_STATUS_REQ">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CERT_STATUS_REQ</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_STAPLED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_STAPLED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_RESPSTATUS_ERR_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_RESPSTATUS_ERR_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_INVALID_CERT_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_INVALID_CERT_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_REVOKED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_REVOKED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_UNKNOWN_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_UNKNOWN_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CACHED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CACHED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_STAPLED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_STAPLED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONDER_QUERIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONDER_QUERIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONSE_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONSE_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_REVOKED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_REVOKED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="STATISTIC_LSN_POOL_PBA_ACTIVE_PORT_BLOCKS">
 					<xsd:annotation>
 						<xsd:documentation>STATISTIC_LSN_POOL_PBA_ACTIVE_PORT_BLOCKS</xsd:documentation>
@@ -7884,6 +7983,26 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_TOTAL_UPDATES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_TOTAL_UPDATES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_NEXT_UPDATE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_NEXT_UPDATE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_CERTIFICATE_COUNT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_CERTIFICATE_COUNT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_REFERENCE_COUNT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_REFERENCE_COUNT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="STATISTIC_IPSECALG_IKE_PACKETS">
 					<xsd:annotation>
 						<xsd:documentation>STATISTIC_IPSECALG_IKE_PACKETS</xsd:documentation>
@@ -8139,6 +8258,56 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_MESSAGES_MAXIMUM_RETRIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_MESSAGES_MAXIMUM_RETRIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_FAILED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_FAILED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_FAILED_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_FAILED_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_C3D_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_C3D_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="LocalLB.VirtualAddressV2.VirtualAddressStatisticEntry">
@@ -8173,6 +8342,13 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:complexType name="LocalLB.VirtualAddressV2.IcmpEchoType2Sequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.VirtualAddressV2.IcmpEchoType2[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:complexType name="Common.StringSequenceSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -8180,6 +8356,40 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:simpleType name="LocalLB.VirtualAddressV2.IcmpEchoType2">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="IETYPE_2_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>IETYPE_2_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IETYPE_2_DISABLED">
+					<xsd:annotation>
+						<xsd:documentation>IETYPE_2_DISABLED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IETYPE_2_ALWAYS">
+					<xsd:annotation>
+						<xsd:documentation>IETYPE_2_ALWAYS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IETYPE_2_SELECTIVE">
+					<xsd:annotation>
+						<xsd:documentation>IETYPE_2_SELECTIVE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IETYPE_2_ANY">
+					<xsd:annotation>
+						<xsd:documentation>IETYPE_2_ANY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="IETYPE_2_ALL">
+					<xsd:annotation>
+						<xsd:documentation>IETYPE_2_ALL</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:complexType name="Common.IPAddressSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -8198,6 +8408,13 @@ All other trademarks mentioned in this document are the property of their respec
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.MetadataPersistenceSequence[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="LocalLB.VirtualAddressV2.RouteAdvertisementTypeSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.VirtualAddressV2.RouteAdvertisementType[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -8311,6 +8528,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.VirtualAddressV2.IcmpEchoTypeSequence"/>
 </message>
 
+<message name="LocalLB.VirtualAddressV2.get_icmp_echo_state_v3Request">
+	<part name="virtual_addresses" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.VirtualAddressV2.get_icmp_echo_state_v3Response">
+	<part name="return" type="tns:LocalLB.VirtualAddressV2.IcmpEchoType2Sequence"/>
+</message>
+
 <message name="LocalLB.VirtualAddressV2.get_is_floating_stateRequest">
 	<part name="virtual_addresses" type="tns:Common.StringSequence"/>
 </message>
@@ -8374,6 +8598,13 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="LocalLB.VirtualAddressV2.get_route_advertisement_stateResponse">
 	<part name="return" type="tns:Common.EnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.VirtualAddressV2.get_route_advertisement_state_v2Request">
+	<part name="virtual_addresses" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.VirtualAddressV2.get_route_advertisement_state_v2Response">
+	<part name="return" type="tns:LocalLB.VirtualAddressV2.RouteAdvertisementTypeSequence"/>
 </message>
 
 <message name="LocalLB.VirtualAddressV2.get_spanning_stateRequest">
@@ -8485,6 +8716,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.VirtualAddressV2.set_icmp_echo_state_v2Response">
 </message>
 
+<message name="LocalLB.VirtualAddressV2.set_icmp_echo_state_v3Request">
+	<part name="virtual_addresses" type="tns:Common.StringSequence"/>
+	<part name="types" type="tns:LocalLB.VirtualAddressV2.IcmpEchoType2Sequence"/>
+</message>
+<message name="LocalLB.VirtualAddressV2.set_icmp_echo_state_v3Response">
+</message>
+
 <message name="LocalLB.VirtualAddressV2.set_is_floating_stateRequest">
 	<part name="virtual_addresses" type="tns:Common.StringSequence"/>
 	<part name="states" type="tns:Common.EnabledStateSequence"/>
@@ -8528,6 +8766,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="states" type="tns:Common.EnabledStateSequence"/>
 </message>
 <message name="LocalLB.VirtualAddressV2.set_route_advertisement_stateResponse">
+</message>
+
+<message name="LocalLB.VirtualAddressV2.set_route_advertisement_state_v2Request">
+	<part name="virtual_addresses" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.VirtualAddressV2.RouteAdvertisementTypeSequence"/>
+</message>
+<message name="LocalLB.VirtualAddressV2.set_route_advertisement_state_v2Response">
 </message>
 
 <message name="LocalLB.VirtualAddressV2.set_spanning_stateRequest">
@@ -8642,21 +8887,32 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_icmp_echo_state">
 	<documentation>
  This method has been deprecated, due to the change in attribute
- definitions. Please use get_icmp_echo_state_v2.
+ definitions. Please use get_icmp_echo_state_v3.
 
- Gets the icmp echo states for the specified virtual addresses. 
- 
+ Gets the ICMP echo states for the specified virtual addresses.
+
         	</documentation>
 		<input message="tns:LocalLB.VirtualAddressV2.get_icmp_echo_stateRequest"/>
 		<output message="tns:LocalLB.VirtualAddressV2.get_icmp_echo_stateResponse"/>
 	</operation>
 	<operation name="get_icmp_echo_state_v2">
 	<documentation>
- Gets the icmp echo states for the specified virtual addresses.
+ This method has been deprecated, due to the change in attribute
+ definitions. Please use get_icmp_echo_state_v3.
+
+ Gets the ICMP echo states for the specified virtual addresses.
 
         	</documentation>
 		<input message="tns:LocalLB.VirtualAddressV2.get_icmp_echo_state_v2Request"/>
 		<output message="tns:LocalLB.VirtualAddressV2.get_icmp_echo_state_v2Response"/>
+	</operation>
+	<operation name="get_icmp_echo_state_v3">
+	<documentation>
+ Gets the ICMP echo states for the specified virtual addresses.
+
+        	</documentation>
+		<input message="tns:LocalLB.VirtualAddressV2.get_icmp_echo_state_v3Request"/>
+		<output message="tns:LocalLB.VirtualAddressV2.get_icmp_echo_state_v3Response"/>
 	</operation>
 	<operation name="get_is_floating_state">
 	<documentation>
@@ -8740,11 +8996,22 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="get_route_advertisement_state">
 	<documentation>
+ This method has been deprecated, due to the change in attribute
+ definitions. Please use get_route_advertisement_state_v2.
+
  Gets the route advertisement states for the specified virtual addresses.
- 
+
         	</documentation>
 		<input message="tns:LocalLB.VirtualAddressV2.get_route_advertisement_stateRequest"/>
 		<output message="tns:LocalLB.VirtualAddressV2.get_route_advertisement_stateResponse"/>
+	</operation>
+	<operation name="get_route_advertisement_state_v2">
+	<documentation>
+ Gets the route advertisement states for the specified virtual addresses.
+
+        	</documentation>
+		<input message="tns:LocalLB.VirtualAddressV2.get_route_advertisement_state_v2Request"/>
+		<output message="tns:LocalLB.VirtualAddressV2.get_route_advertisement_state_v2Response"/>
 	</operation>
 	<operation name="get_spanning_state">
 	<documentation>
@@ -8873,25 +9140,38 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_icmp_echo_state">
 	<documentation>
  This method has been deprecated, due to the change in attribute
- definitions. Please use set_icmp_echo_state_v2.
+ definitions. Please use set_icmp_echo_state_v3.
 
- Sets the icmp echo states for the specified virtual addresses. The icmp echo state 
- determines whether the system sends an icmp echo reply in response to an icmp echo 
+ Sets the ICMP echo states for the specified virtual addresses. The ICMP echo state
+ determines whether the system sends an ICMP echo reply in response to an ICMP echo
  request to the specified virtual address.
- 
+
         	</documentation>
 		<input message="tns:LocalLB.VirtualAddressV2.set_icmp_echo_stateRequest"/>
 		<output message="tns:LocalLB.VirtualAddressV2.set_icmp_echo_stateResponse"/>
 	</operation>
 	<operation name="set_icmp_echo_state_v2">
 	<documentation>
- Sets the icmp echo states for the specified virtual addresses. The icmp echo state
- determines whether the system sends an icmp echo reply in response to an icmp echo
+ This method has been deprecated, due to the change in attribute
+ definitions. Please use set_icmp_echo_state_v3.
+
+ Sets the ICMP echo states for the specified virtual addresses. The ICMP echo state
+ determines whether the system sends an ICMP echo reply in response to an ICMP echo
  request to the specified virtual address.
 
         	</documentation>
 		<input message="tns:LocalLB.VirtualAddressV2.set_icmp_echo_state_v2Request"/>
 		<output message="tns:LocalLB.VirtualAddressV2.set_icmp_echo_state_v2Response"/>
+	</operation>
+	<operation name="set_icmp_echo_state_v3">
+	<documentation>
+ Sets the ICMP echo states for the specified virtual addresses. The ICMP echo state
+ determines whether the system sends an ICMP echo reply in response to an ICMP echo
+ request to the specified virtual address.
+
+        	</documentation>
+		<input message="tns:LocalLB.VirtualAddressV2.set_icmp_echo_state_v3Request"/>
+		<output message="tns:LocalLB.VirtualAddressV2.set_icmp_echo_state_v3Response"/>
 	</operation>
 	<operation name="set_is_floating_state">
 	<documentation>
@@ -8943,11 +9223,22 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="set_route_advertisement_state">
 	<documentation>
+ This method has been deprecated, due to the change in attribute
+ definitions. Please use set_route_advertisement_state_v2.
+
  Sets the route advertisement states for the specified virtual addresses.
- 
+
         	</documentation>
 		<input message="tns:LocalLB.VirtualAddressV2.set_route_advertisement_stateRequest"/>
 		<output message="tns:LocalLB.VirtualAddressV2.set_route_advertisement_stateResponse"/>
+	</operation>
+	<operation name="set_route_advertisement_state_v2">
+	<documentation>
+ Sets the route advertisement states for the specified virtual addresses.
+
+        	</documentation>
+		<input message="tns:LocalLB.VirtualAddressV2.set_route_advertisement_state_v2Request"/>
+		<output message="tns:LocalLB.VirtualAddressV2.set_route_advertisement_state_v2Response"/>
 	</operation>
 	<operation name="set_spanning_state">
 	<documentation>
@@ -9190,10 +9481,10 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_icmp_echo_state">
 	<documentation>
  This method has been deprecated, due to the change in attribute
- definitions. Please use get_icmp_echo_state_v2.
+ definitions. Please use get_icmp_echo_state_v3.
 
- Gets the icmp echo states for the specified virtual addresses. 
- 
+ Gets the ICMP echo states for the specified virtual addresses.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/VirtualAddressV2"/>
 		<input>
@@ -9212,7 +9503,30 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_icmp_echo_state_v2">
 	<documentation>
- Gets the icmp echo states for the specified virtual addresses.
+ This method has been deprecated, due to the change in attribute
+ definitions. Please use get_icmp_echo_state_v3.
+
+ Gets the ICMP echo states for the specified virtual addresses.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/VirtualAddressV2"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/VirtualAddressV2"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/VirtualAddressV2"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_icmp_echo_state_v3">
+	<documentation>
+ Gets the ICMP echo states for the specified virtual addresses.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/VirtualAddressV2"/>
@@ -9408,8 +9722,31 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="get_route_advertisement_state">
 	<documentation>
+ This method has been deprecated, due to the change in attribute
+ definitions. Please use get_route_advertisement_state_v2.
+
  Gets the route advertisement states for the specified virtual addresses.
- 
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/VirtualAddressV2"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/VirtualAddressV2"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/VirtualAddressV2"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_route_advertisement_state_v2">
+	<documentation>
+ Gets the route advertisement states for the specified virtual addresses.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/VirtualAddressV2"/>
 		<input>
@@ -9721,12 +10058,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="set_icmp_echo_state">
 	<documentation>
  This method has been deprecated, due to the change in attribute
- definitions. Please use set_icmp_echo_state_v2.
+ definitions. Please use set_icmp_echo_state_v3.
 
- Sets the icmp echo states for the specified virtual addresses. The icmp echo state 
- determines whether the system sends an icmp echo reply in response to an icmp echo 
+ Sets the ICMP echo states for the specified virtual addresses. The ICMP echo state
+ determines whether the system sends an ICMP echo reply in response to an ICMP echo
  request to the specified virtual address.
- 
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/VirtualAddressV2"/>
 		<input>
@@ -9745,8 +10082,33 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="set_icmp_echo_state_v2">
 	<documentation>
- Sets the icmp echo states for the specified virtual addresses. The icmp echo state
- determines whether the system sends an icmp echo reply in response to an icmp echo
+ This method has been deprecated, due to the change in attribute
+ definitions. Please use set_icmp_echo_state_v3.
+
+ Sets the ICMP echo states for the specified virtual addresses. The ICMP echo state
+ determines whether the system sends an ICMP echo reply in response to an ICMP echo
+ request to the specified virtual address.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/VirtualAddressV2"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/VirtualAddressV2"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/VirtualAddressV2"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_icmp_echo_state_v3">
+	<documentation>
+ Sets the ICMP echo states for the specified virtual addresses. The ICMP echo state
+ determines whether the system sends an ICMP echo reply in response to an ICMP echo
  request to the specified virtual address.
 
         	</documentation>
@@ -9875,8 +10237,31 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="set_route_advertisement_state">
 	<documentation>
+ This method has been deprecated, due to the change in attribute
+ definitions. Please use set_route_advertisement_state_v2.
+
  Sets the route advertisement states for the specified virtual addresses.
- 
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/VirtualAddressV2"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/VirtualAddressV2"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/VirtualAddressV2"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_route_advertisement_state_v2">
+	<documentation>
+ Sets the route advertisement states for the specified virtual addresses.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/VirtualAddressV2"/>
 		<input>

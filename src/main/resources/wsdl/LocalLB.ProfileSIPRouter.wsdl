@@ -6735,6 +6735,71 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SSL_COMMON_OCSP_STAPLING_OCSP_CONNECTION_FAILURES</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CACHED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CACHED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CERT_STATUS_REQ">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CERT_STATUS_REQ</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_STAPLED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_STAPLED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_RESPSTATUS_ERR_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_RESPSTATUS_ERR_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_INVALID_CERT_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_INVALID_CERT_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_REVOKED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_REVOKED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_UNKNOWN_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_UNKNOWN_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CACHED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CACHED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_STAPLED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_STAPLED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONDER_QUERIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONDER_QUERIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONSE_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONSE_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_REVOKED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_REVOKED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="STATISTIC_LSN_POOL_PBA_ACTIVE_PORT_BLOCKS">
 					<xsd:annotation>
 						<xsd:documentation>STATISTIC_LSN_POOL_PBA_ACTIVE_PORT_BLOCKS</xsd:documentation>
@@ -7805,6 +7870,26 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_TOTAL_UPDATES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_TOTAL_UPDATES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_NEXT_UPDATE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_NEXT_UPDATE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_CERTIFICATE_COUNT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_CERTIFICATE_COUNT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_REFERENCE_COUNT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_REFERENCE_COUNT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="STATISTIC_IPSECALG_IKE_PACKETS">
 					<xsd:annotation>
 						<xsd:documentation>STATISTIC_IPSECALG_IKE_PACKETS</xsd:documentation>
@@ -8060,6 +8145,56 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_MESSAGES_MAXIMUM_RETRIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_MESSAGES_MAXIMUM_RETRIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_FAILED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_FAILED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_FAILED_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_FAILED_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_C3D_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_C3D_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="LocalLB.ProfileString">
@@ -8138,6 +8273,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileSIPRouter.SIPRouterProfileStatistics"/>
 </message>
 
+<message name="LocalLB.ProfileSIPRouter.get_concurrent_sessions_per_subscriberRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.get_concurrent_sessions_per_subscriberResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+
 <message name="LocalLB.ProfileSIPRouter.get_default_profileRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -8152,6 +8294,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
+<message name="LocalLB.ProfileSIPRouter.get_dialog_establishment_timeoutRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.get_dialog_establishment_timeoutResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+
 <message name="LocalLB.ProfileSIPRouter.get_ha_message_sweeper_intervalRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -8163,6 +8312,27 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="LocalLB.ProfileSIPRouter.get_listResponse">
 	<part name="return" type="tns:Common.StringSequence"/>
+</message>
+
+<message name="LocalLB.ProfileSIPRouter.get_log_profileRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.get_log_profileResponse">
+	<part name="return" type="tns:LocalLB.ProfileStringSequence"/>
+</message>
+
+<message name="LocalLB.ProfileSIPRouter.get_log_publisherRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.get_log_publisherResponse">
+	<part name="return" type="tns:LocalLB.ProfileStringSequence"/>
+</message>
+
+<message name="LocalLB.ProfileSIPRouter.get_maximum_global_registrationsRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.get_maximum_global_registrationsResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
 </message>
 
 <message name="LocalLB.ProfileSIPRouter.get_maximum_media_sessionsRequest">
@@ -8186,6 +8356,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
 </message>
 
+<message name="LocalLB.ProfileSIPRouter.get_maximum_registrations_per_subscriberRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.get_maximum_registrations_per_subscriberResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+
 <message name="LocalLB.ProfileSIPRouter.get_maximum_session_timeoutRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -8205,6 +8382,13 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="LocalLB.ProfileSIPRouter.get_mirroring_stateResponse">
 	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.ProfileSIPRouter.get_registration_timeoutRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.get_registration_timeoutResponse">
+	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
 </message>
 
 <message name="LocalLB.ProfileSIPRouter.get_sip_routeRequest">
@@ -8296,6 +8480,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfileSIPRouter.reset_statistics_by_virtualResponse">
 </message>
 
+<message name="LocalLB.ProfileSIPRouter.set_concurrent_sessions_per_subscriberRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.set_concurrent_sessions_per_subscriberResponse">
+</message>
+
 <message name="LocalLB.ProfileSIPRouter.set_default_profileRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="defaults" type="tns:Common.StringSequence"/>
@@ -8310,11 +8501,47 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfileSIPRouter.set_descriptionResponse">
 </message>
 
+<message name="LocalLB.ProfileSIPRouter.set_dialog_establishment_timeoutRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.set_dialog_establishment_timeoutResponse">
+</message>
+
 <message name="LocalLB.ProfileSIPRouter.set_ha_message_sweeper_intervalRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
 </message>
 <message name="LocalLB.ProfileSIPRouter.set_ha_message_sweeper_intervalResponse">
+</message>
+
+<message name="LocalLB.ProfileSIPRouter.set_log_profileRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="profiles" type="tns:LocalLB.ProfileStringSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.set_log_profileResponse">
+</message>
+
+<message name="LocalLB.ProfileSIPRouter.set_log_publisherRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="publishers" type="tns:LocalLB.ProfileStringSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.set_log_publisherResponse">
+</message>
+
+<message name="LocalLB.ProfileSIPRouter.set_log_settingsRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="publishers" type="tns:LocalLB.ProfileStringSequence"/>
+	<part name="profiles" type="tns:LocalLB.ProfileStringSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.set_log_settingsResponse">
+</message>
+
+<message name="LocalLB.ProfileSIPRouter.set_maximum_global_registrationsRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.set_maximum_global_registrationsResponse">
 </message>
 
 <message name="LocalLB.ProfileSIPRouter.set_maximum_media_sessionsRequest">
@@ -8338,6 +8565,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfileSIPRouter.set_maximum_pending_messagesResponse">
 </message>
 
+<message name="LocalLB.ProfileSIPRouter.set_maximum_registrations_per_subscriberRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.set_maximum_registrations_per_subscriberResponse">
+</message>
+
 <message name="LocalLB.ProfileSIPRouter.set_maximum_session_timeoutRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
@@ -8357,6 +8591,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="values" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 <message name="LocalLB.ProfileSIPRouter.set_mirroring_stateResponse">
+</message>
+
+<message name="LocalLB.ProfileSIPRouter.set_registration_timeoutRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:LocalLB.ProfileULongSequence"/>
+</message>
+<message name="LocalLB.ProfileSIPRouter.set_registration_timeoutResponse">
 </message>
 
 <message name="LocalLB.ProfileSIPRouter.set_traffic_groupRequest">
@@ -8425,6 +8666,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileSIPRouter.get_all_statisticsRequest"/>
 		<output message="tns:LocalLB.ProfileSIPRouter.get_all_statisticsResponse"/>
 	</operation>
+	<operation name="get_concurrent_sessions_per_subscriber">
+	<documentation>
+ Gets the maximum number of concurrent sessions allowed per subscriber.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.get_concurrent_sessions_per_subscriberRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.get_concurrent_sessions_per_subscriberResponse"/>
+	</operation>
 	<operation name="get_default_profile">
 	<documentation>
  Gets the names of the default profiles from which the specified profiles will derive
@@ -8442,6 +8691,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileSIPRouter.get_descriptionRequest"/>
 		<output message="tns:LocalLB.ProfileSIPRouter.get_descriptionResponse"/>
 	</operation>
+	<operation name="get_dialog_establishment_timeout">
+	<documentation>
+ Gets the timeout (in seconds) for dialog creating SIP request.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.get_dialog_establishment_timeoutRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.get_dialog_establishment_timeoutResponse"/>
+	</operation>
 	<operation name="get_ha_message_sweeper_interval">
 	<documentation>
  Gets the HA message sweeper interval
@@ -8457,6 +8714,32 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileSIPRouter.get_listRequest"/>
 		<output message="tns:LocalLB.ProfileSIPRouter.get_listResponse"/>
+	</operation>
+	<operation name="get_log_profile">
+	<documentation>
+ Gets the ALG log profiles for a set of SIP profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.get_log_profileRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.get_log_profileResponse"/>
+	</operation>
+	<operation name="get_log_publisher">
+	<documentation>
+ Gets the log publishers for a set of SIP profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.get_log_publisherRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.get_log_publisherResponse"/>
+	</operation>
+	<operation name="get_maximum_global_registrations">
+	<documentation>
+ Gets the maximum number of registration per subscriber.
+ Default value of 0 indicates that the limit is ignored.
+ A default value of 0 indicates the limit is ignored.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.get_maximum_global_registrationsRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.get_maximum_global_registrationsResponse"/>
 	</operation>
 	<operation name="get_maximum_media_sessions">
 	<documentation>
@@ -8485,6 +8768,14 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileSIPRouter.get_maximum_pending_messagesRequest"/>
 		<output message="tns:LocalLB.ProfileSIPRouter.get_maximum_pending_messagesResponse"/>
 	</operation>
+	<operation name="get_maximum_registrations_per_subscriber">
+	<documentation>
+ Gets the maximum number of registration per subscriber.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.get_maximum_registrations_per_subscriberRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.get_maximum_registrations_per_subscriberResponse"/>
+	</operation>
 	<operation name="get_maximum_session_timeout">
 	<documentation>
  Gets the maximum duration (in seconds) that media for a call remains active.
@@ -8508,6 +8799,15 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileSIPRouter.get_mirroring_stateRequest"/>
 		<output message="tns:LocalLB.ProfileSIPRouter.get_mirroring_stateResponse"/>
+	</operation>
+	<operation name="get_registration_timeout">
+	<documentation>
+ Gets the registration timeout value, which specifies the
+ maximum time (in seconds) that a registation entry remains active.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.get_registration_timeoutRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.get_registration_timeoutResponse"/>
 	</operation>
 	<operation name="get_sip_route">
 	<documentation>
@@ -8626,6 +8926,17 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileSIPRouter.reset_statistics_by_virtualRequest"/>
 		<output message="tns:LocalLB.ProfileSIPRouter.reset_statistics_by_virtualResponse"/>
 	</operation>
+	<operation name="set_concurrent_sessions_per_subscriber">
+	<documentation>
+ Sets the maximum number of concurrent sessions allowed per subscriber.
+ If the number of concurrent sessions exceeds this limit then the call is dropped.
+ It denotes the concurrent From-URI in the call matching the registration entry.
+ The default value of 0 indicates that the limit is ignored.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.set_concurrent_sessions_per_subscriberRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.set_concurrent_sessions_per_subscriberResponse"/>
+	</operation>
 	<operation name="set_default_profile">
 	<documentation>
  Sets the names of the default profiles from which the specified profiles will derive
@@ -8645,6 +8956,15 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileSIPRouter.set_descriptionRequest"/>
 		<output message="tns:LocalLB.ProfileSIPRouter.set_descriptionResponse"/>
 	</operation>
+	<operation name="set_dialog_establishment_timeout">
+	<documentation>
+ Sets the timeout (in seconds) for a dialog creating SIP request.
+ For example, a SIP INVITE request and its FINAL response create a dialog.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.set_dialog_establishment_timeoutRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.set_dialog_establishment_timeoutResponse"/>
+	</operation>
 	<operation name="set_ha_message_sweeper_interval">
 	<documentation>
  Sets the HA message store sweeper interval in milliseconds. The
@@ -8658,6 +8978,49 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileSIPRouter.set_ha_message_sweeper_intervalRequest"/>
 		<output message="tns:LocalLB.ProfileSIPRouter.set_ha_message_sweeper_intervalResponse"/>
+	</operation>
+	<operation name="set_log_profile">
+	<documentation>
+ Sets the Application Level Gateway (ALG) log profiles for a set of SIP profiles.
+ The ALG log profile controls the logging of ALG connection events.
+ See LocalLB::ALGLogProfile for more details.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.set_log_profileRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.set_log_profileResponse"/>
+	</operation>
+	<operation name="set_log_publisher">
+	<documentation>
+ Sets the log publishers for a set of SIP profiles. A log publisher is
+ a set of log destinations for high-speed logging of formatted log messages.
+ See Log::Publisher for more details.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.set_log_publisherRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.set_log_publisherResponse"/>
+	</operation>
+	<operation name="set_log_settings">
+	<documentation>
+ Sets the log publisher and ALG log profiles for a set of SIP profiles. This is
+ the convenience function for set_log_publisher and set_log_profile.
+
+ It is a convenience function to help avoid using a transaction,
+ because a log publisher must be use in conjunction with a log profile.
+ Either a transaction or this method are good ways of satisfying this validation.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.set_log_settingsRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.set_log_settingsResponse"/>
+	</operation>
+	<operation name="set_maximum_global_registrations">
+	<documentation>
+ Sets the maximum number of registrations allowed.
+ If the limit is reached the registrations are dropped.
+ A default value of 0 indicates the limit is ignored.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.set_maximum_global_registrationsRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.set_maximum_global_registrationsResponse"/>
 	</operation>
 	<operation name="set_maximum_media_sessions">
 	<documentation>
@@ -8689,6 +9052,15 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileSIPRouter.set_maximum_pending_messagesRequest"/>
 		<output message="tns:LocalLB.ProfileSIPRouter.set_maximum_pending_messagesResponse"/>
 	</operation>
+	<operation name="set_maximum_registrations_per_subscriber">
+	<documentation>
+ Sets the maximum number of registration per subscriber.
+ The default value of 0 indicates that the limit is ignored.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.set_maximum_registrations_per_subscriberRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.set_maximum_registrations_per_subscriberResponse"/>
+	</operation>
 	<operation name="set_maximum_session_timeout">
 	<documentation>
  Sets the maximum duration (in seconds) that media for a call remains active.
@@ -8718,6 +9090,18 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileSIPRouter.set_mirroring_stateRequest"/>
 		<output message="tns:LocalLB.ProfileSIPRouter.set_mirroring_stateResponse"/>
+	</operation>
+	<operation name="set_registration_timeout">
+	<documentation>
+ Sets the registration timeout value, which specifies the maximum
+ time (in seconds) that a registation entry remains active.
+ After this period the registration entry is removed from the registration table.
+ A default value of 0 means this timeout is ignored and
+ the Expires header value is used.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileSIPRouter.set_registration_timeoutRequest"/>
+		<output message="tns:LocalLB.ProfileSIPRouter.set_registration_timeoutResponse"/>
 	</operation>
 	<operation name="set_traffic_group">
 	<documentation>
@@ -8860,6 +9244,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_concurrent_sessions_per_subscriber">
+	<documentation>
+ Gets the maximum number of concurrent sessions allowed per subscriber.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_default_profile">
 	<documentation>
  Gets the names of the default profiles from which the specified profiles will derive
@@ -8901,6 +9305,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_dialog_establishment_timeout">
+	<documentation>
+ Gets the timeout (in seconds) for dialog creating SIP request.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_ha_message_sweeper_interval">
 	<documentation>
  Gets the HA message sweeper interval
@@ -8924,6 +9348,68 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_list">
 	<documentation>
  Gets a list of all SIPRouter profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_log_profile">
+	<documentation>
+ Gets the ALG log profiles for a set of SIP profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_log_publisher">
+	<documentation>
+ Gets the log publishers for a set of SIP profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_maximum_global_registrations">
+	<documentation>
+ Gets the maximum number of registration per subscriber.
+ Default value of 0 indicates that the limit is ignored.
+ A default value of 0 indicates the limit is ignored.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
@@ -9004,6 +9490,26 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_maximum_registrations_per_subscriber">
+	<documentation>
+ Gets the maximum number of registration per subscriber.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_maximum_session_timeout">
 	<documentation>
  Gets the maximum duration (in seconds) that media for a call remains active.
@@ -9047,6 +9553,27 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_mirroring_state">
 	<documentation>
  Returns true if mirroring is enabled for the SIP router instance.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_registration_timeout">
+	<documentation>
+ Gets the registration timeout value, which specifies the
+ maximum time (in seconds) that a registation entry remains active.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
@@ -9337,6 +9864,29 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_concurrent_sessions_per_subscriber">
+	<documentation>
+ Sets the maximum number of concurrent sessions allowed per subscriber.
+ If the number of concurrent sessions exceeds this limit then the call is dropped.
+ It denotes the concurrent From-URI in the call matching the registration entry.
+ The default value of 0 indicates that the limit is ignored.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_default_profile">
 	<documentation>
  Sets the names of the default profiles from which the specified profiles will derive
@@ -9380,6 +9930,27 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_dialog_establishment_timeout">
+	<documentation>
+ Sets the timeout (in seconds) for a dialog creating SIP request.
+ For example, a SIP INVITE request and its FINAL response create a dialog.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_ha_message_sweeper_interval">
 	<documentation>
  Sets the HA message store sweeper interval in milliseconds. The
@@ -9389,6 +9960,97 @@ All other trademarks mentioned in this document are the property of their respec
  the standby device to forward its held message to the its mirrored
  outgoing connection. If a message resides in the HA message store
  for longer than the configured sweeper interval, it will be dropped.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_log_profile">
+	<documentation>
+ Sets the Application Level Gateway (ALG) log profiles for a set of SIP profiles.
+ The ALG log profile controls the logging of ALG connection events.
+ See LocalLB::ALGLogProfile for more details.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_log_publisher">
+	<documentation>
+ Sets the log publishers for a set of SIP profiles. A log publisher is
+ a set of log destinations for high-speed logging of formatted log messages.
+ See Log::Publisher for more details.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_log_settings">
+	<documentation>
+ Sets the log publisher and ALG log profiles for a set of SIP profiles. This is
+ the convenience function for set_log_publisher and set_log_profile.
+
+ It is a convenience function to help avoid using a transaction,
+ because a log publisher must be use in conjunction with a log profile.
+ Either a transaction or this method are good ways of satisfying this validation.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_maximum_global_registrations">
+	<documentation>
+ Sets the maximum number of registrations allowed.
+ If the limit is reached the registrations are dropped.
+ A default value of 0 indicates the limit is ignored.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
@@ -9472,6 +10134,27 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_maximum_registrations_per_subscriber">
+	<documentation>
+ Sets the maximum number of registration per subscriber.
+ The default value of 0 indicates that the limit is ignored.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_maximum_session_timeout">
 	<documentation>
  Sets the maximum duration (in seconds) that media for a call remains active.
@@ -9521,6 +10204,30 @@ All other trademarks mentioned in this document are the property of their respec
  Enables connection mirroring for the router instance. All virtual
  servers using this router instance will be mirror connections.
  This will override the mirroring flag of the virtual server.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileSIPRouter"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_registration_timeout">
+	<documentation>
+ Sets the registration timeout value, which specifies the maximum
+ time (in seconds) that a registation entry remains active.
+ After this period the registration entry is removed from the registration table.
+ A default value of 0 means this timeout is ignored and
+ the Expires header value is used.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileSIPRouter"/>

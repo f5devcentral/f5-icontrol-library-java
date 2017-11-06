@@ -372,9 +372,19 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>POLICY_CONTROLS_RESPONSE_ADAPTATION</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_CONTROLS_CLIENT_SSL">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_CONTROLS_CLIENT_SSL</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="POLICY_CONTROLS_SERVER_SSL">
 					<xsd:annotation>
 						<xsd:documentation>POLICY_CONTROLS_SERVER_SSL</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_CONTROLS_SSL_INTERCEPT">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_CONTROLS_SSL_INTERCEPT</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
 				<xsd:enumeration value="POLICY_CONTROLS_PERSISTENCE">
@@ -652,6 +662,11 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>POLICY_REQUIRES_CLIENT_SSL</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_REQUIRES_SERVER_SSL">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_REQUIRES_SERVER_SSL</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="POLICY_REQUIRES_SSL_PERSIST">
 					<xsd:annotation>
 						<xsd:documentation>POLICY_REQUIRES_SSL_PERSIST</xsd:documentation>
@@ -793,9 +808,19 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>POLICY_TARGET_REQUEST_ADAPT</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TARGET_CLIENT_SSL">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TARGET_CLIENT_SSL</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="POLICY_TARGET_SERVER_SSL">
 					<xsd:annotation>
 						<xsd:documentation>POLICY_TARGET_SERVER_SSL</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TARGET_SSL_INTERCEPT">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TARGET_SSL_INTERCEPT</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
 				<xsd:enumeration value="POLICY_TARGET_POLICY">

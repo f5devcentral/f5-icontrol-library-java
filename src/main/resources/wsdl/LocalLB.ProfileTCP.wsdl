@@ -125,6 +125,13 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:element name="time_stamp" type="tns:Common.TimeStamp"/>
 			</xsd:sequence>
 		</xsd:complexType>
+		<xsd:complexType name="LocalLB.ProfileTCP.ProfileTCPPushFlagModeSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.ProfileTCP.ProfileTCPPushFlagMode[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 		<xsd:complexType name="Common.BooleanSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -181,6 +188,30 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:enumeration value="TCP_MODE_AUTO">
 					<xsd:annotation>
 						<xsd:documentation>TCP_MODE_AUTO</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+		<xsd:simpleType name="LocalLB.ProfileTCP.MPTCPMode">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="MPTCP_MODE_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>MPTCP_MODE_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="MPTCP_MODE_DISABLED">
+					<xsd:annotation>
+						<xsd:documentation>MPTCP_MODE_DISABLED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="MPTCP_MODE_ENABLED">
+					<xsd:annotation>
+						<xsd:documentation>MPTCP_MODE_ENABLED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="MPTCP_MODE_PASSTHROUGH">
+					<xsd:annotation>
+						<xsd:documentation>MPTCP_MODE_PASSTHROUGH</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
 			</xsd:restriction>
@@ -6823,6 +6854,71 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SSL_COMMON_OCSP_STAPLING_OCSP_CONNECTION_FAILURES</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CACHED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CACHED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CERT_STATUS_REQ">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CERT_STATUS_REQ</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_STAPLED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_STAPLED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_RESPSTATUS_ERR_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_RESPSTATUS_ERR_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_INVALID_CERT_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_INVALID_CERT_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_REVOKED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_REVOKED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_UNKNOWN_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_UNKNOWN_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CACHED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CACHED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_STAPLED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_STAPLED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONDER_QUERIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONDER_QUERIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONSE_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONSE_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_REVOKED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_REVOKED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="STATISTIC_LSN_POOL_PBA_ACTIVE_PORT_BLOCKS">
 					<xsd:annotation>
 						<xsd:documentation>STATISTIC_LSN_POOL_PBA_ACTIVE_PORT_BLOCKS</xsd:documentation>
@@ -7893,6 +7989,26 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_TOTAL_UPDATES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_TOTAL_UPDATES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_NEXT_UPDATE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_NEXT_UPDATE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_CERTIFICATE_COUNT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_CERTIFICATE_COUNT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_REFERENCE_COUNT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_REFERENCE_COUNT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="STATISTIC_IPSECALG_IKE_PACKETS">
 					<xsd:annotation>
 						<xsd:documentation>STATISTIC_IPSECALG_IKE_PACKETS</xsd:documentation>
@@ -8148,12 +8264,69 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_MESSAGES_MAXIMUM_RETRIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_MESSAGES_MAXIMUM_RETRIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_FAILED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_FAILED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_FAILED_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_FAILED_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_C3D_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_C3D_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="LocalLB.ProfileTCP.ProfileTCPModeSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.ProfileTCP.ProfileTCPMode[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="LocalLB.ProfileTCP.ProfileMPTCPModeSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.ProfileTCP.ProfileMPTCPMode[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -8287,6 +8460,41 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:element name="statistics" type="tns:Common.StatisticSequence"/>
 			</xsd:sequence>
 		</xsd:complexType>
+		<xsd:simpleType name="LocalLB.ProfileTCP.TCPPushFlagMode">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="TCP_PUSHFLAGMODE_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PUSHFLAGMODE_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_PUSHFLAGMODE_DEFAULT">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PUSHFLAGMODE_DEFAULT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_PUSHFLAGMODE_NONE">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PUSHFLAGMODE_NONE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_PUSHFLAGMODE_ONE">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PUSHFLAGMODE_ONE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TCP_PUSHFLAGMODE_AUTO">
+					<xsd:annotation>
+						<xsd:documentation>TCP_PUSHFLAGMODE_AUTO</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+		<xsd:complexType name="LocalLB.ProfileTCP.ProfileTCPPushFlagMode">
+			<xsd:sequence>
+				<xsd:element name="value" type="tns:LocalLB.ProfileTCP.TCPPushFlagMode"/>
+				<xsd:element name="default_flag" type="xsd:boolean"/>
+			</xsd:sequence>
+		</xsd:complexType>
 		<xsd:complexType name="LocalLB.ProfileEnabledStateSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -8299,6 +8507,12 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:element name="type" type="tns:Common.StatisticType"/>
 				<xsd:element name="value" type="tns:Common.ULong64"/>
 				<xsd:element name="time_stamp" type="xsd:long"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:complexType name="LocalLB.ProfileTCP.ProfileMPTCPMode">
+			<xsd:sequence>
+				<xsd:element name="value" type="tns:LocalLB.ProfileTCP.MPTCPMode"/>
+				<xsd:element name="default_flag" type="xsd:boolean"/>
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:schema>
@@ -8594,6 +8808,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileULongSequence"/>
 </message>
 
+<message name="LocalLB.ProfileTCP.get_mptcp_modeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_mptcp_modeResponse">
+	<part name="return" type="tns:LocalLB.ProfileTCP.ProfileMPTCPModeSequence"/>
+</message>
+
 <message name="LocalLB.ProfileTCP.get_mptcp_stateRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -8676,6 +8897,13 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="LocalLB.ProfileTCP.get_proxy_option_stateResponse">
 	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.ProfileTCP.get_push_flag_modeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.get_push_flag_modeResponse">
+	<part name="return" type="tns:LocalLB.ProfileTCP.ProfileTCPPushFlagModeSequence"/>
 </message>
 
 <message name="LocalLB.ProfileTCP.get_rate_pace_maximum_rateRequest">
@@ -9104,6 +9332,13 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfileTCP.set_minimum_rtoResponse">
 </message>
 
+<message name="LocalLB.ProfileTCP.set_mptcp_modeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="modes" type="tns:LocalLB.ProfileTCP.ProfileMPTCPModeSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_mptcp_modeResponse">
+</message>
+
 <message name="LocalLB.ProfileTCP.set_mptcp_stateRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
@@ -9186,6 +9421,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 <message name="LocalLB.ProfileTCP.set_proxy_option_stateResponse">
+</message>
+
+<message name="LocalLB.ProfileTCP.set_push_flag_modeRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="modes" type="tns:LocalLB.ProfileTCP.ProfileTCPPushFlagModeSequence"/>
+</message>
+<message name="LocalLB.ProfileTCP.set_push_flag_modeResponse">
 </message>
 
 <message name="LocalLB.ProfileTCP.set_rate_pace_maximum_rateRequest">
@@ -9689,8 +9931,19 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileTCP.get_minimum_rtoRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.get_minimum_rtoResponse"/>
 	</operation>
+	<operation name="get_mptcp_mode">
+	<documentation>
+ Gets the mode that enables support for RFC6824 TCP Extensions for Multipath Operation with Multiple Addresses.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_mptcp_modeRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_mptcp_modeResponse"/>
+	</operation>
 	<operation name="get_mptcp_state">
 	<documentation>
+ This method is deprecated. New applications should use the get_mptcp_mode
+ method instead.
+
  Gets the states that if true, enable support for RFC6824 TCP Extensions for Multipath Operation with Multiple Addresses.
 
         	</documentation>
@@ -9791,6 +10044,14 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileTCP.get_proxy_option_stateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.get_proxy_option_stateResponse"/>
+	</operation>
+	<operation name="get_push_flag_mode">
+	<documentation>
+ Gets the mode for the PUSH flag.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.get_push_flag_modeRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.get_push_flag_modeResponse"/>
 	</operation>
 	<operation name="get_rate_pace_maximum_rate">
 	<documentation>
@@ -10389,8 +10650,21 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileTCP.set_minimum_rtoRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.set_minimum_rtoResponse"/>
 	</operation>
+	<operation name="set_mptcp_mode">
+	<documentation>
+ Sets the mode that enables support for RFC6824 TCP Extensions for Multipath Operation with Multiple Addresses.
+ If the mode is set to MPTCP_MODE_ENABLED, MPTCP is enabled.  If the mode is set to MPTCP_MODE_DISABLED,
+ MPTCP is disabled.  If the mode is set to MPTCP_MODE_PASSTHROUGH, MPTCP connections are not terminated by this virtual.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_mptcp_modeRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_mptcp_modeResponse"/>
+	</operation>
 	<operation name="set_mptcp_state">
 	<documentation>
+ This method is deprecated. New applications should use the set_mptcp_mode
+ method instead.
+
  Sets the states that if true, enable support for RFC6824 TCP Extensions for Multipath Operation with Multiple Addresses.
 
         	</documentation>
@@ -10518,6 +10792,20 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileTCP.set_proxy_option_stateRequest"/>
 		<output message="tns:LocalLB.ProfileTCP.set_proxy_option_stateResponse"/>
+	</operation>
+	<operation name="set_push_flag_mode">
+	<documentation>
+ Sets the mode for the PUSH flag. If the mode is set to
+ TCP_PUSHFLAGMODE_DEFAULT, a PUSH flag is appended when sending
+ the last data in the TCP send buffer. If the mode is set to
+ TCP_PUSHFLAGMODE_NONE, no PUSH flags are sent at all. If the mode
+ is set to TCP_PUSHFLAGMODE_ONE, a PUSH flag is sent with the FIN
+ segment. If the mode is set to TCP_PUSHFLAGMODE_AUTO, PUSH flag
+ is set based on app/network conditions.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileTCP.set_push_flag_modeRequest"/>
+		<output message="tns:LocalLB.ProfileTCP.set_push_flag_modeResponse"/>
 	</operation>
 	<operation name="set_rate_pace_maximum_rate">
 	<documentation>
@@ -11588,8 +11876,31 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_mptcp_mode">
+	<documentation>
+ Gets the mode that enables support for RFC6824 TCP Extensions for Multipath Operation with Multiple Addresses.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_mptcp_state">
 	<documentation>
+ This method is deprecated. New applications should use the get_mptcp_mode
+ method instead.
+
  Gets the states that if true, enable support for RFC6824 TCP Extensions for Multipath Operation with Multiple Addresses.
 
         	</documentation>
@@ -11819,6 +12130,26 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the states that if true, enable proxying of an option (e.g. time-stamps)
  to the server only if it was negotiated with the client.
  
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_push_flag_mode">
+	<documentation>
+ Gets the mode for the PUSH flag.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
 		<input>
@@ -13164,8 +13495,33 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_mptcp_mode">
+	<documentation>
+ Sets the mode that enables support for RFC6824 TCP Extensions for Multipath Operation with Multiple Addresses.
+ If the mode is set to MPTCP_MODE_ENABLED, MPTCP is enabled.  If the mode is set to MPTCP_MODE_DISABLED,
+ MPTCP is disabled.  If the mode is set to MPTCP_MODE_PASSTHROUGH, MPTCP connections are not terminated by this virtual.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_mptcp_state">
 	<documentation>
+ This method is deprecated. New applications should use the set_mptcp_mode
+ method instead.
+
  Sets the states that if true, enable support for RFC6824 TCP Extensions for Multipath Operation with Multiple Addresses.
 
         	</documentation>
@@ -13422,6 +13778,32 @@ All other trademarks mentioned in this document are the property of their respec
  Sets the states that if true, enable proxying of an option (e.g. time-stamps)
  to the server only if it was negotiated with the client.
  
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileTCP"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_push_flag_mode">
+	<documentation>
+ Sets the mode for the PUSH flag. If the mode is set to
+ TCP_PUSHFLAGMODE_DEFAULT, a PUSH flag is appended when sending
+ the last data in the TCP send buffer. If the mode is set to
+ TCP_PUSHFLAGMODE_NONE, no PUSH flags are sent at all. If the mode
+ is set to TCP_PUSHFLAGMODE_ONE, a PUSH flag is sent with the FIN
+ segment. If the mode is set to TCP_PUSHFLAGMODE_AUTO, PUSH flag
+ is set based on app/network conditions.
+
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileTCP"/>
 		<input>

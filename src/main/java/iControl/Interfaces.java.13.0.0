@@ -295,7 +295,6 @@ private SecurityLogProfileBindingStub m_SecurityLogProfile = null;
 private SecurityProfileDNSSecurityBindingStub m_SecurityProfileDNSSecurity = null;
 private SecurityProfileDoSBindingStub m_SecurityProfileDoS = null;
 private SecurityProfileIPIntelligenceBindingStub m_SecurityProfileIPIntelligence = null;
-private SystemCABundleManagerBindingStub m_SystemCABundleManager = null;
 private SystemCertificateRevocationListFileBindingStub m_SystemCertificateRevocationListFile = null;
 private SystemClusterBindingStub m_SystemCluster = null;
 private SystemConfigSyncBindingStub m_SystemConfigSync = null;
@@ -584,7 +583,6 @@ public SecurityLogProfileBindingStub getSecurityLogProfile() throws Exception { 
 public SecurityProfileDNSSecurityBindingStub getSecurityProfileDNSSecurity() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_SecurityProfileDNSSecurity ) { m_SecurityProfileDNSSecurity = (iControl.SecurityProfileDNSSecurityBindingStub) new iControl.SecurityProfileDNSSecurityLocator().getSecurityProfileDNSSecurityPort(new java.net.URL(buildURL())); } setupInterface(m_SecurityProfileDNSSecurity); return m_SecurityProfileDNSSecurity;}
 public SecurityProfileDoSBindingStub getSecurityProfileDoS() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_SecurityProfileDoS ) { m_SecurityProfileDoS = (iControl.SecurityProfileDoSBindingStub) new iControl.SecurityProfileDoSLocator().getSecurityProfileDoSPort(new java.net.URL(buildURL())); } setupInterface(m_SecurityProfileDoS); return m_SecurityProfileDoS;}
 public SecurityProfileIPIntelligenceBindingStub getSecurityProfileIPIntelligence() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_SecurityProfileIPIntelligence ) { m_SecurityProfileIPIntelligence = (iControl.SecurityProfileIPIntelligenceBindingStub) new iControl.SecurityProfileIPIntelligenceLocator().getSecurityProfileIPIntelligencePort(new java.net.URL(buildURL())); } setupInterface(m_SecurityProfileIPIntelligence); return m_SecurityProfileIPIntelligence;}
-public SystemCABundleManagerBindingStub getSystemCABundleManager() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_SystemCABundleManager ) { m_SystemCABundleManager = (iControl.SystemCABundleManagerBindingStub) new iControl.SystemCABundleManagerLocator().getSystemCABundleManagerPort(new java.net.URL(buildURL())); } setupInterface(m_SystemCABundleManager); return m_SystemCABundleManager;}
 public SystemCertificateRevocationListFileBindingStub getSystemCertificateRevocationListFile() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_SystemCertificateRevocationListFile ) { m_SystemCertificateRevocationListFile = (iControl.SystemCertificateRevocationListFileBindingStub) new iControl.SystemCertificateRevocationListFileLocator().getSystemCertificateRevocationListFilePort(new java.net.URL(buildURL())); } setupInterface(m_SystemCertificateRevocationListFile); return m_SystemCertificateRevocationListFile;}
 public SystemClusterBindingStub getSystemCluster() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_SystemCluster ) { m_SystemCluster = (iControl.SystemClusterBindingStub) new iControl.SystemClusterLocator().getSystemClusterPort(new java.net.URL(buildURL())); } setupInterface(m_SystemCluster); return m_SystemCluster;}
 public SystemConfigSyncBindingStub getSystemConfigSync() throws Exception { if (!m_bInitialized ) { throw new IllegalStateException("Not Initialized"); } if (null == m_SystemConfigSync ) { m_SystemConfigSync = (iControl.SystemConfigSyncBindingStub) new iControl.SystemConfigSyncLocator().getSystemConfigSyncPort(new java.net.URL(buildURL())); } setupInterface(m_SystemConfigSync); return m_SystemConfigSync;}
@@ -917,7 +915,6 @@ m_SecurityLogProfile = null;
 m_SecurityProfileDNSSecurity = null;
 m_SecurityProfileDoS = null;
 m_SecurityProfileIPIntelligence = null;
-m_SystemCABundleManager = null;
 m_SystemCertificateRevocationListFile = null;
 m_SystemCluster = null;
 m_SystemConfigSync = null;
@@ -940,7 +937,6 @@ m_SystemSystemInfo = null;
 m_SystemVCMP = null;
 m_WebAcceleratorApplications = null;
 m_WebAcceleratorPolicies = null;
-
 
 		m_bInitialized = true;
 

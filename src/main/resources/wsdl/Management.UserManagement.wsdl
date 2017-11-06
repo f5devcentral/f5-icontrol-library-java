@@ -269,6 +269,13 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
+		<xsd:complexType name="Management.UserManagement.PasswordChangeInfo">
+			<xsd:sequence>
+				<xsd:element name="encrypted" type="xsd:boolean"/>
+				<xsd:element name="new_password" type="xsd:string"/>
+				<xsd:element name="current_password" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
 	</xsd:schema>
 </types>
 
@@ -278,6 +285,12 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="password" type="tns:Management.UserManagement.PasswordInfo"/>
 </message>
 <message name="Management.UserManagement.change_my_passwordResponse">
+</message>
+
+<message name="Management.UserManagement.change_my_password_v2Request">
+	<part name="password" type="tns:Management.UserManagement.PasswordChangeInfo"/>
+</message>
+<message name="Management.UserManagement.change_my_password_v2Response">
 </message>
 
 <message name="Management.UserManagement.change_passwordRequest">
@@ -548,10 +561,19 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="change_my_password">
        	<documentation>
  Change the password of the user making the request.
+ This method has been deprecated. Please use change_my_password_v2.
 
         	</documentation>
 		<input message="tns:Management.UserManagement.change_my_passwordRequest"/>
 		<output message="tns:Management.UserManagement.change_my_passwordResponse"/>
+	</operation>
+	<operation name="change_my_password_v2">
+	<documentation>
+ Change the password of the user making the request.
+
+        	</documentation>
+		<input message="tns:Management.UserManagement.change_my_password_v2Request"/>
+		<output message="tns:Management.UserManagement.change_my_password_v2Response"/>
 	</operation>
 	<operation name="change_password">
 	<documentation>
@@ -926,6 +948,27 @@ All other trademarks mentioned in this document are the property of their respec
 <binding name="Management.UserManagementBinding" type="tns:Management.UserManagementPortType">
 	<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
 	<operation name="change_my_password">
+	<documentation>
+ Change the password of the user making the request.
+ This method has been deprecated. Please use change_my_password_v2.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:Management/UserManagement"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/UserManagement"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:Management/UserManagement"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="change_my_password_v2">
 	<documentation>
  Change the password of the user making the request.
 

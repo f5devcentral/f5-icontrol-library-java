@@ -6804,6 +6804,71 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SSL_COMMON_OCSP_STAPLING_OCSP_CONNECTION_FAILURES</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CACHED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CACHED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CERT_STATUS_REQ">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CERT_STATUS_REQ</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_STAPLED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_STAPLED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_RESPSTATUS_ERR_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_RESPSTATUS_ERR_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_INVALID_CERT_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_INVALID_CERT_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_REVOKED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_REVOKED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_UNKNOWN_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_UNKNOWN_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CACHED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CACHED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_STAPLED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_STAPLED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONDER_QUERIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONDER_QUERIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONSE_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONSE_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_REVOKED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_REVOKED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="STATISTIC_LSN_POOL_PBA_ACTIVE_PORT_BLOCKS">
 					<xsd:annotation>
 						<xsd:documentation>STATISTIC_LSN_POOL_PBA_ACTIVE_PORT_BLOCKS</xsd:documentation>
@@ -7874,6 +7939,26 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_TOTAL_UPDATES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_TOTAL_UPDATES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_NEXT_UPDATE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_NEXT_UPDATE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_CERTIFICATE_COUNT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_CERTIFICATE_COUNT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_REFERENCE_COUNT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_REFERENCE_COUNT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="STATISTIC_IPSECALG_IKE_PACKETS">
 					<xsd:annotation>
 						<xsd:documentation>STATISTIC_IPSECALG_IKE_PACKETS</xsd:documentation>
@@ -8127,6 +8212,56 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:enumeration value="STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE">
 					<xsd:annotation>
 						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_MESSAGES_MAXIMUM_RETRIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_MESSAGES_MAXIMUM_RETRIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_FAILED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_FAILED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_FAILED_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_FAILED_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_C3D_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_C3D_CONNECTIONS</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
 			</xsd:restriction>

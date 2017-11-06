@@ -7,7 +7,7 @@ F5, F5 Networks, the F5 logo, BIG-IP, 3-DNS, iControl, GLOBAL-SITE, SEE-IT, EDGE
 All other trademarks mentioned in this document are the property of their respective owners. F5 Networks' trademarks may not be used in connection with any product or service except as permitted in writing by F5.
 
 -->
-<definitions name="LocalLB.ProfileHttpClass"
+<definitions name="System.CABundleManager"
 	targetNamespace="urn:iControl"
 	xmlns:tns="urn:iControl"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
@@ -21,52 +21,11 @@ All other trademarks mentioned in this document are the property of their respec
 		xmlns='http://www.w3.org/2001/XMLSchema'
 		xmlns:SOAP-ENC='http://schemas.xmlsoap.org/soap/encoding/'
 		xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'>
-		<xsd:complexType name="Common.StatisticSequenceSequence">
-			<xsd:complexContent>
-				<xsd:restriction base='SOAP-ENC:Array'>
-					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.StatisticSequence[]'/>
-				</xsd:restriction>
-			</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:complexType name="LocalLB.ProfileEnabledState">
-			<xsd:sequence>
-				<xsd:element name="value" type="tns:Common.EnabledState"/>
-				<xsd:element name="default_flag" type="xsd:boolean"/>
-			</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="LocalLB.ProfileStringSequence">
-			<xsd:complexContent>
-				<xsd:restriction base='SOAP-ENC:Array'>
-					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.ProfileString[]'/>
-				</xsd:restriction>
-			</xsd:complexContent>
-		</xsd:complexType>
 		<xsd:complexType name="Common.ULong64">
 			<xsd:sequence>
 				<xsd:element name="high" type="xsd:long"/>
 				<xsd:element name="low" type="xsd:long"/>
 			</xsd:sequence>
-		</xsd:complexType>
-		<xsd:simpleType name="Common.EnabledState">
-			<xsd:restriction base="xsd:string">
-				<xsd:enumeration value="STATE_DISABLED">
-					<xsd:annotation>
-						<xsd:documentation>STATE_DISABLED</xsd:documentation>
-					</xsd:annotation>
-				</xsd:enumeration>
-				<xsd:enumeration value="STATE_ENABLED">
-					<xsd:annotation>
-						<xsd:documentation>STATE_ENABLED</xsd:documentation>
-					</xsd:annotation>
-				</xsd:enumeration>
-			</xsd:restriction>
-		</xsd:simpleType>
-		<xsd:complexType name="LocalLB.ProfileHttpClass.ProfileHttpClassStatisticEntrySequence">
-			<xsd:complexContent>
-				<xsd:restriction base='SOAP-ENC:Array'>
-					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.ProfileHttpClass.ProfileHttpClassStatisticEntry[]'/>
-				</xsd:restriction>
-			</xsd:complexContent>
 		</xsd:complexType>
 		<xsd:complexType name="Common.TimeStamp">
 			<xsd:sequence>
@@ -85,23 +44,17 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
-		<xsd:complexType name="LocalLB.ProfileStatisticsByVirtual">
-			<xsd:sequence>
-				<xsd:element name="statistics" type="tns:Common.StatisticSequenceSequenceSequence"/>
-				<xsd:element name="time_stamp" type="tns:Common.TimeStamp"/>
-			</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="Common.BooleanSequence">
+		<xsd:complexType name="System.CABundleManager.CABundleManagerStatisticsEntrySequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
-					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='xsd:boolean[]'/>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:System.CABundleManager.CABundleManagerStatisticsEntry[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
-		<xsd:complexType name="LocalLB.ProfileMatchPatternStringArraySequence">
+		<xsd:complexType name="Common.ULongSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
-					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.ProfileMatchPatternStringArray[]'/>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='xsd:long[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -111,6 +64,12 @@ All other trademarks mentioned in this document are the property of their respec
 					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.Statistic[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="System.CABundleManager.CABundleManagerStatistics">
+			<xsd:sequence>
+				<xsd:element name="statistics" type="tns:System.CABundleManager.CABundleManagerStatisticsEntrySequence"/>
+				<xsd:element name="time_stamp" type="tns:Common.TimeStamp"/>
+			</xsd:sequence>
 		</xsd:complexType>
 		<xsd:simpleType name="Common.StatisticType">
 			<xsd:restriction base="xsd:string">
@@ -8186,23 +8145,12 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
-		<xsd:complexType name="LocalLB.ProfileHttpClass.ProfileHttpClassStatistics">
-			<xsd:sequence>
-				<xsd:element name="statistics" type="tns:LocalLB.ProfileHttpClass.ProfileHttpClassStatisticEntrySequence"/>
-				<xsd:element name="time_stamp" type="tns:Common.TimeStamp"/>
-			</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="LocalLB.ProfileString">
-			<xsd:sequence>
-				<xsd:element name="value" type="xsd:string"/>
-				<xsd:element name="default_flag" type="xsd:boolean"/>
-			</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="LocalLB.MatchPatternString">
-			<xsd:sequence>
-				<xsd:element name="pattern" type="xsd:string"/>
-				<xsd:element name="is_glob" type="xsd:boolean"/>
-			</xsd:sequence>
+		<xsd:complexType name="System.CABundleManager.UpdateNowCommandSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:System.CABundleManager.UpdateNowCommand[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
 		</xsd:complexType>
 		<xsd:complexType name="Common.StringSequenceSequence">
 			<xsd:complexContent>
@@ -8211,37 +8159,10 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
-		<xsd:complexType name="LocalLB.ProfileHttpClass.ProfileHttpClassStatisticEntry">
-			<xsd:sequence>
-				<xsd:element name="profile_name" type="xsd:string"/>
-				<xsd:element name="statistics" type="tns:Common.StatisticSequence"/>
-			</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="Common.StatisticSequenceSequenceSequence">
+		<xsd:complexType name="Common.PortSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
-					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.StatisticSequenceSequence[]'/>
-				</xsd:restriction>
-			</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:complexType name="LocalLB.MatchPatternStringSequenceSequence">
-			<xsd:complexContent>
-				<xsd:restriction base='SOAP-ENC:Array'>
-					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.MatchPatternStringSequence[]'/>
-				</xsd:restriction>
-			</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:complexType name="LocalLB.MatchPatternStringSequence">
-			<xsd:complexContent>
-				<xsd:restriction base='SOAP-ENC:Array'>
-					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.MatchPatternString[]'/>
-				</xsd:restriction>
-			</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:complexType name="LocalLB.ProfileEnabledStateSequence">
-			<xsd:complexContent>
-				<xsd:restriction base='SOAP-ENC:Array'>
-					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:LocalLB.ProfileEnabledState[]'/>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='xsd:long[]'/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -8252,10 +8173,25 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:element name="time_stamp" type="xsd:long"/>
 			</xsd:sequence>
 		</xsd:complexType>
-		<xsd:complexType name="LocalLB.ProfileMatchPatternStringArray">
+		<xsd:simpleType name="System.CABundleManager.UpdateNowCommand">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="YES">
+					<xsd:annotation>
+						<xsd:documentation>YES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="NO">
+					<xsd:annotation>
+						<xsd:documentation>NO</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+		<xsd:complexType name="System.CABundleManager.CABundleManagerStatisticsEntry">
 			<xsd:sequence>
-				<xsd:element name="values" type="tns:LocalLB.MatchPatternStringSequence"/>
-				<xsd:element name="default_flag" type="xsd:boolean"/>
+				<xsd:element name="name" type="xsd:string"/>
+				<xsd:element name="update_status" type="xsd:string"/>
+				<xsd:element name="statistics" type="tns:Common.StatisticSequence"/>
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:schema>
@@ -8263,1081 +8199,1013 @@ All other trademarks mentioned in this document are the property of their respec
 
 <!-- message -->
 
-<message name="LocalLB.ProfileHttpClass.add_cookie_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="patterns" type="tns:LocalLB.MatchPatternStringSequenceSequence"/>
+<message name="System.CABundleManager.add_exclude_bundleRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="bundles" type="tns:Common.StringSequenceSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.add_cookie_match_patternResponse">
-</message>
-
-<message name="LocalLB.ProfileHttpClass.add_header_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="patterns" type="tns:LocalLB.MatchPatternStringSequenceSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.add_header_match_patternResponse">
+<message name="System.CABundleManager.add_exclude_bundleResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.add_host_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="patterns" type="tns:LocalLB.MatchPatternStringSequenceSequence"/>
+<message name="System.CABundleManager.add_exclude_urlRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="urls" type="tns:Common.StringSequenceSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.add_host_match_patternResponse">
-</message>
-
-<message name="LocalLB.ProfileHttpClass.add_path_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="patterns" type="tns:LocalLB.MatchPatternStringSequenceSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.add_path_match_patternResponse">
+<message name="System.CABundleManager.add_exclude_urlResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.createRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.add_include_bundleRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="bundles" type="tns:Common.StringSequenceSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.createResponse">
-</message>
-
-<message name="LocalLB.ProfileHttpClass.delete_all_profilesRequest">
-</message>
-<message name="LocalLB.ProfileHttpClass.delete_all_profilesResponse">
+<message name="System.CABundleManager.add_include_bundleResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.delete_profileRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.add_include_urlRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="urls" type="tns:Common.StringSequenceSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.delete_profileResponse">
-</message>
-
-<message name="LocalLB.ProfileHttpClass.get_all_statisticsRequest">
-</message>
-<message name="LocalLB.ProfileHttpClass.get_all_statisticsResponse">
-	<part name="return" type="tns:LocalLB.ProfileHttpClass.ProfileHttpClassStatistics"/>
+<message name="System.CABundleManager.add_include_urlResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.get_application_security_module_enabled_stateRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.createRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.get_application_security_module_enabled_stateResponse">
-	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
-</message>
-
-<message name="LocalLB.ProfileHttpClass.get_cookie_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.get_cookie_match_patternResponse">
-	<part name="return" type="tns:LocalLB.ProfileMatchPatternStringArraySequence"/>
+<message name="System.CABundleManager.createResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.get_default_profileRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.delete_all_managersRequest">
 </message>
-<message name="LocalLB.ProfileHttpClass.get_default_profileResponse">
+<message name="System.CABundleManager.delete_all_managersResponse">
+</message>
+
+<message name="System.CABundleManager.delete_managerRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+</message>
+<message name="System.CABundleManager.delete_managerResponse">
+</message>
+
+<message name="System.CABundleManager.get_all_statisticsRequest">
+</message>
+<message name="System.CABundleManager.get_all_statisticsResponse">
+	<part name="return" type="tns:System.CABundleManager.CABundleManagerStatistics"/>
+</message>
+
+<message name="System.CABundleManager.get_descriptionRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+</message>
+<message name="System.CABundleManager.get_descriptionResponse">
 	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
-<message name="LocalLB.ProfileHttpClass.get_descriptionRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.get_exclude_bundleRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.get_descriptionResponse">
+<message name="System.CABundleManager.get_exclude_bundleResponse">
+	<part name="return" type="tns:Common.StringSequenceSequence"/>
+</message>
+
+<message name="System.CABundleManager.get_exclude_urlRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+</message>
+<message name="System.CABundleManager.get_exclude_urlResponse">
+	<part name="return" type="tns:Common.StringSequenceSequence"/>
+</message>
+
+<message name="System.CABundleManager.get_include_bundleRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+</message>
+<message name="System.CABundleManager.get_include_bundleResponse">
+	<part name="return" type="tns:Common.StringSequenceSequence"/>
+</message>
+
+<message name="System.CABundleManager.get_include_urlRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+</message>
+<message name="System.CABundleManager.get_include_urlResponse">
+	<part name="return" type="tns:Common.StringSequenceSequence"/>
+</message>
+
+<message name="System.CABundleManager.get_listRequest">
+</message>
+<message name="System.CABundleManager.get_listResponse">
 	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
-<message name="LocalLB.ProfileHttpClass.get_header_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.get_proxy_portRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.get_header_match_patternResponse">
-	<part name="return" type="tns:LocalLB.ProfileMatchPatternStringArraySequence"/>
-</message>
-
-<message name="LocalLB.ProfileHttpClass.get_host_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.get_host_match_patternResponse">
-	<part name="return" type="tns:LocalLB.ProfileMatchPatternStringArraySequence"/>
+<message name="System.CABundleManager.get_proxy_portResponse">
+	<part name="return" type="tns:Common.PortSequence"/>
 </message>
 
-<message name="LocalLB.ProfileHttpClass.get_listRequest">
+<message name="System.CABundleManager.get_proxy_serverRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.get_listResponse">
+<message name="System.CABundleManager.get_proxy_serverResponse">
 	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
-<message name="LocalLB.ProfileHttpClass.get_path_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.get_statisticsRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.get_path_match_patternResponse">
-	<part name="return" type="tns:LocalLB.ProfileMatchPatternStringArraySequence"/>
-</message>
-
-<message name="LocalLB.ProfileHttpClass.get_pool_nameRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.get_pool_nameResponse">
-	<part name="return" type="tns:LocalLB.ProfileStringSequence"/>
+<message name="System.CABundleManager.get_statisticsResponse">
+	<part name="return" type="tns:System.CABundleManager.CABundleManagerStatistics"/>
 </message>
 
-<message name="LocalLB.ProfileHttpClass.get_redirect_locationRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.get_timeoutRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.get_redirect_locationResponse">
-	<part name="return" type="tns:LocalLB.ProfileStringSequence"/>
-</message>
-
-<message name="LocalLB.ProfileHttpClass.get_rewrite_urlRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.get_rewrite_urlResponse">
-	<part name="return" type="tns:LocalLB.ProfileStringSequence"/>
+<message name="System.CABundleManager.get_timeoutResponse">
+	<part name="return" type="tns:Common.ULongSequence"/>
 </message>
 
-<message name="LocalLB.ProfileHttpClass.get_statisticsRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.get_trusted_ca_bundleRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.get_statisticsResponse">
-	<part name="return" type="tns:LocalLB.ProfileHttpClass.ProfileHttpClassStatistics"/>
-</message>
-
-<message name="LocalLB.ProfileHttpClass.get_statistics_by_virtualRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="virtual_names" type="tns:Common.StringSequenceSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.get_statistics_by_virtualResponse">
-	<part name="return" type="tns:LocalLB.ProfileStatisticsByVirtual"/>
+<message name="System.CABundleManager.get_trusted_ca_bundleResponse">
+	<part name="return" type="tns:Common.StringSequence"/>
 </message>
 
-<message name="LocalLB.ProfileHttpClass.get_versionRequest">
+<message name="System.CABundleManager.get_update_intervalRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.get_versionResponse">
+<message name="System.CABundleManager.get_update_intervalResponse">
+	<part name="return" type="tns:Common.ULongSequence"/>
+</message>
+
+<message name="System.CABundleManager.get_versionRequest">
+</message>
+<message name="System.CABundleManager.get_versionResponse">
 	<part name="return" type="xsd:string"/>
 </message>
 
-<message name="LocalLB.ProfileHttpClass.get_web_accelerator_module_enabled_stateRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.remove_all_exclude_bundlesRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.get_web_accelerator_module_enabled_stateResponse">
-	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
-</message>
-
-<message name="LocalLB.ProfileHttpClass.is_base_profileRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.is_base_profileResponse">
-	<part name="return" type="tns:Common.BooleanSequence"/>
+<message name="System.CABundleManager.remove_all_exclude_bundlesResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.is_system_profileRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.remove_all_exclude_urlsRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.is_system_profileResponse">
-	<part name="return" type="tns:Common.BooleanSequence"/>
-</message>
-
-<message name="LocalLB.ProfileHttpClass.remove_cookie_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="patterns" type="tns:LocalLB.MatchPatternStringSequenceSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.remove_cookie_match_patternResponse">
+<message name="System.CABundleManager.remove_all_exclude_urlsResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.remove_header_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="patterns" type="tns:LocalLB.MatchPatternStringSequenceSequence"/>
+<message name="System.CABundleManager.remove_all_include_bundlesRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.remove_header_match_patternResponse">
-</message>
-
-<message name="LocalLB.ProfileHttpClass.remove_host_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="patterns" type="tns:LocalLB.MatchPatternStringSequenceSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.remove_host_match_patternResponse">
+<message name="System.CABundleManager.remove_all_include_bundlesResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.remove_path_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="patterns" type="tns:LocalLB.MatchPatternStringSequenceSequence"/>
+<message name="System.CABundleManager.remove_all_include_urlsRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.remove_path_match_patternResponse">
-</message>
-
-<message name="LocalLB.ProfileHttpClass.reset_statisticsRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.reset_statisticsResponse">
+<message name="System.CABundleManager.remove_all_include_urlsResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.reset_statistics_by_virtualRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="virtual_names" type="tns:Common.StringSequenceSequence"/>
+<message name="System.CABundleManager.remove_exclude_bundleRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="bundles" type="tns:Common.StringSequenceSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.reset_statistics_by_virtualResponse">
-</message>
-
-<message name="LocalLB.ProfileHttpClass.set_application_security_module_enabled_stateRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.set_application_security_module_enabled_stateResponse">
+<message name="System.CABundleManager.remove_exclude_bundleResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.set_default_cookie_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.remove_exclude_urlRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="urls" type="tns:Common.StringSequenceSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.set_default_cookie_match_patternResponse">
-</message>
-
-<message name="LocalLB.ProfileHttpClass.set_default_header_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.set_default_header_match_patternResponse">
+<message name="System.CABundleManager.remove_exclude_urlResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.set_default_host_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.remove_include_bundleRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="bundles" type="tns:Common.StringSequenceSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.set_default_host_match_patternResponse">
-</message>
-
-<message name="LocalLB.ProfileHttpClass.set_default_path_match_patternRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.set_default_path_match_patternResponse">
+<message name="System.CABundleManager.remove_include_bundleResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.set_default_profileRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="defaults" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.remove_include_urlRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="urls" type="tns:Common.StringSequenceSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.set_default_profileResponse">
+<message name="System.CABundleManager.remove_include_urlResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.set_descriptionRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
+<message name="System.CABundleManager.set_descriptionRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
 	<part name="descriptions" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.set_descriptionResponse">
+<message name="System.CABundleManager.set_descriptionResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.set_pool_nameRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="pool_names" type="tns:LocalLB.ProfileStringSequence"/>
+<message name="System.CABundleManager.set_proxy_portRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="ports" type="tns:Common.PortSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.set_pool_nameResponse">
-</message>
-
-<message name="LocalLB.ProfileHttpClass.set_redirect_locationRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="redirect_locations" type="tns:LocalLB.ProfileStringSequence"/>
-</message>
-<message name="LocalLB.ProfileHttpClass.set_redirect_locationResponse">
+<message name="System.CABundleManager.set_proxy_portResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.set_rewrite_urlRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="urls" type="tns:LocalLB.ProfileStringSequence"/>
+<message name="System.CABundleManager.set_proxy_serverRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="servers" type="tns:Common.StringSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.set_rewrite_urlResponse">
+<message name="System.CABundleManager.set_proxy_serverResponse">
 </message>
 
-<message name="LocalLB.ProfileHttpClass.set_web_accelerator_module_enabled_stateRequest">
-	<part name="profile_names" type="tns:Common.StringSequence"/>
-	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+<message name="System.CABundleManager.set_timeoutRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="timeouts" type="tns:Common.ULongSequence"/>
 </message>
-<message name="LocalLB.ProfileHttpClass.set_web_accelerator_module_enabled_stateResponse">
+<message name="System.CABundleManager.set_timeoutResponse">
+</message>
+
+<message name="System.CABundleManager.set_trusted_ca_bundleRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="trusted_ca_bundles" type="tns:Common.StringSequence"/>
+</message>
+<message name="System.CABundleManager.set_trusted_ca_bundleResponse">
+</message>
+
+<message name="System.CABundleManager.set_update_intervalRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="intervals" type="tns:Common.ULongSequence"/>
+</message>
+<message name="System.CABundleManager.set_update_intervalResponse">
+</message>
+
+<message name="System.CABundleManager.set_update_nowRequest">
+	<part name="managers" type="tns:Common.StringSequence"/>
+	<part name="update_now" type="tns:System.CABundleManager.UpdateNowCommandSequence"/>
+</message>
+<message name="System.CABundleManager.set_update_nowResponse">
 </message>
 
 <!-- portType -->
 
-<portType name="LocalLB.ProfileHttpClassPortType">
-	<operation name="add_cookie_match_pattern">
-	<documentation>
- Adds to the lists of patterns used to match the cookies.
- 
+<portType name="System.CABundleManagerPortType">
+	<operation name="add_exclude_bundle">
+  	<documentation>
+ Adds/associates CA-bundle managers to the specified
+ CA-bundles in the exclude-bundle sets.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.add_cookie_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.add_cookie_match_patternResponse"/>
+		<input message="tns:System.CABundleManager.add_exclude_bundleRequest"/>
+		<output message="tns:System.CABundleManager.add_exclude_bundleResponse"/>
 	</operation>
-	<operation name="add_header_match_pattern">
+	<operation name="add_exclude_url">
 	<documentation>
- Adds to the lists of patterns used to match the headers.
- 
+ Adds/associates individual CA-bundle manager to the
+ specified remote CA-bundle URLs in the exclude-url set.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.add_header_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.add_header_match_patternResponse"/>
+		<input message="tns:System.CABundleManager.add_exclude_urlRequest"/>
+		<output message="tns:System.CABundleManager.add_exclude_urlResponse"/>
 	</operation>
-	<operation name="add_host_match_pattern">
+	<operation name="add_include_bundle">
 	<documentation>
- Adds to the lists of patterns used to match the hosts.
- 
+ Adds/associates CA-bundle managers to the specified
+ CA-bundles in the include-bundle sets.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.add_host_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.add_host_match_patternResponse"/>
+		<input message="tns:System.CABundleManager.add_include_bundleRequest"/>
+		<output message="tns:System.CABundleManager.add_include_bundleResponse"/>
 	</operation>
-	<operation name="add_path_match_pattern">
+	<operation name="add_include_url">
 	<documentation>
- Adds to the lists of patterns used to match the URI paths.
- 
+ Adds/associates individual CA-bundle manager to the
+ specified remote CA-bundle URLs in the include-url set.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.add_path_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.add_path_match_patternResponse"/>
+		<input message="tns:System.CABundleManager.add_include_urlRequest"/>
+		<output message="tns:System.CABundleManager.add_include_urlResponse"/>
 	</operation>
 	<operation name="create">
 	<documentation>
- Creates the specified HTTP class profiles.
- 
+ Creates the specified CA-bundle managers with default
+ settings. A CA-bundle manager manages the automatic update
+ of a CA-bundle, which is identified with an additional
+ suffix .crt to the CA-bundle manager name.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.createRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.createResponse"/>
+		<input message="tns:System.CABundleManager.createRequest"/>
+		<output message="tns:System.CABundleManager.createResponse"/>
 	</operation>
-	<operation name="delete_all_profiles">
+	<operation name="delete_all_managers">
 	<documentation>
- Deletes all HTTP class profiles.
- 
+ Deletes all CA-bundle managers.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.delete_all_profilesRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.delete_all_profilesResponse"/>
+		<input message="tns:System.CABundleManager.delete_all_managersRequest"/>
+		<output message="tns:System.CABundleManager.delete_all_managersResponse"/>
 	</operation>
-	<operation name="delete_profile">
+	<operation name="delete_manager">
 	<documentation>
- Deletes the specified HTTP class profiles.
- 
+ Deletes the specified CA-bundle managers.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.delete_profileRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.delete_profileResponse"/>
+		<input message="tns:System.CABundleManager.delete_managerRequest"/>
+		<output message="tns:System.CABundleManager.delete_managerResponse"/>
 	</operation>
 	<operation name="get_all_statistics">
 	<documentation>
- Gets the statistics for all the profiles.
- 
+ Gets the statistics for all CA-bundle managers.
 
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_all_statisticsRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_all_statisticsResponse"/>
-	</operation>
-	<operation name="get_application_security_module_enabled_state">
-	<documentation>
- Gets the states that specify whether specified classes are Application Security Module classes.
- 
-
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_application_security_module_enabled_stateRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_application_security_module_enabled_stateResponse"/>
-	</operation>
-	<operation name="get_cookie_match_pattern">
-	<documentation>
- Gets the lists of patterns used to match the cookies.
- 
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_cookie_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_cookie_match_patternResponse"/>
-	</operation>
-	<operation name="get_default_profile">
-	<documentation>
- Gets the names of the default profiles from which the specified profiles will derive
- default values for its attributes.
- 
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_default_profileRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_default_profileResponse"/>
+		<input message="tns:System.CABundleManager.get_all_statisticsRequest"/>
+		<output message="tns:System.CABundleManager.get_all_statisticsResponse"/>
 	</operation>
 	<operation name="get_description">
 	<documentation>
- Gets the descriptions for a set of HTTP class profiles.
+ Gets the descriptions of the specified CA-bundle managers.
 
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_descriptionRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_descriptionResponse"/>
+		<input message="tns:System.CABundleManager.get_descriptionRequest"/>
+		<output message="tns:System.CABundleManager.get_descriptionResponse"/>
 	</operation>
-	<operation name="get_header_match_pattern">
+	<operation name="get_exclude_bundle">
 	<documentation>
- Gets the lists of patterns used to match the headers.
- 
+ Gets the names of the CA-bundles for the exclude-bundle
+ sets of specified CA-bundle managers. The union of the
+ certificates from all the CA-bundles will be excluded from
+ the final certificate set of the CA-bundle, respectively.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_header_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_header_match_patternResponse"/>
+		<input message="tns:System.CABundleManager.get_exclude_bundleRequest"/>
+		<output message="tns:System.CABundleManager.get_exclude_bundleResponse"/>
 	</operation>
-	<operation name="get_host_match_pattern">
+	<operation name="get_exclude_url">
 	<documentation>
- Gets the lists of patterns used to match the hosts.
- 
+ Gets the names of the CA-bundles for the exclude-url sets
+ of specified CA-bundle managers. The union of the
+ certificates from all the remote CA-bundle URLs will be
+ excluded in the final certificate set of the generated
+ CA-bundle.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_host_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_host_match_patternResponse"/>
+		<input message="tns:System.CABundleManager.get_exclude_urlRequest"/>
+		<output message="tns:System.CABundleManager.get_exclude_urlResponse"/>
+	</operation>
+	<operation name="get_include_bundle">
+	<documentation>
+ Gets the names of the CA-bundles for the include-bundle
+ sets of specified CA-bundle managers. The union of the
+ certificates from all the CA-bundles will be included from
+ the final certificate set of the CA-bundle, respectively.
+
+        	</documentation>
+		<input message="tns:System.CABundleManager.get_include_bundleRequest"/>
+		<output message="tns:System.CABundleManager.get_include_bundleResponse"/>
+	</operation>
+	<operation name="get_include_url">
+	<documentation>
+ Gets the names of the CA-bundles for the include-url sets
+ of specified CA-bundle managers. The union of the
+ certificates from all the remote CA-bundle URLs will be
+ included in the final certificate set of the generated
+ CA-bundle.
+
+        	</documentation>
+		<input message="tns:System.CABundleManager.get_include_urlRequest"/>
+		<output message="tns:System.CABundleManager.get_include_urlResponse"/>
 	</operation>
 	<operation name="get_list">
 	<documentation>
- Gets a list of all HTTP class profiles.
- 
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_listRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_listResponse"/>
-	</operation>
-	<operation name="get_path_match_pattern">
-	<documentation>
- Gets the lists of patterns used to match the URI paths.
- 
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_path_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_path_match_patternResponse"/>
-	</operation>
-	<operation name="get_pool_name">
-	<documentation>
- Gets the pool names to use when the specified classes match.
- 
+ Gets the names of all CA-bundle managers.
 
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_pool_nameRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_pool_nameResponse"/>
+		<input message="tns:System.CABundleManager.get_listRequest"/>
+		<output message="tns:System.CABundleManager.get_listResponse"/>
 	</operation>
-	<operation name="get_redirect_location">
+	<operation name="get_proxy_port">
 	<documentation>
- Gets the string (which may include a TCL expression) to indicates where to
- redirect the original HTTP request once a match occurs.  For example, to redirect
- requests to https://myserver.com to http://myotherserver.com.
- 
+ Gets the proxy-server port numbers of the specified CA-bundle managers.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_redirect_locationRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_redirect_locationResponse"/>
+		<input message="tns:System.CABundleManager.get_proxy_portRequest"/>
+		<output message="tns:System.CABundleManager.get_proxy_portResponse"/>
 	</operation>
-	<operation name="get_rewrite_url">
+	<operation name="get_proxy_server">
 	<documentation>
- Gets the strings (which may include a TCL expression) with which to rewrite the URLs.
- 
+ Gets the proxy-server host names or IP addresses of the
+ specified CA-bundle managers.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_rewrite_urlRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_rewrite_urlResponse"/>
+		<input message="tns:System.CABundleManager.get_proxy_serverRequest"/>
+		<output message="tns:System.CABundleManager.get_proxy_serverResponse"/>
 	</operation>
 	<operation name="get_statistics">
 	<documentation>
- Gets the statistics for the specified profiles.
- 
+ Gets the statistics for the specified CA-bundle managers.
 
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_statisticsRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_statisticsResponse"/>
+		<input message="tns:System.CABundleManager.get_statisticsRequest"/>
+		<output message="tns:System.CABundleManager.get_statisticsResponse"/>
 	</operation>
-	<operation name="get_statistics_by_virtual">
+	<operation name="get_timeout">
 	<documentation>
- Gets the statistics for the specified profiles, by virtual server.
- 
+ Gets the timeout values for the specified CA-bundle managers.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_statistics_by_virtualRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_statistics_by_virtualResponse"/>
+		<input message="tns:System.CABundleManager.get_timeoutRequest"/>
+		<output message="tns:System.CABundleManager.get_timeoutResponse"/>
+	</operation>
+	<operation name="get_trusted_ca_bundle">
+	<documentation>
+ Gets the trusted CA-bundles that are used to download URL
+ resource for the CA-bundle manager.
+
+        	</documentation>
+		<input message="tns:System.CABundleManager.get_trusted_ca_bundleRequest"/>
+		<output message="tns:System.CABundleManager.get_trusted_ca_bundleResponse"/>
+	</operation>
+	<operation name="get_update_interval">
+	<documentation>
+ Gets the update intervals for the specified CA-bundle managers.
+
+        	</documentation>
+		<input message="tns:System.CABundleManager.get_update_intervalRequest"/>
+		<output message="tns:System.CABundleManager.get_update_intervalResponse"/>
 	</operation>
 	<operation name="get_version">
 	<documentation>
  Gets the version information for this interface.
 
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_versionRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_versionResponse"/>
+		<input message="tns:System.CABundleManager.get_versionRequest"/>
+		<output message="tns:System.CABundleManager.get_versionResponse"/>
 	</operation>
-	<operation name="get_web_accelerator_module_enabled_state">
+	<operation name="remove_all_exclude_bundles">
 	<documentation>
- Gets the states that specify whether specified classes are Web Accelerator classes.
+ Removes all CA-bundles from the exclude-bundle sets of
+ specified CA-bundle managers.
 
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.get_web_accelerator_module_enabled_stateRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.get_web_accelerator_module_enabled_stateResponse"/>
+		<input message="tns:System.CABundleManager.remove_all_exclude_bundlesRequest"/>
+		<output message="tns:System.CABundleManager.remove_all_exclude_bundlesResponse"/>
 	</operation>
-	<operation name="is_base_profile">
+	<operation name="remove_all_exclude_urls">
 	<documentation>
- Determines whether the specified HTTP class profiles are base
- profiles.  A base profile sits at the base of the profile's
- inheritance tree, supplying the defaults for every profile derived
- from it.  (See also is_system_profile).
+ Removes all CA-bundle URLs from the exclude-url sets of
+ specified CA-bundle managers.
 
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.is_base_profileRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.is_base_profileResponse"/>
+		<input message="tns:System.CABundleManager.remove_all_exclude_urlsRequest"/>
+		<output message="tns:System.CABundleManager.remove_all_exclude_urlsResponse"/>
 	</operation>
-	<operation name="is_system_profile">
+	<operation name="remove_all_include_bundles">
 	<documentation>
- Determines whether the specified HTTP class profiles are system
- profiles.  A system profile is a profile pre-configured on the
- system, ready for use.  Non-system profiles are profiles created or
- modified by a user.  Note that if a system profile is modified, it
- is no longer considered a system profile.  (See also
- is_base_profile).
+ Removes all CA-bundles from the include-bundle sets of
+ specified CA-bundle managers.
 
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.is_system_profileRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.is_system_profileResponse"/>
+		<input message="tns:System.CABundleManager.remove_all_include_bundlesRequest"/>
+		<output message="tns:System.CABundleManager.remove_all_include_bundlesResponse"/>
 	</operation>
-	<operation name="remove_cookie_match_pattern">
+	<operation name="remove_all_include_urls">
 	<documentation>
- Removes from the lists of patterns used to match the cookies.
- 
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.remove_cookie_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.remove_cookie_match_patternResponse"/>
-	</operation>
-	<operation name="remove_header_match_pattern">
-	<documentation>
- Removes from the lists of patterns used to match the headers.
- 
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.remove_header_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.remove_header_match_patternResponse"/>
-	</operation>
-	<operation name="remove_host_match_pattern">
-	<documentation>
- Removes from the lists of patterns used to match the hosts.
- 
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.remove_host_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.remove_host_match_patternResponse"/>
-	</operation>
-	<operation name="remove_path_match_pattern">
-	<documentation>
- Removes from the lists of patterns used to match the URI paths.
- 
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.remove_path_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.remove_path_match_patternResponse"/>
-	</operation>
-	<operation name="reset_statistics">
-	<documentation>
- Resets the statistics for the specified profiles.
- 
+ Removes all CA-bundle URLs from the include-url sets of
+ specified CA-bundle managers.
 
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.reset_statisticsRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.reset_statisticsResponse"/>
+		<input message="tns:System.CABundleManager.remove_all_include_urlsRequest"/>
+		<output message="tns:System.CABundleManager.remove_all_include_urlsResponse"/>
 	</operation>
-	<operation name="reset_statistics_by_virtual">
+	<operation name="remove_exclude_bundle">
 	<documentation>
- Resets the statistics for the specified profiles, for
- specified virtual servers.
- 
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.reset_statistics_by_virtualRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.reset_statistics_by_virtualResponse"/>
-	</operation>
-	<operation name="set_application_security_module_enabled_state">
-	<documentation>
- Sets the states that specify whether specified classes are Application Security Module classes.
- 
+ Removes the CA-bundles from the specified CA-bundle managers.
 
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.set_application_security_module_enabled_stateRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.set_application_security_module_enabled_stateResponse"/>
+		<input message="tns:System.CABundleManager.remove_exclude_bundleRequest"/>
+		<output message="tns:System.CABundleManager.remove_exclude_bundleResponse"/>
 	</operation>
-	<operation name="set_default_cookie_match_pattern">
+	<operation name="remove_exclude_url">
 	<documentation>
- Resets the lists to parent defaults.
- 
+ Removes the remote CA-bundle URLs from exclude-url sets of
+ the specified CA-bundle managers.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.set_default_cookie_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.set_default_cookie_match_patternResponse"/>
+		<input message="tns:System.CABundleManager.remove_exclude_urlRequest"/>
+		<output message="tns:System.CABundleManager.remove_exclude_urlResponse"/>
 	</operation>
-	<operation name="set_default_header_match_pattern">
+	<operation name="remove_include_bundle">
 	<documentation>
- Resets the lists to parent defaults.
- 
+ Removes the CA-bundles from the include-bundle sets of the
+ specified CA-bundle managers.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.set_default_header_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.set_default_header_match_patternResponse"/>
+		<input message="tns:System.CABundleManager.remove_include_bundleRequest"/>
+		<output message="tns:System.CABundleManager.remove_include_bundleResponse"/>
 	</operation>
-	<operation name="set_default_host_match_pattern">
+	<operation name="remove_include_url">
 	<documentation>
- Resets the lists to parent defaults.
- 
+ Removes the remote CA-bundle URLs from include-url sets of
+ the specified CA-bundle managers.
+
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.set_default_host_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.set_default_host_match_patternResponse"/>
-	</operation>
-	<operation name="set_default_path_match_pattern">
-	<documentation>
- Resets the lists to parent defaults.
- 
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.set_default_path_match_patternRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.set_default_path_match_patternResponse"/>
-	</operation>
-	<operation name="set_default_profile">
-	<documentation>
- Sets the names of the default profiles from which the specified profiles will derive
- default values for its attributes.
- 
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.set_default_profileRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.set_default_profileResponse"/>
+		<input message="tns:System.CABundleManager.remove_include_urlRequest"/>
+		<output message="tns:System.CABundleManager.remove_include_urlResponse"/>
 	</operation>
 	<operation name="set_description">
 	<documentation>
- Sets the description for a set of HTTP class profiles.
-
- This is an arbitrary field which can be used for any purpose.
+ Sets the descriptions for the specified CA-bundle managers.
 
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.set_descriptionRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.set_descriptionResponse"/>
+		<input message="tns:System.CABundleManager.set_descriptionRequest"/>
+		<output message="tns:System.CABundleManager.set_descriptionResponse"/>
 	</operation>
-	<operation name="set_pool_name">
+	<operation name="set_proxy_port">
 	<documentation>
- Sets the pool names to use when the specified classes match.
- 
+ Sets the proxy-server port numbers for the specified
+ CA-bundle managers. The default port number is 3128.
 
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.set_pool_nameRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.set_pool_nameResponse"/>
+		<input message="tns:System.CABundleManager.set_proxy_portRequest"/>
+		<output message="tns:System.CABundleManager.set_proxy_portResponse"/>
 	</operation>
-	<operation name="set_redirect_location">
+	<operation name="set_proxy_server">
 	<documentation>
- Sets the string (which may include a TCL expression) to indicates where to
- redirect the original HTTP request once a match occurs.  For example, to redirect
- requests to https://myserver.com to http://myotherserver.com.
- 
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.set_redirect_locationRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.set_redirect_locationResponse"/>
-	</operation>
-	<operation name="set_rewrite_url">
-	<documentation>
- Sets the strings (which may include a TCL expression) with which to rewrite the URLs.
- 
-        	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.set_rewrite_urlRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.set_rewrite_urlResponse"/>
-	</operation>
-	<operation name="set_web_accelerator_module_enabled_state">
-	<documentation>
- Sets the states that specify whether specified classes are Web Accelerator classes.
+ Sets the proxy-server host names or IP addresses for the
+ specified CA-bundle managers. Only HTTP proxies are
+ supported. Users may optionally prefix the proxy-server
+ with "http://".
 
         	</documentation>
-		<input message="tns:LocalLB.ProfileHttpClass.set_web_accelerator_module_enabled_stateRequest"/>
-		<output message="tns:LocalLB.ProfileHttpClass.set_web_accelerator_module_enabled_stateResponse"/>
+		<input message="tns:System.CABundleManager.set_proxy_serverRequest"/>
+		<output message="tns:System.CABundleManager.set_proxy_serverResponse"/>
+	</operation>
+	<operation name="set_timeout">
+	<documentation>
+ Sets the timeout values in seconds for the specified
+ CA-bundle managers. This is the time to expire a URL
+ download operation, which defaults to 8 seconds, and ranges
+ from 1 to 3600 (1 hour).
+
+        	</documentation>
+		<input message="tns:System.CABundleManager.set_timeoutRequest"/>
+		<output message="tns:System.CABundleManager.set_timeoutResponse"/>
+	</operation>
+	<operation name="set_trusted_ca_bundle">
+	<documentation>
+ Sets the trusted CA-bundles for downloading URL resources
+ for the CA-bundle managers. The trusted CA-bundles are the
+ CA certificates for remote hosts.
+
+        	</documentation>
+		<input message="tns:System.CABundleManager.set_trusted_ca_bundleRequest"/>
+		<output message="tns:System.CABundleManager.set_trusted_ca_bundleResponse"/>
+	</operation>
+	<operation name="set_update_interval">
+	<documentation>
+ Sets the update intervals for the specified CA-bundle
+ managers. This is the time in days between refreshing the
+ CA-bundles managed by the CA-bundle managers. The defaults
+ is 0. A value of 0 disables automatically updating the
+ CA-bundle, but users may still manually update the
+ CA-bundle using the set_update_now method.
+
+        	</documentation>
+		<input message="tns:System.CABundleManager.set_update_intervalRequest"/>
+		<output message="tns:System.CABundleManager.set_update_intervalResponse"/>
+	</operation>
+	<operation name="set_update_now">
+	<documentation>
+ Instructs the specified CA-bundle managers whether to
+ update the corresponding CA-bundles immediately. A YES
+ command triggers immediate manual update of the CA-bundle
+ by the CA-bundle manager. A NO command does not trigger an
+ immediate update of the CA-bundle, but the CA-bundle may
+ still be updated according to the update interval of the
+ CA-bundle manager.
+
+        	</documentation>
+		<input message="tns:System.CABundleManager.set_update_nowRequest"/>
+		<output message="tns:System.CABundleManager.set_update_nowResponse"/>
 	</operation>
 </portType>
 
 <!-- binding -->
 
-<binding name="LocalLB.ProfileHttpClassBinding" type="tns:LocalLB.ProfileHttpClassPortType">
+<binding name="System.CABundleManagerBinding" type="tns:System.CABundleManagerPortType">
 	<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-	<operation name="add_cookie_match_pattern">
+	<operation name="add_exclude_bundle">
 	<documentation>
- Adds to the lists of patterns used to match the cookies.
- 
+ Adds/associates CA-bundle managers to the specified
+ CA-bundles in the exclude-bundle sets.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="add_header_match_pattern">
+	<operation name="add_exclude_url">
 	<documentation>
- Adds to the lists of patterns used to match the headers.
- 
+ Adds/associates individual CA-bundle manager to the
+ specified remote CA-bundle URLs in the exclude-url set.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="add_host_match_pattern">
+	<operation name="add_include_bundle">
 	<documentation>
- Adds to the lists of patterns used to match the hosts.
- 
+ Adds/associates CA-bundle managers to the specified
+ CA-bundles in the include-bundle sets.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="add_path_match_pattern">
+	<operation name="add_include_url">
 	<documentation>
- Adds to the lists of patterns used to match the URI paths.
- 
+ Adds/associates individual CA-bundle manager to the
+ specified remote CA-bundle URLs in the include-url set.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
 	<operation name="create">
 	<documentation>
- Creates the specified HTTP class profiles.
- 
+ Creates the specified CA-bundle managers with default
+ settings. A CA-bundle manager manages the automatic update
+ of a CA-bundle, which is identified with an additional
+ suffix .crt to the CA-bundle manager name.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="delete_all_profiles">
+	<operation name="delete_all_managers">
 	<documentation>
- Deletes all HTTP class profiles.
- 
+ Deletes all CA-bundle managers.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="delete_profile">
+	<operation name="delete_manager">
 	<documentation>
- Deletes the specified HTTP class profiles.
- 
+ Deletes the specified CA-bundle managers.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
 	<operation name="get_all_statistics">
 	<documentation>
- Gets the statistics for all the profiles.
- 
+ Gets the statistics for all CA-bundle managers.
 
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</output>
-	</operation>
-
-	<operation name="get_application_security_module_enabled_state">
-	<documentation>
- Gets the states that specify whether specified classes are Application Security Module classes.
- 
-
-        	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
-		<input>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</input>
-		<output>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</output>
-	</operation>
-
-	<operation name="get_cookie_match_pattern">
-	<documentation>
- Gets the lists of patterns used to match the cookies.
- 
-        	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
-		<input>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</input>
-		<output>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</output>
-	</operation>
-
-	<operation name="get_default_profile">
-	<documentation>
- Gets the names of the default profiles from which the specified profiles will derive
- default values for its attributes.
- 
-        	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
-		<input>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</input>
-		<output>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
 	<operation name="get_description">
 	<documentation>
- Gets the descriptions for a set of HTTP class profiles.
+ Gets the descriptions of the specified CA-bundle managers.
 
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="get_header_match_pattern">
+	<operation name="get_exclude_bundle">
 	<documentation>
- Gets the lists of patterns used to match the headers.
- 
+ Gets the names of the CA-bundles for the exclude-bundle
+ sets of specified CA-bundle managers. The union of the
+ certificates from all the CA-bundles will be excluded from
+ the final certificate set of the CA-bundle, respectively.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="get_host_match_pattern">
+	<operation name="get_exclude_url">
 	<documentation>
- Gets the lists of patterns used to match the hosts.
- 
+ Gets the names of the CA-bundles for the exclude-url sets
+ of specified CA-bundle managers. The union of the
+ certificates from all the remote CA-bundle URLs will be
+ excluded in the final certificate set of the generated
+ CA-bundle.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_include_bundle">
+	<documentation>
+ Gets the names of the CA-bundles for the include-bundle
+ sets of specified CA-bundle managers. The union of the
+ certificates from all the CA-bundles will be included from
+ the final certificate set of the CA-bundle, respectively.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/CABundleManager"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/CABundleManager"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_include_url">
+	<documentation>
+ Gets the names of the CA-bundles for the include-url sets
+ of specified CA-bundle managers. The union of the
+ certificates from all the remote CA-bundle URLs will be
+ included in the final certificate set of the generated
+ CA-bundle.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/CABundleManager"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
 	<operation name="get_list">
 	<documentation>
- Gets a list of all HTTP class profiles.
- 
+ Gets the names of all CA-bundle managers.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="get_path_match_pattern">
+	<operation name="get_proxy_port">
 	<documentation>
- Gets the lists of patterns used to match the URI paths.
- 
+ Gets the proxy-server port numbers of the specified CA-bundle managers.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="get_pool_name">
+	<operation name="get_proxy_server">
 	<documentation>
- Gets the pool names to use when the specified classes match.
- 
+ Gets the proxy-server host names or IP addresses of the
+ specified CA-bundle managers.
 
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</output>
-	</operation>
-
-	<operation name="get_redirect_location">
-	<documentation>
- Gets the string (which may include a TCL expression) to indicates where to
- redirect the original HTTP request once a match occurs.  For example, to redirect
- requests to https://myserver.com to http://myotherserver.com.
- 
-        	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
-		<input>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</input>
-		<output>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</output>
-	</operation>
-
-	<operation name="get_rewrite_url">
-	<documentation>
- Gets the strings (which may include a TCL expression) with which to rewrite the URLs.
- 
-        	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
-		<input>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</input>
-		<output>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
 	<operation name="get_statistics">
 	<documentation>
- Gets the statistics for the specified profiles.
- 
+ Gets the statistics for the specified CA-bundle managers.
 
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="get_statistics_by_virtual">
+	<operation name="get_timeout">
 	<documentation>
- Gets the statistics for the specified profiles, by virtual server.
- 
+ Gets the timeout values for the specified CA-bundle managers.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_trusted_ca_bundle">
+	<documentation>
+ Gets the trusted CA-bundles that are used to download URL
+ resource for the CA-bundle manager.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/CABundleManager"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/CABundleManager"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_update_interval">
+	<documentation>
+ Gets the update intervals for the specified CA-bundle managers.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/CABundleManager"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
@@ -9347,434 +9215,344 @@ All other trademarks mentioned in this document are the property of their respec
  Gets the version information for this interface.
 
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="get_web_accelerator_module_enabled_state">
+	<operation name="remove_all_exclude_bundles">
 	<documentation>
- Gets the states that specify whether specified classes are Web Accelerator classes.
+ Removes all CA-bundles from the exclude-bundle sets of
+ specified CA-bundle managers.
 
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="is_base_profile">
+	<operation name="remove_all_exclude_urls">
 	<documentation>
- Determines whether the specified HTTP class profiles are base
- profiles.  A base profile sits at the base of the profile's
- inheritance tree, supplying the defaults for every profile derived
- from it.  (See also is_system_profile).
+ Removes all CA-bundle URLs from the exclude-url sets of
+ specified CA-bundle managers.
 
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="is_system_profile">
+	<operation name="remove_all_include_bundles">
 	<documentation>
- Determines whether the specified HTTP class profiles are system
- profiles.  A system profile is a profile pre-configured on the
- system, ready for use.  Non-system profiles are profiles created or
- modified by a user.  Note that if a system profile is modified, it
- is no longer considered a system profile.  (See also
- is_base_profile).
+ Removes all CA-bundles from the include-bundle sets of
+ specified CA-bundle managers.
 
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="remove_cookie_match_pattern">
+	<operation name="remove_all_include_urls">
 	<documentation>
- Removes from the lists of patterns used to match the cookies.
- 
+ Removes all CA-bundle URLs from the include-url sets of
+ specified CA-bundle managers.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="remove_header_match_pattern">
+	<operation name="remove_exclude_bundle">
 	<documentation>
- Removes from the lists of patterns used to match the headers.
- 
+ Removes the CA-bundles from the specified CA-bundle managers.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="remove_host_match_pattern">
+	<operation name="remove_exclude_url">
 	<documentation>
- Removes from the lists of patterns used to match the hosts.
- 
+ Removes the remote CA-bundle URLs from exclude-url sets of
+ the specified CA-bundle managers.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="remove_path_match_pattern">
+	<operation name="remove_include_bundle">
 	<documentation>
- Removes from the lists of patterns used to match the URI paths.
- 
+ Removes the CA-bundles from the include-bundle sets of the
+ specified CA-bundle managers.
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="reset_statistics">
+	<operation name="remove_include_url">
 	<documentation>
- Resets the statistics for the specified profiles.
- 
+ Removes the remote CA-bundle URLs from include-url sets of
+ the specified CA-bundle managers.
 
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</output>
-	</operation>
-
-	<operation name="reset_statistics_by_virtual">
-	<documentation>
- Resets the statistics for the specified profiles, for
- specified virtual servers.
- 
-        	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
-		<input>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</input>
-		<output>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</output>
-	</operation>
-
-	<operation name="set_application_security_module_enabled_state">
-	<documentation>
- Sets the states that specify whether specified classes are Application Security Module classes.
- 
-
-        	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
-		<input>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</input>
-		<output>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</output>
-	</operation>
-
-	<operation name="set_default_cookie_match_pattern">
-	<documentation>
- Resets the lists to parent defaults.
- 
-        	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
-		<input>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</input>
-		<output>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</output>
-	</operation>
-
-	<operation name="set_default_header_match_pattern">
-	<documentation>
- Resets the lists to parent defaults.
- 
-        	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
-		<input>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</input>
-		<output>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</output>
-	</operation>
-
-	<operation name="set_default_host_match_pattern">
-	<documentation>
- Resets the lists to parent defaults.
- 
-        	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
-		<input>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</input>
-		<output>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</output>
-	</operation>
-
-	<operation name="set_default_path_match_pattern">
-	<documentation>
- Resets the lists to parent defaults.
- 
-        	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
-		<input>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</input>
-		<output>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</output>
-	</operation>
-
-	<operation name="set_default_profile">
-	<documentation>
- Sets the names of the default profiles from which the specified profiles will derive
- default values for its attributes.
- 
-        	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
-		<input>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
-				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
-		</input>
-		<output>
-			<soap:body
-				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
 	<operation name="set_description">
 	<documentation>
- Sets the description for a set of HTTP class profiles.
-
- This is an arbitrary field which can be used for any purpose.
+ Sets the descriptions for the specified CA-bundle managers.
 
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="set_pool_name">
+	<operation name="set_proxy_port">
 	<documentation>
- Sets the pool names to use when the specified classes match.
- 
+ Sets the proxy-server port numbers for the specified
+ CA-bundle managers. The default port number is 3128.
 
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="set_redirect_location">
+	<operation name="set_proxy_server">
 	<documentation>
- Sets the string (which may include a TCL expression) to indicates where to
- redirect the original HTTP request once a match occurs.  For example, to redirect
- requests to https://myserver.com to http://myotherserver.com.
- 
+ Sets the proxy-server host names or IP addresses for the
+ specified CA-bundle managers. Only HTTP proxies are
+ supported. Users may optionally prefix the proxy-server
+ with "http://".
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="set_rewrite_url">
+	<operation name="set_timeout">
 	<documentation>
- Sets the strings (which may include a TCL expression) with which to rewrite the URLs.
- 
+ Sets the timeout values in seconds for the specified
+ CA-bundle managers. This is the time to expire a URL
+ download operation, which defaults to 8 seconds, and ranges
+ from 1 to 3600 (1 hour).
+
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
 
-	<operation name="set_web_accelerator_module_enabled_state">
+	<operation name="set_trusted_ca_bundle">
 	<documentation>
- Sets the states that specify whether specified classes are Web Accelerator classes.
+ Sets the trusted CA-bundles for downloading URL resources
+ for the CA-bundle managers. The trusted CA-bundles are the
+ CA certificates for remote hosts.
 
         	</documentation>
-		<soap:operation soapAction="urn:iControl:LocalLB/ProfileHttpClass"/>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
 		<input>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</input>
 		<output>
 			<soap:body
 				use="encoded"
-				namespace="urn:iControl:LocalLB/ProfileHttpClass"
+				namespace="urn:iControl:System/CABundleManager"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_update_interval">
+	<documentation>
+ Sets the update intervals for the specified CA-bundle
+ managers. This is the time in days between refreshing the
+ CA-bundles managed by the CA-bundle managers. The defaults
+ is 0. A value of 0 disables automatically updating the
+ CA-bundle, but users may still manually update the
+ CA-bundle using the set_update_now method.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/CABundleManager"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/CABundleManager"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_update_now">
+	<documentation>
+ Instructs the specified CA-bundle managers whether to
+ update the corresponding CA-bundles immediately. A YES
+ command triggers immediate manual update of the CA-bundle
+ by the CA-bundle manager. A NO command does not trigger an
+ immediate update of the CA-bundle, but the CA-bundle may
+ still be updated according to the update interval of the
+ CA-bundle manager.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:System/CABundleManager"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/CABundleManager"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:System/CABundleManager"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
 		</output>
 	</operation>
@@ -9782,17 +9560,31 @@ All other trademarks mentioned in this document are the property of their respec
 
 <!-- service -->
 
-<service name="LocalLB.ProfileHttpClass">
+<service name="System.CABundleManager">
 	<documentation>
- *IMPORTANT* This entire interface has been deprecated immediately. As of
- v11.4.0, attempting to perform any of the functions in this interface will
- return a not-implemented exception.
-
- The ProfileHttpClass interface enables you to manipulate a local load balancer's
- ability to classify HTTP traffic.
+ The CABundleManager interface enables a user to automatically
+ update CA-bundles on the system, using set include/exclude
+ operations on CA-bundles from local certificate-file-object and
+ remote URL sources. The set include/exclude operations are
+ equivalent to set addition/subtraction operations. For example,
+ the user may use add_include_bundle and add_include_url
+ operations to combine CA-certificates from various sources, and
+ use add_exclude_bundle and add_exclude_url operations to remove
+ certain CA-certificates from the final CA-bundle file. The
+ generated CA-bundle file will be installed as a
+ certificate file object on the system, and used as trusted
+ CA-bundle by other modules. Additionally, the user may set the
+ update frequency of the CA-bundle according to their needs, or
+ use web proxy for downloading the remote URL resources. By
+ default, a newly created CA-bundle manager does not create or
+ update the managed CA-bundle object unless it has a positive
+ update interval or being explicitly told to do so by the
+ set_update_now command. Additionally, the calculated CA-bundle
+ must contain at least two CA certificates to be installed on the
+ system.
 
         	</documentation>
-	<port name="LocalLB.ProfileHttpClassPort" binding="tns:LocalLB.ProfileHttpClassBinding">
+	<port name="System.CABundleManagerPort" binding="tns:System.CABundleManagerBinding">
 		<soap:address location="https://url_to_service"/>
 	</port>
 </service>

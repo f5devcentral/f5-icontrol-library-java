@@ -655,6 +655,11 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>LOG_SOURCE_HOSTAGENTD</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_ICAP">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_ICAP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="LOG_SOURCE_ICRD">
 					<xsd:annotation>
 						<xsd:documentation>LOG_SOURCE_ICRD</xsd:documentation>
@@ -758,6 +763,11 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:enumeration value="LOG_SOURCE_SWG">
 					<xsd:annotation>
 						<xsd:documentation>LOG_SOURCE_SWG</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_TMA">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_TMA</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
 				<xsd:enumeration value="LOG_SOURCE_TMM_TCP">
@@ -890,6 +900,11 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>LOG_SOURCE_GPA</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_KEYMGMTD">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_KEYMGMTD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="LOG_SOURCE_CRYPTOD">
 					<xsd:annotation>
 						<xsd:documentation>LOG_SOURCE_CRYPTOD</xsd:documentation>
@@ -943,6 +958,31 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:enumeration value="LOG_SOURCE_NEST_FLOW_MGR">
 					<xsd:annotation>
 						<xsd:documentation>LOG_SOURCE_NEST_FLOW_MGR</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_IPS">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_IPS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_DPI">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_DPI</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_LOCALDB">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_LOCALDB</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_DYNAD">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_DYNAD</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="LOG_SOURCE_ADFS_PROXY">
+					<xsd:annotation>
+						<xsd:documentation>LOG_SOURCE_ADFS_PROXY</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
 			</xsd:restriction>

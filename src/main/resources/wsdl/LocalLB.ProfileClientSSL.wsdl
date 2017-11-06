@@ -6824,6 +6824,71 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SSL_COMMON_OCSP_STAPLING_OCSP_CONNECTION_FAILURES</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CACHED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CACHED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CERT_STATUS_REQ">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_CERT_STATUS_REQ</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_STAPLED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_STAPLED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_RESPSTATUS_ERR_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_RESPSTATUS_ERR_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_INVALID_CERT_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_INVALID_CERT_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_REVOKED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_REVOKED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_UNKNOWN_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_CLIENTSSL_UNKNOWN_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CACHED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CACHED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_STAPLED_RESP">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_STAPLED_RESP</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONDER_QUERIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONDER_QUERIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONSE_ERRORS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_RESPONSE_ERRORS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_UNKNOWN">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_UNKNOWN</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_REVOKED">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_FWDP_OCSP_SERVERSSL_CERT_STATUS_REVOKED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="STATISTIC_LSN_POOL_PBA_ACTIVE_PORT_BLOCKS">
 					<xsd:annotation>
 						<xsd:documentation>STATISTIC_LSN_POOL_PBA_ACTIVE_PORT_BLOCKS</xsd:documentation>
@@ -7894,6 +7959,26 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_SSL_COMMON_EXTENDED_MASTER_SECRETS</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_TOTAL_UPDATES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_TOTAL_UPDATES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_NEXT_UPDATE">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_NEXT_UPDATE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_CERTIFICATE_COUNT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_CERTIFICATE_COUNT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_BUNDLE_MGR_REFERENCE_COUNT">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_BUNDLE_MGR_REFERENCE_COUNT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 				<xsd:enumeration value="STATISTIC_IPSECALG_IKE_PACKETS">
 					<xsd:annotation>
 						<xsd:documentation>STATISTIC_IPSECALG_IKE_PACKETS</xsd:documentation>
@@ -8149,6 +8234,56 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>STATISTIC_DIAMETERROUTER_FAILED_DUE_TO_PERSIST_KEY_IN_USE</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_MESSAGES_MAXIMUM_RETRIES">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_MESSAGES_MAXIMUM_RETRIES</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_CURRENT_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_CURRENT_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_INCOMING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_INCOMING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_FAILED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_FAILED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SIPROUTER_TOTAL_FAILED_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SIPROUTER_TOTAL_FAILED_AUTOMATICALLY_INITIALIZED_OUTGOING_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATISTIC_SSL_COMMON_C3D_CONNECTIONS">
+					<xsd:annotation>
+						<xsd:documentation>STATISTIC_SSL_COMMON_C3D_CONNECTIONS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="LocalLB.ProfileSSLCertificateExtensionSequence">
@@ -8276,6 +8411,11 @@ All other trademarks mentioned in this document are the property of their respec
 				<xsd:enumeration value="SSL_FWDP_CERT_EXT_SUBJECT_KEY_IDENTIFIER">
 					<xsd:annotation>
 						<xsd:documentation>SSL_FWDP_CERT_EXT_SUBJECT_KEY_IDENTIFIER</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="SSL_FWDP_CERT_EXT_TLS_FEATURE">
+					<xsd:annotation>
+						<xsd:documentation>SSL_FWDP_CERT_EXT_TLS_FEATURE</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
 			</xsd:restriction>
@@ -8673,6 +8813,20 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
 </message>
 
+<message name="LocalLB.ProfileClientSSL.get_c3d_drop_unknown_ocsp_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.get_c3d_drop_unknown_ocsp_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
+<message name="LocalLB.ProfileClientSSL.get_c3d_enabled_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.get_c3d_enabled_stateResponse">
+	<part name="return" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+
 <message name="LocalLB.ProfileClientSSL.get_ca_fileRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
@@ -8786,6 +8940,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 </message>
 <message name="LocalLB.ProfileClientSSL.get_client_certificate_ca_file_v2Response">
+	<part name="return" type="tns:LocalLB.ProfileStringSequence"/>
+</message>
+
+<message name="LocalLB.ProfileClientSSL.get_client_entity_ocsp_objectRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.get_client_entity_ocsp_objectResponse">
 	<part name="return" type="tns:LocalLB.ProfileStringSequence"/>
 </message>
 
@@ -9277,6 +9438,20 @@ All other trademarks mentioned in this document are the property of their respec
 <message name="LocalLB.ProfileClientSSL.set_bypass_on_handshake_alert_stateResponse">
 </message>
 
+<message name="LocalLB.ProfileClientSSL.set_c3d_drop_unknown_ocsp_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.set_c3d_drop_unknown_ocsp_stateResponse">
+</message>
+
+<message name="LocalLB.ProfileClientSSL.set_c3d_enabled_stateRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:LocalLB.ProfileEnabledStateSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.set_c3d_enabled_stateResponse">
+</message>
+
 <message name="LocalLB.ProfileClientSSL.set_ca_fileRequest">
 	<part name="profile_names" type="tns:Common.StringSequence"/>
 	<part name="cas" type="tns:LocalLB.ProfileStringSequence"/>
@@ -9393,6 +9568,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="client_cert_cas" type="tns:LocalLB.ProfileStringSequence"/>
 </message>
 <message name="LocalLB.ProfileClientSSL.set_client_certificate_ca_file_v2Response">
+</message>
+
+<message name="LocalLB.ProfileClientSSL.set_client_entity_ocsp_objectRequest">
+	<part name="profile_names" type="tns:Common.StringSequence"/>
+	<part name="objects" type="tns:LocalLB.ProfileStringSequence"/>
+</message>
+<message name="LocalLB.ProfileClientSSL.set_client_entity_ocsp_objectResponse">
 </message>
 
 <message name="LocalLB.ProfileClientSSL.set_crl_fileRequest">
@@ -9897,6 +10079,24 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileClientSSL.get_bypass_on_handshake_alert_stateRequest"/>
 		<output message="tns:LocalLB.ProfileClientSSL.get_bypass_on_handshake_alert_stateResponse"/>
 	</operation>
+	<operation name="get_c3d_drop_unknown_ocsp_state">
+	<documentation>
+ Gets the SSL client certificate constrained delegation SSL action when the
+ OCSP returns unknown status for the specified client SSL profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.get_c3d_drop_unknown_ocsp_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.get_c3d_drop_unknown_ocsp_stateResponse"/>
+	</operation>
+	<operation name="get_c3d_enabled_state">
+	<documentation>
+ Gets the SSL client certificate constrained delegation enabled states for the
+ specified client SSL profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.get_c3d_enabled_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.get_c3d_enabled_stateResponse"/>
+	</operation>
 	<operation name="get_ca_file">
 	<documentation>
  Certificate files are officially managed as certificate file
@@ -10092,6 +10292,16 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileClientSSL.get_client_certificate_ca_file_v2Request"/>
 		<output message="tns:LocalLB.ProfileClientSSL.get_client_certificate_ca_file_v2Response"/>
+	</operation>
+	<operation name="get_client_entity_ocsp_object">
+	<documentation>
+ Gets the SSL client certificate constrained delegation OCSP object that the
+ system SSL should use to connect to the OCSP responder and check the client
+ certificate status for the specified client SSL profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.get_client_entity_ocsp_objectRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.get_client_entity_ocsp_objectResponse"/>
 	</operation>
 	<operation name="get_crl_file">
 	<documentation>
@@ -10759,6 +10969,32 @@ All other trademarks mentioned in this document are the property of their respec
 		<input message="tns:LocalLB.ProfileClientSSL.set_bypass_on_handshake_alert_stateRequest"/>
 		<output message="tns:LocalLB.ProfileClientSSL.set_bypass_on_handshake_alert_stateResponse"/>
 	</operation>
+	<operation name="set_c3d_drop_unknown_ocsp_state">
+	<documentation>
+ Sets the SSL client certificate constrained delegation SSL action when the
+ OCSP returns unknown status for the specified client SSL profiles.
+ The default value is enabled, which causes the connection to be dropped.
+ Conversely, you can specify disabled to cause the connection to ignore
+ the unknown status and continue.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.set_c3d_drop_unknown_ocsp_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.set_c3d_drop_unknown_ocsp_stateResponse"/>
+	</operation>
+	<operation name="set_c3d_enabled_state">
+	<documentation>
+ Sets the SSL client certificate constrained delegation enabled states for the
+ specified client SSL profiles. This allows ProxySSL/SplitSSL users to migrate
+ to PFS (Perfect Forward Secrecy) which is not supported on your current ProxySSL.
+ SSL client certificate constrained delegation provides PFS for proxy or split SSL
+ users. When this is enabled, SSL client certificate constrained delegation
+ is enabled for the virtual server that uses this profile. The default value is
+ disabled.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.set_c3d_enabled_stateRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.set_c3d_enabled_stateResponse"/>
+	</operation>
 	<operation name="set_ca_file">
 	<documentation>
  Certificate files are officially managed as certificate file
@@ -10955,6 +11191,16 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.ProfileClientSSL.set_client_certificate_ca_file_v2Request"/>
 		<output message="tns:LocalLB.ProfileClientSSL.set_client_certificate_ca_file_v2Response"/>
+	</operation>
+	<operation name="set_client_entity_ocsp_object">
+	<documentation>
+ Sets the SSL client certificate constrained delegation OCSP object that the
+ system SSL should use to connect to the OCSP responder and check the client
+ certificate status for the specified client SSL profiles.
+
+        	</documentation>
+		<input message="tns:LocalLB.ProfileClientSSL.set_client_entity_ocsp_objectRequest"/>
+		<output message="tns:LocalLB.ProfileClientSSL.set_client_entity_ocsp_objectResponse"/>
 	</operation>
 	<operation name="set_crl_file">
 	<documentation>
@@ -11838,6 +12084,48 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_c3d_drop_unknown_ocsp_state">
+	<documentation>
+ Gets the SSL client certificate constrained delegation SSL action when the
+ OCSP returns unknown status for the specified client SSL profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_c3d_enabled_state">
+	<documentation>
+ Gets the SSL client certificate constrained delegation enabled states for the
+ specified client SSL profiles.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_ca_file">
 	<documentation>
  Certificate files are officially managed as certificate file
@@ -12209,6 +12497,28 @@ All other trademarks mentioned in this document are the property of their respec
 
  Certificate file objects are managed by the
  Management::KeyCertificate interface.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_client_entity_ocsp_object">
+	<documentation>
+ Gets the SSL client certificate constrained delegation OCSP object that the
+ system SSL should use to connect to the OCSP responder and check the client
+ certificate status for the specified client SSL profiles.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
@@ -13732,6 +14042,56 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="set_c3d_drop_unknown_ocsp_state">
+	<documentation>
+ Sets the SSL client certificate constrained delegation SSL action when the
+ OCSP returns unknown status for the specified client SSL profiles.
+ The default value is enabled, which causes the connection to be dropped.
+ Conversely, you can specify disabled to cause the connection to ignore
+ the unknown status and continue.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_c3d_enabled_state">
+	<documentation>
+ Sets the SSL client certificate constrained delegation enabled states for the
+ specified client SSL profiles. This allows ProxySSL/SplitSSL users to migrate
+ to PFS (Perfect Forward Secrecy) which is not supported on your current ProxySSL.
+ SSL client certificate constrained delegation provides PFS for proxy or split SSL
+ users. When this is enabled, SSL client certificate constrained delegation
+ is enabled for the virtual server that uses this profile. The default value is
+ disabled.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="set_ca_file">
 	<documentation>
  Certificate files are officially managed as certificate file
@@ -14104,6 +14464,28 @@ All other trademarks mentioned in this document are the property of their respec
 
  Certificate file objects are managed by the
  Management::KeyCertificate interface.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/ProfileClientSSL"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_client_entity_ocsp_object">
+	<documentation>
+ Sets the SSL client certificate constrained delegation OCSP object that the
+ system SSL should use to connect to the OCSP responder and check the client
+ certificate status for the specified client SSL profiles.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/ProfileClientSSL"/>

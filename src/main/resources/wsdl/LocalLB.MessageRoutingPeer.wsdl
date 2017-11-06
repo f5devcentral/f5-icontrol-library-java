@@ -50,6 +50,20 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
+		<xsd:simpleType name="Common.EnabledState">
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="STATE_DISABLED">
+					<xsd:annotation>
+						<xsd:documentation>STATE_DISABLED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="STATE_ENABLED">
+					<xsd:annotation>
+						<xsd:documentation>STATE_ENABLED</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
 		<xsd:complexType name="Common.StringSequence">
 			<xsd:complexContent>
 				<xsd:restriction base='SOAP-ENC:Array'>
@@ -107,6 +121,13 @@ All other trademarks mentioned in this document are the property of their respec
 				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
+		<xsd:complexType name="Common.EnabledStateSequence">
+			<xsd:complexContent>
+				<xsd:restriction base='SOAP-ENC:Array'>
+					<xsd:attribute ref='SOAP-ENC:arrayType' wsdl:arrayType='tns:Common.EnabledState[]'/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
 	</xsd:schema>
 </types>
 
@@ -128,6 +149,20 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="peers" type="tns:Common.StringSequence"/>
 </message>
 <message name="LocalLB.MessageRoutingPeer.delete_peerResponse">
+</message>
+
+<message name="LocalLB.MessageRoutingPeer.get_automatic_initialization_intervalRequest">
+	<part name="peers" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.MessageRoutingPeer.get_automatic_initialization_intervalResponse">
+	<part name="return" type="tns:Common.ULongSequence"/>
+</message>
+
+<message name="LocalLB.MessageRoutingPeer.get_automatic_initialization_stateRequest">
+	<part name="peers" type="tns:Common.StringSequence"/>
+</message>
+<message name="LocalLB.MessageRoutingPeer.get_automatic_initialization_stateResponse">
+	<part name="return" type="tns:Common.EnabledStateSequence"/>
 </message>
 
 <message name="LocalLB.MessageRoutingPeer.get_connection_modeRequest">
@@ -189,6 +224,20 @@ All other trademarks mentioned in this document are the property of their respec
 </message>
 <message name="LocalLB.MessageRoutingPeer.get_versionResponse">
 	<part name="return" type="xsd:string"/>
+</message>
+
+<message name="LocalLB.MessageRoutingPeer.set_automatic_initialization_intervalRequest">
+	<part name="peers" type="tns:Common.StringSequence"/>
+	<part name="values" type="tns:Common.ULongSequence"/>
+</message>
+<message name="LocalLB.MessageRoutingPeer.set_automatic_initialization_intervalResponse">
+</message>
+
+<message name="LocalLB.MessageRoutingPeer.set_automatic_initialization_stateRequest">
+	<part name="peers" type="tns:Common.StringSequence"/>
+	<part name="states" type="tns:Common.EnabledStateSequence"/>
+</message>
+<message name="LocalLB.MessageRoutingPeer.set_automatic_initialization_stateResponse">
 </message>
 
 <message name="LocalLB.MessageRoutingPeer.set_connection_modeRequest">
@@ -259,6 +308,22 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.MessageRoutingPeer.delete_peerRequest"/>
 		<output message="tns:LocalLB.MessageRoutingPeer.delete_peerResponse"/>
+	</operation>
+	<operation name="get_automatic_initialization_interval">
+	<documentation>
+ Gets the automatic initialization interval for the specified peers.
+
+        	</documentation>
+		<input message="tns:LocalLB.MessageRoutingPeer.get_automatic_initialization_intervalRequest"/>
+		<output message="tns:LocalLB.MessageRoutingPeer.get_automatic_initialization_intervalResponse"/>
+	</operation>
+	<operation name="get_automatic_initialization_state">
+	<documentation>
+ Gets the automatic initialization states for the specified peers.
+
+        	</documentation>
+		<input message="tns:LocalLB.MessageRoutingPeer.get_automatic_initialization_stateRequest"/>
+		<output message="tns:LocalLB.MessageRoutingPeer.get_automatic_initialization_stateResponse"/>
 	</operation>
 	<operation name="get_connection_mode">
 	<documentation>
@@ -335,6 +400,22 @@ All other trademarks mentioned in this document are the property of their respec
         	</documentation>
 		<input message="tns:LocalLB.MessageRoutingPeer.get_versionRequest"/>
 		<output message="tns:LocalLB.MessageRoutingPeer.get_versionResponse"/>
+	</operation>
+	<operation name="set_automatic_initialization_interval">
+	<documentation>
+ Sets the automatic initialization interval for the specified peers.
+
+        	</documentation>
+		<input message="tns:LocalLB.MessageRoutingPeer.set_automatic_initialization_intervalRequest"/>
+		<output message="tns:LocalLB.MessageRoutingPeer.set_automatic_initialization_intervalResponse"/>
+	</operation>
+	<operation name="set_automatic_initialization_state">
+	<documentation>
+ Sets the automatic initialization state for the specified peers.
+
+        	</documentation>
+		<input message="tns:LocalLB.MessageRoutingPeer.set_automatic_initialization_stateRequest"/>
+		<output message="tns:LocalLB.MessageRoutingPeer.set_automatic_initialization_stateResponse"/>
 	</operation>
 	<operation name="set_connection_mode">
 	<documentation>
@@ -464,6 +545,46 @@ All other trademarks mentioned in this document are the property of their respec
 		</output>
 	</operation>
 
+	<operation name="get_automatic_initialization_interval">
+	<documentation>
+ Gets the automatic initialization interval for the specified peers.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/MessageRoutingPeer"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/MessageRoutingPeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/MessageRoutingPeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="get_automatic_initialization_state">
+	<documentation>
+ Gets the automatic initialization states for the specified peers.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/MessageRoutingPeer"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/MessageRoutingPeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/MessageRoutingPeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
 	<operation name="get_connection_mode">
 	<documentation>
  Gets the mode for limiting connections to the specified peers.
@@ -631,6 +752,46 @@ All other trademarks mentioned in this document are the property of their respec
 	<operation name="get_version">
 	<documentation>
  Get the version information for this interface.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/MessageRoutingPeer"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/MessageRoutingPeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/MessageRoutingPeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_automatic_initialization_interval">
+	<documentation>
+ Sets the automatic initialization interval for the specified peers.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:LocalLB/MessageRoutingPeer"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/MessageRoutingPeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:LocalLB/MessageRoutingPeer"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="set_automatic_initialization_state">
+	<documentation>
+ Sets the automatic initialization state for the specified peers.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:LocalLB/MessageRoutingPeer"/>

@@ -425,6 +425,41 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>POLICY_TEMPLATE_COMPREHENSIVE</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_DRUPAL">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_DRUPAL</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_JOOMLA">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_JOOMLA</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_WORDPRESS">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_WORDPRESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_OWA_EXCHANGE">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_OWA_EXCHANGE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_SAP_NETWEAVER">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_SAP_NETWEAVER</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_SHAREPOINT">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_SHAREPOINT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_PASSIVE">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_PASSIVE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 		<xsd:complexType name="ASM.ApplyLearningSequence">

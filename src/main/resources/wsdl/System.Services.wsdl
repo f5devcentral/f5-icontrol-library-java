@@ -284,11 +284,6 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>SERVICE_APMD</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
-				<xsd:enumeration value="SERVICE_ACCTD">
-					<xsd:annotation>
-						<xsd:documentation>SERVICE_ACCTD</xsd:documentation>
-					</xsd:annotation>
-				</xsd:enumeration>
 				<xsd:enumeration value="SERVICE_ACED">
 					<xsd:annotation>
 						<xsd:documentation>SERVICE_ACED</xsd:documentation>

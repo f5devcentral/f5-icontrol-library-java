@@ -1022,6 +1022,41 @@ All other trademarks mentioned in this document are the property of their respec
 						<xsd:documentation>POLICY_TEMPLATE_COMPREHENSIVE</xsd:documentation>
 					</xsd:annotation>
 				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_DRUPAL">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_DRUPAL</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_JOOMLA">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_JOOMLA</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_WORDPRESS">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_WORDPRESS</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_OWA_EXCHANGE">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_OWA_EXCHANGE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_SAP_NETWEAVER">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_SAP_NETWEAVER</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_SHAREPOINT">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_SHAREPOINT</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="POLICY_TEMPLATE_PASSIVE">
+					<xsd:annotation>
+						<xsd:documentation>POLICY_TEMPLATE_PASSIVE</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
 			</xsd:restriction>
 		</xsd:simpleType>
 	</xsd:schema>
@@ -1249,6 +1284,13 @@ All other trademarks mentioned in this document are the property of their respec
 	<part name="policy_names" type="tns:Common.StringSequence"/>
 </message>
 <message name="ASM.Policy.is_complex_assocResponse">
+	<part name="return" type="tns:Common.BooleanSequence"/>
+</message>
+
+<message name="ASM.Policy.is_policy_base_complexRequest">
+	<part name="policy_names" type="tns:Common.StringSequence"/>
+</message>
+<message name="ASM.Policy.is_policy_base_complexResponse">
 	<part name="return" type="tns:Common.BooleanSequence"/>
 </message>
 
@@ -1790,11 +1832,21 @@ All other trademarks mentioned in this document are the property of their respec
 	</operation>
 	<operation name="is_complex_assoc">
 	<documentation>
+ This method is deprecated, please use is_policy_base_complex.
+
  Determines whether the specified policies have a complex association type.
 
         	</documentation>
 		<input message="tns:ASM.Policy.is_complex_assocRequest"/>
 		<output message="tns:ASM.Policy.is_complex_assocResponse"/>
+	</operation>
+	<operation name="is_policy_base_complex">
+	<documentation>
+ Determines whether the specified LTM policies have a complex association type.
+
+        	</documentation>
+		<input message="tns:ASM.Policy.is_policy_base_complexRequest"/>
+		<output message="tns:ASM.Policy.is_policy_base_complexResponse"/>
 	</operation>
 	<operation name="reconfigure">
 	<documentation>
@@ -2800,7 +2852,29 @@ All other trademarks mentioned in this document are the property of their respec
 
 	<operation name="is_complex_assoc">
 	<documentation>
+ This method is deprecated, please use is_policy_base_complex.
+
  Determines whether the specified policies have a complex association type.
+
+        	</documentation>
+		<soap:operation soapAction="urn:iControl:ASM/Policy"/>
+		<input>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:ASM/Policy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</input>
+		<output>
+			<soap:body
+				use="encoded"
+				namespace="urn:iControl:ASM/Policy"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</output>
+	</operation>
+
+	<operation name="is_policy_base_complex">
+	<documentation>
+ Determines whether the specified LTM policies have a complex association type.
 
         	</documentation>
 		<soap:operation soapAction="urn:iControl:ASM/Policy"/>
