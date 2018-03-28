@@ -51,23 +51,23 @@
         </executions>
       </plugin>
 
-<plugin>
-  <groupId>org.codehaus.mojo</groupId>
-  <artifactId>exec-maven-plugin</artifactId>
-  <version>1.2.1</version>
-    <executions>
-        <execution>
-            <id>fix-case-in-bindings</id>
-            <phase>generate-sources</phase>
-            <goals>
-                <goal>exec</goal>
-            </goals>
-            <configuration>
-                <executable>./tools/fix.bat</executable>
-            </configuration>
-        </execution>
-    </executions>
-</plugin>
+      <plugin>
+	<groupId>org.codehaus.gmaven</groupId>
+	<artifactId>groovy-maven-plugin</artifactId>
+	<executions>
+	  <execution>
+	    <phase>generate-resources</phase>
+	    <goals>
+	      <goal>execute</goal>
+	    </goals>
+	    <configuration>
+	      <source>
+		${project.basedir}/tools/fix.groovy
+	      </source>
+	    </configuration>
+	  </execution>
+	</executions>
+      </plugin>
 
       <plugin>
 	<artifactId>maven-clean-plugin</artifactId>
@@ -94,6 +94,8 @@
 	  </execution>
 	</executions>
       </plugin>
+
+
     </plugins>
   </build>
 
