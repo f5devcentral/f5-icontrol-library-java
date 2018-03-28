@@ -1,11 +1,12 @@
 import groovy.io.FileType
+import java.util.regex.Pattern
+import java.io.File
 
 //Build a list of wsdls
-def wsdlDir = "src/main/resources/wsdl"
 def wsdlList = []
-def wsdlFiles = new File(wsdlDir)
+def wsdlFiles = new File("${project.basedir}/src/main/resources/wsdl")
 wsdlFiles.eachFileRecurse (FileType.FILES) { file ->
-  wsdlList << file.path.replaceAll(".wsdl","").split("/").reverse().first()
+  wsdlList << file.path.replaceAll(".wsdl","").split(Pattern.quote(File.separator)).reverse().first()
 }
 //wsdlList.each {  println it.tokenize('.') }
 
@@ -21,13 +22,12 @@ wsdlList.each {
   }
 
 }
-badNames.each { println "$it.key: $it.value" }
+//badNames.each { println "$it.key: $it.value" }
 
 
 //Build a list of java files
-def bindingsDir = "src/generated/java/iControl"
 def javaList = []
-def javaFiles = new File(bindingsDir)
+def javaFiles = new File("${project.basedir}/src/generated/java/iControl")
 javaFiles.eachFileRecurse (FileType.FILES) { file ->
 
   javaList << file
@@ -35,7 +35,7 @@ javaFiles.eachFileRecurse (FileType.FILES) { file ->
 // javaList.each {  println it }
 
 for (javaFile in javaList) {
-  def name = javaFile.path.replaceAll(".java","").split("/").reverse().first()
+  def name = javaFile.path.replaceAll(".java","").split(Pattern.quote(File.separator)).reverse().first()
   for (badName in badNames) {
       ant.replace(file: javaFile, token: badName.key, value: badName.value)
   }
