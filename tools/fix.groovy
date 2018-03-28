@@ -2,6 +2,9 @@ import groovy.io.FileType
 import java.util.regex.Pattern
 import java.io.File
 
+
+println "Updating class names and references for backward compatibility"
+
 //Build a list of wsdls
 def wsdlList = []
 def wsdlFiles = new File("${project.basedir}/src/main/resources/wsdl")
@@ -29,19 +32,25 @@ wsdlList.each {
 def javaList = []
 def javaFiles = new File("${project.basedir}/src/generated/java/iControl")
 javaFiles.eachFileRecurse (FileType.FILES) { file ->
-
   javaList << file
 }
 // javaList.each {  println it }
 
 for (javaFile in javaList) {
+
   def name = javaFile.path.replaceAll(".java","").split(Pattern.quote(File.separator)).reverse().first()
+
+  //update all references to all badNames inside the file contents
   for (badName in badNames) {
       ant.replace(file: javaFile, token: badName.key, value: badName.value)
   }
+
+  //update the filename
   for (badName in badNames) {
       if (javaFile.path.contains(badName.key)) {
-      	 javaFile.renameTo(javaFile.path.replaceAll(badName.key, badName.value))
+        def fixedName = name.replaceAll (badName.key, badName.value)
+	println "Renaming class $name to $fixedName"
+	javaFile.renameTo(javaFile.path.replaceAll(badName.key, badName.value))
       }
   }
 }
